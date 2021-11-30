@@ -1,5 +1,18 @@
 ## Evaluation de la fiabilité des prédictions sur la propagation du covid-19 en France
 
+Mar 18, 2019
+
+{% for post in site.posts %}
+ 
+<ul>
+ 
+<li><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3></li>
+ 
+</ul>
+{% endfor %}
+
+[Setup a custom domain for your github pages blog in five minutes](https://aregsar.com/blog/2019/how-to-setup-a-custom-domain-for-your-github-pages-blog-in-five-minutes)
+
 You can use the [editor on GitHub](https://github.com/evaluation-modelisation-covid/github-pages-with-jekyll/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
