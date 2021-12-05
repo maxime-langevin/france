@@ -3,10 +3,6 @@
 
 La fiabilité d'un modele est évaluée en comparant ses prévisions avec la réalité. 
 
-<img src="pasteur_aout.png">
-*Comparaison entre les scénarios de l'institut Pasteur du xxx aout 2021 avec les données réelles.*
-
-
 # A quel moment des modélisations mathématiques ont éte faites, et quelle a éte leur fiabilité?
 
 {% for post in site.posts %}
