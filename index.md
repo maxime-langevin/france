@@ -3,6 +3,9 @@
 
 La fiabilité d'un modele est évaluée en comparant ses prévisions avec la réalité. 
 
+<img src="_images/example.png">
+
+
 # A quel moment des modélisations mathématiques ont éte faites, et quelle a éte leur fiabilité?
 
 {% for post in site.posts %}
