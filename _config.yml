@@ -11,3 +11,18 @@ twitter_username: your-twitter-handle # DO NOT include the @ character, or else 
 github_username:  your-github-handle # DO NOT include the @ character, or else the build will fail!
 
 show_excerpts: true # set to false to remove excerpts on the homepage
+
+buttons:
+  zip_url: https://evaluation-modelisation-covid.github.io/france/about
+  zip_title: A propos de ce site 
+  zip_hide: false
+  tar_hide: true
+  github_hide: true
+
+buttons:
+  zip_url: https://evaluation-modelisation-covid.github.io/france
+  zip_title: Accueil 
+  zip_hide: false
+  tar_hide: true
+  github_hide: true
+  
