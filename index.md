@@ -3,6 +3,15 @@
 
 La fiabilité d'un modele est évaluée en comparant ses prévisions avec la réalité. 
 
+
+<details><summary>Contexte</summary>
+<p>
+
+#### même avec des images ;)
+<img src="pasteur_aout.png" width="400">
+</p>
+</details>
+
 <img src="pasteur_aout.png" width="400"> <img src="pasteur_aout.png" width="400">
 
 
