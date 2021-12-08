@@ -4,17 +4,34 @@
 # Comment évaluer la fiabilité des modelisations mathématiques sur la propagation du covid-19?
 
 La fiabilité d'un modele est évaluée en comparant ses prévisions avec la réalité. 
+Avec markdown tu *peux* faire **beaucoup** de choses.
+Des listes par exemple:
+1. First item
+2. Second item
+3. Third item
+4. Fourth item 
 
+Mais aussi des tables :
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        | 
+
+
+> Des citations
+
+Et mettre une emphase sur certaines choses <mark>très importantes</mark>
 
 <details><summary><b>Contexte</b></summary>
 <p>
 
-#### même avec des images ;)
+<h3>même avec des images ;)</h3> 
+    
 <figure>
     <img src="images/media/media_novembre.png" width="400" alt="Pasteur aout">
     <figcaption class="figure-caption text-center">Name</figcaption>
 </figure>
- 
+
 
 </p>
 </details>
