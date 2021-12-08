@@ -12,22 +12,22 @@ La fiabilité d'un modele est évaluée en comparant ses prévisions avec la ré
 </details>
 
 <!---Media (créer un onglet à part après)-->
-<img src="_images/media/media_novembre.png" width="400"><img src="_images/media/media_fevrier.png" width="400">
-<img src="_images/media/media_juillet_SC.png" width="400"><img src="_images/media/media_juillet_hosp.png" width="400">
+<img src="images/media/media_novembre.png" width="400"><img src="images/media/media_fevrier.png" width="400">
+<img src="images/media/media_juillet_SC.png" width="400"><img src="images/media/media_juillet_hosp.png" width="400">
 
 
 <!---Pasteur august (scenarios 26 july and 5 august)-->
-<img src="_images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_hospital.png" width="400"> <img src="_images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_reanimation.png" width="400"> <img src="_images/Pasteur_2021_Juillet/Pasteur_2021_juillet_reanimation_beds.png" width="400"> 
-<img src="_images/Pasteur_2021_Aout/Pasteur_2021_aout_hospconv.png" width="400"> <img src="_images/Pasteur_2021_Aout/Pasteur_2021_aout_new_hosp.png" width="400"> <img src="_images/Pasteur_2021_Aout/Pasteur_2021_aout_new_reanimation.png" width="400"> <img src="_images/Pasteur_2021_Aout/Pasteur_2021_aout_reanimation.png" width="400"> 
+<img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_hospital.png" width="400"> <img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_reanimation.png" width="400"> <img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_reanimation_beds.png" width="400"> 
+<img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_hospconv.png" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_new_hosp.png" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_new_reanimation.png" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_reanimation.png" width="400"> 
 
 <!---INSERM and Pasteur january-february (scenarios 16/01, 02/02, 08/02 and 14/02)-->
-<img src="_images/INSERM/INSERM_16_janvier.png" width="400"> <img src="_images/INSERM/INSERM_02_février.png" width="400"> <img src="_images/INSERM/INSERM_14_février.png" width="400"> <img src="_images/Pasteur_2021_Février/Pasteur_2021_Février.png" width="400"> 
+<img src="images/INSERM/INSERM_16_janvier.png" width="400"> <img src="images/INSERM/INSERM_02_février.png" width="400"> <img src="images/INSERM/INSERM_14_février.png" width="400"> <img src="images/Pasteur_2021_Février/Pasteur_2021_Février.png" width="400"> 
 
 <!---Pasteur november (scenario 30 october)-->
-<img src="_images/Pasteur_2020_Novembre/Pasteur_novembre_new_reanimations.png" width="400"> <img src="_images/Pasteur_2020_Novembre/Pasteur_novembre_reanimations.png" width="400"> 
+<img src="images/Pasteur_2020_Novembre/Pasteur_novembre_new_reanimations.png" width="400"> <img src="images/Pasteur_2020_Novembre/Pasteur_novembre_reanimations.png" width="400"> 
 
 <!---Pasteur october (scenario 25 september)-->
-<img src="_images/Pasteur_2020_Octobre/Pasteur_octobre_reanimations.png" width="400"> 
+<img src="images/Pasteur_2020_Octobre/Pasteur_octobre_reanimations.png" width="400"> 
  
 
 
