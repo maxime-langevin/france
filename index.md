@@ -1,4 +1,6 @@
 
+<link href="_assets/image.css" rel="stylesheet">
+
 # Comment évaluer la fiabilité des modelisations mathématiques sur la propagation du covid-19?
 
 La fiabilité d'un modele est évaluée en comparant ses prévisions avec la réalité. 
