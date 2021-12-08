@@ -1,3 +1,4 @@
+
 # Comment évaluer la fiabilité des modelisations mathématiques sur la propagation du covid-19?
 
 La fiabilité d'un modele est évaluée en comparant ses prévisions avec la réalité. 
@@ -7,13 +8,17 @@ La fiabilité d'un modele est évaluée en comparant ses prévisions avec la ré
 <p>
 
 #### même avec des images ;)
-<img src="pasteur_aout.png" width="400">
+<figure>
+    <img src="images/media/media_novembre.png" width="400" alt="Pasteur aout">
+    <figcaption class="figure-caption text-center">Name</figcaption>
+</figure>
+ 
+
 </p>
 </details>
 
 <!---Media (créer un onglet à part après)-->
-<img src="images/media/media_novembre.png" width="400"><img src="images/media/media_fevrier.png" width="400">
-<img src="images/media/media_juillet_SC.png" width="400"><img src="images/media/media_juillet_hosp.png" width="400">
+<img src="images/media/media_novembre.png"  width="400"> <img src="images/media/media_juillet_SC.png"  width="400"> 
 
 
 <!---Pasteur august (scenarios 26 july and 5 august)-->
