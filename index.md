@@ -28,9 +28,7 @@ Et mettre une emphase sur certaines choses <mark>très importantes</mark>
 <h3>même avec des images ;)</h3> 
 
 
-|<img src="images/media/media_novembre.png" width="400" alt="Pasteur aout">|
-| :--------: |
-| Caption     |
+<img src="images/media/media_novembre.png" width="400" alt="Pasteur aout">
     
 <figure>
     <img src="images/media/media_novembre.png" width="400" alt="Pasteur aout">
