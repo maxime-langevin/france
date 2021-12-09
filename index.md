@@ -1,5 +1,42 @@
 
 <link href="_assets/image.css" rel="stylesheet">
+<style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style>
 
 # Comment évaluer la fiabilité des modelisations mathématiques sur la propagation du covid-19?
 
@@ -22,7 +59,9 @@ Mais aussi des tables :
 
 Et mettre une emphase sur certaines choses <mark>très importantes</mark>
 
-<details><summary><b>Contexte</b></summary>
+<details><summary><b><div class="tooltip">Hover over me
+  <span class="tooltiptext">Tooltip text</span>
+</div></b></summary>
 <p>
 
 <h3>même avec des images ;)</h3> 
