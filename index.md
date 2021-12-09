@@ -49,6 +49,7 @@ Des listes par exemple:
 4. Fourth item 
 
 Mais aussi des tables :
+
 | Syntax      | Description |
 | ----------- | ----------- |
 | Header      | Title       |
@@ -59,8 +60,8 @@ Mais aussi des tables :
 
 Et mettre une emphase sur certaines choses <mark>très importantes</mark>
 
-<details><summary><b><div class="tooltip">Hover over me
-  <span class="tooltiptext">Tooltip text</span>
+<details><summary><b><div class="tooltip">Modélisations de la 4ème vague
+  <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
 
