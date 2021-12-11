@@ -60,7 +60,28 @@ Mais aussi des tables :
 
 Et mettre une emphase sur certaines choses <mark>très importantes</mark>
 
-<details><summary><b><div class="tooltip">1. Modélisations de la 4ème vague
+<details><summary><b><div class="tooltip">1. Modélisations de la 2ème vague, et deuxième confinement
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+
+<h3>Contexte</h3> 
+Le 26 octobre, l’Institut Pasteur produit des scénarios d’évolution de l’épidémie en l’absence de confinement. Ce rapport n’a à notre connaissance pas été rendu public, et nous n’avons pas pu le consulter. Nous avons simplement trouvé une figure extraite du rapport, que l’on peut trouver sur cette <a href="https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/"> page. </a>
+
+Le 28 octobre, face à la perspective épidémique, Emmanuel Macron annonce un confinement généralisé, qui prendra effet le 30 octobre.
+
+Le 30 octobre, l’Institut Pasteur produit une mise à jour de ses scénarios pour tenir compte de l’impact du confinement. Le rapport n’a pas été rendu public à notre connaissance. Certains médias y ont eu cependant accès, et ont reproduit les scénarios sous forme d’infographique. <a href="https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656">L’article </a> des échos constitut notre source pour ce graphique.
+
+<h3>Comparaison des scénarios aux données réelles</h3> 
+  
+Lors de son allocution du 28 octobre, Emmanuel Macron a annoncé que (citation quoique nous fassions nous dépasserons les 9000). Le pic réel sera deux fois moins élevé, à environ 4800 lits de soins critiques. 
+  
+<img src="images/Pasteur_2020_Novembre/Pasteur_novembre_new_reanimations.png" width="400"> <img src="images/Pasteur_2020_Novembre/Pasteur_novembre_reanimations.png" width="400">  
+
+</p>
+</details>
+
+<details><summary><b><div class="tooltip">2. Modélisations de la 4ème vague
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
@@ -101,8 +122,6 @@ Le deuxième rapport présente des courbes moins pessimistes ; cependant, à not
 <!---INSERM and Pasteur january-february (scenarios 16/01, 02/02, 08/02 and 14/02)-->
 <img src="images/INSERM/INSERM_16_janvier.png" width="400"> <img src="images/INSERM/INSERM_02_février.png" width="400"> <img src="images/INSERM/INSERM_14_février.png" width="400"> <img src="images/Pasteur_2021_Février/Pasteur_2021_Février.png" width="400"> 
 
-<!---Pasteur november (scenario 30 october)-->
-<img src="images/Pasteur_2020_Novembre/Pasteur_novembre_new_reanimations.png" width="400"> <img src="images/Pasteur_2020_Novembre/Pasteur_novembre_reanimations.png" width="400"> 
 
 <!---Pasteur october (scenario 25 september)-->
 <img src="images/Pasteur_2020_Octobre/Pasteur_octobre_reanimations.png" width="400"> 
