@@ -41,24 +41,6 @@
 # Comment évaluer la fiabilité des modelisations mathématiques sur la propagation du covid-19?
 
 La fiabilité d'un modele est évaluée en comparant ses prévisions avec la réalité. 
-Avec markdown tu *peux* faire **beaucoup** de choses.
-Des listes par exemple:
-1. First item
-2. Second item
-3. Third item
-4. Fourth item 
-
-Mais aussi des tables :
-
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        | 
-
-
-> Des citations
-
-Et mettre une emphase sur certaines choses <mark>très importantes</mark>
 
 <details><summary><b><div class="tooltip">1. Modélisations de la 2ème vague, et deuxième confinement
   <span class="tooltiptext">Explorer ce scénario</span>
@@ -82,7 +64,43 @@ Lors de son allocution du 28 octobre, Emmanuel Macron a annoncé que (citation q
 </p>
 </details>
 
-<details><summary><b><div class="tooltip">2. Modélisations de la 4ème vague
+<details><summary><b><div class="tooltip">2. Entre la deuxième et la troisième vague: le couvre-feu étendu
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+
+<h3>Contexte</h3> 
+
+
+<h3>Comparaison des scénarios aux données réelles</h3> 
+  
+<h4>Scénarios de l'INSERM</h4> 
+  
+Un certain nombre de mesures localisées et limitées n’ont pas été représentées sur le graphique, car il nous semble improbable qu’elles aient pu influer de manière significative la trajectoire épidémique nationale :
+
+* 25 février : confinement le week-end à Dunkerke et une partie des Alpes-Maritimes
+* 4 mars : Pas-de-Calais confiné le week-end, centre commerciaux de plus de 10 000 m2 fermés
+ 
+Les mesures suivantes, susceptibles de modifier la trajectoires épidémiques et mises en place après la publication des scénarios, sont représentées sur le graphique :
+
+* 18 mars : confinement de 16 départements
+* 25 mars : 3 nouveaux départements confinés
+* 3 avril : confinement de toute la France
+  
+<img src="images/INSERM/INSERM_16_janvier.png" width="400"> <img src="images/INSERM/INSERM_02_février.png" width="400">  <img src="images/INSERM/INSERM_14_février.png" width="400"> 
+
+
+
+<h4>Scénarios de l'Institut Pasteur</h4> 
+
+Pour les courbes se prolongeant en mars, il s’agit de 2 scénarios : l’un sans vaccination, l’un avec des hypothèses optimistes de vaccination. Il est précisé qu’ « en pratique, l’impact de la campagne actuelle est susceptible d’être intermédiaire entre les scénarios avec et sans vaccination ».
+  
+<img src="images/Pasteur_2021_Février/Pasteur_2021_Février.png" width="400"> 
+
+</p>
+</details>
+
+<details><summary><b><div class="tooltip">3. Modélisations de la 4ème vague
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
@@ -128,6 +146,24 @@ Le deuxième rapport présente des courbes moins pessimistes ; cependant, à not
 <img src="images/Pasteur_2020_Octobre/Pasteur_octobre_reanimations.png" width="400"> 
  
 
+Avec markdown tu *peux* faire **beaucoup** de choses.
+Des listes par exemple:
+1. First item
+2. Second item
+3. Third item
+4. Fourth item 
+
+Mais aussi des tables :
+
+| Syntax      | Description |
+| ----------- | ----------- |
+| Header      | Title       |
+| Paragraph   | Text        | 
+
+
+> Des citations
+
+Et mettre une emphase sur certaines choses <mark>très importantes</mark>
 
 
 
