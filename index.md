@@ -133,18 +133,8 @@ Le deuxième rapport présente des courbes moins pessimistes ; cependant, à not
 </p>
 </details>
 
-<!---Media (créer un onglet à part après)-->
-<img src="images/media/media_novembre.png"  width="400"> <img src="images/media/media_juillet_SC.png"  width="400"> 
 
 
-
-<!---INSERM and Pasteur january-february (scenarios 16/01, 02/02, 08/02 and 14/02)-->
-<img src="images/INSERM/INSERM_16_janvier.png" width="400"> <img src="images/INSERM/INSERM_02_février.png" width="400"> <img src="images/INSERM/INSERM_14_février.png" width="400"> <img src="images/Pasteur_2021_Février/Pasteur_2021_Février.png" width="400"> 
-
-
-<!---Pasteur october (scenario 25 september)-->
-<img src="images/Pasteur_2020_Octobre/Pasteur_octobre_reanimations.png" width="400"> 
- 
 
 Avec markdown tu *peux* faire **beaucoup** de choses.
 Des listes par exemple:
