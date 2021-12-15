@@ -38,7 +38,12 @@
 }
 </style>
 
-# Comment évaluer la fiabilité des modelisations mathématiques sur la propagation du covid-19?
+## Pourquoi évaluer la fiabilité des modelisations mathématiques sur la propagation du covid-19?
+Todo: compléter + liens vers page impact
+## Est-ce que ce ne sont pas les mesures mises en place suite aux scénarios qui permettent justement d'éviter qu'ils se produisent?
+Todo compléter
+## Retour sur les principaux scénarios de modélisation 
+TODO compléter 
 
 La fiabilité d'un modele est évaluée en comparant ses prévisions avec la réalité. 
 
