@@ -47,7 +47,22 @@ TODO compléter
 
 La fiabilité d'un modele est évaluée en comparant ses prévisions avec la réalité. 
 
-<details><summary><b><div class="tooltip">1. Modélisations de la 2ème vague, et deuxième confinement
+<details><summary><b><div class="tooltip">1. Mars 2020: les modelisations qui ont conduit le monde à se confiner
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+
+<h3>Contexte</h3> 
+
+<h3>Comparaison des scénarios aux données réelles</h3> 
+
+<img src="images/Nombre de patients en réanimations en Suède.png" width="400"> 
+
+</p>
+</details>
+
+
+<details><summary><b><div class="tooltip">2. Modélisations de la 2ème vague, et deuxième confinement
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
@@ -69,7 +84,7 @@ Lors de son allocution du 28 octobre, Emmanuel Macron a annoncé que (citation q
 </p>
 </details>
 
-<details><summary><b><div class="tooltip">2. Entre la deuxième et la troisième vague: le couvre-feu étendu
+<details><summary><b><div class="tooltip">3. Entre la deuxième et la troisième vague: le couvre-feu étendu
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
@@ -105,7 +120,7 @@ Pour les courbes se prolongeant en mars, il s’agit de 2 scénarios : l’un sa
 </p>
 </details>
 
-<details><summary><b><div class="tooltip">3. Modélisations de la 4ème vague
+<details><summary><b><div class="tooltip">4. Modélisations de la 4ème vague
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
@@ -139,39 +154,6 @@ Le deuxième rapport présente des courbes moins pessimistes ; cependant, à not
 </details>
 
 
-
-
-Avec markdown tu *peux* faire **beaucoup** de choses.
-Des listes par exemple:
-1. First item
-2. Second item
-3. Third item
-4. Fourth item 
-
-Mais aussi des tables :
-
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        | 
-
-
-> Des citations
-
-Et mettre une emphase sur certaines choses <mark>très importantes</mark>
-
-
-
-# A quel moment des modélisations mathématiques ont éte faites, et quelle a éte leur fiabilité?
-
-{% for post in site.posts %}
- 
-<ul>
- 
-<li><h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3></li>
- 
-</ul>
-{% endfor %}
 
 
 
