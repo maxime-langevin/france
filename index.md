@@ -154,6 +154,19 @@ Le deuxième rapport présente des courbes moins pessimistes ; cependant, à not
 </details>
 
 
+<details><summary><b><div class="tooltip">5. Levée des restrictions: Freedom Day au Royaume-Uni 
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+
+<h3>Contexte</h3> 
+
+<h3>Comparaison des scénarios aux données réelles</h3> 
+
+<img src="sage_summer.png" width="400"> 
+
+</p>
+</details>
 
 
 
