@@ -38,14 +38,21 @@
 }
 </style>
 
-## Pourquoi évaluer la fiabilité des modelisations mathématiques sur la propagation du covid-19?
-Todo: compléter + liens vers page impact
-## Est-ce que ce ne sont pas les mesures mises en place suite aux scénarios qui permettent justement d'éviter qu'ils se produisent?
-Todo compléter
-## Retour sur les principaux scénarios de modélisation 
-TODO compléter 
+## Avant d'explorer les scénarios de modélisation
+<details><summary><b><div class="tooltip">Quel intérêt à étudier la fiabilité des scénarios de modélisations?
+</div></b></summary>
+<p>
+Une explication plus détaillée est disponible sur la page <a href="https://evaluation-modelisation-covid.github.io/france/impact" class="btn">Impact</a>.
+</p>
+</details>
+<details><summary><b><div class="tooltip">L'intérêt des modélisations n'est-il pas justement d'empêcher qu'elles se produisent?
+</div></b></summary>
+<p>
+Une explication plus détaillée est disponible sur la page <a href="https://evaluation-modelisation-covid.github.io/france/impact" class="btn">Impact</a>.
+</p>
+</details>
 
-La fiabilité d'un modele est évaluée en comparant ses prévisions avec la réalité. 
+## Retour sur les principaux scénarios de modélisation 
 
 <details><summary><b><div class="tooltip">1. Mars 2020: les modelisations qui ont conduit le monde à se confiner
   <span class="tooltiptext">Explorer ce scénario</span>
@@ -161,9 +168,13 @@ Le deuxième rapport présente des courbes moins pessimistes ; cependant, à not
 
 <h3>Contexte</h3> 
 
+Les modélisations présentées plus tôt permettent de comparer la réalité et les scénarios lorsque des restrictions sont en place. Mais comment se comparent les scénarios et la réalité dans le cas où les mesures de restrictions sont levées? Pour donner un élément de réponse à cette question, nous présentons une comparaison entre scénarios de modélisation et réalité dans le cas du "Freedom day", jour de levée de la quasi-totalité des mesures restrictives au Royaume-Uni. 
+Le 19 juillet, dans le cadre de son plan de sortie de crise, le gouvernement britannique a en effet décidé de <a href="https://news.sky.com/story/covid-19-what-are-the-remaining-rules-in-england-after-freedom-day-12359221">lever</a> la plupart de ses mesures de restrictions (telles que limitations de capacité dans les lieux acceuillant du public, port du masque obligatoire ou encore limitations de déplacement). Contrairement à d'autres pays européens, ce retour à la normale ne comprenait pas la mise en place d'un "pass sanitaire" pour accéder à des évenements ou lieux publics. Cette levée des restrictions avait été fermement critiquée par de nombreux scientifiques dans une lettre ouverte au journal médical <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)01589-0/fulltext">The Lancet</a>, qui l'avait qualifiée de "dangereuse et prématurée".
+
 <h3>Comparaison des scénarios aux données réelles</h3> 
 
-<img src="sage_summer.png" width="400"> 
+Les données présentées ci-dessous comparent la réalité avec les différents scénarios de modélisations visant à prévoir l'impact de la levée des restrictions. Les données sont <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1001169/S1301_SPI-M-O_Summary_Roadmap_second_Step_4.2__1_.pdf">issues</a> 
+<img src="sage_summer.png" width="400"> du rapport du 7 juillet du SAGE (Scientific Advisory Group for Emergencies), et la mise en forme provient du site du <a href="https://data.spectator.co.uk/category/sage-scenarios">Spectator</a>. Les données montrent l'évolution du nombre de patients covid hospitalisés au cours du temps.
 
 </p>
 </details>
