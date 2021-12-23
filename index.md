@@ -65,9 +65,9 @@ En mars 2020, l'incertitude quand à l'impact qu'allait avoir le covid-19 était
   Mais il y a un pays qui nous permet de tester la validité des scénarios de modélisation: la Suède. Lors de la première vague, la Suède a choisi de ne pas se confiner, préférant se reposer des mesures plus légères. Il est donc possible de comparer ce que prévoyaient les scénarios pour la Suède et la réalité.
   
 <h3>Comparaison des scénarios aux données réelles</h3> 
-Les scénarios ci-dessous sont issus d'un <a href="https://academic.oup.com/cid/article/71/12/3174/5866094">article</a> publié par des chercheurs suédois visant à appliquer le modèle de l'Imperial College à la situation suédoise et à son absence de mesures de confinement. Les chercheurs de l'Imperial College ont par la suite souhaiter se <a href="https://twitter.com/imperialcollege/status/1257991339364560898">désolidariser</a> de ces projections, affirmant qu'ils n'avaient jamais réalisé de prédictions pour la Suède. Pourtant, l'<a href="https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx ">appendice du rapport 12 de l'Imperial College</a> contient bien des modélisations de l'épidémie en Suède. Les résulats présentés y sont quasiment identiques à ceux publiés par les chercheurs suédois, reproduits ci-dessous. \
+Les scénarios ci-dessous sont issus d'un <a href="https://academic.oup.com/cid/article/71/12/3174/5866094">article</a> publié par des chercheurs suédois visant à appliquer le modèle de l'Imperial College à la situation suédoise et à son absence de mesures de confinement. Les chercheurs de l'Imperial College ont par la suite souhaiter se <a href="https://twitter.com/imperialcollege/status/1257991339364560898">désolidariser</a> de ces projections, affirmant qu'ils n'avaient jamais réalisé de prédictions pour la Suède. Pourtant, l'<a href="https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx ">appendice du rapport 12 de l'Imperial College</a> contient bien des modélisations de l'épidémie en Suède. Les résulats présentés y sont quasiment identiques à ceux publiés par les chercheurs suédois, reproduits ci-dessous.  <br /> 
   
-<img src="images/Nombre de patients en réanimations en Suède.png" width="400"> \
+<img src="images/Nombre de patients en réanimations en Suède.png" width="400">  <br /> 
   
 Les scénarios de modélisation (en gris), qui intégraient les mesures de restrictions mises en place par la Suède, prévoyaient un pic à plus de 25 000 patients en réanimation, quand la réalité (en rouge) n'a jamais dépassé les 600. Les modèles épidémiologiques qui ont conduit le monde à se confiner surestimaient donc de plus de 3000% la saturation du système hospitalier en l'absence de confinement. 
 
@@ -89,10 +89,10 @@ Le 30 octobre, l’Institut Pasteur produit une mise à jour de ses scénarios p
 
 <h3>Comparaison des scénarios aux données réelles</h3> 
   
-Lors de son allocution du 28 octobre, Emmanuel Macron a annoncé que (citation quoique nous fassions nous dépasserons les 9000). Le pic réel sera deux fois moins élevé, à environ 4800 lits de soins critiques. 
+Lors de son allocution du 28 octobre, Emmanuel Macron a annoncé que (citation quoique nous fassions nous dépasserons les 9000). Le pic réel sera deux fois moins élevé, à environ 4800 lits de soins critiques.  <br /> 
   
 
-<img src="images/Pasteur_2020_Novembre/Pasteur_novembre_new_reanimations.png" width="400"> <img src="images/Pasteur_2020_Novembre/Pasteur_novembre_reanimations.png" width="400">  
+<img src="images/Pasteur_2020_Novembre/Pasteur_novembre_new_reanimations.png" width="400"> <img src="images/Pasteur_2020_Novembre/Pasteur_novembre_reanimations.png" width="400">   <br /> 
 
 </p>
 </details>
@@ -118,17 +118,17 @@ Les mesures suivantes, susceptibles de modifier la trajectoires épidémiques et
 
 * 18 mars : confinement de 16 départements
 * 25 mars : 3 nouveaux départements confinés
-* 3 avril : confinement de toute la France
+* 3 avril : confinement de toute la France  <br /> 
   
-<img src="images/INSERM/INSERM_16_janvier.png" width="400"> <img src="images/INSERM/INSERM_02_février.png" width="400">  <img src="images/INSERM/INSERM_14_février.png" width="400"> 
+<img src="images/INSERM/INSERM_16_janvier.png" width="400"> <img src="images/INSERM/INSERM_02_février.png" width="400">  <img src="images/INSERM/INSERM_14_février.png" width="400">  <br /> 
 
 
 
 <h4>Scénarios de l'Institut Pasteur</h4> 
 
-Pour les courbes se prolongeant en mars, il s’agit de 2 scénarios : l’un sans vaccination, l’un avec des hypothèses optimistes de vaccination. Il est précisé qu’ « en pratique, l’impact de la campagne actuelle est susceptible d’être intermédiaire entre les scénarios avec et sans vaccination ».
+Pour les courbes se prolongeant en mars, il s’agit de 2 scénarios : l’un sans vaccination, l’un avec des hypothèses optimistes de vaccination. Il est précisé qu’ « en pratique, l’impact de la campagne actuelle est susceptible d’être intermédiaire entre les scénarios avec et sans vaccination ».  <br /> 
   
-<img src="images/Pasteur_2021_Février/Pasteur_2021_Février.png" width="400"> 
+<img src="images/Pasteur_2021_Février/Pasteur_2021_Février.png" width="400">  <br /> 
 
 </p>
 </details>
@@ -147,11 +147,11 @@ Face à la perspective d’une submersion hospitalière que suggéraient ces sc�
   
 <h4>Scénarios du 26 juillet</h4> 
   
-<img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_hospital.png" width="400"> <img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_reanimation.png" width="400"> <img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_reanimation_beds.png" width="400">
+<img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_hospital.png" width="400"> <img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_reanimation.png" width="400"> <img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_reanimation_beds.png" width="400">  <br /> 
   
 <h4>Scénarios du 5 août</h4> 
   
-<img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_hospconv.png" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_new_hosp.png" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_new_reanimation.png" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_reanimation.png" width="400"> 
+<img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_hospconv.png" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_new_hosp.png" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_new_reanimation.png" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_reanimation.png" width="400">  <br /> 
   
 En ligne avec les projections présentées, le président du conseil scientifique Jean-François Delfraissy prévoyait alors une situation compliquée lors de son audition <a href="https://www.publicsenat.fr/article/parlementaire/covid-19-jean-francois-delfraissy-prevoit-une-situation-tres-complexe-dans-les">devant les sénateurs: </a>
   
@@ -180,8 +180,9 @@ Le 19 juillet, dans le cadre de son plan de sortie de crise, le gouvernement bri
 <h3>Comparaison des scénarios aux données réelles</h3> 
 
 Les données présentées ci-dessous comparent la réalité avec les différents scénarios de modélisations visant à prévoir l'impact de la levée des restrictions. Les données sont <a href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1001169/S1301_SPI-M-O_Summary_Roadmap_second_Step_4.2__1_.pdf">issues</a> 
-<img src="sage_summer.png" width="400"> du rapport du 7 juillet du SAGE (Scientific Advisory Group for Emergencies), et la mise en forme provient du site du <a href="https://data.spectator.co.uk/category/sage-scenarios">Spectator</a>. Les données montrent l'évolution du nombre de patients covid hospitalisés au cours du temps.
+du rapport du 7 juillet du SAGE (Scientific Advisory Group for Emergencies), et la mise en forme provient du site du <a href="https://data.spectator.co.uk/category/sage-scenarios">Spectator</a>. Les données montrent l'évolution du nombre de patients covid hospitalisés au cours du temps.  <br /> 
 
+ <img src="sage_summer.png" width="400">
 </p>
 </details>
 
