@@ -49,7 +49,7 @@ Une explication plus détaillée est disponible sur la page <a href="https://eva
 </div></b></summary>
 <p>
 Une explication plus détaillée est disponible sur la page <a href="https://evaluation-modelisation-covid.github.io/france/impact" class="btn">Impact.</a>  
- <a href="https://evaluation-modelisation-covid.github.io/france/impact">rapport</a>
+ <a href="https://evaluation-modelisation-covid.github.io/france/impact">impact</a>
 </p>
 </details>
 
