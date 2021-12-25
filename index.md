@@ -48,8 +48,7 @@ Une explication plus détaillée est disponible sur la page <a href="https://eva
 <details><summary><b><div class="tooltip">L'intérêt des modélisations n'est-il pas justement d'empêcher qu'elles se produisent?
 </div></b></summary>
 <p>
-Une explication plus détaillée est disponible sur la page <a href="https://evaluation-modelisation-covid.github.io/france/impact" class="btn">Impact.</a>  
- <a href="https://evaluation-modelisation-covid.github.io/france/impact">impact</a>
+Une explication plus détaillée est disponible sur la page <a href="https://evaluation-modelisation-covid.github.io/france/impact">impact.</a>
 </p>
 </details>
 
