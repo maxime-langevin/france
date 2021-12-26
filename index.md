@@ -115,19 +115,20 @@ Lors de son allocution du 28 octobre, Emmanuel Macron a annoncé que (citation q
 
 
 <h3>Comparaison des scénarios aux données réelles</h3> 
-  
+Au cours d'un hiver 2020-21 marqué par un couvre-feu prolongé, une dégradation de la situation sanitaire a mené l'INSERM et l'Institut Pasteur à publier des scénarios de modélisations. Ce sont notamment ceux-ci qui conduiront à l'adoption du 3ème confinement. 
+
 <h4>Scénarios de l'INSERM</h4> 
   
 Un certain nombre de mesures localisées et limitées n’ont pas été représentées sur le graphique, car il nous semble improbable qu’elles aient pu influer de manière significative la trajectoire épidémique nationale :
 
-* 25 février : confinement le week-end à Dunkerke et une partie des Alpes-Maritimes
-* 4 mars : Pas-de-Calais confiné le week-end, centre commerciaux de plus de 10 000 m2 fermés
+1. 25 février : confinement le week-end à Dunkerke et une partie des Alpes-Maritimes
+2. 4 mars : Pas-de-Calais confiné le week-end, centre commerciaux de plus de 10 000 m2 fermés
  
 Les mesures suivantes, susceptibles de modifier la trajectoires épidémiques et mises en place après la publication des scénarios, sont représentées sur le graphique :
 
-* 18 mars : confinement de 16 départements
-* 25 mars : 3 nouveaux départements confinés
-* 3 avril : confinement de toute la France  <br /> 
+1. 18 mars : confinement de 16 départements
+2. 25 mars : 3 nouveaux départements confinés
+3. 3 avril : confinement de toute la France  <br /> 
   
 <img src="images/INSERM/INSERM_16_janvier.png" width="400"> <img src="images/INSERM/INSERM_02_février.png" width="400">  <img src="images/INSERM/INSERM_14_février.png" width="400">  <br /> 
 
