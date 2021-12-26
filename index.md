@@ -48,7 +48,12 @@ Une explication plus détaillée est disponible sur la page <a href="https://eva
 <details><summary><b><div class="tooltip">L'intérêt des modélisations n'est-il pas justement d'empêcher qu'elles se produisent?
 </div></b></summary>
 <p>
-
+Un argument souvent entendu au sujet des scénarios de modélisation est le suivant: comme le scénario permet d'anticiper le pire, il mène à prendre des mesures qui vont justement empêcher que le scénario modélisé se produisent, ce qui expliquent le décalage entre le scénario de modélisation et la réalité (où des mesures de freinage ont été prises!). Effectivement, il n'est pas possible d'établir une comparaison dans ce cas de figure. <br /> 
+  
+<img src="images/Nombre de patients en réanimations en Suède.png" width="400">  <br /> 
+Cependant, les scnéarios de modélisation intègre souvent plusieurs hypothèses sur les mesures de freinage qui pourraient être mises en place. Ici, nous ne comparerons la réalité qu'**avec des scénarios où les mesures de freinage mises en place avaient aussi été modélisées.** <br /> 
+<img src="images/Nombre de patients en réanimations en Suède.png" width="400">  <br /> 
+Ainsi, la comparaison entre scénarios de modélisation et réalité permettra bien d'évaluer si ceux-ci ont bien anticipé la réalité.
 </p>
 </details>
 
