@@ -79,6 +79,8 @@ Les scénarios ci-dessous sont issus d'un <a href="https://academic.oup.com/cid/
 <img src="images/Nombre de patients en réanimations en Suède.png" width="400">  <br /> 
   
 Les scénarios de modélisation (en gris), qui intégraient les mesures de restrictions mises en place par la Suède, prévoyaient un pic à plus de 25 000 patients en réanimation, quand la réalité (en rouge) n'a jamais dépassé les 600. Les modèles épidémiologiques qui ont conduit le monde à se confiner surestimaient donc de plus de 3000% la saturation du système hospitalier en l'absence de confinement. 
+  
+<h3>Impact politique et médiatique</h3> 
 
 </p>
 </details>
@@ -97,12 +99,14 @@ Le 28 octobre, face à la perspective épidémique, Emmanuel Macron annonce un c
 Le 30 octobre, l’Institut Pasteur produit une mise à jour de ses scénarios pour tenir compte de l’impact du confinement. Le rapport n’a pas été rendu public à notre connaissance. Certains médias y ont eu cependant accès, et ont reproduit les scénarios sous forme d’infographique. <a href="https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656">L’article </a> des échos constitut notre source pour ce graphique.
 
 <h3>Comparaison des scénarios aux données réelles</h3> 
-  
-Lors de son allocution du 28 octobre, Emmanuel Macron a annoncé que (citation quoique nous fassions nous dépasserons les 9000). Le pic réel sera deux fois moins élevé, à environ 4800 lits de soins critiques.  <br /> 
-  
+    
 
 <img src="images/Pasteur_2020_Novembre/Pasteur_novembre_new_reanimations.png" width="400"> <img src="images/Pasteur_2020_Novembre/Pasteur_novembre_reanimations.png" width="400">   <br /> 
 
+<h3>Impact politique et médiatique</h3> 
+
+Ces modélisations ont été un des élément déclencheur du 2ème confinement. Notamment, lors de son allocution du 28 octobre, Emmanuel Macron a annoncé que le nombre de patients en réanimation dépasserait les 9000 "quoi que nous fassions". Le pic réel sera deux fois moins élevé, à environ 4800 lits de soins critiques. On constate qu'en vue de justifier une décision politique, seule la modélisation la plus pessimiste a été mise en avant. <br /> 
+Ces modélisations ont également été largement reprises dans la presse: <a href="https://www.lci.fr/sante/video-deuxieme-vague-les-scenarios-qui-inquietent-2168899.html">"Deuxième vague : les scénarios qui inquiètent"</a> titrait ainsi LCI après l'annonce du 2ème confinement, présentant les scénarios dont les pics de réanimation était de 5500, 6200 et 9000 patients. 
 </p>
 </details>
 
@@ -201,7 +205,7 @@ du rapport du 7 juillet du SAGE (Scientific Advisory Group for Emergencies), et 
  <img src="sage_summer.png" width="400">
   
 <h3>Impact politique et médiatique</h3>
-Cette levée des restrictions avait été fermement critiquée par de nombreux scientifiques dans une lettre ouverte au prestigieux journal médical <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)01589-0/fulltext">The Lancet</a>, qui l'avait qualifiée de "dangereuse et prématurée". Cette lettre ouverte a été reprise par différents médias  <a href="https://www.dailymail.co.uk/news/article-9766759/Experts-sign-letter-condemning-Government-s-dangerous-unethical-experiment.html">britanniques</a> et <a href="https://edition.cnn.com/2021/07/18/uk/boris-johnson-covid-gamble-freedom-day-intl-gbr-cmd/index.html">internationaux</a>, qui s'appuyaient sur les modélisations de l'Imperial College pour annoncer "une troisième vague importante d'hospitalisations et de décès" à la suite de la levée des restricitons.  
+Cette levée des restrictions avait été fermement critiquée par de nombreux scientifiques dans une lettre ouverte au prestigieux journal médical <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)01589-0/fulltext">The Lancet</a>, qui l'avait qualifiée de "dangereuse et prématurée". Cette lettre ouverte a été reprise par différents médias  <a href="https://www.dailymail.co.uk/news/article-9766759/Experts-sign-letter-condemning-Government-s-dangerous-unethical-experiment.html">britanniques</a> et <a href="https://edition.cnn.com/2021/07/18/uk/boris-johnson-covid-gamble-freedom-day-intl-gbr-cmd/index.html">internationaux</a>, qui s'appuyaient sur les modélisations de l'Imperial College pour annoncer "une troisième vague importante d'hospitalisations et de décès" à la suite de la levée des restricitons. Le fait que les modélisations aient largement surestimées l'impact de la réouverture a été <a href="https://www.nature.com/articles/d41586-021-02125-1">décrit</a> dans le journal scientifique Nature par un épidémiologiste renommé: "Personne ne comprend vraiment ce qu'il se passe."
 </p>
 </details>
 
