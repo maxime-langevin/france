@@ -120,9 +120,10 @@ Ces modélisations ont également été largement reprises dans la presse: <a hr
 
 <h3>Contexte</h3> 
 
-
+Au cours d'un hiver 2020-21 marqué par un couvre-feu prolongé, une dégradation de la situation sanitaire a mené l'INSERM et l'Institut Pasteur à publier des scénarios de modélisations. Ces scénarios ont notamment été utilisés par des scientifiques pour demander la mise en place d'un confinement strict début février.
+  
 <h3>Comparaison des scénarios aux données réelles</h3> 
-Au cours d'un hiver 2020-21 marqué par un couvre-feu prolongé, une dégradation de la situation sanitaire a mené l'INSERM et l'Institut Pasteur à publier des scénarios de modélisations. Ce sont notamment ceux-ci qui conduiront à l'adoption du 3ème confinement. 
+
 
 <h4>Scénarios de l'INSERM</h4> 
   
