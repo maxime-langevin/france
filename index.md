@@ -38,6 +38,17 @@
 }
 </style>
 
+## Pourquoi évaluer les scénarios de modélisation est-il important?
+impact majeur 
+Suède premier confinement 
+
+## Peut-on vraiment les évaluer?
+Oui, comparaison avec la réalité 
+Donner exemple pass sanitaire 26 juillet et 6 juillet 
+## Est-ce vraiment grave si les modélisations ne concordent pas avec la réalité? 
+Par exemple 2ème confinement 
+Angleterre levée des mesures
+
 ## Avant d'explorer les scénarios de modélisation
 <details><summary><b><div class="tooltip">Quel intérêt à étudier la fiabilité des scénarios de modélisations?
 </div></b></summary>
