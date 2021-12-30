@@ -75,7 +75,7 @@ Des modélisations trop pessimistes peuvent ainsi conduire à maintenir en place
  Pourtant, ces modélisations étaient largement pessimistes, et la catastrophe annoncée n'a pas eu lieu. Des modélisations non alignés avec la réalité ont donc failli empêcher un retour à une vie presque normale pour les Britanniques. <br />
 
 
-Une description plus détaillée des scénarios de modélisation est accessible sur la page <a href="https://evaluation-modelisation-covid.github.io/france/modelisations" class="btn">Modélisations</a>.
+Une description plus détaillée des scénarios de modélisation est accessible sur la page <a href="https://evaluation-modelisation-covid.github.io/france/modelisations">Modélisations.</a>
 
 
 
