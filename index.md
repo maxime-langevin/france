@@ -38,7 +38,7 @@
 }
 </style>
 
-Ce site vise à proposer une rétrospective sur les principaux scénarios de modélisation utilisés pour guider les décisions majeures prises depuis deux ans (par exemple confinements, couvre-feu, ou encore mise en place du pass sanitaire). Une description détaillée des scénarios de modélisations est accessible sur la page <a href="https://evaluation-modelisation-covid.github.io/france/modelisations" class="btn">Modélisations</a>. Une explication de l'importance de l'évaluation des scénarios de modélisation est accessible sur la page <a href="https://evaluation-modelisation-covid.github.io/france/impact" class="btn">Impact</a>. <br /> 
+Ce site vise à proposer une rétrospective sur les principaux scénarios de modélisation utilisés pour guider les décisions majeures prises depuis deux ans (par exemple confinements, couvre-feu, ou encore mise en place du pass sanitaire). Une description détaillée des scénarios de modélisations est accessible sur la page <a href="https://evaluation-modelisation-covid.github.io/france/modelisations">Modélisations.</a> Une explication de l'importance de l'évaluation des scénarios de modélisation est accessible sur la page <a href="https://evaluation-modelisation-covid.github.io/france/impact">Impact.</a> <br /> 
 ## Pourquoi évaluer les scénarios de modélisation est-il important?
 
 Les scénarios de modélisation jouent un rôle primordial dans les politiques publiques mises en place depuis le début de la pandémie de covid-19. 
