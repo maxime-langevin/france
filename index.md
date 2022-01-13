@@ -45,12 +45,12 @@ Les scénarios de modélisation jouent un rôle primordial dans les politiques p
 Par conséquent, pour pouvoir prendre de bonnes décisions, il est important d'avoir des scénarios de modélisation qui permettent de bien anticiper la réalité.
 <br /> 
 
-Par exemple, ce sont des <a href="https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/">scénarios de modélisation</a> qui ont conduit beaucoup de gouvernement à ne pas se limiter aux mesures traditionelles de lutte contre les épidémies (interdiction de grands rassemblements, fermetures d'écoles et de lieux de travail, et isolement des malades) pour aller vers un confinement strict.  <br /> 
+Par exemple, ce sont des <a href="https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/">scénarios de modélisation</a> qui ont conduit beaucoup de gouvernement à ne pas se limiter aux mesures traditionelles de lutte contre les épidémies (interdiction de grands rassemblements, fermetures d'écoles et de lieux de travail, et isolement des malades) pour aller vers un confinement strict. Ainsi, dans son <a href="https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf">rapport du 12 mars 2020</a>, le Conseil Scientifique a affirmé que les mesures classiques utilisées pour limiter la propagation des épidémies ne permettraient pas de limiter suffisament la circulation du virus, impliquant la nécessité d'un confinement strict ("on ne s’attend pas à ce que la réduction de la taille du pic épidémique soit suffisante pour éviter une saturation du système de santé. (...) Cette intuition a été illustrée à travers la réalisation d’un modèle COVID19 particulier (Neil Ferguson, communication personnelle)."), en se basant sur le modèle qui a produit les courbes ci-dessous. <br /> 
   
 <img src="images/Nombre de patients en réanimations en Suède.png" width="800">  <br /> 
 
-Ces modélisations prévoyaient qu'avec les mesures classiques (sans confinement), le nombre de patients en réanimations suivraient la courbe grise, tandis que la réalité est représentée par la courbe rouge.  <br /> 
-Cette exemple illustre l'importance que peuvent avoir les scénarios de modélisation, par exemple en décidant un gouvernement à mettre en place un confinement strict.
+Les modélisations ci-dessus prévoyaient qu'avec les mesures classiques (sans confinement), le nombre de patients en réanimations suivraient la courbe grise, tandis que la réalité est représentée par la courbe rouge.  <br /> 
+Cet exemple illustre l'importance que peuvent avoir les scénarios de modélisation, par exemple en décidant un gouvernement à mettre en place un confinement strict.
 
 ## Peut-on vraiment les évaluer?
 
