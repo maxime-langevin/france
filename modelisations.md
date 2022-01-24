@@ -104,7 +104,7 @@ Le 30 octobre, l’Institut Pasteur produit une mise à jour de ses scénarios p
 <h3>Comparaison des scénarios aux données réelles</h3> 
     
 
-<img src="images/Pasteur_2020_Novembre/Pasteur_novembre_new_reanimations.png" width="400"> <img src="images/Pasteur_2020_Novembre/Pasteur_novembre_reanimations.png" width="400">   <br /> 
+<img src="images/Pasteur_2020_Novembre/Pasteur_novembre_new_reanimations.svg" width="400"> <img src="images/Pasteur_2020_Novembre/Pasteur_novembre_reanimations.svg" width="400">   <br /> 
 
 <h3>Impact politique et médiatique</h3> 
 
@@ -138,7 +138,7 @@ Les mesures suivantes, susceptibles de modifier la trajectoires épidémiques et
 2. 25 mars : 3 nouveaux départements confinés
 3. 3 avril : confinement de toute la France  <br /> 
   
-<img src="images/INSERM/INSERM_16_janvier.png" width="400"> <img src="images/INSERM/INSERM_02_février.png" width="400">  <img src="images/INSERM/INSERM_14_février.png" width="400">  <br /> 
+<img src="images/INSERM/INSERM_16_janvier.svg" width="400"> <img src="images/INSERM/INSERM_02_février.svg" width="400">  <img src="images/INSERM/INSERM_14_février.svg" width="400">  <br /> 
 
 
 
@@ -146,7 +146,7 @@ Les mesures suivantes, susceptibles de modifier la trajectoires épidémiques et
 
 Pour les courbes se prolongeant en mars, il s’agit de 2 scénarios : l’un sans vaccination, l’un avec des hypothèses optimistes de vaccination. Il est précisé qu’ « en pratique, l’impact de la campagne actuelle est susceptible d’être intermédiaire entre les scénarios avec et sans vaccination ».  <br /> 
   
-<img src="images/Pasteur_2021_Février/Pasteur_2021_Février.png" width="400">  <br /> 
+<img src="images/Pasteur_2021_Février/Pasteur_2021_Février.svg" width="400">  <br /> 
 <h3>Impact politique et médiatique</h3>
 Les prévisions de l'INSERM ont été mises en avant dans un <a href="https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf">rapport spécial</a> du Conseil Scientifique qui demandait la mise en place d'un confinement strict à partir du lundi 8 février 2021. Selon ces modélisation, le nombre d'hospitalisations hebdomadaires aurait du être de plus de 30 000 à cette date (en réalité autour de 10 000), et continuer d'augmenter exponentiellement sans confinement strict (qui n'aura finalement lieu qu'un mois plus tard). 
   
@@ -168,11 +168,11 @@ Face à la perspective d’une submersion hospitalière que suggéraient ces sc�
   
 <h4>Scénarios du 26 juillet</h4> 
   
-<img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_hospital.png" width="400"> <img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_reanimation.png" width="400"> <img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_reanimation_beds.png" width="400">  <br /> 
+<img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_hospital.svg" width="400"> <img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_reanimation.svg" width="400"> <img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_reanimation_beds.svg" width="400">  <br /> 
   
 <h4>Scénarios du 5 août</h4> 
   
-<img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_hospconv.png" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_new_hosp.png" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_new_reanimation.png" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_reanimation.png" width="400">  <br /> 
+<img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_hospconv.svg" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_new_hosp.svg" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_new_reanimation.svg" width="400"> <img src="images/Pasteur_2021_Aout/Pasteur_2021_aout_reanimation.svg" width="400">  <br /> 
   
 <h3>Impact politique et médiatique</h3>
   
