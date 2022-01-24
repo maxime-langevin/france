@@ -77,7 +77,7 @@ En mars 2020, l'incertitude quand à l'impact qu'allait avoir le covid-19 était
 <h3>Comparaison des scénarios aux données réelles</h3> 
 Les scénarios ci-dessous sont issus d'un <a href="https://academic.oup.com/cid/article/71/12/3174/5866094">article</a> publié par des chercheurs suédois visant à appliquer le modèle de l'Imperial College à la situation suédoise et à son absence de mesures de confinement. Les chercheurs de l'Imperial College ont par la suite souhaiter se <a href="https://twitter.com/imperialcollege/status/1257991339364560898">désolidariser</a> de ces projections, affirmant qu'ils n'avaient jamais réalisé de prédictions pour la Suède. Pourtant, l'<a href="https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx ">appendice du rapport 12 de l'Imperial College</a> contient bien des modélisations de l'épidémie en Suède. Les résulats présentés y sont quasiment identiques à ceux publiés par les chercheurs suédois, reproduits ci-dessous.  <br /> 
   
-<img src="images/Nombre de patients en réanimations en Suède.png" width="400">  <br /> 
+<img src="images/Imperial_Sweden/Sweden_deaths.svg" width="400">  <br /> 
   
 Les scénarios de modélisation (en gris), qui intégraient les mesures de restrictions mises en place par la Suède, prévoyaient un pic à plus de 25 000 patients en réanimation, quand la réalité (en rouge) n'a jamais dépassé les 600. Les modèles épidémiologiques qui ont conduit le monde à se confiner surestimaient donc de plus de 3000% la saturation du système hospitalier en l'absence de confinement. 
   
