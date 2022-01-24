@@ -218,3 +218,11 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
 </p>
 </details>
 
+
+<details><summary><b><div class="tooltip">6. Seconde vague delta, décembre 2021 
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+  <img src="images/Pasteur_2021_Decembre_projection/Pasteur_2021_decembre_projection_beds_hosp.svg" width="400"><img src="images/Pasteur_2021_Decembre_projection/Pasteur_2021_decembre_projection_beds_SC.svg" width="400"><img src="images/Pasteur_2021_Decembre_projection/Pasteur_2021_decembre_projection_new_hosp.svg" width="400"><img src="images/Pasteur_2021_Decembre_projection/Pasteur_2021_decembre_projection_new_SC.svg" width="400">
+</p>
+</details>
