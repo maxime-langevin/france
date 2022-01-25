@@ -67,7 +67,7 @@ Ainsi, la comparaison entre scénarios de modélisation et réalité permettra b
 ### 1. Mars 2020: les modélisations qui ont conduit le monde à se confiner
 
 <details><summary><b><div class="tooltip">
-  <span class="tooltiptext"><h3>Contexte</h3></span>
+  <span class="tooltiptext">Contexte</span>
 </div></b></summary>
 <p>
 
@@ -78,7 +78,7 @@ En mars 2020, l'incertitude quant à l'impact qu'allait avoir le covid-19 était
 </details>
 
 <details><summary><b><div class="tooltip">
-  <span class="tooltiptext"><h3>Comparaison des scénarios aux données réelles</h3> </span>
+  <span class="tooltiptext">Comparaison des scénarios aux données réelles</span>
 </div></b></summary>
 <p>
 
@@ -94,8 +94,7 @@ Les scénarios de modélisation (en gris), qui intégraient les mesures de restr
 <img src="images/Imperial_Sweden/Sweden_deaths.svg" width="400"><img src="images/Imperial_Sweden/Sweden_hospital.svg" width="400"><img src="images/Imperial_Sweden/Sweden_icu.svg" width="400">  <br /> 
 
 <details><summary><b><div class="tooltip">
-  <span class="tooltiptext"><h3>Impact politique et médiatique</h3> 
- </span>
+  <span class="tooltiptext">Impact politique et médiatique</span>
 </div></b></summary>
 <p>
 Ces modélisations ont eu un impact majeur. En effet, elles furent un des principaux élément déclencheur du confinement national français (qui influencera d'autres pays européens à suivre la même voie). Ainsi, dans son <a href="https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf">rapport du 12 mars 2020</a>, le Conseil Scientifique a affirmé que les mesures classiques utilisées pour limiter la propagation des épidémies ne permettraient pas de limiter suffisamment la circulation du virus, impliquant la nécessité d'un confinement strict ("on ne s’attend pas à ce que la réduction de la taille du pic épidémique soit suffisante pour éviter une saturation du système de santé. (...) Cette intuition a été illustrée à travers la réalisation d’un modèle COVID19 particulier (Neil Ferguson, communication personnelle).")
