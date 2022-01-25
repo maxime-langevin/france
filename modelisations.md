@@ -64,24 +64,40 @@ Ainsi, la comparaison entre scénarios de modélisation et réalité permettra b
 
 ## Retour sur les principaux scénarios de modélisation 
 
-<details><summary><b><div class="tooltip">1. Mars 2020: les modélisations qui ont conduit le monde à se confiner
-  <span class="tooltiptext">Explorer ce scénario</span>
+### 1. Mars 2020: les modélisations qui ont conduit le monde à se confiner
+
+<details><summary><b><div class="tooltip">
+  <span class="tooltiptext"><h3>Contexte</h3></span>
 </div></b></summary>
 <p>
 
-<h3>Contexte</h3> 
 
 En mars 2020, l'incertitude quant à l'impact qu'allait avoir le covid-19 était grande. Lorsque l'Italie a commencé à être fortement touchée, à la mi-mars, de nombreux pays européens ont réalisé que le covid-19 risquait d'avoir un impact significatif.  Pour prévoir l'évolution et l'impact de la pandémie, les décideurs se sont tournés vers le domaine de la modélisation épidémiologique. Une équipe de scientifiques de l'Imperial College (Londres), menée par le Professeur Neil Ferguson, a notamment publié le <a href="https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/">rapport</a> qui a conduit de nombreux gouvernements européens, dont le gouvernement <a href="https://www.lemonde.fr/planete/article/2020/03/15/coronavirus-les-simulations-alarmantes-des-epidemiologistes-pour-la-france_6033149_3244.html">français</a>, à confiner leur pays. Les scénarios présentés dans le rapport prédisaient, en l'absence de mesures strictes, plus de 500 000 morts en moins de 3 mois au Royaume-Uni. En revanche, le rapport avançait que la mise en place de mesures strictes (type confinement) permettrait de contenir la vague et d'éviter une saturation du système hospitalier. Se fiant à ce rapport, les gouvernements ont pour beaucoup choisi de mettre en place des mesures strictes afin de rester dans le deuxième scénario. Bien évidemment, les projections faites <em>en l'absence de mesures</em> ne peuvent être comparées avec ce qui s'est passé dans les pays confinés. C'est d'ailleurs l'un des contre-arguments les plus communs aux détracteurs des modèles épidémiologiques: c'est précisément grâce aux mesures que les scénarios de modélisation ne se sont pas réalisés.
   Mais il y a un pays qui nous permet de tester la validité des scénarios de modélisation: la Suède. Lors de la première vague, la Suède a choisi de ne pas se confiner, préférant se reposer des mesures plus légères. Il est donc possible de comparer ce que prévoyaient les scénarios pour la Suède et la réalité.
-  
-<h3>Comparaison des scénarios aux données réelles</h3> 
+</p>
+</details>
+
+<details><summary><b><div class="tooltip">
+  <span class="tooltiptext"><h3>Comparaison des scénarios aux données réelles</h3> </span>
+</div></b></summary>
+<p>
+
 Bien que les chercheurs de l'Imperial College aient par la suite souhaiter se <a href="https://twitter.com/imperialcollege/status/1257991339364560898">désolidariser</a> de ces projections, affirmant qu'ils n'avaient jamais réalisé de prédictions pour la Suède, l'<a href="https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx ">appendice du rapport 12 de l'Imperial College</a> contient bien des modélisations de l'épidémie en Suède. Leurs resultats sont présentés ci-dessous. Les résulats présentés y sont quasiment similaires à ceux <a href="https://www.medrxiv.org/content/10.1101/2020.04.11.20062133v1">publiés</a> par des chercheurs suédois ayant également appliqués le modèle de l'Imperial College à la Suède.  <br /> 
-  
-<img src="images/Imperial_Sweden/Sweden_deaths.svg" width="400"><img src="images/Imperial_Sweden/Sweden_hospital.svg" width="400"><img src="images/Imperial_Sweden/Sweden_icu.svg" width="400">  <br /> 
-  
+
+ 
 Les scénarios de modélisation (en gris), qui intégraient les mesures de restrictions mises en place par la Suède, prévoyaient un pic à plus de 30 000 patients en réanimation, quand la réalité (en rouge) n'a jamais dépassé les 600. Les modèles épidémiologiques qui ont conduit le monde à se confiner surestimaient donc de plus de 5000% la saturation du système hospitalier en l'absence de confinement. 
   
-<h3>Impact politique et médiatique</h3> 
+ 
+</p>
+</details>
+
+<img src="images/Imperial_Sweden/Sweden_deaths.svg" width="400"><img src="images/Imperial_Sweden/Sweden_hospital.svg" width="400"><img src="images/Imperial_Sweden/Sweden_icu.svg" width="400">  <br /> 
+
+<details><summary><b><div class="tooltip">
+  <span class="tooltiptext"><h3>Impact politique et médiatique</h3> 
+ </span>
+</div></b></summary>
+<p>
 Ces modélisations ont eu un impact majeur. En effet, elles furent un des principaux élément déclencheur du confinement national français (qui influencera d'autres pays européens à suivre la même voie). Ainsi, dans son <a href="https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf">rapport du 12 mars 2020</a>, le Conseil Scientifique a affirmé que les mesures classiques utilisées pour limiter la propagation des épidémies ne permettraient pas de limiter suffisamment la circulation du virus, impliquant la nécessité d'un confinement strict ("on ne s’attend pas à ce que la réduction de la taille du pic épidémique soit suffisante pour éviter une saturation du système de santé. (...) Cette intuition a été illustrée à travers la réalisation d’un modèle COVID19 particulier (Neil Ferguson, communication personnelle).")
 La figure présentée ci-dessus montrant que ces modèles surestimaient largement ce qui se passait avec des mesures classiques de contrôle des épidémies, cette affirmation était donc en réalité totalement fausse. 
 
