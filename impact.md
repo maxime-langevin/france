@@ -9,10 +9,3 @@ On peut penser qu'il vaut mieux surestimer la réalité, et donc mener les déci
 
 Dans un cas de figure où les scénarios sous-estimeraient l'évolution de l'épidémie (A), le risque serait que les décideurs sous-estiment aussi l'évolution de l'épidémie et ne réagissent pas, ou pas assez. Inversement, si les scénarios surestiment l'évolution de l'épidémie (B), le risque est de surréagir et notamment de prendre trop de mesures aux effets délétères sans qu'elles soient justifiées. <br /> 
 
-<img src="images/explication_impact_mesures.PNG" width="600">  <br /> 
-
-Les scénarios de modélisation jouent également un rôle majeur dans l'évaluation de l'impact des mesures de freinage de l'épidémie. Des scénarios qui tendent à surestimer l'évolution de l'épidémie sans mesures vont également surestimer l'impact des restrictions mises en place (B), tandis que des scénarios qui sous-estimeraient l'évolution de l'épidémie sans mesures sous-estimeraient aussi l'impact des restrictions (A). 
-
-
-
-
