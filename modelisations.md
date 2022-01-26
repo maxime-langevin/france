@@ -259,7 +259,7 @@ Nous comparons ici la projection du modèle 2 semaines avant le pic de la second
 
 Malgré une précision moyenne de 10% du modèle selon l’Institut Pasteur, au moment du pic, l’erreur réelle aura été bien plus élevée. Nous aurions souhaité comparer les projections du modèle aux autres pics (février 2021, avril 2021, août 2021) afin d’évaluer s’il s’agissait d’une erreur ponctuelle ou d’un biais systématique. <br /> 
 
-Malheureusement la mise à jour régulière des projections sur la page présentant les résultats écrase les projections publiées précédemment, et nous n’avons pas pu effectuer cette évaluation systématique. Une conservation des résultats précédents en open data aiderait une telle démarche et une appropriation par le public. <br /> 
+Malheureusement la mise à jour régulière des projections sur <a href = https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/>la page présentant les résultats</a> écrase les projections publiées précédemment, et nous n’avons pas pu effectuer cette évaluation systématique. Une conservation des résultats précédents en open data aiderait une telle démarche et une appropriation par le public. <br /> 
 
   
 </p>
