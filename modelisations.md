@@ -81,11 +81,11 @@ En mars 2020, l'incertitude quant à l'impact qu'allait avoir le covid-19 était
 </div></b></summary>
 <p>
   
+L'<a href="https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx ">appendice du rapport 12 de l'Imperial College</a> contient des modélisations de l'épidémie en Suède.  <br /> 
 
-Bien que les chercheurs de l'Imperial College aient par la suite souhaiter se <a href="https://twitter.com/imperialcollege/status/1257991339364560898">désolidariser</a> de ces projections, affirmant qu'ils n'avaient jamais réalisé de prédictions pour la Suède, l'<a href="https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx ">appendice du rapport 12 de l'Imperial College</a> contient bien des modélisations de l'épidémie en Suède. Leurs resultats sont présentés ci-dessous. Les résulats présentés y sont quasiment similaires à ceux <a href="https://www.medrxiv.org/content/10.1101/2020.04.11.20062133v1">publiés</a> par des chercheurs suédois ayant également appliqués le modèle de l'Imperial College à la Suède.  <br /> 
+Les scénarios (en gris) modélisant un confinement strict tel qu'adoptés par les autres pays européens anticipaient un pic de réanimation compris entre 1200 et 6800 patient. La réalité (en rouge) a été de 550, soit 2 à 12 fois moins, alors même que la Suède n'a PAS confiné sa population. Nous avons aussi représenter la projection du modèle en l'absence de mesure (qui ne représente pas la réalité, la Suède n'ayant pas "rien fait"). Cela permet d'imaginer le résultat si les chercheurs avaient modélisé l'approche effectivement suivie par la Suède, le résultat se trouvant quelque part entre un confinement strict et l'absence de mesure. <br /> 
 
- 
-Les scénarios de modélisation (en gris), qui intégraient les mesures de restrictions mises en place par la Suède, prévoyaient un pic à plus de 30 000 patients en réanimation, quand la réalité (en rouge) n'a jamais dépassé les 600. Les modèles épidémiologiques qui ont conduit le monde à se confiner surestimaient donc de plus de 5000% la saturation du système hospitalier en l'absence de confinement. 
+Les modèles épidémiologiques qui ont conduit le monde à se confiner surestimaient très largement saturation du système hospitalier en l'absence de confinement (saturation qui n'a pas eu lieu en Suède). 
   
  
 </p>
