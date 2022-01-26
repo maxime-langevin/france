@@ -85,7 +85,7 @@ L'<a href="https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/I
 
 Les scénarios (en gris) modélisant un confinement strict tel qu'adoptés par les autres pays européens anticipaient un pic de réanimation compris entre 1200 et 6800 patient. La réalité (en rouge) a été de 550, soit 2 à 12 fois moins, alors même que la Suède n'a PAS confiné sa population. Nous avons aussi représenter la projection du modèle en l'absence de mesure (qui ne représente pas la réalité, la Suède n'ayant pas "rien fait"). Cela permet d'imaginer le résultat si les chercheurs avaient modélisé l'approche effectivement suivie par la Suède, le résultat se trouvant quelque part entre un confinement strict et l'absence de mesure. <br /> 
 
-Les modèles épidémiologiques qui ont conduit le monde à se confiner surestimaient très largement saturation du système hospitalier en l'absence de confinement (saturation qui n'a pas eu lieu en Suède). 
+Les modèles épidémiologiques qui ont conduit le monde à se confiner surestimaient très largement saturation du système hospitalier en l'absence de confinement, au moins dans le cas de la Suède. 
   
  
 </p>
