@@ -50,7 +50,7 @@ Ainsi, dans son <a href="https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_
   
 <img src="images/Imperial_Sweden/Sweden_icu.png" width="800">  <br /> 
 
-Les modélisations ci-dessus prévoyaient qu'avec les mesures classiques (sans confinement), le nombre total de patients en réanimation suivraient la barre grise, tandis que la réalité est représentée par la barre rouge.  <br /> 
+Les scénarios du modèle sont représentés par les barres grises, représentant 2 extrêmes : un confinement stric tel que suivi par les autres pays européens, et aucune mesure. L'approche suivie par la Suède est intérmédiaire, quelque part entre les deux. On voit que les scénarios ont largement surestimé la taille du pic hospitalier : même le scénario avec un confinement le plus optimiste surestime ce pic par un facteur 2, alors même que la Suède n'a pas confiné sa population. <br /> 
 Cet exemple illustre l'importance que peuvent avoir les scénarios de modélisation, par exemple en décidant un gouvernement à mettre en place un confinement strict.
 
 ## Peut-on vraiment les évaluer?
