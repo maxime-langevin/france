@@ -162,7 +162,7 @@ Les mesures suivantes, susceptibles de modifier la trajectoire épidémique et m
 
 Pour les courbes se prolongeant en mars, il s’agit de 2 scénarios : l’un sans vaccination, l’un avec des hypothèses optimistes de vaccination. Il est précisé qu’ « en pratique, l’impact de la campagne actuelle est susceptible d’être intermédiaire entre les scénarios avec et sans vaccination ».  <br /> 
   
-<img src="images/Pasteur_2021_Février/Pasteur_2021_Février.svg" width="400">  <br /> 
+<img src="images/Pasteur_2021_Février/Pasteur_2021_Février.svg" width="400">  <br /> 
 <h3>Impact politique et médiatique</h3>
 Les prévisions de l'INSERM ont été mises en avant dans un <a href="https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf">rapport spécial</a> du Conseil Scientifique qui demandait la mise en place d'un confinement strict à partir du lundi 8 février 2021. Selon ces modélisations, le nombre d'hospitalisations hebdomadaires aurait dû être de plus de 30 000 à cette date (en réalité autour de 10 000), et continuer d'augmenter exponentiellement sans confinement strict (qui n'aura finalement lieu qu'un mois plus tard). 
   
