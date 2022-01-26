@@ -210,7 +210,6 @@ Les modélisations de l'Institut Pasteur ont été également utilisé par le Co
 </p>
 </details>
 
-
 <details><summary><b><div class="tooltip">5. Levée des restrictions: Freedom Day au Royaume-Uni 
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
