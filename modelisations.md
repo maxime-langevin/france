@@ -236,7 +236,7 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
 
 
 <details><summary><b><div class="tooltip">6. Seconde vague delta, décembre 2021 
-  <span class="tooltiptext">Explorer ce scénario</span>
+  <span class="tooltiptext">Explorer ces projections</span>
 </div></b></summary>
 <p>
   
@@ -244,14 +244,14 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
   
 Une critique souvent apportée à la comparaison des données réelles aux “scénarios” telle que réalisée ci-dessus est que ces derniers ne constituent pas des “prédictions”, et servent simplement à donner une idée des grandes tendances et de l’impact de différentes mesures. <br /> 
 
-Au-delà des scénarios présentés dans ses rapports, l’Institut Pasteur publié également des “Projection à court terme des besoins hospitaliers” sur cette page, régulièrement mise à jour. Ici, le but est bien de prévoir correctement le nombre de malades, l’Institut précisant que “l’erreur relative pour les projections du nombre de lits de soins critiques au niveau national est de 11% à 14 jours.“ <br /> 
+Néanmoins, au-delà des scénarios présentés dans ses rapports, l’Institut Pasteur publié également des “Projection à court terme des besoins hospitaliers” sur <a href = https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/> cette page </a>, régulièrement mise à jour. Ici, le but est bien de prévoir correctement le nombre de malades, l’Institut précisant que “l’erreur relative pour les projections du nombre de lits de soins critiques au niveau national est de 11% à 14 jours.“ <br /> 
 
 Nous comparons ici la projection du modèle 2 semaines avant le pic de la seconde vague delta de mi-décembre 2021. Ce pic est intervenu juste avant l’émergence du variant omicron, qui a changé la donne dans les semaines qui ont suivi. <br /> 
 
   
   
   
-  <h3>Comparaison des scénarios aux données réelles</h3> 
+  <h3>Comparaison des projections aux données réelles</h3> 
   
   <img src="images/Pasteur_2021_Decembre_projection/Pasteur_2021_decembre_projection_beds_hosp.svg" width="400"><img src="images/Pasteur_2021_Decembre_projection/Pasteur_2021_decembre_projection_beds_SC.svg" width="400"><img src="images/Pasteur_2021_Decembre_projection/Pasteur_2021_decembre_projection_new_hosp.svg" width="400"><img src="images/Pasteur_2021_Decembre_projection/Pasteur_2021_decembre_projection_new_SC.svg" width="400">
   
