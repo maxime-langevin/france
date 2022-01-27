@@ -6,7 +6,7 @@
   position: relative;
   display: inline-block;
   text-decoration: none;
-  padding: 25px 0;
+  padding: 10px 0;
 
 }
 
@@ -42,7 +42,7 @@
 </style>
 
 ## Avant d'explorer les scénarios de modélisation
-<details><summary><b><div class="tooltip" style="text-decoration: none;">Quel intérêt à étudier la fiabilité des scénarios de modélisations?
+<details><summary><b><div class="tooltip">Quel intérêt à étudier la fiabilité des scénarios de modélisations?
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
