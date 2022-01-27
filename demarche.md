@@ -37,10 +37,10 @@
 }
 </style>
 
-## Notre démarche
+## <span style="color:black">Notre démarche</span> 
 
 Ce site vise à proposer une rétrospective sur les principaux scénarios de modélisation utilisés pour guider les décisions majeures prises depuis deux ans (par exemple confinements, couvre-feu, ou encore mise en place du pass sanitaire). Une description détaillée des scénarios de modélisations est accessible sur la page <a href="https://evaluation-modelisation-covid.github.io/france/">Accueil.</a> Une explication de l'importance de l'évaluation des scénarios de modélisation est accessible sur la page <a href="https://evaluation-modelisation-covid.github.io/france/impact">Impact.</a> <br /> 
-## Pourquoi évaluer les scénarios de modélisation est-il important?
+## <span style="color:black">Pourquoi évaluer les scénarios de modélisation est-il important?</span> 
 
 Les scénarios de modélisation jouent un rôle primordial dans les politiques publiques mises en place depuis le début de la pandémie de covid-19. 
 Par conséquent, pour pouvoir prendre de bonnes décisions, il est important d'avoir des scénarios de modélisation qui permettent de bien anticiper la réalité.
@@ -58,7 +58,7 @@ On voit que les scénarios ont largement surestimé la taille du pic hospitalier
 
 Cet exemple illustre l'importance que peuvent avoir les scénarios de modélisation, par exemple en décidant un gouvernement à mettre en place un confinement strict.
 
-## Peut-on vraiment les évaluer?
+## <span style="color:black">Peut-on vraiment les évaluer?</span> 
 
 Un argument souvent entendu au sujet des scénarios de modélisation est le suivant: comme le scénario permet d'anticiper le pire, il mène à prendre des mesures qui vont justement empêcher que le scénario modélisé se produisent, ce qui explique le décalage entre le scénario de modélisation et la réalité (où des mesures de freinage ont été prises!). Effectivement, il n'est pas possible d'établir une comparaison dans ce cas de figure. <br /> 
   
@@ -71,7 +71,7 @@ Par exemple, lors de la 4ème vague, l'Institut Pasteur avait d'abord publié un
 <img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_hospital.png" width="400"> <img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_reanimation.png" width="400"> <img src="images/Pasteur_2021_Juillet/Pasteur_2021_juillet_reanimation_beds.png" width="400">  <br /> <br /> 
 Ces scénarios comparent les prévisions faites pour le mois d'août 2021 avec l'évolution réelle durant les mois d'août: comme les scénarios intègrent les mesures mises en place, la comparaison est possible. 
 
-## Est-ce vraiment grave si les modélisations ne concordent pas avec la réalité? 
+## <span style="color:black">Est-ce vraiment grave si les modélisations ne concordent pas avec la réalité?</span>  
 
 On peut penser qu'il vaut mieux surestimer la réalité et "prévoir systématiquement le pire", et donc mener les politiques à réagir avec un surplus de mesures pour limiter la propagation de l'épidémie. En réalité, la plupart des mesures de freinage de l'épidémie (confinement, couvre-feu, fermeture de classes, fermetures de lieux publics) ont des impacts sanitaires, sociaux et économiques négatifs. Par conséquent, surréagir face à l'épidémie n'est pas une bonne chose (de même que ne pas réagir assez). <br />
 <img src="images/explication_simulation_enjeu.PNG" width="600">  <br /> 
