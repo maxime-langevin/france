@@ -1,6 +1,6 @@
 
 
-## Quel est l'impact des scénarios de modélisation?
+## <span style="color:black">Quel est l'impact des scénarios de modélisation?</span> 
 
 Pourquoi se poser la question de l'évaluation des scénarios de modélisation? 
 La prise de décision au cours de la pandémie de covid-19 est marquée par l'incertitude: incertitude sur l'évolution de l'épidémie, et incertitude sur l'impact des mesures prises en réaction. Les scénarios de modélisation sont utilisés pour informer les décideurs (conseil scientifique, conseil de défense sanitaire...). Par conséquent, pour pouvoir prendre de bonnes décisions, il est important d'avoir des scénarios de modélisation qui permettent de bien anticiper la réalité.
