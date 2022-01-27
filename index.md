@@ -152,7 +152,6 @@ Ces modélisations ont également été largement reprises dans la presse: <a hr
 </div></b></summary>
 <p>
 
-<h3>Contexte</h3> 
 
 Au cours d'un hiver 2020-21 marqué par un couvre-feu prolongé, une dégradation de la situation sanitaire a mené l'INSERM et l'Institut Pasteur à publier des scénarios de modélisations. Ces scénarios ont notamment été utilisés par des scientifiques pour demander la mise en place d'un confinement strict début février.
 
@@ -211,6 +210,8 @@ Face à la perspective d’une submersion hospitalière que suggéraient ces sc�
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
+  Pour le rapport du 26 juillet, la réalité est environ 2 fois moins grande que les scénarios les plus optimistes ; 3 à 4 fois moins grande que les scénarios médians ; 1à fois moins grande que les scénarios pessimistes.<br /> <br /> 
+  Le rapport publié 10 jour plus tard corrige partiellement cette surestimation, la réalité correspondant environ au scénario le plus optimiste.
 </p>
 </details>
   
@@ -228,7 +229,7 @@ Face à la perspective d’une submersion hospitalière que suggéraient ces sc�
 </div></b></summary>
 <p>
 
-En ligne avec les projections présentées, le président du conseil scientifique Jean-François Delfraissy prévoyait alors une situation compliquée lors de son audition <a href="https://www.publicsenat.fr/article/parlementaire/covid-19-jean-francois-delfraissy-prevoit-une-situation-tres-complexe-dans-les">devant les sénateurs.</a>
+En ligne avec les projections présentées, le président du conseil scientifique Jean-François Delfraissy prévoyait alors une situation hospitalière compliquée pour fin août lors de son audition <a href="https://www.publicsenat.fr/article/parlementaire/covid-19-jean-francois-delfraissy-prevoit-une-situation-tres-complexe-dans-les">devant les sénateurs.</a>
 
 Il <a href="https://www.publicsenat.fr/article/parlementaire/covid-19-jean-francois-delfraissy-prevoit-une-situation-tres-complexe-dans-les">prévoyait également</a> que l'on allait:
   
@@ -254,8 +255,11 @@ Les modélisations de l'Institut Pasteur ont été également utilisé par le Co
 </div></b></summary>
 <p>
 
-Les modélisations présentées plus tôt permettent de comparer la réalité et les scénarios lorsque des restrictions sont en place. Mais comment se comparent les scénarios et la réalité dans le cas où les mesures de restrictions sont levées? Pour donner un élément de réponse à cette question, nous présentons une comparaison entre scénarios de modélisation et réalité dans le cas du "Freedom day", jour de levée de la quasi-totalité des mesures restrictives au Royaume-Uni. 
-Le 19 juillet, dans le cadre de son plan de sortie de crise, le gouvernement britannique a en effet décidé de <a href="https://news.sky.com/story/covid-19-what-are-the-remaining-rules-in-england-after-freedom-day-12359221">lever</a> la plupart de ses mesures de restrictions (telles que limitations de capacité dans les lieux accueillant du public, port du masque obligatoire ou encore limitations de déplacement). Contrairement à d'autres pays européens, ce retour à la normale ne comprenait pas la mise en place d'un "pass sanitaire" pour accéder à des événements ou lieux publics. 
+Les modélisations présentées plus tôt permettent de comparer la réalité et les scénarios lorsque des restrictions sont en place. Mais comment se comparent les scénarios et la réalité dans le cas où les mesures de restrictions sont levées? <br /> <br /> 
+  
+  Pour donner un élément de réponse à cette question, nous présentons une comparaison entre scénarios de modélisation et réalité dans le cas du "Freedom day", jour de levée de la quasi-totalité des mesures restrictives au Royaume-Uni. 
+Le 19 juillet, dans le cadre de son plan de sortie de crise, le gouvernement britannique a en effet décidé de <a href="https://news.sky.com/story/covid-19-what-are-the-remaining-rules-in-england-after-freedom-day-12359221">lever</a> la plupart de ses mesures de restrictions (telles que limitations de capacité dans les lieux accueillant du public, port du masque obligatoire ou encore limitations de déplacement). <br /> <br /> 
+  Contrairement à d'autres pays européens, ce retour à la normale ne comprenait pas la mise en place d'un "pass sanitaire" pour accéder à des événements ou lieux publics. 
 
 </p>
 </details>
@@ -269,13 +273,14 @@ Les données présentées ci-dessous comparent la réalité avec les différents
 du rapport du 7 juillet du SAGE (Scientific Advisory Group for Emergencies), et la mise en forme provient du site du <a href="https://data.spectator.co.uk/category/sage-scenarios">Spectator</a>. Les données montrent l'évolution du nombre de patients covid hospitalisés au cours du temps.  <br /> 
 </p>
 </details>
- <img src="sage_summer.png" width="400">
+ <img src="sage_summer.png" width="600">
 
 <details><summary><b><div class="tooltip">Impact politique et médiatique
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
-Cette levée des restrictions avait été fermement critiquée par de nombreux scientifiques dans une lettre ouverte au prestigieux journal médical <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)01589-0/fulltext">The Lancet</a>, qui l'avait qualifiée de "dangereuse et prématurée". Cette lettre ouverte a été reprise par différents médias  <a href="https://www.dailymail.co.uk/news/article-9766759/Experts-sign-letter-condemning-Government-s-dangerous-unethical-experiment.html">britanniques</a> et <a href="https://edition.cnn.com/2021/07/18/uk/boris-johnson-covid-gamble-freedom-day-intl-gbr-cmd/index.html">internationaux</a>, qui s'appuyaient sur les modélisations de l'Imperial College pour annoncer "une troisième vague importante d'hospitalisations et de décès" à la suite de la levée des restrictions. Le fait que les modélisations aient largement surestimées l'impact de la réouverture a été <a href="https://www.nature.com/articles/d41586-021-02125-1">décrit</a> dans le journal scientifique Nature par un épidémiologiste renommé: "Personne ne comprend vraiment ce qu'il se passe."
+Cette levée des restrictions avait été fermement critiquée par de nombreux scientifiques dans une lettre ouverte au prestigieux journal médical <a href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)01589-0/fulltext">The Lancet</a>, qui l'avait qualifiée de "dangereuse et prématurée". Cette lettre ouverte a été reprise par différents médias  <a href="https://www.dailymail.co.uk/news/article-9766759/Experts-sign-letter-condemning-Government-s-dangerous-unethical-experiment.html">britanniques</a> et <a href="https://edition.cnn.com/2021/07/18/uk/boris-johnson-covid-gamble-freedom-day-intl-gbr-cmd/index.html">internationaux</a>, qui s'appuyaient sur les modélisations de l'Imperial College pour annoncer "une troisième vague importante d'hospitalisations et de décès" à la suite de la levée des restrictions.<br /> <br /> 
+  Le fait que les modélisations aient largement surestimées l'impact de la réouverture a été <a href="https://www.nature.com/articles/d41586-021-02125-1">décrit</a> dans le journal scientifique Nature par un épidémiologiste renommé: "Personne ne comprend vraiment ce qu'il se passe."
 </p>
 </details>
 
@@ -287,9 +292,9 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
 </div></b></summary>
 <p>
     
-Une critique souvent apportée à la comparaison des données réelles aux “scénarios” telle que réalisée ci-dessus est que ces derniers ne constituent pas des “prédictions”, et servent simplement à donner une idée des grandes tendances et de l’impact de différentes mesures. <br /> 
+Une critique souvent apportée à la comparaison des données réelles aux “scénarios” telle que réalisée ci-dessus est que ces derniers ne constituent pas des “prédictions”, et servent simplement à donner une idée des grandes tendances et de l’impact de différentes mesures. <br /> <br /> 
 
-Néanmoins, au-delà des scénarios présentés dans ses rapports, l’Institut Pasteur publié également des “Projection à court terme des besoins hospitaliers” sur <a href = https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/> cette page </a>, régulièrement mise à jour. Ici, le but est bien de prévoir correctement le nombre de malades, l’Institut précisant que “l’erreur relative pour les projections du nombre de lits de soins critiques au niveau national est de 11% à 14 jours.“ <br /> 
+Néanmoins, au-delà des scénarios présentés dans ses rapports, l’Institut Pasteur publié également des “Projection à court terme des besoins hospitaliers” sur <a href = "https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/"> cette page </a>, régulièrement mise à jour. Ici, le but est bien de prévoir correctement le nombre de malades, l’Institut précisant que “l’erreur relative pour les projections du nombre de lits de soins critiques au niveau national est de 11% à 14 jours.“ <br /> <br /> 
 
 Nous comparons ici la projection du modèle 2 semaines avant le pic de la seconde vague delta de mi-décembre 2021. Ce pic est intervenu juste avant l’émergence du variant omicron, qui a changé la donne dans les semaines qui ont suivi. <br /> 
 
@@ -304,11 +309,11 @@ Nous comparons ici la projection du modèle 2 semaines avant le pic de la second
 </div></b></summary>
 <p>
     
-  Au moment du pic du variant delta, la projection du modèle correspond à une surestimation de 30% pour les lits de soins critiques, et d’environ 40% pour les autres indicateurs. <br /> 
+  Au moment du pic du variant delta, la projection du modèle correspond à une surestimation 2 semaines plus tard de 30% pour les lits de soins critiques, et d’environ 40% pour les autres indicateurs. <br /> <br /> 
 
-Malgré une précision moyenne de 10% du modèle selon l’Institut Pasteur, au moment du pic, l’erreur réelle aura été bien plus élevée. Nous aurions souhaité comparer les projections du modèle aux autres pics (février 2021, avril 2021, août 2021) afin d’évaluer s’il s’agissait d’une erreur ponctuelle ou d’un biais systématique. <br /> 
+Malgré une précision moyenne de 10% du modèle selon l’Institut Pasteur, au moment du pic, l’erreur réelle aura été bien plus élevée. Nous aurions souhaité comparer les projections du modèle aux autres pics (février 2021, avril 2021, août 2021) afin d’évaluer s’il s’agissait d’une erreur ponctuelle ou d’un biais systématique. Une telle évaluation est importante car c'est l'anticipation d'un pic hospitalier qui conditionne la réponse politique. <br /> <br /> 
 
-Malheureusement la mise à jour régulière des projections sur <a href = https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/>la page présentant les résultats</a> écrase les projections publiées précédemment, et nous n’avons pas pu effectuer cette évaluation systématique. Une conservation des résultats précédents en open data aiderait une telle démarche et une appropriation par le public. <br /> 
+Malheureusement la mise à jour régulière des projections sur <a href = "https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/">la page présentant les résultats</a> écrase les projections publiées précédemment, et nous n’avons pas pu effectuer cette évaluation systématique. Une conservation des résultats précédents en open data aiderait une telle démarche et une appropriation par les citoyens. <br /> 
 
   
 </p>
