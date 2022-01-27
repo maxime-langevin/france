@@ -65,9 +65,8 @@ Ainsi, la comparaison entre scénarios de modélisation et réalité permettra b
 </p>
 </details>
 
-## Retour sur les principaux scénarios de modélisation 
-
-### 1. Mars 2020: les modélisations qui ont conduit le monde à se confiner
+## <span style="color:black">Retour sur les principaux scénarios de modélisation </span> 
+### <span style="color:black">1. Mars 2020: les modélisations qui ont conduit le monde à se confiner</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ce scénario</span>
@@ -111,7 +110,7 @@ La figure présentée ci-dessus montrant que ces modèles surestimaient largemen
 </details>
 
 
-### 2. Modélisations de la 2ème vague, et deuxième confinement
+### <span style="color:black">2. Modélisations de la 2ème vague, et deuxième confinement</span>
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
@@ -144,7 +143,7 @@ Ces modélisations ont également été largement reprises dans la presse: <a hr
 
 </details>
 
-### 3. Entre la deuxième et la troisième vague: le couvre-feu étendu
+### <span style="color:black">3. Entre la deuxième et la troisième vague: le couvre-feu étendu</span>
 
 
 <details><summary><b><div class="tooltip">Contexte
@@ -193,7 +192,7 @@ Les prévisions de l'INSERM ont été mises en avant dans un <a href="https://so
 </p>
 </details>
 
-### 4. Modélisations de la 4ème vague
+### <span style="color:black">4. Modélisations de la 4ème vague</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ce scénario</span>
@@ -248,7 +247,7 @@ Les modélisations de l'Institut Pasteur ont été également utilisé par le Co
 
 
 
-### 5. Levée des restrictions: Freedom Day au Royaume-Uni 
+### <span style="color:black">5. Levée des restrictions: Freedom Day au Royaume-Uni</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ce scénario</span>
@@ -285,7 +284,7 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
 </details>
 
 
-### 6. Seconde vague delta, décembre 2021
+### <span style="color:black">6. Seconde vague delta, décembre 2021</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ces projections</span>
