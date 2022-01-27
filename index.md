@@ -40,7 +40,7 @@
 }
 </style>
 
-## Avant d'explorer les scénarios de modélisation
+## <span style="color:black">Avant d'explorer les scénarios de modélisation</span>
 <details><summary><b><div class="tooltip">Quel intérêt à étudier la fiabilité des scénarios de modélisations?
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
