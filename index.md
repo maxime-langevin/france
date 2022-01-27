@@ -156,17 +156,13 @@ Au cours d'un hiver 2020-21 marqué par un couvre-feu prolongé, une dégradatio
 </p>
 </details>
 
-<h3>Comparaison des scénarios aux données réelles</h3> 
-
 <details><summary><b><div class="tooltip">Comparaison des scénarios aux données réelles: Scénarios de l'INSERM
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
   
-Un certain nombre de mesures localisées et limitées n’ont pas été représentées sur le graphique, car il nous semble improbable qu’elles aient pu influer de manière significative la trajectoire épidémique nationale moins de 2 semaines après leurs mises en place:
-
-1. 25 février : confinement le week-end à Dunkerque et une partie des Alpes-Maritimes
-2. 4 mars : Pas-de-Calais confiné le week-end, centre commerciaux de plus de 10 000 m2 fermés
+Le 20 mars, de premiers confinements régionaux sont mis en place, suivis plus tard par d'autres jusqu'au confinement national le 3 avril. Le temps de latence entre la mise en place des mesures et leur effet sur les hospitalisations étant au minimum d'une semaine, nous arrêtons notre graphique au 27 mars. Au-delà, il n'est plus légitime de comparer la dynamique de la pandémie au scénarios "sans confinement".  <br /> 
+Avant ces dates, nous estimons improbable qu'un certain nombre de mesures aient impacté la dynmique nationale de l'épidémie : 25 février confinement le week-end à Dunkerque et une partie des Alpes-Maritimes ; et 4 mars Pas-de-Calais confiné le week-end, centre commerciaux de plus de 10 000 m2 fermés.
 
 </p>
 </details>
@@ -178,6 +174,7 @@ Un certain nombre de mesures localisées et limitées n’ont pas été représe
 </div></b></summary>
 <p>
 
+Nous appliquons la même restriction de dates que pour les scénarios de l'INSERM ci-dessus.   <br /> 
 Pour les courbes se prolongeant en mars, il s’agit de 2 scénarios : l’un sans vaccination, l’un avec des hypothèses optimistes de vaccination. Il est précisé qu’ « en pratique, l’impact de la campagne actuelle est susceptible d’être intermédiaire entre les scénarios avec et sans vaccination ».  <br /> 
 </p>
 </details>
