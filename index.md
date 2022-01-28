@@ -181,7 +181,10 @@ Pour les courbes se prolongeant en mars dans les scénarios du 8 février, il s�
   
   Pour le rapport du 23 février, le scénario sans confinement représenté se prolonge durant le mois d'avril et entraîne une saturation de l'hôpital plus importante que les 2 premières vagues. Il n'est pas fait mention du décalage observé entre la trajectoire épidémique et les scénarios publiés 2 semaines plus tôt. <br /> 
   
-  Une évaluation rétrospective portant sur le rapport du 8 février sera faite dans <a href = "https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf">le rapport du 26 avril </a>, indiquant que "dès le 8 février, ce modèle avait anticipé que le couvre-feu serait efficace pour contenir la circulation du virus historique mais n'empêcherait pas une augmentation importante des hospitalisations en l'absence de mesures supplémentaires", agrémenté de la figure ci-dessous. Nous n'avons cependant pas trouvé une telle projection dans le <a href="https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf"> rapport du 8 février </a> (celles que nous avons trouvé étant représentées sur notre graphique).
+  Une évaluation rétrospective portant sur le rapport du 8 février sera faite dans <a href = "https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf">le rapport du 26 avril </a>, indiquant que "dès le 8 février, ce modèle avait anticipé que le couvre-feu serait efficace pour contenir la circulation du virus historique mais n'empêcherait pas une augmentation importante des hospitalisations en l'absence de mesures supplémentaires", agrémenté de la figure ci-dessous. <br /> 
+  <img src="images/Pasteur_2021_Février/comparaison_pasteur.png" width="400"><br /> 
+  
+  Nous n'avons cependant pas trouvé une telle projection dans le <a href="https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf"> rapport du 8 février </a> (celles que nous avons trouvée étant représentées sur notre graphique).
 </p>
 </details>
 
