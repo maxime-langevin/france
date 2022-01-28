@@ -176,11 +176,11 @@ Avant ces dates, nous estimons improbable qu'un certain nombre de mesures aient 
 <p>
 
 Nous appliquons la même restriction de dates que pour les scénarios de l'INSERM ci-dessus.   <br /> 
-Pour les courbes se prolongeant en mars, il s’agit de 2 scénarios : l’un sans vaccination, l’un avec des hypothèses optimistes de vaccination. Il est précisé qu’ « en pratique, l’impact de la campagne actuelle est susceptible d’être intermédiaire entre les scénarios avec et sans vaccination ».  <br /> 
+Pour les courbes se prolongeant en mars dans les scénarios du 8 février, il s’agit de 2 scénarios : l’un sans vaccination, l’un avec des hypothèses optimistes de vaccination. Il est précisé qu’ « en pratique, l’impact de la campagne actuelle est susceptible d’être intermédiaire entre les scénarios avec et sans vaccination ».  <br /> 
 </p>
 </details>
 
-<img src="images/Pasteur_2021_Février/Pasteur_2021_Février.svg" width="400">  <br /> 
+<img src="images/Pasteur_2021_Février/Pasteur_2021_Février.svg" width="400"><img src="images/Pasteur_2021_Février/Pasteur_2021_Fevrier_bis.svg" width="400">  <br /> 
 
 <details><summary><b><div class="tooltip">Impact politique et médiatique
   <span class="tooltiptext">Explorer ce scénario</span>
