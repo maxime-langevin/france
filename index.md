@@ -289,7 +289,9 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
 </details>
 
 
-### <span style="color:black">6. Automne-hiver 2021 2021</span>
+
+
+### <span style="color:black">6. Automne-hiver 2021</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ces projections</span>
