@@ -289,7 +289,27 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
 </details>
 
 
-### <span style="color:black">6. Seconde vague delta, décembre 2021</span>
+### <span style="color:black">6. Automne-hiver 2021 2021</span>
+
+<details><summary><b><div class="tooltip">Contexte
+  <span class="tooltiptext">Explorer ces projections</span>
+</div></b></summary>
+<p>
+</p>
+</details> 
+<img src="images/Pasteur_2021_Octobre/Pasteur_2021_octobre_new_hosp.svg" width="400">
+<details><summary><b><div class="tooltip">Comparaison des projections aux données réelles
+  <span class="tooltiptext">Explorer ces projections</span>
+</div></b></summary>
+<p>
+  </p>
+</details>
+
+  
+  
+  
+
+### <span style="color:black">7. Seconde vague delta, décembre 2021</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ces projections</span>
