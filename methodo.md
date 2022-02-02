@@ -3,7 +3,9 @@
 .tooltip {
   position: relative;
   display: inline-block;
-  border-bottom: 1px dotted black;
+  text-decoration: none;
+  padding: 10px 0;
+
 }
 
 .tooltip .tooltiptext {
@@ -13,7 +15,7 @@
   color: #fff;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 10px 10px;
   position: absolute;
   z-index: 1;
   bottom: 150%;
@@ -56,21 +58,21 @@ La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non
 <details><summary><b><div class="tooltip">Modélisations de l’Institut Pasteur
 </div></b></summary>
 <p>
-* 25 septembre 2020 : exclu (des mesures ont été prises en septembre, les scénarios ne sont donc plus comparable avec la réalité)
-* 30 octobre 2020 : inclus (ce sont les modélisations du 2ème confinement, pas publiée sur le site de l’Institut Pasteur mais retranscrites par la presse)
-* 8 février 2021 : inclus
-* 23 février 2021 : inclus
-* 29 mars 2021 : pas de projections
-* 6 avril 2021 : Travail en cours, l’analyse est rendue complexe de par la levée des mesures
-* 26 avril 2021 : Travail en cours, l’analyse est rendue complexe de par la levée des mesures
-* 21 mai 2021 : exclus (apparition du variant Delta non pris en compte dans les modélisations)
-* 9 juillet 2021 : exclus (les scénarios ayant entraîné la mise en place du pass sanitaire qui n’était pas inclus dans les hypothèses de modélisation, les scénarios ne sont donc plus comparable avec la réalité)
-* 26 juillet 2021 : inclus (les scénarios prennent en compte la mise en place du pass)
-* 5 août 2021 : inclus (les scénarios prennent en compte la mise en place du pass sanitaire)
-* 6 septembre 2021 : pas de scénarios
-* 4 octobre 2021 : inclus
-* 29 novembre 2021 : exclus (apparition du variant Omicron non pris en compte dans les modélisations)
-* 2 décembre 2021 : exclus (apparition du variant Omicron non pris en compte dans les modélisations)
+1. 25 septembre 2020 : exclu (des mesures ont été prises en septembre, les scénarios ne sont donc plus comparable avec la réalité)
+2. 30 octobre 2020 : inclus (ce sont les modélisations du 2ème confinement, pas publiée sur le site de l’Institut Pasteur mais retranscrites par la presse)
+3. 8 février 2021 : inclus
+4. 23 février 2021 : inclus
+5. 29 mars 2021 : pas de projections
+6. 6 avril 2021 : Travail en cours, l’analyse est rendue complexe de par la levée des mesures
+7. 26 avril 2021 : Travail en cours, l’analyse est rendue complexe de par la levée des mesures
+8. 21 mai 2021 : exclus (apparition du variant Delta non pris en compte dans les modélisations)
+9. 9 juillet 2021 : exclus (les scénarios ayant entraîné la mise en place du pass sanitaire qui n’était pas inclus dans les hypothèses de modélisation, les scénarios ne sont donc plus comparable avec la réalité)
+10. 26 juillet 2021 : inclus (les scénarios prennent en compte la mise en place du pass)
+11. 5 août 2021 : inclus (les scénarios prennent en compte la mise en place du pass sanitaire)
+12. 6 septembre 2021 : pas de scénarios
+13. 4 octobre 2021 : inclus
+14. 29 novembre 2021 : exclus (apparition du variant Omicron non pris en compte dans les modélisations)
+15. 2 décembre 2021 : exclus (apparition du variant Omicron non pris en compte dans les modélisations)
 
 </p>
 </details>
@@ -79,7 +81,7 @@ La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non
 <details><summary><b><div class="tooltip">Modélisations de l’INSERM
 </div></b></summary>
 <p>
-* modélisations de janvier-février 2021: inclues car apparaissant 
+1. modélisations de janvier-février 2021: inclues car apparaissant 
   dans le <a href="https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf">rapport du Conseil Scientifique</a> du 29 janvier 
   2021 suggérant l’instauration d’un confinement strict 
 
@@ -89,7 +91,7 @@ La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non
 <details><summary><b><div class="tooltip">Modélisations de l’INSERM
 </div></b></summary>
 <p>
-* modélisations du rapport 12: inclues car cités comme argument majeur en faveur du confinement dans le <a href="https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf">rapport du Conseil Scientifique</a> du 12 mars 2020 
+1. modélisations du rapport 12: inclues car cités comme argument majeur en faveur du confinement dans le <a href="https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf">rapport du Conseil Scientifique</a> du 12 mars 2020 
 
 </p>
 </details>
