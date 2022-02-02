@@ -317,6 +317,8 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
   <span class="tooltiptext">Explorer ces projections</span>
 </div></b></summary>
 <p>
+
+Dans un contexte de seconde vague delta, l'Institut Pasteur a produit 2 rapports le <a href ="https://modelisation-covid19.pasteur.fr/scenarios/Institut_Pasteur_diminution_de_limmunit%C3%A9_et_rappel_20211129.pdf"> 29 novembre </a> et le <a href ="https://modelisation-covid19.pasteur.fr/scenarios/Institut_Pasteur_Complement_rapport_rappel_20211202.pdf"> 2 décembre 2021 </a> avec des scénarios couvrant l'hiver et le printemps 2022. Malheureusement l'émergence du variant omicron 2 semaines plus tard rend caduques les hypothèses et ne permet pas une comparaison à la réalité. Il est cependant possible de comparer le modèle à la situation épidémique durant ce laps de temps de 2 semaines.
     
 Une critique souvent apportée à la comparaison des données réelles aux “scénarios” telle que réalisée ci-dessus est que ces derniers ne constituent pas des “prédictions”, et servent simplement à donner une idée des grandes tendances et de l’impact de différentes mesures. <br /> <br /> 
 
