@@ -65,6 +65,12 @@ Ainsi, la comparaison entre scénarios de modélisation et réalité permettra b
 </p>
 </details>
 
+
+
+
+
+
+
 ## <span style="color:black">Retour sur les principaux scénarios de modélisation </span> 
 ### <span style="color:black">1. Mars 2020: les modélisations qui ont conduit le monde à se confiner</span>
 
@@ -110,7 +116,49 @@ La figure présentée ci-dessus montrant que ces modèles surestimaient largemen
 </details>
 
 
-### <span style="color:black">2. Modélisations de la 2ème vague, et deuxième confinement</span>
+
+
+
+
+
+
+## <span style="color:black">Retour sur les principaux scénarios de modélisation </span> 
+### <span style="color:black">2. Avril 2020: déconfinement de l'Ile-de-France</span>
+
+<details><summary><b><div class="tooltip">Contexte
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+
+</p>
+</details>
+
+<details><summary><b><div class="tooltip">Comparaison des scénarios aux données réelles
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+ 
+</p>
+</details>
+
+<img src="images/Pasteur_2020_Avril/Pasteur_2020_Avril_reanimations.svg" width="400"><br /> 
+
+<details><summary><b><div class="tooltip">Impact politique et médiatique
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+ 
+</p>
+</details>
+
+
+
+
+
+
+
+
+### <span style="color:black">3. Modélisations de la 2ème vague, et deuxième confinement</span>
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
@@ -143,7 +191,14 @@ Ces modélisations ont également été largement reprises dans la presse: <a hr
 
 </details>
 
-### <span style="color:black">3. Entre la deuxième et la troisième vague: le couvre-feu étendu</span>
+
+
+
+
+
+
+
+### <span style="color:black">4. Entre la deuxième et la troisième vague: le couvre-feu étendu</span>
 
 
 <details><summary><b><div class="tooltip">Contexte
@@ -197,7 +252,14 @@ Les prévisions de l'INSERM ont été mises en avant dans un <a href="https://so
 </p>
 </details>
 
-### <span style="color:black">4. Modélisations de la 4ème vague</span>
+
+
+
+
+
+
+
+### <span style="color:black">5. Modélisations de la 4ème vague</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ce scénario</span>
@@ -252,7 +314,10 @@ Les modélisations de l'Institut Pasteur ont été également utilisé par le Co
 
 
 
-### <span style="color:black">5. Levée des restrictions: Freedom Day au Royaume-Uni</span>
+
+
+
+### <span style="color:black">6. Levée des restrictions: Freedom Day au Royaume-Uni</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ce scénario</span>
@@ -291,7 +356,11 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
 
 
 
-### <span style="color:black">6. Automne-hiver 2021</span>
+
+
+
+
+### <span style="color:black">7. Automne-hiver 2021</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ces projections</span>
@@ -310,8 +379,12 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
   
   
   
+  
+  
+  
+  
 
-### <span style="color:black">7. Seconde vague delta, décembre 2021</span>
+### <span style="color:black">8. Seconde vague delta, décembre 2021</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ces projections</span>
