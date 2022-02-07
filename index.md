@@ -259,7 +259,45 @@ Les prévisions de l'INSERM ont été mises en avant dans un <a href="https://so
 
 
 
-### <span style="color:black">5. Modélisations de la 4ème vague</span>
+
+### <span style="color:black">5. Sortie du 3e confinement</span>
+
+<details><summary><b><div class="tooltip">Contexte
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+
+</p>
+</details>
+
+<details><summary><b><div class="tooltip">Comparaison des scénarios aux données réelles
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+
+</p>
+</details>
+ <img src="images/Pasteur_2021_Avril/Pasteur_2021_avril_new_hospital.svg" width="400">
+
+<details><summary><b><div class="tooltip">Impact politique et médiatique
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+
+</p>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+### <span style="color:black">6. Modélisations de la 4ème vague et variant delta</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ce scénario</span>
@@ -317,7 +355,7 @@ Les modélisations de l'Institut Pasteur ont été également utilisé par le Co
 
 
 
-### <span style="color:black">6. Levée des restrictions: Freedom Day au Royaume-Uni</span>
+### <span style="color:black">7. Levée des restrictions: Freedom Day au Royaume-Uni</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ce scénario</span>
@@ -360,7 +398,7 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
 
 
 
-### <span style="color:black">7. Automne-hiver 2021</span>
+### <span style="color:black">8. Automne-hiver 2021</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ces projections</span>
@@ -384,7 +422,7 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
   
   
 
-### <span style="color:black">8. Seconde vague delta, décembre 2021</span>
+### <span style="color:black">9. Seconde vague delta, décembre 2021</span>
 
 <details><summary><b><div class="tooltip">Contexte
   <span class="tooltiptext">Explorer ces projections</span>
