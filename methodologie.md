@@ -53,7 +53,7 @@ Nous avons analysé :
 
 ## Méthodologie détaillée
 
-La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non dans l’analyse du site (avec la raison) est disponible ci-dessous. 
+La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non dans l’analyse du site (avec la raison) est disponible ci-dessous, ainsi que les liens renvoyant vers les rapports en question.
 
 <details><summary><b><div class="tooltip">Modélisations de l’Institut Pasteur
 </div></b></summary>
@@ -90,6 +90,9 @@ La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non
 <p>
 <ul>
   <li>modélisations de janvier-février 2021: inclues car apparaissant dans le <a href="https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf">rapport du Conseil Scientifique</a> du 29 janvier 2021 suggérant l’instauration d’un confinement strict. Elles ont également été diffusées dans la presse.</li>
+  <li><a href = "https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_dominance-20210116.pdf">16 janvier 2021</a></li>
+  <li><a href = "www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf">2 février 2021</a></li>
+  <li><a href = "https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_socialdistancing-20210214.pdf">14 février 2021</a></li>
 </ul>
 
 </p>
@@ -99,7 +102,7 @@ La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non
 </div></b></summary>
 <p>
 <ul>
-  <li>modélisations du rapport 12: inclues car cités comme argument majeur en faveur du confinement dans le <a href="https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf">rapport du Conseil Scientifique</a> du 12 mars 2020 </li>
+  <li><a href = "https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/">modélisations du rapport 12</a>, et notamment son <a href = "https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx">appendice</a>: inclues car cités comme argument majeur en faveur du confinement dans le <a href="https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf">rapport du Conseil Scientifique</a> du 12 mars 2020. Il a aussi été cité par de nombreux médias comme ayant été un argument décivif pour trancher en faveur du confinement, par exemple dans <a href = "https://www.lemonde.fr/planete/article/2020/03/15/coronavirus-les-simulations-alarmantes-des-epidemiologistes-pour-la-france_6033149_3244.html">Le Monde</a> ou dans <a href = "https://www.liberation.fr/evenements-libe/2020/03/16/l-urgence-eviter-la-saturation-des-services-de-sante_1781988/">Libération</a>  </li>
 </ul>
 
 </p>
