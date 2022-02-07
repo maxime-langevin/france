@@ -46,7 +46,7 @@ Pour permettre une évaluation appropriée des scénarios de modélisation, seul
 Afin de ne pas introduire de biais (par exemple ne prendre que les scénarios qui surestimaient la réalité, ou l’inverse), nous avons étudié les scénarios de manière exhaustive. 
 Nous avons analysé :
 
-1. toutes les modélisations issues des rapports de l'Insitut Pasteur, publiés sur <a href = "https://modelisation-covid19.pasteur.fr/">ce site</a> 
+1. toutes les modélisations issues des rapports de l'Insitut Pasteur, publiés sur <a href = "https://modelisation-covid19.pasteur.fr/">leur page web</a> 
 2. les modélisations cités dans les <a href = "https://solidarites-sante.gouv.fr/actualites/presse/dossiers-de-presse/article/conseil-scientifique-covid-19"> rapports du Conseil Scientifique</a>, ce qui nous à notamment mené à identifier des scénarios de l’INSERM pour janvier-février 2021
 3. les modélisations de l’Imperial College pour le 1er confinement: il n’y a pas eu de modélisation spécifique à la France, mais celle d’Imperial College a été reprise par le Conseil Scientifique et a eu un impact majeur sur les politiques publiques françaises 
 4. une recherche google rétrospective avec dates délimitées pour chaque mois et les mots-clés "INSERM", "Pasteur", "modélisation", "scénario". Cela a permis d'identifier des scénarios non officiellement publiés mais néanmoins cités par la presse : Institut Pasteur pour le 2ème confinement de novembre 2020, et Institut Pasteur pour le déconfinement de l'Ile-de-France en mai 2020.
@@ -60,24 +60,24 @@ La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non
 <p>
   
 <ul>
-  <li>29 avril 2020 : inclus (non officiellement publié mais retranscrit par la presse)</li>
-  <li>25 septembre 2020 : exclu (des mesures ont été prises en septembre, les scénarios ne sont donc plus comparable avec la réalité)</li>
-  <li>30 octobre 2020 : inclus (ce sont les modélisations du 2ème confinement, non publiées sur le site de l’Institut Pasteur mais retranscrites par la presse)</li>
-  <li>8 février 2021 : inclus</li>
-  <li>23 février 2021 : inclus</li>
-  <li>29 mars 2021 : pas de scénario dans le rapport</li>
-  <li>6 avril 2021 : exclu  (les courbes présentées sont un contrefactuel de l'évolution épidémique en l'absence de vaccination)</li>
-  <li>26 avril 2021 : travail en cours, l’analyse est rendue complexe de par les dates de levée des mesures</li>
-  <li>21 mai 2021 : exclus (apparition du variant Delta non pris en compte dans les modélisations)</li>
-  <li>9 juillet 2021 : exclus (la mise en place du pass sanitaire n’était pas incluse dans les hypothèses de modélisation, les scénarios ne sont donc plus comparable avec la réalité)</li>
-  <li>26 juillet 2021 : inclus (les scénarios prennent en compte la mise en place du pass)</li>
-  <li>5 août 2021 : inclus (les scénarios prennent en compte la mise en place du pass sanitaire)</li>
-  <li>6 septembre 2021 : pas de scénarios dans le rapport</li>
-  <li>4 octobre 2021 : inclus</li>
-  <li>29 novembre 2021 : exclus (impact du variant Omicron 2 semaines plus tard, qui n'était pas pris en compte dans les modélisations). Nous avons tout de même pu comparer les projections à court terme durant la courte fenêtre de 2 semaines avant que le variant Omicron vienne fausser les résulats.</li>
-  <li>2 décembre 2021 : exclus (impact du variant Omicron 2 semaines plus tard, qui n'était pas pris en compte dans les modélisations). Nous avons tout de même pu comparer les projections à court terme durant la courte fenêtre de 2 semaines avant que le variant Omicron vienne fausser les résulats. </li>
-  <li>29 novembre 2021 : pas encore analysé, le sera quand il y aura suffisamment de recul</li>
-  <li>2 décembre 2021 : pas encore analysé, le sera quand il y aura suffisamment de recul</li>
+  <li><a href = "https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309">29 avril 2020</a> : inclus (non officiellement publié mais retranscrit par la presse)</li>
+  <li><a href = "https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&ved=2ahUKEwiKi_Kpje71AhUBzhoKHc1SCagQFnoECAQQAQ&url=https%3A%2F%2Fwww.sdbio.eu%2Fimages%2Facymailing%2FSimulations%2520Institut%2520Pasteur%252025%252009%25202020.pdf&usg=AOvVaw1lVRUxNtDL5FaIPO_HIH4g">25 septembre 2020</a> : exclu (des mesures ont été prises en septembre, les scénarios ne sont donc plus comparable avec la réalité)</li>
+  <li><a href = "https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656">30 octobre 2020</a> : inclus (ce sont les modélisations du 2ème confinement, non publiées sur le site de l’Institut Pasteur mais retranscrites par la presse)</li>
+  <li><a href = "https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf">8 février 2021</a> : inclus</li>
+  <li><a href = "https://hal-pasteur.archives-ouvertes.fr/pasteur-03149525">23 février 2021</a> : inclus</li>
+  <li><a href = "https://www.eurosurveillance.org/content/10.2807/1560-7917.ES.2021.26.9.2100133">29 mars 2021</a> : pas de scénario dans le rapport</li>
+  <li><a href = "https://www.thelancet.com/journals/eclinm/article/PIIS2589-5370(21)00281-9/fulltext">6 avril 2021</a> : exclu (les courbes présentées sont un contrefactuel de l'évolution épidémique en l'absence de vaccination)</li>
+  <li><a href = "https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf">26 avril 2021</a> : inclus </li>
+  <li><a href = "https://modelisation-covid19.pasteur.fr/loosening/Mise_a_jour_scenarios_de_levee_des_mesures_de_freinage_20210521.pdf">21 mai 2021</a> : exclus (apparition du variant Delta non pris en compte dans les modélisations)</li>
+  <li><a href = "https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_dynamique_du_variant_Delta_en_France_metropolitaine_20210709.pdf">9 juillet 2021</a> : exclus (la mise en place du pass sanitaire n’était pas incluse dans les hypothèses de modélisation, les scénarios ne sont donc plus comparable avec la réalité)</li>
+  <li><a href = "https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Acceleration_vaccination_et_Delta_20210726.pdf">26 juillet 2021</a> : inclus (les scénarios prennent en compte la mise en place du pass)</li>
+  <li><a href = "https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_Dynamiques_regionales_des_hospitalisations_20210805.pdf">5 août 2021</a> : inclus (les scénarios prennent en compte la mise en place du pass sanitaire)</li>
+  <li><a href = "https://hal-pasteur.archives-ouvertes.fr/pasteur-03272638v2">6 septembre 2021</a> : pas de scénarios dans le rapport</li>
+  <li><a href = "https://modelisation-covid19.pasteur.fr/scenarios/InstitutPasteur_scenariosCOVID19AutomneHiver_2021.pdf">4 octobre 2021</a> : inclus</li>
+  <li><a href = "https://modelisation-covid19.pasteur.fr/scenarios/Institut_Pasteur_diminution_de_limmunit%C3%A9_et_rappel_20211129.pdf">29 novembre 2021</a> : exclus (impact du variant Omicron 2 semaines plus tard, qui n'était pas pris en compte dans les modélisations). Nous avons tout de même pu comparer les projections à court terme durant la courte fenêtre de 2 semaines avant que le variant Omicron vienne fausser les résulats.</li>
+  <li><a href = "https://modelisation-covid19.pasteur.fr/scenarios/Institut_Pasteur_Complement_rapport_rappel_20211202.pdf">2 décembre 2021</a> : exclus (impact du variant Omicron 2 semaines plus tard, qui n'était pas pris en compte dans les modélisations). Nous avons tout de même pu comparer les projections à court terme durant la courte fenêtre de 2 semaines avant que le variant Omicron vienne fausser les résulats. </li>
+  <li><a href = "https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Impact_dOmicron_sur_lepidemie_francaise_20211227.pdf">27 décembre 2021</a> : pas encore analysé, le sera quand il y aura suffisamment de recul</li>
+  <li><a href = "https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_Complement_Analyse_Impact_Omicron_20220107_corrige.pdf">7 janvier 2021</a> : pas encore analysé, le sera quand il y aura suffisamment de recul</li>
 </ul>
   
 
