@@ -89,7 +89,7 @@ La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non
 </div></b></summary>
 <p>
 <ul>
-  <li>modélisations de janvier-février 2021: inclues car apparaissant dans le <a href="https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf">rapport du Conseil Scientifique</a> du 29 janvier 2021 suggérant l’instauration d’un confinement strict</li>
+  <li>modélisations de janvier-février 2021: inclues car apparaissant dans le <a href="https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf">rapport du Conseil Scientifique</a> du 29 janvier 2021 suggérant l’instauration d’un confinement strict. Elles ont également été diffusées dans la presse.</li>
 </ul>
 
 </p>
