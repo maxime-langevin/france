@@ -74,8 +74,10 @@ La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non
   <li>5 août 2021 : inclus (les scénarios prennent en compte la mise en place du pass sanitaire)</li>
   <li>6 septembre 2021 : pas de scénarios dans le rapport</li>
   <li>4 octobre 2021 : inclus</li>
-  <li>29 novembre 2021 : exclus (apparition du variant Omicron non pris en compte dans les modélisations)</li>
-  <li>2 décembre 2021 : exclus (apparition du variant Omicron non pris en compte dans les modélisations)</li>
+  <li>29 novembre 2021 : exclus (impact du variant Omicron 2 semaines plus tard, qui n'était pas pris en compte dans les modélisations). Nous avons tout de même pu comparer les projections à court terme durant la courte fenêtre de 2 semaines avant que le variant Omicron vienne fausser les résulats.</li>
+  <li>2 décembre 2021 : exclus (impact du variant Omicron 2 semaines plus tard, qui n'était pas pris en compte dans les modélisations). Nous avons tout de même pu comparer les projections à court terme durant la courte fenêtre de 2 semaines avant que le variant Omicron vienne fausser les résulats. </li>
+  <li>29 novembre 2021 : pas encore analysé, le sera quand il y aura suffisamment de recul</li>
+  <li>2 décembre 2021 : pas encore analysé, le sera quand il y aura suffisamment de recul</li>
 </ul>
   
 
