@@ -118,7 +118,7 @@ La figure présentée ci-dessus montrant que ces modèles surestimaient largemen
 <details><summary><b><div class="tooltip">Discussion sur les hypothèses des scénarios (technique)
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
-<p>Test
+<p>
   </p>
 </details>
 
@@ -155,6 +155,13 @@ La figure présentée ci-dessus montrant que ces modèles surestimaient largemen
 <p>
  
 </p>
+</details>
+
+<details><summary><b><div class="tooltip">Discussion sur les hypothèses des scénarios (technique)
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+  </p>
 </details>
 
 
@@ -195,6 +202,13 @@ Le 30 octobre, l’Institut Pasteur produit une mise à jour de ses scénarios p
 Ces modélisations ont été un des élément déclencheur du 2ème confinement. Notamment, lors de son allocution du 28 octobre, Emmanuel Macron a annoncé que le nombre de patients en réanimation dépasserait les 9000 "quoi que nous fassions". Le pic réel sera deux fois moins élevé, à environ 4800 lits de soins critiques. On constate qu'en vue de justifier une décision politique, seule la modélisation la plus pessimiste a été mise en avant par l'exécutif. Elle a aussi été présentée comme une certitude, alors qu'il ne s'agissait que d'un scénario parmi d'autres. <br /> 
 Ces modélisations ont également été largement reprises dans la presse: <a href="https://www.lci.fr/sante/video-deuxieme-vague-les-scenarios-qui-inquietent-2168899.html">"Deuxième vague : les scénarios qui inquiètent"</a> titrait ainsi LCI après l'annonce du 2ème confinement, présentant les scénarios dont les pics de réanimation étaient de 5500, 6200 et 9000 patients. 
 
+</details>
+
+<details><summary><b><div class="tooltip">Discussion sur les hypothèses des scénarios (technique)
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+  </p>
 </details>
 
 
@@ -258,6 +272,13 @@ Les prévisions de l'INSERM ont été mises en avant dans un <a href="https://so
 </p>
 </details>
 
+<details><summary><b><div class="tooltip">Discussion sur les hypothèses des scénarios (technique)
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+  </p>
+</details>
+
 
 
 
@@ -291,6 +312,13 @@ Les prévisions de l'INSERM ont été mises en avant dans un <a href="https://so
 <p>
 
 </p>
+</details>
+
+<details><summary><b><div class="tooltip">Discussion sur les hypothèses des scénarios (technique)
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+  </p>
 </details>
 
 
@@ -356,6 +384,13 @@ Les modélisations de l'Institut Pasteur ont été également utilisé par le Co
 </p>
 </details>
 
+<details><summary><b><div class="tooltip">Discussion sur les hypothèses des scénarios (technique)
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+  </p>
+</details>
+
 
 
 
@@ -397,6 +432,13 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
 </p>
 </details>
 
+<details><summary><b><div class="tooltip">Discussion sur les hypothèses des scénarios (technique)
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+  </p>
+</details>
+
 
 
 
@@ -415,6 +457,13 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
 <img src="images/Pasteur_2021_Octobre/Pasteur_2021_octobre_new_hosp.svg" width="400">
 <details><summary><b><div class="tooltip">Comparaison des projections aux données réelles
   <span class="tooltiptext">Explorer ces projections</span>
+</div></b></summary>
+<p>
+  </p>
+</details>
+
+<details><summary><b><div class="tooltip">Discussion sur les hypothèses des scénarios (technique)
+  <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
   </p>
@@ -459,6 +508,13 @@ Malheureusement la mise à jour régulière des projections sur <a href = "https
 
   
 </p>
+</details>
+
+<details><summary><b><div class="tooltip">Discussion sur les hypothèses des scénarios (technique)
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+  </p>
 </details>
 
 
