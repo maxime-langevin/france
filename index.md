@@ -520,3 +520,45 @@ Malheureusement la mise à jour régulière des projections sur <a href = "https
 
 
 
+
+
+
+
+
+### <span style="color:black">10. Vague Omicron, janvier 2022</span>
+
+<details><summary><b><div class="tooltip">Contexte
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+
+
+</p>
+</details>  
+  
+    
+<img src="images/Pasteur_2022_Fevrier/Pasteur_2022_fevrier_SC_all.svg" width="400"><br /> 
+<img src="images/Pasteur_2022_Fevrier/Pasteur_2022_fevrier_SC_high_VE.svg" width="400"><br /><img src="images/Pasteur_2022_Fevrier/Pasteur_2022_fevrier_SC_low_VE.svg" width="400"><br />
+ 
+<details><summary><b><div class="tooltip">Comparaison des projections aux données réelles
+  <span class="tooltiptext">Explorer ce scénario</span>
+</div></b></summary>
+<p>
+
+  
+</p>
+</details>
+
+<details><summary><b><div class="tooltip">Discussion sur les hypothèses des scénarios (technique)
+  <span class="tooltiptext">Explorer  ce scénario</span>
+</div></b></summary>
+<p>
+  </p>
+</details>
+
+
+
+
+
+
+
