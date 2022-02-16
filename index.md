@@ -102,7 +102,7 @@ Les modèles épidémiologiques qui ont conduit le monde à se confiner surestim
 </p>
 </details>
 
-<img src="images/Imperial_Sweden/Sweden_icu.svg" width="400"><img src="images/Imperial_Sweden/Sweden_deaths.svg" width="400"><img src="images/Imperial_Sweden/Sweden_hospital.svg" width="400">  <br /> 
+<img src="images/Imperial_Sweden/Sweden_icu.png" width="400"><img src="images/Imperial_Sweden/Sweden_deaths.png" width="400"><img src="images/Imperial_Sweden/Sweden_hospital.png" width="400">  <br /> 
 
 <details><summary><b><div class="tooltip">Impact politique et médiatique
   <span class="tooltiptext">Explorer ce scénario</span>
