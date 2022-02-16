@@ -539,7 +539,7 @@ Malheureusement la mise à jour régulière des projections sur <a href = "https
     
 <img src="images/Pasteur_2022_Fevrier/Pasteur_2022_fevrier_SC_all.svg" width="400"><br /> 
 
-En plus de la probabilité des scénarios, 2 types d'efficacité vaccinale étaient explorées. Nous représentons ici la distinction dans le cas du scénario "probable" : <br /> 
+En plus de la probabilité des scénarios, 2 types d'efficacité vaccinale étaient explorées. Lorsqu'il y aura suffisamment de recul, nous sélectionnerons le cas qui colle aux données réelles. Nous représentons ici la distinction dans le cas du scénario "probable" :  <br /> 
 
 <img src="images/Pasteur_2022_Fevrier/Pasteur_2022_fevrier_SC_high_VE.svg" width="400"><img src="images/Pasteur_2022_Fevrier/Pasteur_2022_fevrier_SC_low_VE.svg" width="400"><br />
  
