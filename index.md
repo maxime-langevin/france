@@ -304,7 +304,7 @@ Les prévisions de l'INSERM ont été mises en avant dans un <a href="https://so
 
 </p>
 </details>
- <img src="images/Pasteur_2021_Avril/Pasteur_2021_avril_new_hospital.svg" width="400">
+ <img src="images/Pasteur_2021_Avril/Pasteur_2021_avril_new_hospital.svg" width="400"> <img src="images/Cauchemez.png" width="400">
 
 <details><summary><b><div class="tooltip">Impact politique et médiatique
   <span class="tooltiptext">Explorer ce scénario</span>
