@@ -153,9 +153,12 @@ Le 29 avril 2020, pendant le premier confinement, le journal Les Echos rapportai
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
- Bien que le rapport ayant conduit à ces modélisations n’à pas été à notre connaissance rendu public, celles-ci ont néanmoins été communiquées à la presse et à l'exécutif. La presse rapporte que ces modélisations ont conduit l'exécutif à freiner la sortie du confinement:
-> ce sont peut-être  les modélisations réalisées par l'Institut Pasteur pour l'ARS Ile-de-France et l'AP-HP - par le Pr Simon Cauchemez - qui invitent à la prudence le gouvernement. Datées de mardi et à vocation interne, elles montrent  que le nombre de patients en réanimation restera longtemps élevé, en tout cas jusqu'à l'été. Et cela quels que soient les scénarios.
-selon les Echos.
+ Bien que le rapport ayant conduit à ces modélisations n’à pas été à notre connaissance rendu public, celles-ci ont néanmoins été communiquées à la presse et à l'exécutif. La presse rapporte que ces modélisations ont conduit l'exécutif à freiner la sortie du confinement. Selon les Echos:
+
+<blockquote cite="https://www.huxley.net/bnw/four.html">
+        <p>Ce sont peut-être  les modélisations réalisées par l'Institut Pasteur pour l'ARS Ile-de-France et l'AP-HP - par le Pr Simon Cauchemez - qui invitent à la prudence le gouvernement. Datées de mardi et à vocation interne, elles montrent  que le nombre de patients en réanimation restera longtemps élevé, en tout cas jusqu'à l'été. Et cela quels que soient les scénarios.</p>
+</blockquote>
+ 
 Ces modélisations n’ont pas été rendues publiques (elles ne sont accessibles qu’à travers l’article des Echos), ce qui pose la question de la transparence des modélisations. Par exemple, dans le rapport du Conseil Scientifique du 12 mars, celui-ci faisait référence aux modélisations de l’Imperial College utilisées dans le rapport dans les termes “Neil Ferguson, communication personnelle”, sans information additionnelle. 
 
 </p>
