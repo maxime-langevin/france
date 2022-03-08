@@ -317,7 +317,8 @@ Les prévisions de l'INSERM ont été mises en avant dans un <a href="https://so
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
-
+Ces modélisations ont appuyé le rapport du Conseil Scientifique du <a href="https://www.vie-publique.fr/sites/default/files/rapport/pdf/279792.pdf">6 mai 2021.</a>
+Bien que le Conseil Scientifique précise que “Ces projections [...] ne sont pas des prédictions”, il s’appuie sur celles-ci pour estimer que “sous des hypothèses plausibles, un rebond important de l’épidémie est possible durant la période estivale si les mesures de contrôle sont relâchées trop rapidement, et cela même lorsqu’on considère un rythme important de vaccination.”. C’est un des arguments qui à poussé le Conseil Scientifique à se positionner en faveur d’une réouverture des activités sociales “prudente et maîtrisée" suite au 3ème confinement.
 </p>
 </details>
 
@@ -459,6 +460,7 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
   <span class="tooltiptext">Explorer ces projections</span>
 </div></b></summary>
 <p>
+Dans un contexte notamment marqué par la généralisation du pass sanitaire, l’Institut Pasteur a publié des modélisations sur la dynamique de l’épidémie pendant la transition automne-hiver. Bien que l’arrivée du variant Omicron ait rendu obsolète ces modélisations courant décembre, il reste une période de 2 mois sur laquelle elles peuvent être comparées à la réalité.
 </p>
 </details> 
 <img src="images/Pasteur_2021_Octobre/Pasteur_2021_octobre_new_hosp.svg" width="400">
@@ -466,6 +468,7 @@ Cette levée des restrictions avait été fermement critiquée par de nombreux s
   <span class="tooltiptext">Explorer ces projections</span>
 </div></b></summary>
 <p>
+  Ces modélisations ont été <a href="https://www.huffingtonpost.fr/entry/pass-sanitaire-modelisations-de-linstitut-pasteur-qui-guident-le-gouvernement_fr_615f1428e4b09f3389721226">reprises</a> par le Conseil Scientifique dans son rapport du <a href="https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_5_octobre_2021.pdf">5 octobre 2021.</a> Il s’est appuyé dessus notamment pour recommander de maintenir le pass sanitaire pendant une période courant a minima jusqu’au 15 novembre 2021 (première prolongation du pass sanitaire). Elles ont été également reprises dans la <a href="https://www.francetvinfo.fr/sante/maladie/coronavirus/covid-19-en-france-l-institut-pasteur-juge-improbable-une-reprise-importante-de-l-epidemie-cet-hiver_4800973.html">presse</a> nationale.
   </p>
 </details>
 
