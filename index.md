@@ -135,7 +135,7 @@ La figure présentée ci-dessus montrant que ces modèles surestimaient largemen
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
-Le 29 avril 2020, pendant le premier confinement, le journal Les Echos rapportait des modélisations de l’Institut Pasteur. Ces modélisations portaient sur l’évolution de l’épidémie post-confinement.
+Le 29 avril 2020, pendant le premier confinement, <a href = "https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309"> un article du journal Les Echos </a> rapportait des modélisations de l’Institut Pasteur. Ces modélisations portaient sur l’évolution de l’épidémie post-confinement. Le ministère de la Santé indiquait alors que ces modèles sont non finalisés et en cours d'analyse, et par conséquent ne peuvent pas être rendus publics pour le moment. A notre connaissance ils n'ont pas été rendus publics par la suite.
 </p>
 </details>
 
@@ -168,6 +168,7 @@ Ces modélisations n’ont pas été rendues publiques (elles ne sont accessible
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
+  Les modélisations n'étant pas publiques, il ne nous a pas été possible d'étudier les hypothèses des scénarios.
   </p>
 </details>
 
