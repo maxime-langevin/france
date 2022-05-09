@@ -209,6 +209,7 @@ Le pic du nombre de lits de réanimation aura été surestimé de 15% dans le sc
 </div></b></summary>
 
 Ces modélisations ont été un des élément déclencheur du 2ème confinement. Notamment, <a href = "https://www.vie-publique.fr/discours/276951-emmanuel-macron-28102020-covid-19">lors de son allocution du 28 octobre</a>, Emmanuel Macron a annoncé que le nombre de patients en réanimation dépasserait les 9000 "quoi que nous fassions". Le pic réel sera deux fois moins élevé, à environ 4800 lits de soins critiques. On constate qu'en vue de justifier une décision politique, seule la modélisation la plus pessimiste a été mise en avant par l'exécutif. Elle a aussi été présentée comme une certitude, alors qu'il ne s'agissait que d'un scénario parmi d'autres. <br /> 
+  
 Ces modélisations ont également été largement reprises dans la presse: <a href="https://www.lci.fr/sante/video-deuxieme-vague-les-scenarios-qui-inquietent-2168899.html">"Deuxième vague : les scénarios qui inquiètent"</a> titrait ainsi LCI après l'annonce du 2ème confinement, présentant les scénarios dont les pics de réanimation étaient de 5500, 6200 et 9000 patients. 
 
 </details>
