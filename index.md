@@ -128,7 +128,7 @@ La figure présentée ci-dessus montrant que ces modèles surestimaient largemen
 
 
 
-## <span style="color:black">Retour sur les principaux scénarios de modélisation </span> 
+
 ### <span style="color:black">2. Avril 2020: déconfinement de l'Ile-de-France</span>
 
 <details><summary><b><div class="tooltip">Contexte
