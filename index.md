@@ -207,7 +207,7 @@ Le 30 octobre, l’Institut Pasteur produit une mise à jour de ses scénarios p
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 
-Ces modélisations ont été un des élément déclencheur du 2ème confinement. Notamment, lors de son allocution du 28 octobre, Emmanuel Macron a annoncé que le nombre de patients en réanimation dépasserait les 9000 "quoi que nous fassions". Le pic réel sera deux fois moins élevé, à environ 4800 lits de soins critiques. On constate qu'en vue de justifier une décision politique, seule la modélisation la plus pessimiste a été mise en avant par l'exécutif. Elle a aussi été présentée comme une certitude, alors qu'il ne s'agissait que d'un scénario parmi d'autres. <br /> 
+Ces modélisations ont été un des élément déclencheur du 2ème confinement. Notamment, <a href = "https://www.vie-publique.fr/discours/276951-emmanuel-macron-28102020-covid-19">lors de son allocution du 28 octobre</a>, Emmanuel Macron a annoncé que le nombre de patients en réanimation dépasserait les 9000 "quoi que nous fassions". Le pic réel sera deux fois moins élevé, à environ 4800 lits de soins critiques. On constate qu'en vue de justifier une décision politique, seule la modélisation la plus pessimiste a été mise en avant par l'exécutif. Elle a aussi été présentée comme une certitude, alors qu'il ne s'agissait que d'un scénario parmi d'autres. <br /> 
 Ces modélisations ont également été largement reprises dans la presse: <a href="https://www.lci.fr/sante/video-deuxieme-vague-les-scenarios-qui-inquietent-2168899.html">"Deuxième vague : les scénarios qui inquiètent"</a> titrait ainsi LCI après l'annonce du 2ème confinement, présentant les scénarios dont les pics de réanimation étaient de 5500, 6200 et 9000 patients. 
 
 </details>
@@ -216,6 +216,7 @@ Ces modélisations ont également été largement reprises dans la presse: <a hr
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
+  Le rapport n'ayant pas été rendu public, il ne nous a pas été possible d'explorer en détail les hypothèses des scénarios. Selon les éléments rapoprtés par Les Echos, les différents scénarios correspondent à différentes valeurs de taux de reproduction "R" de 0.7 à 1.2, reflétant une efficacité plus ou moins marquée du confinement.
   </p>
 </details>
 
