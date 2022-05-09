@@ -153,13 +153,13 @@ Fin juin, le scénario optimiste surestime les données réelles de 66%. Les sc�
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
- Bien que le rapport ayant conduit à ces modélisations n’à pas été à notre connaissance rendu public, celles-ci ont néanmoins été communiquées à la presse et à l'exécutif. La presse rapporte que ces modélisations ont conduit l'exécutif à freiner la sortie du confinement. Selon les Echos:
+ Bien que le rapport ayant conduit à ces modélisations n’à pas été à notre connaissance rendu public, celles-ci ont néanmoins été communiquées à la presse et à l'exécutif, comme le rapporte l'article des Echos:
 
 <blockquote cite="https://www.huxley.net/bnw/four.html">
         <p>Ce sont peut-être  les modélisations réalisées par l'Institut Pasteur pour l'ARS Ile-de-France et l'AP-HP - par le Pr Simon Cauchemez - qui invitent à la prudence le gouvernement. Datées de mardi et à vocation interne, elles montrent  que le nombre de patients en réanimation restera longtemps élevé, en tout cas jusqu'à l'été. Et cela quels que soient les scénarios.</p>
 </blockquote>
  
-Ces modélisations n’ont pas été rendues publiques (elles ne sont accessibles qu’à travers l’article des Echos), ce qui pose la question de la transparence des modélisations. De manière similaire le rapport du Conseil Scientifique du 12 mars faisait référence aux modélisations de l’Imperial College utilisées dans le rapport dans les termes “Neil Ferguson, communication personnelle”, sans information additionnelle. 
+La confidentialité du rapport dont sont issues ces courbes pose la question de la transparence des modélisations. De manière similaire le rapport du Conseil Scientifique du 12 mars faisait référence aux modélisations de l’Imperial College utilisées dans le rapport dans les termes “Neil Ferguson, communication personnelle”, sans information additionnelle. 
 
 </p>
 </details>
