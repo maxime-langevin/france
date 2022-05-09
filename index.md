@@ -159,7 +159,7 @@ Fin juin, le scénario optimiste surestime les données réelles de 66%. Les sc�
         <p>Ce sont peut-être  les modélisations réalisées par l'Institut Pasteur pour l'ARS Ile-de-France et l'AP-HP - par le Pr Simon Cauchemez - qui invitent à la prudence le gouvernement. Datées de mardi et à vocation interne, elles montrent  que le nombre de patients en réanimation restera longtemps élevé, en tout cas jusqu'à l'été. Et cela quels que soient les scénarios.</p>
 </blockquote>
  
-Ces modélisations n’ont pas été rendues publiques (elles ne sont accessibles qu’à travers l’article des Echos), ce qui pose la question de la transparence des modélisations. Par exemple, dans le rapport du Conseil Scientifique du 12 mars, celui-ci faisait référence aux modélisations de l’Imperial College utilisées dans le rapport dans les termes “Neil Ferguson, communication personnelle”, sans information additionnelle. 
+Ces modélisations n’ont pas été rendues publiques (elles ne sont accessibles qu’à travers l’article des Echos), ce qui pose la question de la transparence des modélisations. De manière similaire le rapport du Conseil Scientifique du 12 mars faisait référence aux modélisations de l’Imperial College utilisées dans le rapport dans les termes “Neil Ferguson, communication personnelle”, sans information additionnelle. 
 
 </p>
 </details>
