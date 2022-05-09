@@ -198,6 +198,7 @@ Le 30 octobre, l’Institut Pasteur produit une mise à jour de ses scénarios p
   <span class="tooltiptext">Explorer ce scénario</span>
 </div></b></summary>
 <p>
+Le pic du nombre de lits de réanimation aura été surestimé de 15% dans le scénario le plus optimiste, 30% dans le scénario médian, et de 100% pour le scénario le plus pessimiste. 
   </p>
 </details>
 
