@@ -118,7 +118,7 @@ Ainsi, la comparaison entre scénarios de modélisation et réalité permettra b
     c) Atténuation : comme b) mais en augmentant la distanciation sociale des plus de 70 ans (réduction des contacts de 60% pour cette catégorie)<br /> 
     d) Suppression des transmissions : distanciation sociale élargie  et intense (réduction de 75% des contacts de l'ensemble de la population).<br /> <br /> 
     Il est impossible de mesurer la réduction de contacts effective, mais les données de mobilité peuvent fournir une approximation. En Suède, la fréquentation des lieux de travail, gares, et des lieux de commerce et loisirs a été réduite au mxiumum de 30-45%, et celle des magasins alimentaires et pharmacies de 10-15%. Cela semble confirmer que la Suède ne penchait pas vers le scénario d), mais plutôt vers une atténuation légère. Pour comparaison, en France, la fréquentation des lieux de travail, de commerce et de loisir a été réduite de 70-90% et celle des magasins alimentaires de 50%, ce qui est aligné avec le scénario d) de confinement. <br /> <br />
-    <img src="images/Imperial_Sweden/Sweden_mobility.png" width="400"><img src="images/Imperial_Sweden/France_mobility.png" width="400">
+    <img src="images/Imperial_Sweden/Sweden_mobility.png" width="400"><img src="images/Imperial_Sweden/France_mobility.png" width="400"><br /> 
     
     Bien que ne correspondant pas à la réalité, nous avons fait le choix de représenter les scénarios "aucune mesure" pour plusieurs raisons :<br /> 
     a) Dans le cas des pics de réanimations et hospitaliers, aucun scénario intermédiaire n'a été produit, seulement les scénarios "confinement" et "0 mesures". Présenter ces 2 scénarios permet donc d'imaginer où aurait dû se trouver la réalité, quelque part entre les 2.<br /> 
