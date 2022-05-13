@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
+
   <head>
     <meta charset="UTF-8">
-
-{% seo %}
+    {% seo %}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style" type="text/css" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
     {% include head-custom.html %}
   </head>
+
   <body>
     <a id="skip-to-content" href="#content">Skip to the content.</a>
-    <header class="page-header" role="banner" background-image="images/banner.svg">
+    <header class="page-header" role="banner" background-image="images/banner.svg" style="background-image: linear-gradient(0deg, gray, black)">
       <img src="images/banner.svg" height="300" width = "350"> 
       <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
       <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
@@ -23,12 +24,9 @@
       <a href="https://evaluation-modelisation-covid.github.io/france/methodologie" class="btn">Méthodologie</a>
       <a href="https://evaluation-modelisation-covid.github.io/france/impact" class="btn">Impact</a>
       <a href="https://evaluation-modelisation-covid.github.io/france/contact" class="btn">Contact</a>
-
     </header>
-
     <main id="content" class="main-content" role="main">
       {{ content }}
-
       <footer class="site-footer">
         {% if site.github.is_project_page %}
           <span class="site-footer-owner"><a href="{{ site.github.repository_url }}">{{ site.github.repository_name }}</a> is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a>.</span>
@@ -37,4 +35,5 @@
       </footer>
     </main>
   </body>
+
 </html>

@@ -1,4 +1,5 @@
 <link href="_assets/image.css" rel="stylesheet">
+
 <style>
 .tooltip {
   position: relative;
@@ -7,7 +8,6 @@
   padding: 10px 0;
 
 }
-
 .tooltip .tooltiptext {
   visibility: hidden;
   width: 120px;
@@ -22,7 +22,6 @@
   left: 50%;
   margin-left: -60px;
 }
-
 .tooltip .tooltiptext::after {
   content: "";
   position: absolute;
@@ -33,13 +32,12 @@
   border-style: solid;
   border-color: black transparent transparent transparent;
 }
-
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
 </style>
 
-## Méthodologie
+## <span style="color:black">Méthodologie</span>
 
 Les courbes présentées sur le site sont issues des scénarios de modélisations ayant impacté les politiques publiques mises en place en France. Elles sont principalement issues de scénarios de modélisation de l’Institut Pasteur et de l’INSERM. 
 Pour permettre une évaluation appropriée des scénarios de modélisation, seuls les scénarios dont les hypothèses sont vérifiées ont été retenus, notamment les hyopthèses portant sur les mesures mises en place. 
@@ -51,7 +49,7 @@ Nous avons analysé :
 3. les modélisations de l’Imperial College pour le 1er confinement: il n’y a pas eu de modélisation spécifique à la France, mais celle d’Imperial College a été reprise par le Conseil Scientifique et a eu un impact majeur sur les politiques publiques françaises 
 4. une recherche google rétrospective avec dates délimitées pour chaque mois et les mots-clés "INSERM", "Pasteur", "modélisation", "scénario". Cela a permis d'identifier des scénarios non officiellement publiés mais néanmoins cités par la presse : Institut Pasteur pour le <a href = "https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656">2ème confinement de novembre 2020</a>, et Institut Pasteur pour le <a href = "https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309">déconfinement de l'Ile-de-France en mai 2020</a>.
 
-## Méthodologie détaillée
+## <span style="color:black">Méthodologie détaillée</span>
 
 La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non dans l’analyse du site (avec la raison) est disponible ci-dessous, ainsi que les liens renvoyant vers les rapports en question.
 
