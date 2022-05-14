@@ -840,7 +840,11 @@
     </blockquote>
     Au moment de la publication du rapport, <a href ="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1052353/Vaccine_surveillance_report_-_week_5.pdf">les données de surveillance britanniques </a> indiquaient déjà une efficacité vaccinale de seulement 40% au bout de 10 semaines, bien loin des 80%. <a href ="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1075115/COVID-19_vaccine_surveillance_report_12_May_2022_week_19.pdf">Leurs dernières données</a> confirment une efficacité initiale de 60% puis nulle au-delà de 4 mois. L'équipe de Pasteur pouvait-elle ignorer ces éléments au moment de son auto-évaluation ?<br /><br /> 
     Par ailleurs, contrairement à nous, l'auto-évaluation ne présente pas les scénarios "moins probables". Se pose alors la question des bonnes pratiques d'évaluation rétrospective, à définir en amont. L'équipe aurait-elle écarté ces scénario si la réalité les avait suivi ? <br /><br /> 
-    Enfin, nous notons que si <a href="https://www.liberation.fr/sciences/2020/11/03/simon-cauchemez-le-pic-de-cette-vague-en-reanimation-devrait-arriver-mi-novembre_1804291/">l'équipe insiste régulièrement sur le fait que "les scénarios ne sont pas des prédictions"</a>, l'auto-évaluation est moins prudente, le terme "prédit" revenant plusieurs fois dans le rapport, par exemple "les dynamiques prédites et observées des admissions quotidiennes sont également proches."
+    Nous notons que si <a href="https://www.liberation.fr/sciences/2020/11/03/simon-cauchemez-le-pic-de-cette-vague-en-reanimation-devrait-arriver-mi-novembre_1804291/">l'équipe insiste régulièrement sur le fait que "les scénarios ne sont pas des prédictions"</a>, l'auto-évaluation est moins prudente, le terme "prédit" revenant plusieurs fois dans le rapport, par exemple "les dynamiques prédites et observées des admissions quotidiennes sont également proches."<br /><br /> 
+    Nous rappelons que la vérification de l'adéquation des hypothèses est importante, car comme le rapelle le début de chacun des rapport de l'Institut Pasteur :
+    <blockquote cite="https://www.huxley.net/bnw/four.html">
+      <i>"Les trajectoires décrites dépendent des hypothèses faites; si les hypothèses ne se réalisent pas, la dynamique observée pourra être différente des projections."</i>
+    </blockquote>
   </p>
 </details>
 
