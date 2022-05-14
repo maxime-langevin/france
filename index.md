@@ -356,7 +356,7 @@
   <p>
     Pour le rapport du 8 février, les 2 scénarios principaux se prolongeant en mars reflètent une hypothèse "sans vaccination" et une hypothèse "optimiste" de vaccination. Il est précisé qu’ « en pratique, l’impact de la campagne actuelle est susceptible d’être intermédiaire entre les scénarios avec et sans vaccination », d'où notre choix de représenter ces 2 courbes. Plus loin dans le rapport sont présentés 2 autres variantes secondaires illustrant l'influence d'une faible variation du taux de reproduction : ce sont les courbes s'arrêtant en mars. <br /> <br />
     Seul le scénario le plus optimiste colle à la réalité, bien que ce n'était pas le scénario principal présenté aux décideurs. Les autres surestiment les admissions réelles d'un facteur 50-100%. <br /> <br />
-    Pour le rapport du 23 février, le scénario sans confinement présenté colle bien aux observations. Il n'est pas fait mention du décalage observé entre la réalité et les scénarios publiés 15 jours auparavant. <br /> <br />
+    Pour le rapport du 23 février, les scénarios présentés collent globalement bien à l'observation. Il n'est pas fait mention du décalage observé entre la réalité et les scénarios publiés 15 jours auparavant. <br /> <br />
   </p>
 </details>
 
@@ -422,6 +422,7 @@
       <li>Tout d'abord les auteurs ont fait le choix de les représenter, indiquant qu'ils validaient eux-mêmes la pertinence de ces scénarios. En effet ils n'hésitent pas à affirmer que "les nouvelles hospitalisations devraient atteindre environ 25 000 entre mi-février et début avril en l’absence d’intervention" »</li>
       <li>En s'appuyant sur ces résultats, ils n’hésitaient pas non plus à donner des recommendations politiques explicites « Ces résultats montrent la nécessité de renforcer les mesures de distanciation sociale » et ce alors même bien que le couvre-feu, dont le but même est d'éviter des mesures plus restrictives, n'était pas modélisé…</li>
       <li>Enfin, on voit que les scénarios du 16 janvier sont très similaires à ceux du 2 février, alors même que ceux-ci "intègrent de façon effective toutes les mesures de distanciation sociale", indiquant que la prise en compte du couvre-feu ne change pas grand-chose</li>
+    </ul>
   </p>
 </details>
 
@@ -722,9 +723,6 @@
       <li>Un relâchement des mesures/comportements au 15 octobre ou au 15 novembre. Les dates du 15 décembre et 15 janvier étaient également étudiées mais ne nous intéressent pas car hors de notre période d'étude</li>
       <li>3 variantes d'hypothèses sur l'efficacité vaccinale contre l'hospitalisation et l'infection respectivement de 95% et 60% (référence), 90% et 60%, et 95% et 80%. 
     </ul>
-
-figure 7 les 2 du haut
-aussi figure 9 efficacité vaccinale
   </p>
 </details>
 
@@ -834,9 +832,9 @@ aussi figure 9 efficacité vaccinale
     </b>
   </summary>
   <p>
-    Plusieurs points soulèvent question dans l'auto-évaluation menée par l'Institut Pasteur présentée ci-dessous. La plus évidente est l'absence totale d'allusion à l'efficacité vaccinale et le choix de ne représenter que les courbes illustrant une efficacité vaccinale de 80%, contrairement à nos graphiques.<br /><br /> 
+    Plusieurs points soulèvent question dans l'auto-évaluation menée par l'Institut Pasteur présentée ci-dessous.<br /><br /> 
     <img src="images/Pasteur_2022_Fevrier/auto_eval_pasteur.png" width="400"><br /><br /> 
-    Pourtant <a href="https://drees.solidarites-sante.gouv.fr/communique-de-presse/au-dela-de-trois-mois-la-dose-de-rappel-ne-semble-plus-proteger-contre-les">une note officielle de la DREES</a> titre explicitement :
+    La plus évidente est l'absence totale d'allusion à l'efficacité vaccinale et le choix de ne représenter que les courbes illustrant une efficacité vaccinale de 80%, contrairement à nos graphiques. Pourtant <a href="https://drees.solidarites-sante.gouv.fr/communique-de-presse/au-dela-de-trois-mois-la-dose-de-rappel-ne-semble-plus-proteger-contre-les">une note officielle de la DREES</a> titre explicitement :
     <blockquote cite="https://www.huxley.net/bnw/four.html">
       <i>"Au-delà de trois mois, la dose de rappel ne semble plus protéger contre les infections au Covid-19"</i>
     </blockquote>
