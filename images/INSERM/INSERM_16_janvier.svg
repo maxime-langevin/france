@@ -9,6 +9,9 @@
       stroke-linejoin: round;
       stroke-miterlimit: 10.00;
     }
+    .svglite text {
+      white-space: pre;
+    }
   ]]></style>
 </defs>
 <rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
@@ -38,15 +41,15 @@
 <polyline points='54.90,288.06 58.09,287.93 61.28,287.77 64.47,287.58 67.66,287.36 70.85,287.12 74.04,286.86 77.22,286.56 80.41,286.24 83.60,285.89 86.79,285.52 89.98,285.13 93.17,284.70 96.36,284.25 99.55,283.77 102.74,283.26 105.93,282.72 109.12,282.16 112.30,281.60 115.49,281.01 118.68,280.40 121.87,279.76 125.06,279.08 128.25,278.36 131.44,277.60 134.63,276.84 137.82,276.09 141.01,275.34 144.19,274.55 147.38,273.72 150.57,272.82 153.76,271.83 156.95,270.75 160.14,269.68 163.33,268.62 166.52,267.54 169.71,266.42 172.90,265.23 176.09,263.94 179.27,262.52 182.46,260.99 185.65,259.56 188.84,258.19 192.03,256.83 195.22,255.41 198.41,253.86 201.60,252.11 204.79,250.10 207.98,247.87 211.16,245.72 214.35,243.64 217.54,241.52 220.73,239.28 223.92,236.85 227.11,234.13 230.30,231.04 233.49,227.58 236.68,223.99 239.87,220.25 243.06,216.35 246.24,212.26 249.43,207.96 252.62,203.43 255.81,198.64 259.00,193.62 262.19,188.42 265.38,183.04 268.57,177.47 271.76,171.70 274.95,165.72 278.13,159.53 281.32,153.12 284.51,146.49 287.70,139.65 290.89,132.61 294.08,125.36 297.27,117.91 300.46,110.25 303.65,102.38 306.84,94.32 ' style='stroke-width: 2.13; stroke: #D8D8D8; stroke-linecap: butt;' />
 <polyline points='54.90,288.84 57.45,288.56 60.00,288.24 62.55,287.88 65.11,287.47 67.66,287.02 70.21,286.52 72.76,285.98 75.31,285.40 77.86,284.77 80.41,284.10 82.96,283.39 85.52,282.63 88.07,281.83 90.62,280.98 93.17,280.09 95.72,279.16 98.27,278.18 100.82,277.17 103.37,276.10 105.93,275.00 108.48,273.87 111.03,272.73 113.58,271.56 116.13,270.36 118.68,269.11 121.23,267.81 123.78,266.44 126.34,265.01 128.89,263.49 131.44,261.89 133.99,260.24 136.54,258.57 139.09,256.85 141.64,255.08 144.19,253.26 146.75,251.37 149.30,249.40 151.85,247.35 154.40,245.21 156.95,242.99 159.50,240.78 162.05,238.57 164.60,236.35 167.16,234.06 169.71,231.70 172.26,229.24 174.81,226.64 177.36,223.87 179.91,220.92 182.46,217.79 185.01,214.62 187.57,211.40 190.12,208.10 192.67,204.71 195.22,201.20 197.77,197.55 200.32,193.73 202.87,189.72 205.42,185.50 207.98,181.07 210.53,176.51 213.08,171.80 215.63,166.96 218.18,161.96 220.73,156.82 223.28,151.53 225.83,146.08 228.39,140.47 230.94,134.70 233.49,128.77 236.04,122.69 238.59,116.46 241.14,110.08 243.69,103.55 246.24,96.86 248.80,90.03 251.35,83.04 253.90,75.89 256.45,68.59 ' style='stroke-width: 2.13; stroke: #D8D8D8; stroke-linecap: butt;' />
 <polyline points='47.70,298.23 51.30,292.05 54.90,289.65 58.50,289.07 62.10,288.85 65.70,289.55 69.30,288.35 72.90,286.33 76.50,284.81 80.09,282.76 83.69,283.01 87.29,279.97 90.89,277.27 94.49,274.67 98.09,274.13 101.69,272.30 105.29,272.50 108.89,270.73 112.49,269.87 116.09,269.78 119.68,269.60 123.28,269.87 126.88,270.17 130.48,270.16 134.08,270.98 137.68,271.16 141.28,269.69 144.88,270.10 148.48,269.89 152.08,270.73 155.68,271.13 159.27,271.34 162.87,270.19 166.47,272.27 170.07,275.14 173.67,276.22 177.27,278.75 180.87,279.08 184.47,280.20 188.07,283.92 191.67,284.51 195.27,284.24 198.86,285.27 202.46,284.16 206.06,284.61 209.66,285.08 213.26,284.29 216.86,284.91 220.46,284.29 224.06,284.58 227.66,283.84 231.26,284.02 234.85,282.94 238.45,284.03 242.05,284.63 245.65,284.75 249.25,284.07 252.85,285.98 256.45,285.25 260.05,285.32 263.65,283.78 267.25,282.94 270.85,283.32 274.44,282.75 278.04,282.34 281.64,282.42 285.24,281.61 288.84,280.87 292.44,279.30 296.04,277.92 299.64,277.50 303.24,275.48 306.84,273.38 310.44,272.53 314.03,270.71 317.63,268.45 321.23,265.35 324.83,263.75 328.43,260.94 332.03,259.17 335.63,258.44 339.23,256.85 342.83,254.49 346.43,253.86 350.03,252.45 353.62,252.09 ' style='stroke-width: 2.13; stroke: #FF0000; stroke-linecap: butt;' />
-<text x='62.10' y='308.88' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; fill: #FF0000; font-family: Times New Roman;' textLength='30.01px' lengthAdjust='spacingAndGlyphs'>réalité</text>
-<text x='159.27' y='163.94' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; fill: #B4B4B4; font-family: Times New Roman;' textLength='43.50px' lengthAdjust='spacingAndGlyphs'>scénarios</text>
+<text x='62.10' y='308.88' text-anchor='middle' style='font-size: 11.04px; font-weight: bold;fill: #FF0000; font-family: "Times New Roman";' textLength='30.01px' lengthAdjust='spacingAndGlyphs'>réalité</text>
+<text x='159.27' y='163.94' text-anchor='middle' style='font-size: 11.04px; font-weight: bold;fill: #B4B4B4; font-family: "Times New Roman";' textLength='43.50px' lengthAdjust='spacingAndGlyphs'>scénarios</text>
 </g>
 <g clip-path='url(#cpMC4wMHwzNzQuNDB8MC4wMHw0MzIuMDA=)'>
 <polyline points='32.41,372.15 32.41,49.56 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
-<text x='27.48' y='364.51' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='4.40px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='27.48' y='283.98' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>10000</text>
-<text x='27.48' y='203.46' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>20000</text>
-<text x='27.48' y='122.94' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>30000</text>
+<text x='27.48' y='364.51' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='4.40px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='27.48' y='283.98' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>10000</text>
+<text x='27.48' y='203.46' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>20000</text>
+<text x='27.48' y='122.94' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='22.00px' lengthAdjust='spacingAndGlyphs'>30000</text>
 <polyline points='29.67,361.59 32.41,361.59 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='29.67,281.07 32.41,281.07 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='29.67,200.54 32.41,200.54 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
@@ -55,15 +58,15 @@
 <polyline points='47.70,374.89 47.70,372.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='159.27,374.89 159.27,372.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='260.05,374.89 260.05,372.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<text x='47.70' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='10.75px' lengthAdjust='spacingAndGlyphs'>jan</text>
-<text x='159.27' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='11.23px' lengthAdjust='spacingAndGlyphs'>fév</text>
-<text x='260.05' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='13.68px' lengthAdjust='spacingAndGlyphs'>mar</text>
-<text x='32.41' y='29.82' style='font-size: 11.00px; font-family: Times New Roman;' textLength='224.13px' lengthAdjust='spacingAndGlyphs'>scénarios publiés par l'INSERM le 16 janvier 2021</text>
-<text x='32.41' y='41.70' style='font-size: 11.00px; font-family: Times New Roman;' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
-<text x='32.41' y='14.21' style='font-size: 13.20px; font-weight: bold; font-family: Times New Roman;' textLength='261.17px' lengthAdjust='spacingAndGlyphs'>Nombre hebdomadaire d'admission à l'hôpital</text>
-<text x='368.92' y='396.11' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
-<text x='368.92' y='405.62' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='122.08px' lengthAdjust='spacingAndGlyphs'>Source: rapport #26 de l'INSERM </text>
-<text x='368.92' y='415.12' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='122.84px' lengthAdjust='spacingAndGlyphs'>www.epicx-lab.com/covid-19.html</text>
-<text x='368.92' y='424.63' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='208.02px' lengthAdjust='spacingAndGlyphs'>       https://evaluation-modelisation-covid.github.io/france/</text>
+<text x='47.70' y='382.91' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='10.75px' lengthAdjust='spacingAndGlyphs'>jan</text>
+<text x='159.27' y='382.91' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='11.23px' lengthAdjust='spacingAndGlyphs'>fév</text>
+<text x='260.05' y='382.91' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='13.68px' lengthAdjust='spacingAndGlyphs'>mar</text>
+<text x='32.41' y='29.82' style='font-size: 11.00px; font-family: "Times New Roman";' textLength='224.13px' lengthAdjust='spacingAndGlyphs'>scénarios publiés par l'INSERM le 16 janvier 2021</text>
+<text x='32.41' y='41.70' style='font-size: 11.00px; font-family: "Times New Roman";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
+<text x='32.41' y='14.21' style='font-size: 13.20px; font-weight: bold; font-family: "Times New Roman";' textLength='261.17px' lengthAdjust='spacingAndGlyphs'>Nombre hebdomadaire d'admission à l'hôpital</text>
+<text x='368.92' y='396.11' text-anchor='end' style='font-size: 8.80px; font-family: "Times New Roman";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
+<text x='368.92' y='405.62' text-anchor='end' style='font-size: 8.80px; font-family: "Times New Roman";' textLength='122.08px' lengthAdjust='spacingAndGlyphs'>Source: rapport #26 de l'INSERM </text>
+<text x='368.92' y='415.12' text-anchor='end' style='font-size: 8.80px; font-family: "Times New Roman";' textLength='122.84px' lengthAdjust='spacingAndGlyphs'>www.epicx-lab.com/covid-19.html</text>
+<text x='368.92' y='424.63' text-anchor='end' style='font-size: 8.80px; font-family: "Times New Roman";' textLength='208.02px' lengthAdjust='spacingAndGlyphs'>       https://evaluation-modelisation-covid.github.io/france/</text>
 </g>
 </svg>

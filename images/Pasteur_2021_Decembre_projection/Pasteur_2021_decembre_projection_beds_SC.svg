@@ -9,6 +9,9 @@
       stroke-linejoin: round;
       stroke-miterlimit: 10.00;
     }
+    .svglite text {
+      white-space: pre;
+    }
   ]]></style>
 </defs>
 <rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
@@ -34,17 +37,17 @@
 <polyline points='28.01,51.74 368.92,51.74 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
 <polyline points='239.58,207.66 240.94,206.42 242.30,205.15 243.66,203.87 245.02,202.57 246.38,201.24 247.74,199.90 249.10,198.53 250.46,197.14 251.83,195.72 253.19,194.28 254.55,192.82 255.91,191.33 257.27,189.82 258.63,188.30 259.99,186.76 261.35,185.19 262.71,183.59 264.08,181.97 265.44,180.33 266.80,178.67 268.16,177.00 269.52,175.32 270.88,173.63 272.24,171.92 273.60,170.13 274.96,168.28 276.32,166.39 277.69,164.48 279.05,162.56 280.41,160.66 281.77,158.79 283.13,156.97 284.49,155.21 285.85,153.50 287.21,151.82 288.57,150.17 289.94,148.53 291.30,146.90 292.66,145.26 294.02,143.61 295.38,141.93 296.74,140.22 298.10,138.54 299.46,136.91 300.82,135.32 302.18,133.74 303.55,132.15 304.91,130.54 306.27,128.88 307.63,127.16 308.99,125.36 310.35,123.48 311.71,121.55 313.07,119.59 314.43,117.59 315.80,115.56 317.16,113.51 318.52,111.44 319.88,109.36 321.24,107.27 322.60,105.18 323.96,103.05 325.32,100.90 326.68,98.72 328.04,96.53 329.41,94.31 330.77,92.08 332.13,89.83 333.49,87.57 334.85,85.31 336.21,83.03 337.57,80.73 338.93,78.42 340.29,76.10 341.66,73.75 343.02,71.39 344.38,69.02 345.74,66.63 347.10,64.22 ' style='stroke-width: 2.13; stroke: #D8D8D8; stroke-linecap: butt;' />
 <polyline points='43.50,284.94 49.83,283.65 56.15,283.49 62.48,282.19 68.80,281.05 75.13,279.98 81.45,278.75 87.78,277.61 94.10,276.46 100.43,275.24 106.75,273.33 113.08,272.26 119.40,270.65 125.73,269.12 132.05,267.13 138.38,265.45 144.70,263.08 151.03,261.25 157.35,260.10 163.68,257.96 170.00,253.99 176.33,251.62 182.65,249.32 188.98,246.04 195.30,242.45 201.63,239.85 207.95,233.50 214.28,229.07 220.60,224.56 226.93,219.21 233.25,214.24 239.58,207.67 245.90,202.01 252.23,196.28 258.55,190.54 264.88,185.12 271.20,179.16 277.53,174.19 283.85,168.76 290.18,164.25 296.50,159.74 302.83,154.31 309.15,149.35 315.48,145.98 321.80,141.32 328.12,136.20 334.45,135.74 340.77,133.29 347.10,133.06 ' style='stroke-width: 2.13; stroke: #FF0000; stroke-linecap: butt;' />
-<text x='277.53' y='70.37' text-anchor='middle' style='font-size: 11.04px; font-style: italic; fill: #515A5A; font-family: Times New Roman;' textLength='104.67px' lengthAdjust='spacingAndGlyphs'>projection à 2 semaines</text>
-<text x='277.53' y='86.27' text-anchor='middle' style='font-size: 11.04px; font-style: italic; fill: #515A5A; font-family: Times New Roman;' textLength='90.07px' lengthAdjust='spacingAndGlyphs'>surestimation +30%</text>
-<text x='321.80' y='170.04' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; fill: #FF0000; font-family: Times New Roman;' textLength='30.01px' lengthAdjust='spacingAndGlyphs'>réalité</text>
+<text x='277.53' y='70.37' text-anchor='middle' style='font-size: 11.04px; font-style: italic;fill: #515A5A; font-family: "Times New Roman";' textLength='104.67px' lengthAdjust='spacingAndGlyphs'>projection à 2 semaines</text>
+<text x='277.53' y='86.27' text-anchor='middle' style='font-size: 11.04px; font-style: italic;fill: #515A5A; font-family: "Times New Roman";' textLength='90.07px' lengthAdjust='spacingAndGlyphs'>surestimation +30%</text>
+<text x='321.80' y='170.04' text-anchor='middle' style='font-size: 11.04px; font-weight: bold;fill: #FF0000; font-family: "Times New Roman";' textLength='30.01px' lengthAdjust='spacingAndGlyphs'>réalité</text>
 </g>
 <g clip-path='url(#cpMC4wMHwzNzQuNDB8MC4wMHw0MzIuMDA=)'>
 <polyline points='28.01,372.15 28.01,49.56 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
-<text x='23.08' y='360.40' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='4.40px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='23.08' y='283.96' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>1000</text>
-<text x='23.08' y='207.53' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>2000</text>
-<text x='23.08' y='131.09' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>3000</text>
-<text x='23.08' y='54.65' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>4000</text>
+<text x='23.08' y='360.40' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='4.40px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='23.08' y='283.96' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>1000</text>
+<text x='23.08' y='207.53' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>2000</text>
+<text x='23.08' y='131.09' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>3000</text>
+<text x='23.08' y='54.65' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>4000</text>
 <polyline points='25.27,357.48 28.01,357.48 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='25.27,281.05 28.01,281.05 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='25.27,204.61 28.01,204.61 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
@@ -55,16 +58,16 @@
 <polyline points='132.05,374.89 132.05,372.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='233.25,374.89 233.25,372.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='321.80,374.89 321.80,372.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<text x='43.50' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='24.20px' lengthAdjust='spacingAndGlyphs'>nov 01</text>
-<text x='132.05' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='24.20px' lengthAdjust='spacingAndGlyphs'>nov 15</text>
-<text x='233.25' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='23.21px' lengthAdjust='spacingAndGlyphs'>déc 01</text>
-<text x='321.80' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='23.21px' lengthAdjust='spacingAndGlyphs'>déc 15</text>
-<text x='28.01' y='29.82' style='font-size: 11.00px; font-family: Times New Roman;' textLength='224.75px' lengthAdjust='spacingAndGlyphs'>Projection de l'Institut Pasteur du 6 décembre 2021</text>
-<text x='28.01' y='41.70' style='font-size: 11.00px; font-family: Times New Roman;' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
-<text x='28.01' y='14.21' style='font-size: 13.20px; font-weight: bold; font-family: Times New Roman;' textLength='169.29px' lengthAdjust='spacingAndGlyphs'>Lits occupés en soins critiques</text>
-<text x='368.92' y='396.11' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
-<text x='368.92' y='405.62' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='256.41px' lengthAdjust='spacingAndGlyphs'>Source: Projection à cour terme des besoins hospitaliers, Institut Pasteur </text>
-<text x='368.92' y='415.12' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='231.73px' lengthAdjust='spacingAndGlyphs'>https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/</text>
-<text x='368.92' y='424.63' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='208.02px' lengthAdjust='spacingAndGlyphs'>       https://evaluation-modelisation-covid.github.io/france/</text>
+<text x='43.50' y='382.91' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='24.20px' lengthAdjust='spacingAndGlyphs'>nov 01</text>
+<text x='132.05' y='382.91' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='24.20px' lengthAdjust='spacingAndGlyphs'>nov 15</text>
+<text x='233.25' y='382.91' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='23.21px' lengthAdjust='spacingAndGlyphs'>déc 01</text>
+<text x='321.80' y='382.91' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='23.21px' lengthAdjust='spacingAndGlyphs'>déc 15</text>
+<text x='28.01' y='29.82' style='font-size: 11.00px; font-family: "Times New Roman";' textLength='224.75px' lengthAdjust='spacingAndGlyphs'>Projection de l'Institut Pasteur du 6 décembre 2021</text>
+<text x='28.01' y='41.70' style='font-size: 11.00px; font-family: "Times New Roman";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
+<text x='28.01' y='14.21' style='font-size: 13.20px; font-weight: bold; font-family: "Times New Roman";' textLength='169.29px' lengthAdjust='spacingAndGlyphs'>Lits occupés en soins critiques</text>
+<text x='368.92' y='396.11' text-anchor='end' style='font-size: 8.80px; font-family: "Times New Roman";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
+<text x='368.92' y='405.62' text-anchor='end' style='font-size: 8.80px; font-family: "Times New Roman";' textLength='256.41px' lengthAdjust='spacingAndGlyphs'>Source: Projection à cour terme des besoins hospitaliers, Institut Pasteur </text>
+<text x='368.92' y='415.12' text-anchor='end' style='font-size: 8.80px; font-family: "Times New Roman";' textLength='231.73px' lengthAdjust='spacingAndGlyphs'>https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/</text>
+<text x='368.92' y='424.63' text-anchor='end' style='font-size: 8.80px; font-family: "Times New Roman";' textLength='208.02px' lengthAdjust='spacingAndGlyphs'>       https://evaluation-modelisation-covid.github.io/france/</text>
 </g>
 </svg>

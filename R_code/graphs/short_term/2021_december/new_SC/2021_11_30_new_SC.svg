@@ -1,0 +1,73 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='374.40pt' height='432.00pt' viewBox='0 0 374.40 432.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHwzNzQuNDB8MC4wMHw0MzIuMDA='>
+    <rect x='0.00' y='0.00' width='374.40' height='432.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHwzNzQuNDB8MC4wMHw0MzIuMDA=)'>
+<rect x='0.000000000000032' y='0.00' width='374.40' height='432.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpMjMuNjF8MzY4LjkyfDQ5LjU2fDM3Mi4xNQ=='>
+    <rect x='23.61' y='49.56' width='345.31' height='322.59' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMjMuNjF8MzY4LjkyfDQ5LjU2fDM3Mi4xNQ==)'>
+<rect x='23.61' y='49.56' width='345.31' height='322.59' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<polyline points='23.61,357.48 368.92,357.48 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='23.61,285.96 368.92,285.96 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='23.61,214.43 368.92,214.43 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='23.61,142.90 368.92,142.90 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='23.61,71.37 368.92,71.37 ' style='stroke-width: 1.07; stroke: #EBEBEB; stroke-linecap: butt;' />
+<polyline points='39.30,338.89 45.12,273.08 50.93,289.53 56.74,303.84 62.56,303.12 68.37,323.15 74.18,343.18 80.00,273.80 85.81,293.11 91.62,293.82 97.44,332.45 103.25,288.10 109.06,316.00 114.88,340.32 120.69,258.06 126.50,261.64 132.32,283.09 138.13,276.66 143.94,268.79 149.76,328.87 155.57,339.60 161.38,226.59 167.20,233.03 173.01,260.92 178.82,262.35 184.64,235.89 190.45,285.96 196.26,333.16 202.08,182.24 207.89,165.07 213.70,206.56 219.52,226.59 225.33,158.64 231.14,277.37 236.96,307.41 242.77,138.61 248.58,75.67 254.40,167.94 260.21,187.96 266.02,180.10 271.84,242.32 277.65,278.09 283.46,88.54 289.28,107.14 295.09,166.51 300.90,185.10 306.72,145.05 312.53,228.02 318.34,293.82 324.16,116.44 329.97,115.01 335.78,130.03 341.60,131.46 347.41,142.90 353.22,246.62 ' style='stroke-width: 1.07; stroke: #FF0000; stroke-opacity: 0.20; stroke-linecap: butt;' />
+<polyline points='39.30,312.42 45.12,312.42 50.93,310.99 56.74,310.28 62.56,308.13 68.37,308.13 74.18,306.70 80.00,305.27 85.81,302.41 91.62,302.41 97.44,300.26 103.25,299.55 109.06,297.40 114.88,294.54 120.69,293.82 126.50,290.96 132.32,287.39 138.13,285.24 143.94,282.38 149.76,278.80 155.57,274.51 161.38,270.94 167.20,267.36 173.01,262.35 178.82,258.78 184.64,255.20 190.45,250.91 196.26,247.33 202.08,242.32 207.89,238.75 213.70,233.03 219.52,228.73 225.33,223.01 231.14,216.57 236.96,212.28 242.77,205.85 248.58,200.12 254.40,192.97 260.21,187.25 266.02,180.81 271.84,172.94 277.65,167.22 ' style='stroke-width: 5.33; stroke: #D8D8D8; stroke-linecap: butt;' />
+<polyline points='39.30,310.99 45.12,310.99 50.93,309.56 56.74,308.13 62.56,307.41 68.37,305.27 74.18,303.84 80.00,302.41 85.81,300.26 91.62,299.55 97.44,297.40 103.25,296.69 109.06,294.54 114.88,293.82 120.69,292.39 126.50,289.53 132.32,287.39 138.13,285.96 143.94,282.38 149.76,279.52 155.57,275.23 161.38,270.94 167.20,265.93 173.01,260.92 178.82,254.48 184.64,248.76 190.45,240.89 196.26,235.17 202.08,228.02 207.89,222.30 213.70,216.57 219.52,210.14 225.33,204.41 231.14,200.12 236.96,195.83 242.77,191.54 248.58,188.68 254.40,185.82 260.21,184.39 266.02,184.39 271.84,182.24 277.65,182.24 283.46,182.24 289.28,181.53 295.09,180.81 300.90,180.81 306.72,180.10 312.53,179.38 318.34,177.23 324.16,176.52 329.97,175.09 335.78,173.66 341.60,172.23 347.41,170.08 353.22,167.94 ' style='stroke-width: 2.13; stroke: #FF0000; stroke-linecap: butt;' />
+<line x1='184.64' y1='372.15' x2='184.64' y2='49.56' style='stroke-width: 1.07; stroke: #000000; stroke-opacity: 0.50; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<text x='178.82' y='338.01' text-anchor='end' style='font-size: 11.04px; font-weight: bold; fill: #B4B4B4; font-family: Times New Roman;' textLength='45.35px' lengthAdjust='spacingAndGlyphs'>date de la</text>
+<text x='178.82' y='353.91' text-anchor='end' style='font-size: 11.04px; font-weight: bold; fill: #B4B4B4; font-family: Times New Roman;' textLength='48.20px' lengthAdjust='spacingAndGlyphs'>projection</text>
+<text x='295.09' y='160.86' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; fill: #B4B4B4; font-family: Times New Roman;' textLength='48.20px' lengthAdjust='spacingAndGlyphs'>projection</text>
+<text x='242.77' y='182.32' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; fill: #FF0000; font-family: Times New Roman;' textLength='30.01px' lengthAdjust='spacingAndGlyphs'>réalité</text>
+</g>
+<g clip-path='url(#cpMC4wMHwzNzQuNDB8MC4wMHw0MzIuMDA=)'>
+<polyline points='23.61,372.15 23.61,49.56 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<text x='18.68' y='360.40' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='4.40px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='18.68' y='288.87' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='13.20px' lengthAdjust='spacingAndGlyphs'>100</text>
+<text x='18.68' y='217.34' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='13.20px' lengthAdjust='spacingAndGlyphs'>200</text>
+<text x='18.68' y='145.82' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='13.20px' lengthAdjust='spacingAndGlyphs'>300</text>
+<text x='18.68' y='74.29' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='13.20px' lengthAdjust='spacingAndGlyphs'>400</text>
+<polyline points='20.87,357.48 23.61,357.48 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='20.87,285.96 23.61,285.96 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='20.87,214.43 23.61,214.43 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='20.87,142.90 23.61,142.90 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='20.87,71.37 23.61,71.37 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='23.61,372.15 368.92,372.15 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
+<polyline points='39.30,374.89 39.30,372.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='120.69,374.89 120.69,372.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='213.70,374.89 213.70,372.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='295.09,374.89 295.09,372.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<text x='39.30' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='24.20px' lengthAdjust='spacingAndGlyphs'>nov 01</text>
+<text x='120.69' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='24.20px' lengthAdjust='spacingAndGlyphs'>nov 15</text>
+<text x='213.70' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='23.21px' lengthAdjust='spacingAndGlyphs'>déc 01</text>
+<text x='295.09' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='23.21px' lengthAdjust='spacingAndGlyphs'>déc 15</text>
+<text x='23.61' y='29.82' style='font-size: 11.00px; font-family: Times New Roman;' textLength='231.49px' lengthAdjust='spacingAndGlyphs'>Projection de l'Institut Pasteur du 26 novembre 2021</text>
+<text x='23.61' y='41.70' style='font-size: 11.00px; font-family: Times New Roman;' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
+<text x='23.61' y='14.21' style='font-size: 13.20px; font-weight: bold; font-family: Times New Roman;' textLength='235.74px' lengthAdjust='spacingAndGlyphs'>Admissions journalières en soins critiques</text>
+<text x='368.92' y='396.11' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
+<text x='368.92' y='405.62' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='258.86px' lengthAdjust='spacingAndGlyphs'>Source: Projection à court terme des besoins hospitaliers, Institut Pasteur </text>
+<text x='368.92' y='415.12' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='231.73px' lengthAdjust='spacingAndGlyphs'>https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/</text>
+<text x='368.92' y='424.63' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='208.02px' lengthAdjust='spacingAndGlyphs'>       https://evaluation-modelisation-covid.github.io/france/</text>
+</g>
+</svg>

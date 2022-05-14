@@ -9,6 +9,9 @@
       stroke-linejoin: round;
       stroke-miterlimit: 10.00;
     }
+    .svglite text {
+      white-space: pre;
+    }
   ]]></style>
 </defs>
 <rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
@@ -39,17 +42,17 @@
 <polyline points='104.06,294.61 107.63,289.56 111.19,283.70 114.75,279.36 118.31,269.15 121.87,263.40 125.44,255.43 129.00,250.27 132.56,241.59 136.12,234.31 139.69,224.93 143.25,217.66 146.81,208.15 150.37,200.18 153.94,190.79 157.50,182.82 161.06,173.31 164.62,166.04 168.18,157.36 171.75,150.09 175.31,141.41 178.87,135.54 182.43,128.27 186.00,122.52 189.56,116.66 193.12,112.32 196.68,107.98 200.25,105.04 203.81,102.11 207.37,100.00 210.93,97.77 214.49,97.07 218.06,97.07 221.62,97.07 225.18,98.47 228.74,100.70 232.31,103.64 235.87,106.57 239.43,110.91 242.99,115.25 246.56,119.59 250.12,125.45 253.68,131.20 257.24,136.25 260.80,142.82 264.37,148.68 267.93,155.13 271.49,161.00 275.05,167.57 278.62,173.31 282.18,180.59 285.74,186.45 289.30,192.20 292.87,199.47 296.43,204.52 299.99,211.09 303.55,216.95 307.11,222.70 310.68,228.57 314.24,234.31 317.80,238.65 ' style='stroke-width: 2.13; stroke: #D8D8D8; stroke-linecap: butt;' />
 <polyline points='104.06,294.02 107.63,289.09 111.19,283.23 114.75,277.36 118.31,270.68 121.87,264.81 125.44,257.42 129.00,250.74 132.56,239.83 136.12,232.32 139.69,223.99 143.25,216.48 146.81,208.15 150.37,200.65 153.94,190.68 157.50,182.35 161.06,173.20 164.62,165.69 168.18,156.42 171.75,149.85 175.31,141.53 178.87,134.84 182.43,128.15 186.00,121.47 189.56,117.24 193.12,112.32 196.68,108.09 200.25,104.81 203.81,101.41 207.37,99.76 210.93,98.12 214.49,97.30 218.06,96.48 221.62,97.30 225.18,98.12 228.74,99.76 232.31,103.17 235.87,106.45 239.43,109.74 242.99,114.78 246.56,119.82 250.12,124.75 253.68,129.79 257.24,136.48 260.80,141.53 264.37,148.09 267.93,153.96 271.49,161.47 275.05,166.51 278.62,173.20 282.18,179.88 285.74,186.45 289.30,191.50 292.87,198.18 296.43,204.87 299.99,211.56 303.55,216.48 307.11,224.81 310.68,229.86 314.24,234.90 317.80,239.83 321.36,244.87 ' style='stroke-width: 2.13; stroke: #D8D8D8; stroke-linecap: butt;' />
 <polyline points='43.50,340.96 47.07,339.62 50.63,338.43 54.19,336.02 57.75,334.31 61.32,332.61 64.88,331.83 68.44,331.16 72.00,327.30 75.56,323.60 79.13,320.67 82.69,317.18 86.25,312.77 89.81,308.62 93.38,305.18 96.94,304.06 100.50,300.26 104.06,295.83 107.63,293.79 111.19,289.58 114.75,288.56 118.31,286.65 121.87,283.98 125.44,281.89 129.00,281.18 132.56,279.39 136.12,280.67 139.69,278.92 143.25,279.21 146.81,277.80 150.37,276.31 153.94,274.38 157.50,273.96 161.06,274.11 164.62,273.41 168.18,273.34 171.75,274.06 175.31,274.85 178.87,277.90 182.43,280.11 186.00,280.70 189.56,284.29 193.12,285.84 196.68,288.88 200.25,291.36 203.81,291.86 207.37,293.23 210.93,295.95 214.49,297.36 218.06,298.40 221.62,298.61 225.18,300.86 228.74,303.37 232.31,304.24 235.87,305.75 239.43,306.41 242.99,307.28 246.56,310.61 250.12,314.00 253.68,315.56 257.24,318.40 260.80,320.47 264.37,321.97 267.93,323.03 271.49,324.15 275.05,323.88 278.62,325.56 282.18,326.11 285.74,327.25 289.30,327.59 292.87,328.11 296.43,328.93 299.99,332.08 303.55,333.12 307.11,334.24 310.68,335.06 314.24,335.51 317.80,335.48 321.36,336.03 324.93,336.08 328.49,336.67 332.05,337.16 335.61,337.17 339.18,337.49 342.74,337.37 346.30,338.33 349.86,338.65 353.42,338.48 ' style='stroke-width: 2.13; stroke: #FF0000; stroke-linecap: butt;' />
-<text x='118.31' y='314.22' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; fill: #FF0000; font-family: Times New Roman;' textLength='30.01px' lengthAdjust='spacingAndGlyphs'>réalité</text>
-<text x='146.81' y='138.26' text-anchor='middle' style='font-size: 11.04px; font-weight: bold; fill: #B4B4B4; font-family: Times New Roman;' textLength='43.50px' lengthAdjust='spacingAndGlyphs'>scénarios</text>
+<text x='118.31' y='314.22' text-anchor='middle' style='font-size: 11.04px; font-weight: bold;fill: #FF0000; font-family: "Times New Roman";' textLength='30.01px' lengthAdjust='spacingAndGlyphs'>réalité</text>
+<text x='146.81' y='138.26' text-anchor='middle' style='font-size: 11.04px; font-weight: bold;fill: #B4B4B4; font-family: "Times New Roman";' textLength='43.50px' lengthAdjust='spacingAndGlyphs'>scénarios</text>
 </g>
 <g clip-path='url(#cpMC4wMHwzNzQuNDB8MC4wMHw0MzIuMDA=)'>
 <polyline points='28.01,372.15 28.01,49.56 ' style='stroke-width: 1.07; stroke-linecap: butt;' />
-<text x='23.08' y='360.40' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='4.40px' lengthAdjust='spacingAndGlyphs'>0</text>
-<text x='23.08' y='301.75' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='13.20px' lengthAdjust='spacingAndGlyphs'>500</text>
-<text x='23.08' y='243.09' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>1000</text>
-<text x='23.08' y='184.44' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>1500</text>
-<text x='23.08' y='125.79' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>2000</text>
-<text x='23.08' y='67.14' text-anchor='end' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>2500</text>
+<text x='23.08' y='360.40' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='4.40px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='23.08' y='301.75' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='13.20px' lengthAdjust='spacingAndGlyphs'>500</text>
+<text x='23.08' y='243.09' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>1000</text>
+<text x='23.08' y='184.44' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>1500</text>
+<text x='23.08' y='125.79' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>2000</text>
+<text x='23.08' y='67.14' text-anchor='end' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='17.60px' lengthAdjust='spacingAndGlyphs'>2500</text>
 <polyline points='25.27,357.48 28.01,357.48 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='25.27,298.83 28.01,298.83 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='25.27,240.18 28.01,240.18 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
@@ -60,15 +63,15 @@
 <polyline points='104.06,374.89 104.06,372.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='214.49,374.89 214.49,372.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
 <polyline points='321.36,374.89 321.36,372.15 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
-<text x='104.06' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='12.70px' lengthAdjust='spacingAndGlyphs'>aoû</text>
-<text x='214.49' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='11.73px' lengthAdjust='spacingAndGlyphs'>sep</text>
-<text x='321.36' y='382.91' text-anchor='middle' style='font-size: 8.80px; fill: #4D4D4D; font-family: Times New Roman;' textLength='10.75px' lengthAdjust='spacingAndGlyphs'>oct</text>
-<text x='28.01' y='29.82' style='font-size: 11.00px; font-family: Times New Roman;' textLength='231.79px' lengthAdjust='spacingAndGlyphs'>scénarios publiés par l'Institut Pasteur le 5 août 2021</text>
-<text x='28.01' y='41.70' style='font-size: 11.00px; font-family: Times New Roman;' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
-<text x='28.01' y='14.21' style='font-size: 13.20px; font-weight: bold; font-family: Times New Roman;' textLength='124.62px' lengthAdjust='spacingAndGlyphs'>Admissions à l'hôpital</text>
-<text x='368.92' y='396.11' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
-<text x='368.92' y='405.62' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='138.84px' lengthAdjust='spacingAndGlyphs'>Source: Institut Pasteur Rapport 5 août </text>
-<text x='368.92' y='415.12' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='281.55px' lengthAdjust='spacingAndGlyphs'>https://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/</text>
-<text x='368.92' y='424.63' text-anchor='end' style='font-size: 8.80px; font-family: Times New Roman;' textLength='208.02px' lengthAdjust='spacingAndGlyphs'>       https://evaluation-modelisation-covid.github.io/france/</text>
+<text x='104.06' y='382.91' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='12.70px' lengthAdjust='spacingAndGlyphs'>aoû</text>
+<text x='214.49' y='382.91' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='11.73px' lengthAdjust='spacingAndGlyphs'>sep</text>
+<text x='321.36' y='382.91' text-anchor='middle' style='font-size: 8.80px;fill: #4D4D4D; font-family: "Times New Roman";' textLength='10.75px' lengthAdjust='spacingAndGlyphs'>oct</text>
+<text x='28.01' y='29.82' style='font-size: 11.00px; font-family: "Times New Roman";' textLength='231.79px' lengthAdjust='spacingAndGlyphs'>scénarios publiés par l'Institut Pasteur le 5 août 2021</text>
+<text x='28.01' y='41.70' style='font-size: 11.00px; font-family: "Times New Roman";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
+<text x='28.01' y='14.21' style='font-size: 13.20px; font-weight: bold; font-family: "Times New Roman";' textLength='124.62px' lengthAdjust='spacingAndGlyphs'>Admissions à l'hôpital</text>
+<text x='368.92' y='396.11' text-anchor='end' style='font-size: 8.80px; font-family: "Times New Roman";' textLength='0.00px' lengthAdjust='spacingAndGlyphs'></text>
+<text x='368.92' y='405.62' text-anchor='end' style='font-size: 8.80px; font-family: "Times New Roman";' textLength='138.84px' lengthAdjust='spacingAndGlyphs'>Source: Institut Pasteur Rapport 5 août </text>
+<text x='368.92' y='415.12' text-anchor='end' style='font-size: 8.80px; font-family: "Times New Roman";' textLength='281.55px' lengthAdjust='spacingAndGlyphs'>https://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/</text>
+<text x='368.92' y='424.63' text-anchor='end' style='font-size: 8.80px; font-family: "Times New Roman";' textLength='208.02px' lengthAdjust='spacingAndGlyphs'>       https://evaluation-modelisation-covid.github.io/france/</text>
 </g>
 </svg>
