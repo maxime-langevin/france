@@ -721,7 +721,7 @@
       <li>Des comportements/mesures réduisant les transmissions au niveau de juin/juillet avant le pass sanitaire, au niveau actuel (-40% par rapport à juin/juillet), où à un niveau intermédiaire (-20%)</li>
       <li>Une modulation du climat qui augmente les contaminations de 33% (estimé), 20% ou 40%</li>
       <li>Un relâchement des mesures/comportements au 15 octobre ou au 15 novembre. Les dates du 15 décembre et 15 janvier étaient également étudiées mais ne nous intéressent pas car hors de notre période d'étude</li>
-      <li>3 variantes d'hypothèses sur l'efficacité vaccinale contre l'hospitalisation et l'infection respectivement de 95% et 60% (référence), 90% et 60%, et 95% et 80%. 
+      <li>3 variantes d'hypothèses sur l'efficacité vaccinale contre l'hospitalisation et l'infection respectivement de 95% et 60% (référence), 90% et 60%, et 95% et 80%. </li>
     </ul>
   </p>
 </details>
