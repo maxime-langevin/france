@@ -805,7 +805,7 @@ g <- scenario_peu_probables %>%
            family = "Times New Roman") +
   annotate('text', x = as.Date("2021-12-25"), y = 5800, label = "scénarios \n'moins probables'", color = mygrey, fontface = "bold",
            family = "Times New Roman") +
-  annotate('text', x = as.Date("2022-01-30"), y = 9000, label = "hypothèse fausse :\nefficacité vaccinale 80%", 
+  annotate('text', x = as.Date("2022-01-30"), y = 9000, label = "hypothèse fausse :\nefficacité vaccinale 85%", 
            color = myred, fontface = "bold",
            size = 10, alpha = .4,
            family = "Times New Roman") +
