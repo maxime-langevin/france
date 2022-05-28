@@ -1,0 +1,15 @@
+name: "my-website"
+navbar:
+  title: "My Website"
+  left:
+    - text: "Accueil"
+      href: index.html
+    - text: "Démarche"
+      href: process.html
+    - text: "Méthodologie"
+      href: methodology.html
+    - text: "Impact"
+      href: impact.html      
+    - text: "Contact"
+      href: contact.html
+      
