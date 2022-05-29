@@ -280,11 +280,11 @@ $(document).ready(function () {
 <div id="avant-dexplorer-les-scénarios-de-modélisation"
 class="section level1">
 <h1>Avant d’explorer les scénarios de modélisation</h1>
-<div
-id="quel-intérêt-à-étudier-la-fiabilité-des-scénarios-de-modélisations"
-class="section level2">
-<h2>Quel intérêt à étudier la fiabilité des scénarios de
-modélisations?</h2>
+<details>
+<summary>
+<p><strong>Quel intérêt à étudier la fiabilité des scénarios de
+modélisations ?</strong></p>
+</summary>
 <p>Dans un cas de figure où les scénarios de modélisation sous-estiment
 l’évolution de l’épidémie (A), le risque est de ne pas réagir, ou pas
 assez. Inversement, si les scénarios surestiment l’évolution de
@@ -295,14 +295,17 @@ couvre-feu, fermeture de classes, fermetures de lieux publics) ont des
 impacts sanitaires, sociaux et économiques négatifs. Par conséquent,
 surréagir face à l’épidémie n’est pas une bonne chose (de même que ne
 pas réagir assez).</p>
+<center>
+<p><img src="images/explication_simulation_enjeu.PNG" width="800" /></p>
+</center>
 <p>Une explication plus détaillée est disponible sur la page <a
 href="https://evaluation-modelisation-covid.github.io/france/impact">Impact</a>.</p>
-</div>
-<div
-id="lintérêt-des-modélisations-nest-il-pas-justement-dempêcher-quelles-se-produisent"
-class="section level2">
-<h2>L’intérêt des modélisations n’est-il pas justement d’empêcher
-qu’elles se produisent?</h2>
+</details>
+<details>
+<summary>
+<p><strong>L’intérêt des modélisations n’est-il pas justement d’empêcher
+qu’elles se produisent ?</strong></p>
+</summary>
 <p>Un argument souvent entendu au sujet des scénarios de modélisation
 est le suivant : comme le scénario permet d’anticiper le pire, il mène à
 prendre des mesures qui vont justement empêcher que le scénario modélisé
@@ -310,13 +313,19 @@ se produisent, ce qui expliquent le décalage entre le scénario de
 modélisation et la réalité (où des mesures de freinage ont été prises!).
 Effectivement, il n’est pas possible d’établir une comparaison dans ce
 cas de figure.</p>
-<p>Cependant, les scénarios de modélisation intègre souvent plusieurs
+<center>
+<p><img src="images/pas_de_comparaison.PNG" width="500" /></p>
+</center>
+<p>Cependant, les scénarios de modélisation intègrent souvent plusieurs
 hypothèses sur les mesures de freinage qui pourraient être mises en
 place. Ici, nous ne comparerons la réalité qu’avec des scénarios où les
 mesures de freinage mises en place avaient aussi été modélisées.</p>
+<center>
+<p><img src="images/comparaison_explication.PNG" width="500" /></p>
+</center>
 <p>Ainsi, la comparaison entre scénarios de modélisation et réalité
 permettra bien d’évaluer si ceux-ci ont bien anticipé la réalité.</p>
-</div>
+</details>
 </div>
 <div id="retour-sur-les-principaux-scénarios-de-modélisation"
 class="section level1">
@@ -326,8 +335,10 @@ id="mars-2020-les-modélisations-qui-ont-conduit-le-monde-à-se-confiner"
 class="section level2">
 <h2>1.Mars 2020: les modélisations qui ont conduit le monde à se
 confiner</h2>
-<div id="contexte" class="section level3">
-<h3>Contexte</h3>
+<details>
+<summary>
+<p><strong>Contexte</strong></p>
+</summary>
 <p>En mars 2020, l’incertitude sur les conséquences qu’allaient avoir le
 covid-19 était grande. Lorsque l’Italie a commencé à être fortement
 touchée à la mi-mars, de nombreux pays européens ont réalisé que le
@@ -358,10 +369,11 @@ scénarios de modélisation: la Suède. Lors de la première vague, la Suède
 a choisi de ne pas se confiner, préférant se reposer des mesures plus
 légères. Il est donc possible de comparer ce que prévoyaient les
 scénarios pour la Suède et la réalité.</p>
-</div>
-<div id="comparaison-des-scénarios-aux-données-réelles"
-class="section level3">
-<h3>Comparaison des scénarios aux données réelles</h3>
+</details>
+<details>
+<summary>
+<p><strong>Comparaison des scénarios aux données réelles</strong></p>
+</summary>
 <p><a
 href="https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx">L’appendice</a>
 du <a
@@ -385,9 +397,12 @@ de morts réels correspond au scénario de confinement précoce, ce qui n’a
 évidemment pas été l’approche suivie par la Suède. Les scénarios
 intermédiaires de distanciation sociale surestiment quant à eux la
 mortalité de 200% à 600%.</p>
-</div>
-<div id="impact-politique-et-médiatique" class="section level3">
-<h3>Impact politique et médiatique</h3>
+</details>
+<p><img src="images/Imperial_Sweden/Sweden_icu.svg" width="400px" /><img src="images/Imperial_Sweden/Sweden_hospital.svg" width="400px" /><img src="images/Imperial_Sweden/Sweden_deaths.svg" width="400px" /></p>
+<details>
+<summary>
+<p><strong>Impact politique et médiatique</strong></p>
+</summary>
 <p>Ces modélisations furent un des principaux éléments déclencheurs du
 confinement national français (qui influencera d’autres pays européens à
 suivre la même voie). Dans son rapport du 12 mars 2020, le Conseil
@@ -423,10 +438,12 @@ confiné sa population, il aurait pu affirmer à l’image de la ministre
 espagnole que son action avait sauvé 90 000 personnes. Nous savons qu’il
 n’en est rien, le bilan réel sans confinement étant de 5000 morts, soit
 18 fois moins.</p>
-</div>
-<div id="discussion-sur-les-hypothèses-des-scénarios-technique"
-class="section level3">
-<h3>Discussion sur les hypothèses des scénarios (technique)</h3>
+</details>
+<details>
+<summary>
+<p><strong>Discussion sur les hypothèses des scénarios
+(technique)</strong></p>
+</summary>
 <p>Pour les décès, l’Imperial College a développé 4 scénarios :</p>
 <ol style="list-style-type: decimal">
 <li>Aucune mesure</li>
@@ -449,6 +466,12 @@ légère. Pour comparaison, en France, la fréquentation des lieux de
 travail, de commerce et de loisir a été réduite de 70-90% et celle des
 magasins alimentaires de 50%, ce qui est aligné avec le scénario 4 de
 confinement.</p>
+<center>
+<p><img src="images/Imperial_Sweden/Sweden_mobility.png"
+width="500" /></p>
+<p><img src="images/Imperial_Sweden/France_mobility.png"
+width="500" /></p>
+</center>
 <p>Bien que ne correspondant pas à la réalité, nous avons fait le choix
 de représenter les scénarios “aucune mesure” pour plusieurs raisons
 :</p>
@@ -468,13 +491,15 @@ href="https://www.courrierinternational.com/article/forme-espagne-un-confinement
 000 personnes sauvées</a> selon la ministre de la justice
 espagnole).</p></li>
 </ul>
-</div>
+</details>
 </div>
 <div id="avril-2020-déconfinement-de-lîle-de-france"
 class="section level2">
 <h2>2. Avril 2020: déconfinement de l’Île-de-France</h2>
-<div id="contexte-1" class="section level3">
-<h3>Contexte</h3>
+<details>
+<summary>
+<p><strong>Contexte</strong></p>
+</summary>
 <p>Le 29 avril 2020, pendant le premier confinement, <a
 href="https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309">un
 article du journal Les Echos</a> rapportait des modélisations de
@@ -483,17 +508,20 @@ l’épidémie post-confinement. Le ministère de la Santé indiquait alors
 que ces modèles sont non finalisés et en cours d’analyse, et par
 conséquent ne peuvent pas être rendus publics pour le moment. A notre
 connaissance ils n’ont pas été rendus publics par la suite.</p>
-</div>
-<div id="comparaison-des-scénarios-aux-données-réelles-1"
-class="section level3">
-<h3>Comparaison des scénarios aux données réelles</h3>
+</details>
+<details>
+<summary>
+<p><strong>Comparaison des scénarios aux données réelles</strong></p>
+</summary>
 <p>Fin juin, le scénario optimiste surestime les données réelles de 66%.
 Les scénarios médian et pessimiste se situent eux 250% et 800% au-dessus
 des données réelles.</p>
-<p><img src="index_files/figure-html/2020-04-29%20Pasteur-1.png" width="432" /></p>
-</div>
-<div id="impact-politique-et-médiatique-1" class="section level3">
-<h3>Impact politique et médiatique</h3>
+</details>
+<p><img src="index_files/figure-html/2020_04_29_Pasteur-1.png" width="432" /></p>
+<details>
+<summary>
+<p><strong>Impact politique et médiatique</strong></p>
+</summary>
 <p>Bien que le rapport ayant conduit à ces modélisations n’a pas été à
 notre connaissance rendu public, celles-ci ont néanmoins été
 communiquées à la presse et à l’exécutif, comme le rapporte l’article
@@ -514,27 +542,35 @@ du Conseil Scientifique du 12 mars 2020</a> faisait référence aux
 modélisations de l’Imperial College utilisées dans le rapport en ces
 termes “Neil Ferguson, communication personnelle”, sans information
 additionnelle.</p>
-</div>
-<div id="discussion-sur-les-hypothèses-des-scénarios-technique-1"
-class="section level3">
-<h3>Discussion sur les hypothèses des scénarios (technique)</h3>
+</details>
+<details>
+<summary>
+<p><strong>Discussion sur les hypothèses des scénarios
+(technique)</strong></p>
+</summary>
 <p>Les modélisations n’étant pas publiques, il ne nous a pas été
 possible d’étudier les hypothèses des scénarios. L’article des Echos
 fait simplement mention de différents taux de reproduction du virus, de
 1.2, 1.5, ou plus.</p>
-</div>
+</details>
 </div>
 <div id="modélisations-de-la-2ème-vague-et-deuxième-confinement"
 class="section level2">
 <h2>3. Modélisations de la 2ème vague, et deuxième confinement</h2>
-<div id="contexte-2" class="section level3">
-<h3>Contexte</h3>
+<details>
+<summary>
+<p><strong>Contexte</strong></p>
+</summary>
 <p>Le 26 octobre, l’Institut Pasteur produit des scénarios d’évolution
 de l’épidémie en l’absence de confinement. Ce rapport n’a à notre
 connaissance pas été rendu public, et nous n’avons pas pu le consulter.
 Nous avons simplement trouvé une figure extraite du rapport, que l’on
 peut trouver sur cette <a
 href="https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/">page</a>.</p>
+<center>
+<p><img src="images/Pasteur_2020_Novembre/Pateur_before_lockdown.png"
+width="400" /></p>
+</center>
 <p>Le 28 octobre, face à la perspective présentée par ces chiffres,
 Emmanuel Macron annonce un confinement généralisé, qui prendra effet le
 30 octobre.</p>
@@ -545,17 +581,20 @@ cependant eu accès, et ont reproduit les scénarios sous forme
 d’infographie. <a
 href="https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656">L’article
 des Echos</a> constitue notre source pour nos graphiques.</p>
-</div>
-<div id="comparaison-des-scénarios-aux-données-réelles-2"
-class="section level3">
-<h3>Comparaison des scénarios aux données réelles</h3>
+</details>
+<details>
+<summary>
+<p><strong>Comparaison des scénarios aux données réelles</strong></p>
+</summary>
 <p>Le scénario le plus optimiste est proche du pic réel de lits occupés
 en réanimation (+15%). Le scénario médian et le plus pessimiste se
 trouvent eux à +30% et +100%.</p>
-<p><img src="index_files/figure-html/2020-10-30%20Pasteur-1.png" width="432" /><img src="index_files/figure-html/2020-10-30%20Pasteur-2.png" width="432" /></p>
-</div>
-<div id="impact-politique-et-médiatique-2" class="section level3">
-<h3>Impact politique et médiatique</h3>
+</details>
+<p><img src="index_files/figure-html/2020_10_30_Pasteur-1.png" width="432" /><img src="index_files/figure-html/2020_10_30_Pasteur-2.png" width="432" /></p>
+<details>
+<summary>
+<p><strong>Impact politique et médiatique</strong></p>
+</summary>
 <p>Les modélisations du 26 octobre ont été un des élément déclencheur du
 2ème confinement. Notamment, <a
 href="https://www.vie-publique.fr/discours/276951-emmanuel-macron-28102020-covid-19">lors
@@ -572,23 +611,27 @@ href="https://www.tf1info.fr/sante/video-deuxieme-vague-les-scenarios-qui-inquie
 vague : les scénarios qui inquiètent”</a> titrait ainsi LCI après
 l’annonce du 2ème confinement, présentant les scénarios dont les pics de
 réanimation étaient de 5500, 6200 et 9000 patients.</p>
-</div>
-<div id="discussion-sur-les-hypothèses-des-scénarios-technique-2"
-class="section level3">
-<h3>Discussion sur les hypothèses des scénarios (technique)</h3>
+</details>
+<details>
+<summary>
+<p><strong>Discussion sur les hypothèses des scénarios
+(technique)</strong></p>
+</summary>
 <p>Le rapport n’ayant pas été rendu public, il ne nous a pas été
 possible d’explorer en détail les hypothèses des scénarios. Selon les
 éléments rapportés par Les Echos, les différents scénarios correspondent
 à différentes valeurs de taux de reproduction “R” de 0.7 à 1.2,
 reflétant une efficacité plus ou moins marquée du confinement.</p>
-</div>
+</details>
 </div>
 <div id="entre-la-deuxième-et-la-troisième-vague-le-couvre-feu-étendu"
 class="section level2">
 <h2>4. Entre la deuxième et la troisième vague: le couvre-feu
 étendu</h2>
-<div id="contexte-3" class="section level3">
-<h3>Contexte</h3>
+<details>
+<summary>
+<p><strong>Contexte</strong></p>
+</summary>
 <p>Au cours d’un hiver 2020-2021 marqué par un couvre-feu étendu, une
 dégradation de la situation sanitaire a mené Inserm et l’Institut
 Pasteur à publier des scénarios de modélisations de mi-janvier à
@@ -612,12 +655,12 @@ la dynamique nationale de l’épidémie : le 25 février confinement le
 week-end à Dunkerque et une partie des Alpes-Maritimes, et le 4 mars
 confinement le week-end dans le Pas-de-Calais, ainsi que les centres
 commerciaux de plus de 10 000 m2 fermés.</p>
-</div>
-<div
-id="comparaison-des-scénarios-aux-données-réelles-scénarios-de-linserm"
-class="section level3">
-<h3>Comparaison des scénarios aux données réelles : scénarios de
-l’Inserm</h3>
+</details>
+<details>
+<summary>
+<p><strong>Comparaison des scénarios aux données réelles : scénarios de
+l’Inserm</strong></p>
+</summary>
 <p>Les scénarios réalisés pendant 1 mois pointent tous vers une
 augmentation exponentielle des admissions à l’hôpital. La réalité sera
 une légère diminution suivi d’une augmentation ramenant environ au
@@ -626,13 +669,13 @@ admissions hebdomadaires avant la mi-mars sans signe de ralentissement
 de la dynamique, alors que la réalité se trouvait aux alentours de 10
 000, soit 3 fois moins. Le scénario le plus optimiste surestime les
 hospitalisation d’un 50-100%.</p>
-<p><img src="index_files/figure-html/2021-02%20Inserm-1.png" width="432" /><img src="index_files/figure-html/2021-02%20Inserm-2.png" width="432" /><img src="index_files/figure-html/2021-02%20Inserm-3.png" width="432" /></p>
-</div>
-<div
-id="comparaison-des-scénarios-aux-données-réelles-scénarios-de-linstitut-pasteur"
-class="section level3">
-<h3>Comparaison des scénarios aux données réelles : scénarios de
-l’Institut Pasteur</h3>
+</details>
+<p><img src="index_files/figure-html/2021_02_Inserm-1.png" width="432" /><img src="index_files/figure-html/2021_02_Inserm-2.png" width="432" /><img src="index_files/figure-html/2021_02_Inserm-3.png" width="432" /></p>
+<details>
+<summary>
+<p><strong>Comparaison des scénarios aux données réelles : scénarios de
+l’Institut Pasteur</strong></p>
+</summary>
 <p>Pour le rapport du 8 février, les 2 scénarios principaux se
 prolongeant en mars reflètent une hypothèse “sans vaccination” et une
 hypothèse “optimiste” de vaccination. Il est précisé qu’ « en pratique,
@@ -649,10 +692,12 @@ surestiment les admissions réelles d’un facteur 50-100%.</p>
 globalement bien à l’observation. Il n’est pas fait mention du décalage
 observé entre la réalité et les scénarios publiés 15 jours
 auparavant.</p>
-<p><img src="index_files/figure-html/2021-02%20Pasteur-1.png" width="432" /><img src="index_files/figure-html/2021-02%20Pasteur-2.png" width="432" /></p>
-</div>
-<div id="auto-évaluation-de-linstitut-pasteur" class="section level3">
-<h3>Auto-évaluation de l’Institut Pasteur</h3>
+</details>
+<p><img src="index_files/figure-html/2021_02_Pasteur-1.png" width="432" /><img src="index_files/figure-html/2021_02_Pasteur-2.png" width="432" /></p>
+<details>
+<summary>
+<p><strong>Auto-évaluation de l’Institut Pasteur</strong></p>
+</summary>
 <p>Une évaluation rétrospective portant sur le rapport du 8 février sera
 faite dans <a
 href="https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf">un
@@ -672,22 +717,15 @@ href="https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_var
 rapport du 8 févrie</a>r. Toutes celles que nous avons trouvée sont
 représentées sur nos graphiques présentés ci-dessus. ### Impact
 politique et médiatique</p>
-<p>Les modélisations du 26 octobre ont été un des élément déclencheur du
-2ème confinement. Notamment, lors de son allocution du 28 octobre,
-Emmanuel Macron a annoncé que le nombre de patients en réanimation
-dépasserait les 9000 “quoi que nous fassions”. Le pic réel sera deux
-fois moins élevé, à environ 4800 lits de soins critiques. On constate
-qu’en vue de justifier une décision politique, seule la modélisation la
-plus pessimiste a été mise en avant par l’exécutif. Elle a aussi été
-présentée comme une certitude, alors qu’il ne s’agissait que d’un
-scénario parmi d’autres.</p>
-<p>Ces modélisations ont également été largement reprises dans la
-presse: “Deuxième vague : les scénarios qui inquiètent” titrait ainsi
-LCI après l’annonce du 2ème confinement, présentant les scénarios dont
-les pics de réanimation étaient de 5500, 6200 et 9000 patients.</p>
-</div>
-<div id="impact-politique-et-médiatique-3" class="section level3">
-<h3>Impact politique et médiatique</h3>
+<center>
+<p><img src="images/Pasteur_2021_Fe%CC%81vrier/comparaison_pasteur.png"
+width="500" /></p>
+</center>
+</details>
+<details>
+<summary>
+<p><strong>Impact politique et médiatique</strong></p>
+</summary>
 <p>Les prévisions de l’INSERM ont été mises en avant dans un <a
 href="https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf">rapport
 spécial du Conseil Scientifique</a> qui demandait la mise en place d’un
@@ -695,9 +733,14 @@ confinement strict à partir du lundi 8 février 2021. Selon ces
 modélisations, le nombre d’hospitalisations hebdomadaires aurait dû être
 de plus de 30 000 à cette date (en réalité autour de 10 000), et
 continuer d’augmenter exponentiellement sans confinement strict (qui
-n’aura finalement lieu qu’un mois plus tard). ### Discussion sur les
-hypothèses des scénarios (technique) A propos des scénarios de l’INSERM
-:</p>
+n’aura finalement lieu qu’un mois plus tard).</p>
+</details>
+<details>
+<summary>
+<p><strong>Discussion sur les hypothèses des scénarios
+(technique)</strong></p>
+</summary>
+<p>A propos des scénarios de l’INSERM :</p>
 <ul>
 <li><p>rapport du 16 janvier : les scénarios correspondent à 3 taux de
 reproduction du variant historique (1, 1.1 et 1.2), couplés à un variant
@@ -756,12 +799,14 @@ similaires à ceux du 2 février, alors même que ceux-ci “intègrent de
 façon effective toutes les mesures de distanciation sociale”, indiquant
 que la prise en compte du couvre-feu ne change pas grand-chose</p></li>
 </ul>
-</div>
+</details>
 </div>
 <div id="sortie-du-3e-confinement" class="section level2">
 <h2>5. Sortie du 3e confinement</h2>
-<div id="contexte-4" class="section level3">
-<h3>Contexte</h3>
+<details>
+<summary>
+<p><strong>Contexte</strong></p>
+</summary>
 <p>Des scénarios sont sortis les <a
 href="https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf">26
 avril</a> et <a
@@ -777,20 +822,24 @@ href="https://twitter.com/SCauchemez/status/1405129313721241603?cxt=HHwWhsC-_dDq
 comparaison informelle sur son compte twitter</a>, reproduite ici. A
 notre connaissance cela n’a pas été fait pour le rapport du 26 avril, et
 nous avons donc procédé nous-mêmes à la comparaison.</p>
-</div>
-<div id="comparaison-des-scénarios-aux-données-réelles-3"
-class="section level3">
-<h3>Comparaison des scénarios aux données réelles</h3>
+</details>
+<details>
+<summary>
+<p><strong>Comparaison des scénarios aux données réelles</strong></p>
+</summary>
 <p>Pour le premier rapport, les scénarios se situent à la mi-juin
 au-dessus de la réalité, la surestimation allant d’un peu moins de 100%
 à 500%.</p>
 <p>En revanche la décrue observée suit fidèlement le scénario du second
 rapport, comme le montre la capture d’écran de Simon Cauchemez. Ce
 dernier ne fait pas mention du premier rapport.</p>
-<p><img src="index_files/figure-html/2021-04-26%20Pasteur-1.png" width="432" /></p>
-</div>
-<div id="impact-politique-et-médiatique-4" class="section level3">
-<h3>Impact politique et médiatique</h3>
+</details>
+<p><img src="index_files/figure-html/2021_04_26_Pasteur-1.png" width="432" /></p>
+<p><img src="images/Pasteur_2021_Avril/Cauchemez.png" width="400px" /></p>
+<details>
+<summary>
+<p><strong>Impact politique et médiatique</strong></p>
+</summary>
 <p>Ces modélisations ont appuyé le <a
 href="https://www.vie-publique.fr/sites/default/files/rapport/pdf/279792.pdf">rapport
 du Conseil Scientifique du 6 mai 2021</a>. Bien que le Conseil
@@ -802,10 +851,12 @@ trop rapidement, et cela même lorsqu’on considère un rythme important de
 vaccination.”. C’est un des arguments qui à poussé le Conseil
 Scientifique à se positionner en faveur d’une réouverture des activités
 sociales “prudente et maîtrisée” suite au 3ème confinement.</p>
-</div>
-<div id="discussion-sur-les-hypothèses-des-scénarios-technique-3"
-class="section level3">
-<h3>Discussion sur les hypothèses des scénarios (technique)</h3>
+</details>
+<details>
+<summary>
+<p><strong>Discussion sur les hypothèses des scénarios
+(technique)</strong></p>
+</summary>
 <p>Pour le rapport du 26 avril, les courbes sont extraites des figures
 3b et 3d. Les hypothèses faites dans les scénarios sont les suivantes
 :</p>
@@ -824,19 +875,25 @@ des hospitalisations</p></li>
 doses/jour, qui sont proches de la réalité, comme le montre le graphique
 ci-dessous.</p></li>
 </ul>
+<center>
+<p><img src="images/Pasteur_2021_Avril/vaccine_doses_april.png"
+width="500" /></p>
+</center>
 <p>Pour le rapport du 21 mai, nous n’avons pas eu besoin de vérifier les
 hypothèses, Simon Cauchemez ayant lui-même comparé la trajectoire
 épidémique à ses scénarios.</p>
 <p>Dans les 2 cas nous arrêtons la comparaison à la mi-juin, lorsque
 l’apparition du variant delta non prévue par les modèles rend les
 hypothèses caduques.</p>
-</div>
+</details>
 </div>
 <div id="modélisations-de-la-4ème-vague-et-variant-delta"
 class="section level2">
 <h2>6. Modélisations de la 4ème vague et variant delta</h2>
-<div id="contexte-5" class="section level3">
-<h3>Contexte</h3>
+<details>
+<summary>
+<p><strong>Contexte</strong></p>
+</summary>
 <p>Un <a
 href="https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_dynamique_du_variant_Delta_en_France_metropolitaine_20210709.pdf">premier
 rapport de l’Institut Pasteur est sorti le 9 juillet 2021</a> dans un
@@ -855,10 +912,11 @@ juillet</a> et <a
 href="https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_Dynamiques_regionales_des_hospitalisations_20210805.pdf">5
 août,</a> afin de tenir compte de l’effet du pass sanitaire ; ce sont
 ces 2 rapports que nous comparons à la trajectoire réelle.</p>
-</div>
-<div id="comparaison-des-scénarios-aux-données-réelles-4"
-class="section level3">
-<h3>Comparaison des scénarios aux données réelles</h3>
+</details>
+<details>
+<summary>
+<p><strong>Comparaison des scénarios aux données réelles</strong></p>
+</summary>
 <p>Pour le premier rapport, la réalité est environ 2 fois moins grande
 que les scénarios les plus optimistes, 3 à 4 fois moins grande que les
 scénarios médians, 10 fois moins grande que les scénarios
@@ -867,17 +925,15 @@ pessimistes.</p>
 surestimation, la réalité correspondant environ au scénario le plus
 optimiste, mais restant 2 fois moins grande que le scénario médian et 4
 fois moindre que le scénario pessimiste.</p>
-<div id="scénarios-du-26-juillet" class="section level4">
-<h4>Scénarios du 26 juillet</h4>
-<p><img src="index_files/figure-html/2021-07-26%20Pasteur-1.png" width="432" /><img src="index_files/figure-html/2021-07-26%20Pasteur-2.png" width="432" /><img src="index_files/figure-html/2021-07-26%20Pasteur-3.png" width="432" /></p>
-</div>
-<div id="scénarios-du-5-août" class="section level4">
-<h4>Scénarios du 5 août</h4>
-<p><img src="index_files/figure-html/2021-08-05%20Pasteur-1.png" width="432" /><img src="index_files/figure-html/2021-08-05%20Pasteur-2.png" width="432" /><img src="index_files/figure-html/2021-08-05%20Pasteur-3.png" width="432" /></p>
-</div>
-</div>
-<div id="impact-politique-et-médiatique-5" class="section level3">
-<h3>Impact politique et médiatique</h3>
+</details>
+<p><strong>Scénarios du 26 juillet</strong></p>
+<p><img src="index_files/figure-html/2021_07_26%20Pasteur-1.png" width="432" /><img src="index_files/figure-html/2021_07_26%20Pasteur-2.png" width="432" /><img src="index_files/figure-html/2021_07_26%20Pasteur-3.png" width="432" /></p>
+<p><strong>Scénarios du 5 août</strong></p>
+<p><img src="index_files/figure-html/2021_08_05_Pasteur-1.png" width="432" /><img src="index_files/figure-html/2021_08_05_Pasteur-2.png" width="432" /><img src="index_files/figure-html/2021_08_05_Pasteur-3.png" width="432" /></p>
+<details>
+<summary>
+<p><strong>Impact politique et médiatique</strong></p>
+</summary>
 <p>En ligne avec les projections présentées, le président du conseil
 scientifique <a
 href="https://www.publicsenat.fr/article/parlementaire/covid-19-jean-francois-delfraissy-prevoit-une-situation-tres-complexe-dans-les">Jean-François
@@ -901,10 +957,12 @@ ces demandes, le Conseil d’Etat a notamment expliqué que</p>
 début du mois d’août, selon les modélisations de l’Institut
 Pasteur.”</em></p>
 </blockquote>
-</div>
-<div id="discussion-sur-les-hypothèses-des-scénarios-technique-4"
-class="section level3">
-<h3>Discussion sur les hypothèses des scénarios (technique)</h3>
+</details>
+<details>
+<summary>
+<p><strong>Discussion sur les hypothèses des scénarios
+(technique)</strong></p>
+</summary>
 <p>Le scénarios du premier rapport sont extraits des figures 4, 5 et 6.
 Les scénarios dont les hypothèses ne collaient pas à la réalité ont été
 exclus de la comparaison, permettant de ramener le nombre de variantes
@@ -937,13 +995,23 @@ passage en soins critiques (10, 14 ou 17 jours) et sur le nombre de
 doses de vaccin distribuées par jour (600 000, 700 000 800 000). Au vu
 des chiffre ci-dessous, nous avons exclus les scénarios à 700 000 et 800
 000 doses/jour.</p>
-</div>
+<center>
+<p><img src="images/Pasteur_2021_Juillet/vaccination_juillet.png"
+width="600" /></p>
+</center>
+<center>
+<p><img src="images/Pasteur_2021_Juillet/vaccine_doses_juillet.png"
+width="600" /></p>
+</center>
+</details>
 </div>
 <div id="levée-des-restrictions-freedom-day-au-royaume-uni"
 class="section level2">
 <h2>7. Levée des restrictions: Freedom Day au Royaume-Uni</h2>
-<div id="contexte-6" class="section level3">
-<h3>Contexte</h3>
+<details>
+<summary>
+<p><strong>Contexte</strong></p>
+</summary>
 <p>Les modélisations présentées plus tôt permettent de comparer la
 réalité et les scénarios lorsque des restrictions sont en place. Mais
 comment se comparent les scénarios et la réalité dans le cas où les
@@ -960,10 +1028,11 @@ obligatoire ou encore limitations de déplacement).</p>
 <p>Contrairement à d’autres pays européens, ce retour à la normale ne
 comprenait pas la mise en place d’un “pass sanitaire” pour accéder à des
 évènements ou lieux publics.</p>
-</div>
-<div id="comparaison-des-scénarios-aux-données-réelles-5"
-class="section level3">
-<h3>Comparaison des scénarios aux données réelles</h3>
+</details>
+<details>
+<summary>
+<p><strong>Comparaison des scénarios aux données réelles</strong></p>
+</summary>
 <p>Les données présentées ci-dessous comparent la réalité des patients
 hospitalisés avec les différents scénarios de modélisations visant à
 prévoir l’impact de la levée des restrictions. Les données sont issues
@@ -976,9 +1045,14 @@ Spectator</a>.</p>
 <p>Le pic réel se trouve sous le scénario le plus optimiste, les
 scénarios médians sont 2 à 3 fois supérieurs, et le scénario le plus
 pessimiste est plus de 5 fois supérieur.</p>
-</div>
-<div id="impact-politique-et-médiatique-6" class="section level3">
-<h3>Impact politique et médiatique</h3>
+</details>
+<center>
+<p><img src="images/sage_scenarios.png" width="500" /></p>
+</center>
+<details>
+<summary>
+<p><strong>Impact politique et médiatique</strong></p>
+</summary>
 <p>Cette levée des restrictions avait été fermement critiquée par de
 nombreux scientifiques dans une lettre ouverte au prestigieux journal
 médical <a
@@ -999,22 +1073,25 @@ journal scientifique Nature</a> par un épidémiologiste renommé:</p>
 <blockquote>
 <p>Personne ne comprend vraiment ce qu’il se passe.</p>
 </blockquote>
-</div>
+</details>
 </div>
 <div id="automne-hiver-2021" class="section level2">
 <h2>8. Automne-hiver 2021</h2>
-<div id="contexte-7" class="section level3">
-<h3>Contexte</h3>
+<details>
+<summary>
+<p><strong>Contexte</strong></p>
+</summary>
 <p>Dans un contexte notamment marqué par la généralisation du pass
 sanitaire, l’Institut Pasteur a publié des modélisations sur la
 dynamique de l’épidémie pendant la transition automne-hiver. Bien que
 l’arrivée du variant Omicron ait rendu obsolète ces modélisations
 courant décembre, il reste une période de 2 mois sur laquelle elles
 peuvent être comparées à la réalité.</p>
-</div>
-<div id="comparaison-des-scénarios-aux-données-réelles-6"
-class="section level3">
-<h3>Comparaison des scénarios aux données réelles</h3>
+</details>
+<details>
+<summary>
+<p><strong>Comparaison des scénarios aux données réelles</strong></p>
+</summary>
 <p>La plupart des scénarios se trouvent au niveau d’une circulation
 épidémique contenue, en-dessous des admissions hospitalières réelles
 d’un facteur 4 à 6.</p>
@@ -1025,10 +1102,12 @@ climat. Bien que les mesures de contrôle n’aient pas été relâchées au
 niveau de juin-juillet, quand il n’y avait pas de pass sanitaire, il
 nous est impossible de mesurer le “relâchement des comportements”, et
 nous avons donc gardé ces scénarios.</p>
+</details>
 <p><img src="index_files/figure-html/2021-10-10%20Pasteur-1.png" width="432" /></p>
-</div>
-<div id="impact-politique-et-médiatique-7" class="section level3">
-<h3>Impact politique et médiatique</h3>
+<details>
+<summary>
+<p><strong>Impact politique et médiatique</strong></p>
+</summary>
 <p>Ces modélisations ont été <a
 href="https://www.huffingtonpost.fr/entry/pass-sanitaire-modelisations-de-linstitut-pasteur-qui-guident-le-gouvernement_fr_615f1428e4b09f3389721226">reprises</a>
 par le Conseil Scientifique dans son rapport du <a
@@ -1039,10 +1118,12 @@ jusqu’au 15 novembre 2021 (première prolongation du pass sanitaire).
 Elles ont été également reprises dans la <a
 href="https://www.francetvinfo.fr/sante/maladie/coronavirus/covid-19-en-france-l-institut-pasteur-juge-improbable-une-reprise-importante-de-l-epidemie-cet-hiver_4800973.html">presse</a>
 nationale.</p>
-</div>
-<div id="discussion-sur-les-hypothèses-des-scénarios-technique-5"
-class="section level3">
-<h3>Discussion sur les hypothèses des scénarios (technique)</h3>
+</details>
+<details>
+<summary>
+<p><strong>Discussion sur les hypothèses des scénarios
+(technique)</strong></p>
+</summary>
 <p>Nos courbes sont issues de la figure 7.</p>
 <ul>
 <li><p>Des comportements/mesures réduisant les transmissions au niveau
@@ -1058,12 +1139,14 @@ d’étude</p></li>
 l’hospitalisation et l’infection respectivement de 95% et 60%
 (référence), 90% et 60%, et 95% et 80%.</p></li>
 </ul>
-</div>
+</details>
 </div>
 <div id="seconde-vague-delta-décembre-2021" class="section level2">
 <h2>9. Seconde vague delta, décembre 2021</h2>
-<div id="contexte-8" class="section level3">
-<h3>Contexte</h3>
+<details>
+<summary>
+<p><strong>Contexte</strong></p>
+</summary>
 <p>Dans un contexte de seconde vague delta, l’Institut Pasteur a produit
 2 rapports le <a
 href="https://modelisation-covid19.pasteur.fr/scenarios/Institut_Pasteur_diminution_de_limmunit%C3%A9_et_rappel_20211129.pdf">29
@@ -1089,10 +1172,11 @@ niveau national est de 11% à 14 jours.”</p>
 la seconde vague delta de mi-décembre 2021. Ce pic est intervenu juste
 avant l’émergence du variant omicron, qui a changé la donne dans les
 semaines qui ont suivi.</p>
-</div>
-<div id="comparaison-des-scénarios-aux-données-réelles-7"
-class="section level3">
-<h3>Comparaison des scénarios aux données réelles</h3>
+</details>
+<details>
+<summary>
+<p><strong>Comparaison des scénarios aux données réelles</strong></p>
+</summary>
 <p>Au moment du pic du variant delta, la projection du modèle correspond
 à une surestimation 2 semaines plus tard de 30% pour les lits de soins
 critiques, et d’environ 40% pour les autres indicateurs.</p>
@@ -1109,11 +1193,13 @@ présentant les résultats</a> écrase les projections publiées
 précédemment, et nous n’avons pas pu effectuer cette évaluation
 systématique. Une conservation des résultats précédents en open data
 aiderait une telle démarche et une appropriation par les citoyens.</p>
+</details>
 <p><img src="index_files/figure-html/2021-12-06%20Pasteur-1.png" width="432" /><img src="index_files/figure-html/2021-12-06%20Pasteur-2.png" width="432" /><img src="index_files/figure-html/2021-12-06%20Pasteur-3.png" width="432" /><img src="index_files/figure-html/2021-12-06%20Pasteur-4.png" width="432" /></p>
-</div>
-<div id="discussion-sur-les-hypothèses-des-scénarios-technique-6"
-class="section level3">
-<h3>Discussion sur les hypothèses des scénarios (technique)</h3>
+<details>
+<summary>
+<p><strong>Discussion sur les hypothèses des scénarios
+(technique)</strong></p>
+</summary>
 <p>Il n’y pas de respect des hypothèses à vérifier pour ces projections.
 L’horizon de 2 semaines est trop court pour qu’une mesure mise en place
 après publication viennent modifier la trajectoire épidémique. En effet,
@@ -1121,12 +1207,14 @@ comme le rappelle le <a
 href="https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf">rapport
 du conseil scientifique</a>, “les premiers effets des mesures adoptées
 […] ne peuvent apparaître qu’après deux à trois semaines”.</p>
-</div>
+</details>
 </div>
 <div id="vague-omicron-janvier-2022" class="section level2">
 <h2>10. Vague Omicron, janvier 2022</h2>
-<div id="contexte-9" class="section level3">
-<h3>Contexte</h3>
+<details>
+<summary>
+<p><strong>Contexte</strong></p>
+</summary>
 <p>Suite à l’apparition du variant Omicron, l’Institut Pasteur a publié
 un <a
 href="https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Impact_dOmicron_sur_lepidemie_francaise_20211227.pdf">premier
@@ -1144,10 +1232,11 @@ href="https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Comparais
 publié le 15 février</a>, qui constitue une auto-évaluation comparant ce
 qui a été “prédit” (terme utilisé par le rapport) à ce qui s’est
 réellement passé.</p>
-</div>
-<div id="comparaison-des-scénarios-aux-données-réelles-8"
-class="section level3">
-<h3>Comparaison des scénarios aux données réelles</h3>
+</details>
+<details>
+<summary>
+<p><strong>Comparaison des scénarios aux données réelles</strong></p>
+</summary>
 <p>Le rapport distinguait des scénarios “probables” (en trais pleins) de
 scénarios “moins probables” (en pointillés). Il distinguait également
 une hypothèses d’efficacité à 6 mois de la dose de rappel contre les
@@ -1158,10 +1247,12 @@ a minima le scénario 85%. Mais l’Institut Pasteur l’utilisant pour
 affirmer dans son rapport rétrospectif que “les dynamiques prédites et
 observées des admissions quotidiennes sont proches”, nous avons fait le
 choix de le représenter.</p>
+</details>
 <p><img src="index_files/figure-html/2022-01-07%20Pasteur-1.png" width="432" /><img src="index_files/figure-html/2022-01-07%20Pasteur-2.png" width="432" /></p>
-</div>
-<div id="impact-politique-et-médiatique-8" class="section level3">
-<h3>Impact politique et médiatique</h3>
+<details>
+<summary>
+<p><strong>Impact politique et médiatique</strong></p>
+</summary>
 <p>Le rapport d’auto-évaluation de l’Institut Pasteur a été repris dans
 <a
 href="https://www.huffingtonpost.fr/entry/institut-pasteur-avait-vu-juste-pour-la-5e-vague-voici-ses-predictions-sur-la-fin-de-lhiver_fr_620d0102e4b05706db70a281">certains
@@ -1169,16 +1260,20 @@ articles de presse</a> déclarant que “l’institut Pasteur avait presque
 tout bon sur l’impact d’Omicron”. Nous détaillons dans le paragraphe
 suivant les raisons qui nous font penser que cette affirmation est à
 prendre avec des pincettes.</p>
-</div>
-<div
-id="auto-évaluation-de-linstitut-pasteur-et-discussion-des-hypothèses"
-class="section level3">
-<h3>Auto-évaluation de l’Institut Pasteur et discussion des
-hypothèses</h3>
+</details>
+<details>
+<summary>
+<p><strong>Auto-évaluation de l’Institut Pasteur et discussion des
+hypothèses</strong></p>
+</summary>
 <p>Plusieurs points soulèvent question dans l’auto-évaluation menée par
 l’Institut Pasteur présentée ci-dessous. On notera au passage que notre
 propre rétrospective est cohérente avec la figure présentée par
 l’Institut.</p>
+<center>
+<p><img src="images/Pasteur_2022_Fevrier/auto_eval_pasteur.png"
+width="400" /></p>
+</center>
 <p>La plus évidente est l’absence totale d’allusion à l’efficacité
 vaccinale et le choix de ne représenter que les courbes illustrant une
 efficacité vaccinale de 85%, contrairement à nos graphiques. Pourtant
@@ -1215,7 +1310,7 @@ l’Institut Pasteur :</p>
 les hypothèses ne se réalisent pas, la dynamique observée pourra être
 différente des projections.”</em></p>
 </blockquote>
-</div>
+</details>
 </div>
 </div>
 
