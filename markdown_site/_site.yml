@@ -4,6 +4,8 @@ navbar:
   left:
     - text: "Accueil"
       href: index.html
+    - text: "Projections"
+      href: short_term.html
     - text: "Démarche"
       href: process.html
     - text: "Méthodologie"
@@ -16,9 +18,9 @@ navbar:
     - text: "English"
       href: en_index.html
 output:
-  html_document:
-    toc: true
-    toc_float: true
+  rmdformats::downcute:
+    fig_width: 5.2
+    fig_height: 6
     include:
       after_body: footer.html
     css: styles.css

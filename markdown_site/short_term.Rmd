@@ -1,0 +1,455 @@
+---
+title: "Projections court terme"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message=F, warning=F, fig.align = "center",  dev='png')
+library(plyr)
+library(lattice)
+library(lubridate)
+library(svglite)
+
+#loading relevant packages
+library(gifski) #for animation
+library(zoo) #for rollmean function
+library(tidyr)
+library(tidyverse) #mainly for reading files functions
+library(dplyr)
+library(ggplot2) #for ggplot graphs
+library(cowplot) #for plot_grid()
+library(stringr) #to manipulate strings
+
+theme_set(
+  theme_classic() +
+  theme(legend.position = "none", 
+        legend.title = element_blank(),
+        panel.grid.major.y = element_line(),
+        text = element_text(family = "Times New Roman"),
+        plot.title = element_text(face="bold"),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank())
+  )
+g_theme <- scale_color_manual(values=c('#ff0000','#D8D8D8'))
+myred <- '#ff0000'
+mygrey <- '#b4b4b4'
+#height and width of graphs
+w <- 4.5
+h <- 5.2
+```
+
+```{r loading_true _data}
+data_gouv_new_hosp_rea <- 
+  read.csv(url("https://www.data.gouv.fr/fr/datasets/r/6fadff46-9efd-4c53-942a-54aca783c30c"), sep=";") %>%
+  mutate(date = as.Date(jour))
+data_gouv_beds_hosp_rea <- 
+  read.csv(url("https://www.data.gouv.fr/fr/datasets/r/63352e38-d353-4b54-bfd1-f1b3ee1cabd7"), sep=";")  %>%
+  mutate(date = as.Date(jour))
+
+#Lits occupés en réanimation, hospitalisation et hospitalisation conventionnelle
+true_data_beds_hosp_rea <- data_gouv_beds_hosp_rea %>%
+  filter(sexe =="0", # 0 = hommes + femmes, 1=hommes, 2=femmes
+         #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978) %>%
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(hosp = sum(hosp, na.rm = T), 
+            rea = sum(rea, na.rm = T),
+            HospConv = sum(HospConv, na.rm = T))
+
+#pour les echos pasteur 29 avril ile de france
+true_data_beds_hosp_rea_IDF <- data_gouv_beds_hosp_rea %>%
+  filter(sexe =="0", # 0 = hommes + femmes, 1=hommes, 2=femmes
+         #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         dep == 75 | dep == 92 | dep == 93 | dep == 94 | dep == 91 | dep == 95 | dep == 78 | dep == 77) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(hosp = sum(hosp, na.rm = T), 
+            rea = sum(rea, na.rm = T),
+            HospConv = sum(HospConv, na.rm = T))
+
+#Nouvelles admissions à l'hôpital et en réanimation (moyenné sur 7 jours)
+true_data_new_hosp_rea <- data_gouv_new_hosp_rea %>% 
+  filter( #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(incid_hosp = sum(incid_hosp, na.rm = T), 
+            incid_rea = sum(incid_rea, na.rm = T)) %>%
+  mutate(new_rea_right = rollmean(incid_rea, 7, na.pad = T, align = "right"),#mean of 7 last days
+         new_hosp_right = rollmean(incid_hosp, 7, na.pad = T, align = "right"),
+         new_rea_center = rollmean(incid_rea, 7, na.pad = T, align = "center"),#centered mean
+         new_hosp_center = rollmean(incid_hosp, 7, na.pad = T, align = "center"))
+
+true_data_new_hosp_rea_no_mean <- data_gouv_new_hosp_rea %>% 
+  filter( #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+    dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(new_hosp = sum(incid_hosp, na.rm = T), 
+            new_rea = sum(incid_rea, na.rm = T))
+
+#Pour l'INSERM : admissions hebdomadaire à l'hôpital
+true_data_new_hosp_rea_weekly <- data_gouv_new_hosp_rea %>% 
+  group_by(date) %>% #je n'ai pas filtré les outre-mer ici car pas précisé, mais ne change pas grand-chose
+  dplyr::summarise(incid_hosp = sum(incid_hosp, na.rm = T)) %>%
+  mutate(new_hosp_week = rollsum(incid_hosp, 7, na.pad = T, align = "left")) #patients arrivés dans les 7 derniers jours)
+
+```
+
+# A propos des projections à court terme
+Une critique souvent faite à l'analyse des scénarios est que ceux-ci ne sont pas des projections, et ne servent qu'à évaluer le champ des possibles pour quelques semaines ou mois sous un ensemble d'hypothèses. 
+
+Les projections à court terme ne souffrent pas de cette limitation. Elles sont réalisées à un horizon de 2 semaines maximum. Selon le conseil scientifique, sous un horizon temporel aussi court, la situation hospitalière n'est pas affectée par le mesures mises en place ou les changements de comportement. Les modélisateurs ont alors tous les éléments en main pour effectuer une projection au plus près de la réalité.
+
+# Projections
+
+## Avril-Mai 2021, pic 3e vague
+
+```{r projection_april_may_2021, animation.hook='gifski'}
+scenario <- read.csv("data/short_term/new_SC/2021_04_02.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  geom_vline(xintercept = as.Date("2021-03-29"), linetype = "dashed", alpha=.5) + 
+  annotate('text', x = as.Date("2021-03-28"), y = 20, label = "date de la\nprojection", color = mygrey, fontface = "bold",
+           family = "Times New Roman", hjust = "right", vjust = "bottom") +
+  annotate('text', x = as.Date("2021-04-17"), y = 480, label = "projection", color = mygrey, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-04-10"), y = 380, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  xlim(date("2021-03-01"), date("2021-05-15")) + g_theme + ylim(0, 670) + 
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 28 mars 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+scenario <- read.csv("data/short_term/new_SC/2021_04_12.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  geom_vline(xintercept = as.Date("2021-04-08"), linetype = "dashed", alpha=.5) + 
+  annotate('text', x = as.Date("2021-04-07"), y = 20, label = "date de la\nprojection", color = mygrey, fontface = "bold",
+           family = "Times New Roman", hjust = "right", vjust = "bottom") +
+  annotate('text', x = as.Date("2021-04-26"), y = 470, label = "projection", color = mygrey, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-04-17"), y = 380, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  xlim(date("2021-03-01"), date("2021-05-15")) + g_theme + ylim(0, 670) +
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 08 avril 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+scenario <- read.csv("data/short_term/new_SC/2021_04_20.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  geom_vline(xintercept = as.Date("2021-04-16"), linetype = "dashed", alpha=.5) + 
+  annotate('text', x = as.Date("2021-04-15"), y = 20, label = "date de la\nprojection", color = mygrey, fontface = "bold",
+           family = "Times New Roman", hjust = "right", vjust = "bottom") +
+  annotate('text', x = as.Date("2021-05-07"), y = 330, label = "projection", color = mygrey, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-04-23"), y = 420, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  xlim(date("2021-03-01"), date("2021-05-15")) + g_theme + ylim(0, 670) +
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 16 avril 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+
+
+scenario <- read.csv("data/short_term/new_SC/2021_04_26.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  geom_vline(xintercept = as.Date("2021-04-23"), linetype = "dashed", alpha=.5) + 
+  annotate('text', x = as.Date("2021-04-22"), y = 20, label = "date de la\nprojection", color = mygrey, fontface = "bold",
+           family = "Times New Roman", hjust = "right", vjust = "bottom") +
+  annotate('text', x = as.Date("2021-05-10"), y = 350, label = "projection", color = mygrey, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-04-29"), y = 220, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  xlim(date("2021-03-01"), date("2021-05-15")) + g_theme + ylim(0, 670) +
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 23 avril 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+
+scenario <- read.csv("data/short_term/new_SC/2021_05_04.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  geom_vline(xintercept = as.Date("2021-04-30"), linetype = "dashed", alpha=.5) + 
+  annotate('text', x = as.Date("2021-04-29"), y = 20, label = "date de la\nprojection", color = mygrey, fontface = "bold",
+           family = "Times New Roman", hjust = "right", vjust = "bottom") +
+  annotate('text', x = as.Date("2021-05-12"), y = 310, label = "projection", color = mygrey, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-05-10"), y = 140, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  xlim(date("2021-03-01"), date("2021-05-15")) + g_theme + ylim(0, 670) +
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 30 avril 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+```
+
+## Mai-Juin 2021, décrue
+
+```{r projection_may_june_2021, animation.hook='gifski'}
+scenario <- read.csv("data/short_term/new_SC/2021_05_11.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  annotate('text', x = as.Date("2021-12-05"), y = 1420, label = "projection à 2 semaines\nsurestimation +40%", color = '#515a5a', fontface = "italic",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-12-10"), y = 900, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  geom_vline(xintercept = as.Date("2021-05-11"), linetype = "dashed", alpha=.5) + 
+  xlim(date("2021-05-01"), date("2021-06-30")) + g_theme + ylim(0, 400) + 
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 5 mai 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+#Reprendre les mesures
+scenario <- read.csv("data/short_term/new_SC/2021_05_18.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  annotate('text', x = as.Date("2021-12-05"), y = 1420, label = "projection à 2 semaines\nsurestimation +40%", color = '#515a5a', fontface = "italic",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-12-10"), y = 900, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  geom_vline(xintercept = as.Date("2021-05-18"), linetype = "dashed", alpha=.5) + 
+  xlim(date("2021-05-01"), date("2021-06-30")) + g_theme + ylim(0, 400) + 
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 18 mai 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+#reprendre les mesures
+scenario <- read.csv("data/short_term/new_SC/2021_05_26.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  annotate('text', x = as.Date("2021-12-05"), y = 1420, label = "projection à 2 semaines\nsurestimation +40%", color = '#515a5a', fontface = "italic",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-12-10"), y = 900, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  geom_vline(xintercept = as.Date("2021-05-26"), linetype = "dashed", alpha=.5) + 
+  xlim(date("2021-05-01"), date("2021-06-30")) + g_theme + ylim(0, 400) + 
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 26 mai 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+scenario <- read.csv("data/short_term/new_SC/2021_05_31.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  annotate('text', x = as.Date("2021-12-05"), y = 1420, label = "projection à 2 semaines\nsurestimation +40%", color = '#515a5a', fontface = "italic",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-12-10"), y = 900, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  geom_vline(xintercept = as.Date("2021-05-31"), linetype = "dashed", alpha=.5) + 
+  xlim(date("2021-05-01"), date("2021-06-30")) + g_theme + ylim(0, 400) + 
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 31 mai 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+scenario <- read.csv("data/short_term/new_SC/2021_06_07.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  annotate('text', x = as.Date("2021-12-05"), y = 1420, label = "projection à 2 semaines\nsurestimation +40%", color = '#515a5a', fontface = "italic",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-12-10"), y = 900, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  geom_vline(xintercept = as.Date("2021-06-07"), linetype = "dashed", alpha=.5) + 
+  xlim(date("2021-05-01"), date("2021-06-30")) + g_theme + ylim(0, 400) + 
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 6 juin 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+scenario <- read.csv("data/short_term/new_SC/2021_06_15.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  annotate('text', x = as.Date("2021-12-05"), y = 1420, label = "projection à 2 semaines\nsurestimation +40%", color = '#515a5a', fontface = "italic",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-12-10"), y = 900, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  geom_vline(xintercept = as.Date("2021-06-15"), linetype = "dashed", alpha=.5) + 
+  xlim(date("2021-05-01"), date("2021-06-30")) + g_theme + ylim(0, 400) + 
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 15 juin 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+```
+
+
+
+
+```{r projection_august_2021, animation.hook='gifski'}
+#en attente de données pour août
+# scenario <- read.csv("data/short_term/new_SC/2021_08_24.csv", sep=";") %>%
+#   mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+# ggplot(data= true_data_new_hosp_rea_no_mean) +
+#   geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+#   geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+#   geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+#   annotate('text', x = as.Date("2021-12-05"), y = 1420, label = "projection à 2 semaines\nsurestimation +40%", color = '#515a5a', fontface = "italic",
+#            family = "Times New Roman") + 
+#   annotate('text', x = as.Date("2021-12-10"), y = 900, label = "réalité", color = myred, fontface = "bold",
+#            family = "Times New Roman") +
+#   geom_vline(xintercept = as.Date("2021-08-20"), linetype = "dashed", alpha=.5) + 
+#   xlim(date("2021-07-01"), date("2021-09-30")) + g_theme + ylim(0, 250) + 
+#   labs(title = "Admissions journalières en soins critiques",
+#        subtitle = "Projection de l'Institut Pasteur du 20 août 2021\n",
+#        caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+#        https://evaluation-modelisation-covid.github.io/france/")
+# 
+# scenario <- read.csv("data/short_term/new_SC/2021_08_31.csv", sep=";") %>%
+#   mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+# ggplot(data= true_data_new_hosp_rea_no_mean) +
+#   geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+#   geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+#   geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+#   annotate('text', x = as.Date("2021-12-05"), y = 1420, label = "projection à 2 semaines\nsurestimation +40%", color = '#515a5a', fontface = "italic",
+#            family = "Times New Roman") + 
+#   annotate('text', x = as.Date("2021-12-10"), y = 900, label = "réalité", color = myred, fontface = "bold",
+#            family = "Times New Roman") +
+#   geom_vline(xintercept = as.Date("2021-08-27"), linetype = "dashed", alpha=.5) + 
+#   xlim(date("2021-07-01"), date("2021-09-30")) + g_theme + ylim(0, 250) + 
+#   labs(title = "Admissions journalières en soins critiques",
+#        subtitle = "Projection de l'Institut Pasteur du 27 août 2021\n",
+#        caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+#        https://evaluation-modelisation-covid.github.io/france/")
+
+
+```
+
+
+## Décembre 2021, 2e pic delta
+
+```{r projection_december_2021, animation.hook='gifski'}
+scenario <- read.csv("data/short_term/new_SC/2021_11_25.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  annotate('text', x = as.Date("2021-11-18"), y = 5, label = "date de la\nprojection", color = mygrey, fontface = "bold",
+           family = "Times New Roman", hjust = "right", vjust = "bottom") +
+  annotate('text', x = as.Date("2021-12-05"), y = 160, label = "projection", color = mygrey, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-11-28"), y = 210, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  geom_vline(xintercept = as.Date("2021-11-19"), linetype = "dashed", alpha=.5) + 
+  xlim(date("2021-11-01"), date("2021-12-31")) + g_theme + ylim(0, 410) +
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 19 novembre 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+scenario <- read.csv("data/short_term/new_SC/2021_11_30.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  geom_vline(xintercept = as.Date("2021-11-26"), linetype = "dashed", alpha=.5) + 
+  annotate('text', x = as.Date("2021-11-25"), y = 5, label = "date de la\nprojection", color = mygrey, fontface = "bold",
+           family = "Times New Roman", hjust = "right", vjust = "bottom") +
+  annotate('text', x = as.Date("2021-12-15"), y = 280, label = "projection", color = mygrey, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-12-06"), y = 250, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  xlim(date("2021-11-01"), date("2021-12-31")) + g_theme + ylim(0, 410) +
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 26 novembre 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+scenario <- read.csv("data/short_term/new_SC/2021_12_06.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  geom_vline(xintercept = as.Date("2021-12-03"), linetype = "dashed", alpha=.5) + 
+  annotate('text', x = as.Date("2021-12-02"), y = 5, label = "date de la\nprojection", color = mygrey, fontface = "bold",
+           family = "Times New Roman", hjust = "right", vjust = "bottom") +
+  annotate('text', x = as.Date("2021-12-21"), y = 340, label = "projection", color = mygrey, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-12-15"), y = 230, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  xlim(date("2021-11-01"), date("2021-12-31")) + g_theme + ylim(0, 410) +
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 3 décembre 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+scenario <- read.csv("data/short_term/new_SC/2021_12_13.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  annotate('text', x = as.Date("2021-12-09"), y = 5, label = "date de la\nprojection", color = mygrey, fontface = "bold",
+           family = "Times New Roman", hjust = "right", vjust = "bottom") +
+  annotate('text', x = as.Date("2021-12-21"), y = 380, label = "projection", color = mygrey, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-12-20"), y = 230, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  geom_vline(xintercept = as.Date("2021-12-10"), linetype = "dashed", alpha=.5) + 
+  xlim(date("2021-11-01"), date("2021-12-31")) + g_theme + ylim(0, 410) +
+  labs(title = "Admissions journalières en soins critiques",
+       subtitle = "Projection de l'Institut Pasteur du 10 décembre 2021\n",
+       caption = "\nSource: Projection à court terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+       https://evaluation-modelisation-covid.github.io/france/")
+
+scenario <- read.csv("data/short_term/new_SC/2021_12_20.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+ggplot(data= true_data_new_hosp_rea_no_mean) +
+  geom_line(aes(x=date, y=new_rea), color = myred, alpha = .2, size = .5) +
+  geom_line(data = scenario, aes(x = date, y=projection, color="projection"), size=2.5) +
+  geom_line(data = scenario, aes(x = date , y=reality, color = " réalité"), size=1) +
+  annotate('text', x = as.Date("2021-12-18"), y = 5, label = "date de la\nprojection", color = mygrey, fontface = "bold",
+           family = "Times New Roman", hjust = "right", vjust = "bottom") +
+  annotate('text', x = as.Date("2021-12-27"), y = 200, label = "projection", color = mygrey, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-12-26"), y = 300, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  geom_vline(xintercept = as.Date("2021-12-20"), linetype = "dashed", alpha=.5) +
+  xlim(date("2021-11-01"), date("2021-12-31")) + g_theme + ylim(0, 410) +
+   labs(title = "Admissions journalières en soins critiques",
+        subtitle = "Projection de l'Institut Pasteur du 20 décembre 2021\n",
+        caption = "\nSource: Projection à cour terme des besoins hospitaliers, Institut Pasteur \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/
+        https://evaluation-modelisation-covid.github.io/france/")
+
+```
+

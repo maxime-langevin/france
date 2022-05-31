@@ -1,3 +1,7 @@
+---
+title: "Méthodologie"
+---
+
 # Méthodologie
 
 Les courbes présentées sur le site sont issues des scénarios de modélisations ayant impacté les politiques publiques mises en place en France. Elles sont principalement issues de scénarios de modélisation de l'Institut Pasteur et de Inserm. Pour permettre une évaluation appropriée des scénarios de modélisation, seuls les scénarios dont les hypothèses sont vérifiées ont été retenus, notamment les hyopthèses portant sur les mesures mises en place. Afin de ne pas introduire de biais (par exemple ne prendre que les scénarios qui surestimaient la réalité, ou l'inverse), nous avons étudié les scénarios de manière exhaustive. Nous avons analysé :

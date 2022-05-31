@@ -3,8 +3,93 @@ title: "Démarche"
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = F, message=F, warning=F, fig.align = "center",  dev='svg')
+library(plyr)
+library(lattice)
+library(lubridate)
+library(svglite)
+
+#loading relevant packages
+library(zoo) #for rollmean function
+library(tidyr)
+library(tidyverse) #mainly for reading files functions
+library(dplyr)
+library(ggplot2) #for ggplot graphs
+library(cowplot) #for plot_grid()
+library(stringr) #to manipulate strings
+
+theme_set(
+  theme_classic() +
+  theme(legend.position = "none", 
+        legend.title = element_blank(),
+        panel.grid.major.y = element_line(),
+        text = element_text(family = "Times New Roman"),
+        plot.title = element_text(face="bold"),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank())
+  )
+g_theme <- scale_color_manual(values=c('#ff0000','#D8D8D8'))
+myred <- '#ff0000'
+mygrey <- '#b4b4b4'
+#height and width of graphs
+w <- 4.5
+h <- 5.2
 ```
+
+
+```{r loading true data, echo=FALSE, message=FALSE, warning=FALSE}
+data_gouv_new_hosp_rea <- read.csv(url("https://www.data.gouv.fr/fr/datasets/r/6fadff46-9efd-4c53-942a-54aca783c30c"), sep=";") %>%
+  mutate(date = as.Date(jour))
+data_gouv_beds_hosp_rea <- read.csv(url("https://www.data.gouv.fr/fr/datasets/r/63352e38-d353-4b54-bfd1-f1b3ee1cabd7"), sep=";")  %>%
+  mutate(date = as.Date(jour))
+
+#Lits occupés en réanimation, hospitalisation et hospitalisation conventionnelle
+true_data_beds_hosp_rea <- data_gouv_beds_hosp_rea %>%
+  filter(sexe =="0", # 0 = hommes + femmes, 1=hommes, 2=femmes
+         #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978) %>%
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(hosp = sum(hosp, na.rm = T), 
+            rea = sum(rea, na.rm = T),
+            HospConv = sum(HospConv, na.rm = T))
+
+#pour les echos pasteur 29 avril ile de france
+true_data_beds_hosp_rea_IDF <- data_gouv_beds_hosp_rea %>%
+  filter(sexe =="0", # 0 = hommes + femmes, 1=hommes, 2=femmes
+         #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         dep == 75 | dep == 92 | dep == 93 | dep == 94 | dep == 91 | dep == 95 | dep == 78 | dep == 77) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(hosp = sum(hosp, na.rm = T), 
+            rea = sum(rea, na.rm = T),
+            HospConv = sum(HospConv, na.rm = T))
+
+#Nouvelles admissions à l'hôpital et en réanimation (moyenné sur 7 jours)
+true_data_new_hosp_rea <- data_gouv_new_hosp_rea %>% 
+  filter( #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(incid_hosp = sum(incid_hosp, na.rm = T), 
+            incid_rea = sum(incid_rea, na.rm = T)) %>%
+  mutate(new_rea_right = rollmean(incid_rea, 7, na.pad = T, align = "right"),#mean of 7 last days
+         new_hosp_right = rollmean(incid_hosp, 7, na.pad = T, align = "right"),
+         new_rea_center = rollmean(incid_rea, 7, na.pad = T, align = "center"),#centered mean
+         new_hosp_center = rollmean(incid_hosp, 7, na.pad = T, align = "center"))
+
+true_data_new_hosp_rea_no_mean <- data_gouv_new_hosp_rea %>% 
+  filter( #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+    dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(new_hosp = sum(incid_hosp, na.rm = T), 
+            new_rea = sum(incid_rea, na.rm = T))
+
+#Pour l'INSERM : admissions hebdomadaire à l'hôpital
+true_data_new_hosp_rea_weekly <- data_gouv_new_hosp_rea %>% 
+  group_by(date) %>% #je n'ai pas filtré les outre-mer ici car pas précisé, mais ne change pas grand-chose
+  dplyr::summarise(incid_hosp = sum(incid_hosp, na.rm = T)) %>%
+  mutate(new_hosp_week = rollsum(incid_hosp, 7, na.pad = T, align = "left")) #patients arrivés dans les 7 derniers jours)
+
+```
+
 
 # Notre démarche
 
@@ -50,9 +135,87 @@ Ainsi, la comparaison entre scénarios de modélisation et réalité permettra b
 
 Par exemple, lors de la 4ème vague, l'Institut Pasteur avait d'abord publié un rapport le 9 juillet. Après l'annonce de l'extension du pass sanitaire annoncée mi-juillet, l'Institut Pasteur a publié un nouveau rapport intégrant l'effet de cette mesure. Comparer les modélisations du rapport du 9 juillet avec la réalité n'est pas légitime, mais comparer les prévisions du rapport suivant avec la réalité oui (car l'impact des mesures y a déja été modélisé).
 
-```{r 2021_07_26 Pasteur}
+## {.tabset .tabset-fade .tabset-pills}
 
+### Lits de réanimation
+
+```{r 2021_07_26_Pasteur_ICU_beds}
+scenario <- read.csv("data/2021_07_26_Pasteur/beds_SC.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+scenario %>%
+  gather(key=pasteur, value = value, -date) %>%
+  ggplot(aes(date, value+200, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité", group="réalité"), size=1) +
+  annotate('text', x = as.Date("2021-08-30"), y = 1000, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-08-25"), y = 9500, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  xlim(as.Date("2021-07-15"), as.Date("2021-10-10")) + g_theme +
+  labs(title = "Lits de soins critiques occupés",
+       subtitle = "scénarios publiés par l'Institut Pasteur le 26 juillet 2021\n",
+       caption = "\nSource: Institut Pasteur Rapport 26 juillet \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/
+       https://evaluation-modelisation-covid.github.io/france/")
+# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_reanimation_beds.png", 
+#        plot =g, width = w, height = h)
+# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_reanimation_beds.svg", 
+#        plot =g, width = w, height = h)
 ```
+
+### Entrées en réanimation
+
+```{r 2021_07_26_Pasteur_ICU_adm}
+#admissions en soins critiques
+scenario <- read.csv("data/2021_07_26_Pasteur/new_SC.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+scenario %>%
+  gather(key=pasteur, value = value, -date) %>%
+  ggplot(aes(date, value, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
+  geom_line(data= true_data_new_hosp_rea, 
+            aes(x=date, y=new_rea_right, color = "réalité", group="réalité"), size=1) +
+  annotate('text', x = as.Date("2021-08-20"), y = 80, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-08-15"), y = 800, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  xlim(date("2021-07-15"), date("2021-10-10")) + g_theme +
+  labs(title = "Admissions en soins critiques",
+       subtitle = "scénarios publiés par l'Institut Pasteur le 26 juillet 2021\n",
+       caption = "\nSource: Institut Pasteur Rapport 26 juillet \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/
+       https://evaluation-modelisation-covid.github.io/france/")
+# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_reanimation.png", 
+#        plot =g, width = w, height = h)
+# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_reanimation.svg", 
+#        plot =g, width = w, height = h)
+```
+
+### Nouvelles hospitalisations
+
+```{r 2021_07_26_Pasteur_hosp_adm}
+
+#Nouvelles admissions à l'hôpital
+scenario <- read.csv("data/2021_07_26_Pasteur/new_hospital.csv", sep=";") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+scenario %>%
+  gather(key=pasteur, value = value, -date) %>%
+  ggplot(aes(date, value, group=pasteur, color="scénarios")) + geom_smooth(se=F) +
+  geom_line(data= true_data_new_hosp_rea, 
+            aes(x=date, y=new_hosp_right, color = "réalité", group="réalité"), size = 1) +
+  annotate('text', x = as.Date("2021-08-20"), y = 400, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") + 
+  annotate('text', x = as.Date("2021-08-15"), y = 3200, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  xlim(date("2021-07-15"), date("2021-10-10")) + g_theme +
+  labs(title = "Admission journalières à l'hôpital",
+       subtitle = "scénarios publiés par l'Institut Pasteur le 26 juillet 2021\n",
+       caption = "\nSource: Institut Pasteur Rapport 26 juillet \nhttps://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/
+       https://evaluation-modelisation-covid.github.io/france/")
+# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_hospital.png", 
+#        plot =g, width = w, height = h) 
+# ggsave("../images/Pasteur_2021_Juillet/Pasteur_2021_juillet_new_hospital.svg", 
+#        plot =g, width = w, height = h) 
+```
+
+##
 
 Ces scénarios comparent les prévisions faites pour le mois d'août 2021 avec l'évolution réelle durant les mois d'août: comme les scénarios intègrent les mesures mises en place, la comparaison est possible.
 
