@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="generator" content="pandoc" />
+
+    
+    
+    <title>process.knit</title>
+
+        <script src="site_libs/header-attrs-2.14/header-attrs.js"></script>
+        <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="site_libs/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="site_libs/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+        <script src="site_libs/navigation-1.1/tabsets.js"></script>
+        <link href="site_libs/downcute-0.1/downcute.css" rel="stylesheet" />
+        <link href="site_libs/downcute-0.1/downcute_fonts_embed.css" rel="stylesheet" />
+        <script src="site_libs/downcute-0.1/downcute_styles.js"></script>
+        <script src="site_libs/downcute-0.1/downcute.js"></script>
+        <script src="site_libs/prism-1.22/prism.js"></script>
+        <link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+        <link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+    
+    
+    
+        <link rel="stylesheet" href="styles.css" type="text/css" />
+    
+    <!-- tabsets -->
+    <script>
+      $(document).ready(function () {
+	  window.buildTabsets("toc");
+      });
+      $(document).ready(function () {
+	  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+	      $(this).parent().toggleClass('nav-tabs-open')
+	  });
+      });
+    </script>
+
+    <!-- code folding -->
+    
+    <!-- code download -->
+    
+    <!-- tabsets dropdown -->
+
+    <style type="text/css">
+      .tabset-dropdown > .nav-tabs {
+	  display: inline-table;
+	  max-height: 500px;
+	  min-height: 44px;
+	  overflow-y: auto;
+	  background: white;
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+	  content: "&#xe258;";
+	  border: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+	  content: "";
+	  font-family: 'Glyphicons Halflings';
+	  display: inline-block;
+	  padding: 10px;
+	  border-right: 1px solid #ddd;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li.active {
+	  display: block;
+      }
+
+      .tabset-dropdown > .nav-tabs > li.active a {
+  	  padding: 0 15px !important;
+      }
+
+      .tabset-dropdown > .nav-tabs > li > a,
+      .tabset-dropdown > .nav-tabs > li > a:focus,
+      .tabset-dropdown > .nav-tabs > li > a:hover {
+	  border: none;
+	  display: inline-block;
+	  border-radius: 4px;
+	  background-color: transparent;
+      }
+      
+      .tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+	  display: block;
+	  float: none;
+      }
+      
+      .tabset-dropdown > .nav-tabs > li {
+	  display: none;
+	  margin-left: 0 !important;
+      }
+    </style>
+    
+</head>
+
+<body class="preload">
+
+   	
+               <!-- downcute start -->   
+   <div id="docute" class="Root theme-default">
+     <div class="Page layout-narrow">
+      <div class="Wrap">
+        <div class="Sidebar">
+          <div class="SidebarItems" id="toc">
+            <ul>
+            <li><a href="#notre-démarche">Notre démarche</a></li>
+            <li><a
+            href="#pourquoi-évaluer-les-scénarios-de-modélisation-est-il-important">Pourquoi
+            évaluer les scénarios de modélisation est-il
+            important?</a></li>
+            <li><a href="#peut-on-vraiment-les-évaluer">Peut-on vraiment
+            les évaluer?</a>
+            <ul>
+            <li><a href="#section"></a></li>
+            <li><a href="#section-1"></a></li>
+            </ul></li>
+            <li><a
+            href="#est-ce-vraiment-grave-si-les-modélisations-ne-concordent-pas-avec-la-réalité">Est-ce
+            vraiment grave si les modélisations ne concordent pas avec
+            la réalité?</a></li>
+            </ul>
+          </div>
+          <div data-position="sidebar:post-end" class="InjectedComponents"><div class="dark-theme-toggler"><div class="toggle "><div class="toggle-track"><div class="toggle-track-check"><img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAAlwSFlzAAALEwAACxMBAJqcGAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAABlJJREFUWAm1V3tsFEUcntnXvXu0tBWo1ZZHihBjCEWqkHiNaMLDRKOtQSKaiCFKQtS/SbxiFCHGCIkmkBSMwZhQNTFoQZD0DFiwtCDFAkdDqBBBKFj63rvdnfH7zfVo5aFBj0l2Z/dm5vd98/0es8dYjlpr62azufnDQNZcU1PciMfjWvb9rvZSMk4Ayfb36pLH13189GC8LAtIRLLPt+pzwrCuLq4ISEv/gHmitrAwfPbEkXc/ad4dL6iujrvyX0jcitgd/yZlZqftP6995Mr5TVLa22Tn8XVX2g/XLSRjUu7Q79jonS7I7hS7/0oOb5VyqF52n98oj7esXX07EjlxwXWisRmSnm3b29TTM8iYrjmFBWExubxwY/uhNas4r/WySl1fc5cetDMd7ydl+lMJJRw5WC8ud62Xx5rfepzwxgZmbhUYNS5Stvsj4yo2GXJEFBVHWDBkfdbR9HpYBaaUajDnBLKKpl1xRKYcgGtMCqEzTaSnThk/SQT0uJqTqFNBmXMCsZE48DzRZRMBRjv1GHNdk3HBImF9ZUvTyxM40pMKVc4JZBXQOLOFoDeKSxdp6HIQcO4rjYT9fn0pjbz9GLt7BAAODmjSVReXUMFzNW5x5vfxp2mIxZjIuQKJxAmFa+is2DQJJQ0JyBVExNOYcJnPxx/6/utnijmP555ALEagKAGGnGn64QORBjARcIA/yJk7JMJBLRrNtybTvH88KGjCf2jK86bhzmMcwDKFZEQvbIhxFYhChoMWMzU2iWznlIBEVJOsP+1bdX/ALx9l7jApADeDAEcMkE90JnUmmGl4USKQ0xhoW3JB5XY0YrxYWhLwMZZypUyjDGH35AbNwgUGiFBPpuGbHCpAOV1ZGXf2f/taftAv31DyeymN2d1IhAFAwTOmnzF/kKcdh3me7CYCOVNgycju84u8DeVlwfFq9/ZlTfldYrMUjOlrkjkD+rU+WzCROkcEchIDHR011syZW9JHD7y07N6JvhWMpz3pugaTkB6lWFVCKkhck0zzeMp2utq+uHrmfxOgoCO/Z8CXPlEQ1bdH8wgvhSIkEG0ICcQeExIFGdimjvKka7btJFZuaXOammIGKUCFQ53j9EN1dYKWqHf0t2w407W2tgs6h89ZnImjB55flh81tt9XirjjDuSl+oIPRQ0iWPgNZ5GqTqbBe3vSzEl5n5PhWKwocyR2HlqYN61qV18WjYjE8JLARZPQsUSim8foIRYTlGr02Ly7piASFRtKJ4VfieYhxdS2JcDVMN6xVOKZyrCGm8b108lrLRVzvptLH7IoEFLFANes6KnDi+uxfmvFnF17oALq5u1agu3/YfHkcSFzeSggV5eXRfIB7CHNcO5SUI+Ih5Ir7f4MAV9IqdFzdZgNpZw1Gcs1mNvgGbTbqQ9/cz7ZuuhgyYRQ49ljTyWHhr2DwpNHHFf+5gnWZ3Bharo+0TD5dNMw5vv9RlVpSRDHK4TlnoukhtYApuOHejSZQuo5g/A9BysdKRCyLl6062fN37OXMDlvUJtUrtmxo0avrW3wTrYs3jJ9RvRVChrmSmanPMpX2OXMsmDGh6AiEIwBAlvkOqIdBy+8JyAz8pz7QxiDth4KDy5uAlwzrWTnwC8Vc4KVAMZ3YUZ+IqoIjP3h5KFFX1ZMy3uW+7RhEDHgTi0zC9rS7uhPCDiNrGFyqBeERtKN/B0YlyFCkw0NJ5C0Ojv7zvT1a1WV1TuvZDdL4NTgB7CASYpsen6gqvG5jmTf5qHedADgkBl3D0nkSgNhZACDyi0FUKZRr3IdRjgN4WPPoFMIIegIK3mqd38fS80mcJKelM4szNyzZtQbkchGePuBRS8Eg9pHU8ojRQpSqs+ajAIwTjjUMQ/nvTNM0kicwYxZIYMh/891DYi+fvedB+c1xsm4lDU6ya+Axtz+RiAzEVYbajQOpq17F0R9QevNcEhfcU+xvyQQUalGJBSesqOkgPQ4YNyUZL9fSvUPDjoNAwN8/dwFjaczNkc3ptaMud1EIDtGcmXTcefO2cGSvKIFfp/2JIJxlq7xEl3nVPM4fDeIbPkD16/ptNc0bDu7qxbsu0R2JGywWMIjF2ft3tjfloAyQAGXiOn8hrqwbVvMXzaO+QeHXP6nF0wvX74Hf4NGG5GPjSlYoyM3P/0FbCT6zvM/yYoAAAAASUVORK5CYII=" role="presentation" style="pointer-events: none;" width="16" height="16"></div> <div class="toggle-track-x"><img src="data:image/png;base64,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" role="presentation" style="pointer-events: none;" width="16" height="16"></div></div> <div class="toggle-thumb"></div></div> <input type="checkbox" aria-label="Switch between Dark and Default theme" class="toggler-screen-reader-only"></div></div>
+        </div>
+        <div class="Main">
+          <div class="Content" id="content"> 
+   
+   
+      
+      <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Rétrospective Covid</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li>
+        <a href="index.html">Accueil</a>
+      </li>
+      <li>
+        <a href="short_term.html">Projections</a>
+      </li>
+      <li>
+        <a href="process.html">Démarche</a>
+      </li>
+      <li>
+        <a href="methodology.html">Méthodologie</a>
+      </li>
+      <li>
+        <a href="impact.html">Impact</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li>
+        <a href="en_index.html">English</a>
+      </li>
+      <li>
+        <a href="https://twitter.com/Covid_Scenarios">
+          <span class="fa fa-twitter"></span>
+           
+        </a>
+      </li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container -->
+      </div><!--/.navbar -->
+        
+      
+      <p class="authors">
+              
+
+   
+      
+   
+<!-- Don't indent these lines or it will mess pre blocks indentation --> 
+<div class="page-content has-page-title">
+<div id="notre-démarche" class="section level1">
+<h1>Notre démarche</h1>
+<p>Ce site vise à proposer une rétrospective sur les principaux
+scénarios de modélisation utilisés pour guider les décisions majeures
+prises depuis deux ans (par exemple confinements, couvre-feu, ou encore
+mise en place du pass sanitaire). Une description détaillée des
+scénarios de modélisations est accessible sur la page <a
+href="https://evaluation-modelisation-covid.github.io/france/">Accueil</a>.
+Une explication de l’importance de l’évaluation des scénarios de
+modélisation est accessible sur la page <a
+href="https://evaluation-modelisation-covid.github.io/france/impact">Impact</a>.</p>
+</div>
+<div
+id="pourquoi-évaluer-les-scénarios-de-modélisation-est-il-important"
+class="section level1">
+<h1>Pourquoi évaluer les scénarios de modélisation est-il
+important?</h1>
+<p>Les scénarios de modélisation jouent un rôle primordial dans les
+politiques publiques mises en place depuis le début de la pandémie de
+covid-19. Par conséquent, pour pouvoir prendre de bonnes décisions, il
+est important d’avoir des scénarios de modélisation qui permettent de
+bien anticiper la réalité.</p>
+<p>Par exemple, ce sont des <a
+href="https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/">scénarios
+de modélisation</a> qui ont conduit beaucoup de gouvernement à ne pas se
+limiter aux mesures traditionnelles de lutte contre les épidémies pour
+aller vers un confinement strict. En effet, <a
+href="https://www.who.int/publications/i/item/non-pharmaceutical-public-health-measuresfor-mitigating-the-risk-and-impact-of-epidemic-and-pandemic-influenza">le
+rapport de l’OMS</a> de préparation aux pandémies de 2019 ne
+recommandait sous aucune circonstance la fermeture des frontières, le
+contact tracing ou la quarantaine des cas contact durant la phase
+pandémique (et a fortiori encore moins un confinement généralisé).</p>
+<p>Ainsi, dans son <a
+href="https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf">rapport
+du 12 mars 2020</a>, le Conseil Scientifique a affirmé que les mesures
+classiques utilisées pour limiter la propagation des épidémies ne
+permettraient pas de limiter suffisamment la circulation du virus,
+impliquant la nécessité d’un confinement strict (“on ne s’attend pas à
+ce que la réduction de la taille du pic épidémique soit suffisante pour
+éviter une saturation du système de santé. (…) Cette intuition a été
+illustrée à travers la réalisation d’un modèle COVID19 particulier (Neil
+Ferguson, communication personnelle).”), en se basant sur le modèle dont
+les résultats sont présentés ci-dessous.</p>
+<p><img src="images/Imperial_Sweden/Sweden_icu.svg" width="500px" style="display: block; margin: auto;" /></p>
+<p>Les scénarios du modèle sont représentés par les barres grises,
+représentant 2 extrêmes : un confinement stric tel que suivi par les
+autres pays européens, et aucune mesure. L’approche suivie par la Suède
+est intérmédiaire, quelque part entre les deux.</p>
+<p>On voit que les scénarios ont largement surestimé la taille du pic
+hospitalier : même le scénario optimiste avec un confinement strict
+surestime ce pic par un facteur 2, alors même que la Suède n’a pas
+confiné sa population.</p>
+<p>Cet exemple illustre l’importance que peuvent avoir les scénarios de
+modélisation, par exemple en décidant un gouvernement à mettre en place
+un confinement strict.</p>
+</div>
+<div id="peut-on-vraiment-les-évaluer" class="section level1">
+<h1>Peut-on vraiment les évaluer?</h1>
+<p>Un argument souvent entendu au sujet des scénarios de modélisation
+est le suivant: comme le scénario permet d’anticiper le pire, il mène à
+prendre des mesures qui vont justement empêcher que le scénario modélisé
+se produisent, ce qui explique le décalage entre le scénario de
+modélisation et la réalité (où des mesures de freinage ont été prises!).
+Effectivement, il n’est pas possible d’établir une comparaison dans ce
+cas de figure.</p>
+<center>
+<p><img src="images/pas_de_comparaison.PNG" width="500" /></p>
+</center>
+<p>Cependant, les scénarios de modélisation intègrent souvent plusieurs
+hypothèses sur les mesures de freinage qui pourraient être mises en
+place. Ici, nous ne comparerons la réalité qu’<strong>avec des scénarios
+où les mesures de freinage mises en place avaient aussi été
+modélisées</strong>.</p>
+<center>
+<p><img src="images/comparaison_explication.PNG" width="500" /></p>
+</center>
+<p>Ainsi, la comparaison entre scénarios de modélisation et réalité
+permettra bien d’évaluer si ceux-ci ont bien anticipé la réalité.</p>
+<p>Par exemple, lors de la 4ème vague, l’Institut Pasteur avait d’abord
+publié un rapport le 9 juillet. Après l’annonce de l’extension du pass
+sanitaire annoncée mi-juillet, l’Institut Pasteur a publié un nouveau
+rapport intégrant l’effet de cette mesure. Comparer les modélisations du
+rapport du 9 juillet avec la réalité n’est pas légitime, mais comparer
+les prévisions du rapport suivant avec la réalité oui (car l’impact des
+mesures y a déja été modélisé).</p>
+<div id="section"
+class="section level2 tabset tabset-fade tabset-pills">
+<h2 class="tabset tabset-fade tabset-pills"></h2>
+<div id="lits-de-réanimation" class="section level3">
+<h3>Lits de réanimation</h3>
+<p><img src="process_files/figure-html/2021_07_26_Pasteur_ICU_beds-1.svg" width="499.2" style="display: block; margin: auto;" /></p>
+</div>
+<div id="entrées-en-réanimation" class="section level3">
+<h3>Entrées en réanimation</h3>
+<p><img src="process_files/figure-html/2021_07_26_Pasteur_ICU_adm-1.svg" width="499.2" style="display: block; margin: auto;" /></p>
+</div>
+<div id="nouvelles-hospitalisations" class="section level3">
+<h3>Nouvelles hospitalisations</h3>
+<p><img src="process_files/figure-html/2021_07_26_Pasteur_hosp_adm-1.svg" width="499.2" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="section-1" class="section level2">
+<h2></h2>
+<p>Ces scénarios comparent les prévisions faites pour le mois d’août
+2021 avec l’évolution réelle durant les mois d’août: comme les scénarios
+intègrent les mesures mises en place, la comparaison est possible.</p>
+</div>
+</div>
+<div
+id="est-ce-vraiment-grave-si-les-modélisations-ne-concordent-pas-avec-la-réalité"
+class="section level1">
+<h1>Est-ce vraiment grave si les modélisations ne concordent pas avec la
+réalité?</h1>
+<p>On peut penser qu’il vaut mieux surestimer la réalité et “prévoir
+systématiquement le pire”, et donc mener les politiques à réagir avec un
+surplus de mesures pour limiter la propagation de l’épidémie. En
+réalité, la plupart des mesures de freinage de l’épidémie (confinement,
+couvre-feu, fermeture de classes, fermetures de lieux publics) ont des
+impacts sanitaires, sociaux et économiques négatifs. Par conséquent,
+surréagir face à l’épidémie n’est pas une bonne chose (de même que ne
+pas réagir assez).</p>
+<center>
+<p><img src="images/explication_simulation_enjeu.PNG" width="500" /></p>
+</center>
+<p>Des modélisations trop pessimistes peuvent ainsi conduire à maintenir
+en place des mesures restrictives qui ne seraient pas nécessaires. Par
+exemple, lorsque le <a
+href="https://news.sky.com/story/covid-19-what-are-the-remaining-rules-in-england-after-freedom-day-12359221">gouvernement
+britannique a décidé de lever la plupart de ses mesures de
+restrictions</a> (telles que limitations de capacité dans les lieux
+accueillant du public, port du masque obligatoire ou encore limitations
+de déplacement) le 19 juillet 2021, sans non plus mettre en place un
+“pass sanitaire” pour accéder à des évenements ou lieux publics, <a
+href="https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)01589-0/fulltext">cette
+initiative a été décriée par des scientifiques comme “dangereuse et
+prématurée”</a>. Cette thèse de l’ouverture “dangereuse et prématurée”
+était <a
+href="https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1001169/S1301_SPI-M-O_Summary_Roadmap_second_Step_4.2__1_.pdf">supportée
+par les modélisations du conseil scientifique Britannique (SAGE)</a>,
+représentées ci-dessous.</p>
+<center>
+<p><img src="images/sage_scenarios.png" width="500" /></p>
+</center>
+<p>Ces modélisations étaient largement pessimistes, et ont donc
+surestimée la nécessité de maintenir en place des mesures restrictives.
+Des modélisations non alignées avec la réalité ont donc failli empêcher
+un retour à une vie presque normale pour les Britanniques.</p>
+<p>Une description plus détaillée des scénarios de modélisation est
+accessible sur la page <a
+href="https://evaluation-modelisation-covid.github.io/france/">Modélisations</a>.</p>
+</div>
+</div>
+
+   
+      <p>Contactez-nous via <a href="mailto:%20evaluation.modelisations.covid@gmail.com">email</a> or <a href="https://twitter.com/Covid_Scenarios">twitter</a></p>
+   
+              </div>
+  </div>
+  </div>
+  </div>
+   
+      
+
+  <script>
+    $(document).ready(function () {
+
+		// add bootstrap table styles to pandoc tables
+	$('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+		
+ 		
+	    });
+  </script>
+
+
+
+    <!-- dynamically load mathjax for compatibility with self-contained -->
+  <script>
+    (function () {
+	var script = document.createElement("script");
+	script.type = "text/javascript";
+	script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+	document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+  
+</body>
+</html>
