@@ -1,5 +1,5 @@
 ---
-title: "Démarche"
+title: ""
 ---
 
 ```{r setup, include=FALSE}
@@ -103,8 +103,9 @@ Par exemple, ce sont des [scénarios de modélisation](https://www.imperial.ac.u
 
 Ainsi, dans son [rapport du 12 mars 2020](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf), le Conseil Scientifique a affirmé que les mesures classiques utilisées pour limiter la propagation des épidémies ne permettraient pas de limiter suffisamment la circulation du virus, impliquant la nécessité d'un confinement strict ("on ne s'attend pas à ce que la réduction de la taille du pic épidémique soit suffisante pour éviter une saturation du système de santé. (...) Cette intuition a été illustrée à travers la réalisation d'un modèle COVID19 particulier (Neil Ferguson, communication personnelle)."), en se basant sur le modèle dont les résultats sont présentés ci-dessous.
 
-```{r Imperial }
 
+```{r Sweden_Imperial_ICU_peak, echo=FALSE, out.width="500px"}
+knitr::include_graphics("images/Imperial_Sweden/Sweden_icu.svg")
 ```
 
 Les scénarios du modèle sont représentés par les barres grises, représentant 2 extrêmes : un confinement stric tel que suivi par les autres pays européens, et aucune mesure. L'approche suivie par la Suède est intérmédiaire, quelque part entre les deux.

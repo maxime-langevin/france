@@ -1,6 +1,6 @@
 name: "my-website"
 navbar:
-  title: "My Website"
+  title: "Rétrospective Covid"
   left:
     - text: "Accueil"
       href: index.html
