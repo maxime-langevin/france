@@ -1,5 +1,5 @@
 ---
-title: "Projections court terme"
+title: ""
 ---
 
 ```{r setup, include=FALSE}

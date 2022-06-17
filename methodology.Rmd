@@ -1,10 +1,12 @@
 ---
-title: "Méthodologie"
+title: ""
 ---
 
 # Méthodologie
 
-Les courbes présentées sur le site sont issues des scénarios de modélisations ayant impacté les politiques publiques mises en place en France. Elles sont principalement issues de scénarios de modélisation de l'Institut Pasteur et de Inserm. Pour permettre une évaluation appropriée des scénarios de modélisation, seuls les scénarios dont les hypothèses sont vérifiées ont été retenus, notamment les hyopthèses portant sur les mesures mises en place. Afin de ne pas introduire de biais (par exemple ne prendre que les scénarios qui surestimaient la réalité, ou l'inverse), nous avons étudié les scénarios de manière exhaustive. Nous avons analysé :
+Les courbes présentées sur le site sont issues des scénarios de modélisations ayant impacté les politiques publiques mises en place en France. Elles ont principalement été produites par l'Institut Pasteur et l'Inserm. Les données n'étant à notre connaissance pas disponibles en accès libre, nous les avons extraites à partir des courbes des rapport en utilisant [WebPlotDigitilizer](https://automeris.io/WebPlotDigitizer/).
+
+Pour permettre une évaluation appropriée des scénarios de modélisation, seuls les scénarios dont les hypothèses sont vérifiées ont été retenus, notamment les hyopthèses portant sur les mesures mises en place. Afin de ne pas introduire de biais (par exemple ne prendre que les scénarios qui surestimaient la réalité, ou l'inverse), nous avons étudié les scénarios de manière exhaustive. Nous avons analysé :
 
 1.  toutes les modélisations issues des rapports de l'Institut Pasteur, publiés sur leur [page web](https://modelisation-covid19.pasteur.fr/)
 2.  les modélisations cités dans les [rapports du Conseil Scientifique](https://solidarites-sante.gouv.fr/actualites/presse/dossiers-de-presse/article/conseil-scientifique-covid-19), ce qui nous à notamment mené à identifier des scénarios de Inserm pour janvier-février 2021
