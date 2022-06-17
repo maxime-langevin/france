@@ -1,0 +1,33 @@
+name: "my-website"
+output_dir: "."
+navbar:
+  title: "Rétrospective Covid"
+  left:
+    - text: "Accueil"
+      href: index.html
+    - text: "Projections"
+      href: short_term.html
+    - text: "Démarche"
+      href: process.html
+    - text: "Méthodologie"
+      href: methodology.html
+    - text: "Impact"
+      href: impact.html      
+    - text: "Contact"
+      href: contact.html
+  right:
+    - text: "English"
+      href: en_index.html
+    - icon: fa-twitter
+      href: "https://twitter.com/Covid_Scenarios"
+    - icon: fa-github
+      href: ""
+output:
+  rmdformats::downcute:
+    fig_width: 5.2
+    fig_height: 6
+    include:
+      after_body: footer.html
+    css: styles.css
+
+      
