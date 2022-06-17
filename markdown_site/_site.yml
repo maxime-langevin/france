@@ -17,6 +17,8 @@ navbar:
   right:
     - text: "English"
       href: en_index.html
+    - icon: fa-twitter
+      href: "https://twitter.com/Covid_Scenarios"
 output:
   rmdformats::downcute:
     fig_width: 5.2
