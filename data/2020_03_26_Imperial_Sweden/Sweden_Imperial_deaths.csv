@@ -1,0 +1,16 @@
+﻿NPI,number,deaths,scenario
+Suppression forte (confinement),3,3395,scenario
+Suppression forte (confinement),4,14518,scenario
+Distanciation renforcée des plus âgés,1,16192,scenario
+Distanciation renforcée des plus âgés,2,19210,scenario
+Distanciation renforcée des plus âgés,3,29840,scenario
+Distanciation renforcée des plus âgés,4,33878,scenario
+Distanciation sociale de toute la population,1,30434,scenario
+Distanciation sociale de toute la population,2,34895,scenario
+Distanciation sociale de toute la population,3,38880,scenario
+Distanciation sociale de toute la population,4,42473,scenario
+Aucune mesure,1,66393,scenario
+Aucune mesure,2,75560,scenario
+Aucune mesure,3,83410,scenario
+Aucune mesure,4,90157,scenario
+Réalité,1,5800,reality
