@@ -5,19 +5,17 @@ navbar:
   left:
     - text: "Accueil"
       href: index.html
-    - text: "Projections"
-      href: short_term.html
-    - text: "Démarche"
-      href: process.html
     - text: "Méthodologie"
       href: methodology.html
+    - text: "Démarche"
+      href: process.html
     - text: "Impact"
       href: impact.html      
     - text: "Contact"
       href: contact.html
   right:
     - text: "English"
-      href: en_index.html
+      href: "https://evaluation-modelisation-covid.github.io/france_eng/index.html"
     - icon: fa-twitter
       href: "https://twitter.com/Covid_Scenarios"
     - icon: fa-github

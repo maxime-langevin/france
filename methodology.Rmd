@@ -15,7 +15,7 @@ Pour permettre une évaluation appropriée des scénarios de modélisation, seul
 
 Enfin, nous nous concentrons sur les indicateurs hospitaliers, et excluons de notre analyse le nombre de cas. Cette exclusion est justifiée selon nous par deux raisons. La première est que le nombre de cas est un indicateur moins objectif que le nombre de lits occupés, car il dépend notamment de la propension des français à se faire tester, qui varie au cours du temps. Deuxièmement, le nombre de cas ne dit pas grand chose sur la dangerosité des infections. A partir de janvier 2022, le nombre de cas se situe à un niveau 10 fois supérieur aux chiffres pré-Omicron, sans que la pression hospitalière ne suive pour autant.
 
-# Méthodologie détaillée
+# Liste exhaustive des rapports
 
 La liste exhaustive des scénarios de modélisation, et de leur inclusion ou non dans l'analyse du site (avec la raison) est disponible ci-dessous, ainsi que les liens renvoyant vers les rapports en question.
 
