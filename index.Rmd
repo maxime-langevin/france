@@ -155,9 +155,9 @@ Ainsi, la comparaison entre scénarios de modélisation et réalité permettra b
 
 En mars 2020, l'incertitude sur les conséquences qu'allaient avoir le covid-19 était grande. Lorsque l'Italie a commencé à être fortement touchée à la mi-mars, de nombreux pays européens ont réalisé que le covid-19 risquait d'avoir un impact significatif. Pour anticiper l'évolution de la pandémie, les décideurs se sont tournés vers le domaine de la modélisation épidémiologique.
 
-Une équipe de scientifiques de l'Imperial College (Londres), menée par le Professeur Neil Ferguson, a notamment publié le 16 mars le [rapport](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/) qui a conduit de nombreux gouvernements européens, dont le [gouvernement français](https://www.lemonde.fr/planete/article/2020/03/15/coronavirus-les-simulations-alarmantes-des-epidemiologistes-pour-la-france_6033149_3244.html), à confiner leur pays. Les scénarios présentés dans le rapport anticipaient, en l'absence de mesures strictes, de l'ordre de 500 000 morts en moins de 3 mois au Royaume-Uni, et des chiffres similaires pour la France. En revanche, le rapport avançait que la mise en place de mesures strictes (type confinement) permettrait de contenir la vague et serait la seule manière d'éviter une saturation du système hospitalier. Se fiant à ce rapport, les gouvernements ont pour beaucoup choisi de mettre en place des mesures strictes.
+Une équipe de scientifiques de l'Imperial College (Londres), menée par le Professeur Neil Ferguson, a notamment publié le 16 mars le [rapport](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/) qui a conduit de nombreux gouvernements européens, dont le [gouvernement français](https://www.lemonde.fr/planete/article/2020/03/15/coronavirus-les-simulations-alarmantes-des-epidemiologistes-pour-la-france_6033149_3244.html), à confiner leur pays. Les scénarios présentés dans le rapport anticipaient, en l'absence de mesures strictes, de l'ordre de 500 000 morts en moins de 3 mois au Royaume-Uni, et des chiffres similaires pour la France. La mise en œuvre de mesures standard telles que celles prévues dans les plans de préparation à la pandémie (stratégie d'atténuation) entraînerait 250 000 décès. Selon le rapport, seule la mise en œuvre de mesures plus strictes pour supprimer le virus (comme le confinement) permettrait de contenir la vague et serait le seul moyen d'éviter la saturation du système hospitalier. Se fiant à ce rapport, les gouvernements ont pour beaucoup choisi de mettre en place des mesures strictes.
 
-Bien évidemment, les projections décrivant ce qu'il devrait se passer en l'absence de mesures ne peuvent être comparées avec ce qui s'est réellement passé dans les pays confinés. C'est d'ailleurs l'un des contre-arguments les plus communs aux détracteurs des modèles épidémiologiques: c'est précisément grâce aux mesures que les scénarios de modélisation ne se sont pas réalisés.
+Bien évidemment, les projections décrivant ce qu'il devrait se passer en l'absence de mesures ne peuvent être comparées avec ce qui s'est réellement passé dans les pays confinés. C'est d'ailleurs l'un des contre-arguments les plus communs aux critiques des modèles épidémiologiques: c'est précisément grâce aux mesures que les scénarios de modélisation ne se sont pas réalisés.
 
 Mais il y a un pays qui nous permet de tester la validité des scénarios de modélisation: la Suède. Lors de la première vague, la Suède a choisi de ne pas se confiner, préférant se reposer des mesures plus légères. Il est donc possible de comparer ce que prévoyaient les scénarios pour la Suède et la réalité.
 
@@ -173,9 +173,9 @@ Mais il y a un pays qui nous permet de tester la validité des scénarios de mod
 
 [L'appendice](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx) du [rapport 12](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/) de l'Imperial College, publié le 26 mars, contient des modélisations de l'épidémie en Suède.
 
-Les 2 premiers graphiques représentent les pics de lits occupés en réanimation et à l'hôpital. Les barres grises représentent les scénarios de l'Imperial College : confinement strict précoce, confinement strict tardif, et aucune mesure. Les barres rouges représentent la réalité. La Suède ayant mis en place des mesures de distanciation sociale sans pour autant imposer un confinement, les chiffres observés auraient dû se trouver quelque part entre les scénarios "confinement" et "aucune mesure". La réalité est tout autre. Alors même que la Suède n'a PAS confiné sa population, les scénarios AVEC confinement surestiment le pic de lits utilisés de 100% à 1000%.
+Les 2 premiers graphiques représentent les pics de lits occupés en réanimation et à l'hôpital. Les barres grises représentent les scénarios de l'Imperial College : confinement strict précoce, confinement strict tardif, et aucune mesure. Les barres rouges représentent la réalité. La Suède ayant mis en place des mesures de distanciation sociale sans pour autant imposer un confinement, les chiffres observés auraient dû se trouver quelque part entre les scénarios "confinement" et "aucune mesure". La réalité est tout autre. Alors même que la Suède n'a PAS confiné sa population, les scénarios AVEC confinement surestiment le pic de lits utilisés d'un facteur 2 à 10. Un scénario avec certaines restrictions devrait se situer entre les scénarios de confinement et sans restrictions, ce qui donne une surestimation d'un facteur 10 à 60.
 
-La 3e figure présente en gris les différents scénarios de l'Imperial College relatifs à la mortalité, et en rouge le nombre de morts réels. Là encore, les scénarios surestiment largement la mortalité. Le nombre de morts réels correspond au scénario de confinement précoce, ce qui n'a évidemment pas été l'approche suivie par la Suède. Les scénarios intermédiaires de distanciation sociale surestiment quant à eux la mortalité de 200% à 600%.
+La dernière figure présente en gris les différents scénarios de l'Imperial College relatifs à la mortalité, et en rouge le nombre de morts réels. Là encore, les scénarios surestiment largement la mortalité. Le nombre de morts réels correspond au scénario de confinement précoce, ce qui n'a évidemment pas été l'approche suivie par la Suède. Les scénarios intermédiaires de distanciation sociale surestiment quant à eux la mortalité d'un facteur 3 à 7.
 
 </details>
 
@@ -229,7 +229,7 @@ knitr::include_graphics("images/Imperial_Sweden/Sweden_deaths.svg")
 
 </summary>
 
-Ces modélisations furent un des principaux éléments déclencheurs du confinement national français (qui influencera d'autres pays européens à suivre la même voie). Dans son rapport du 12 mars 2020, le Conseil Scientifique a affirmé que les mesures classiques utilisées pour limiter la propagation des épidémies ne permettraient pas de limiter suffisamment la circulation du virus, impliquant la nécessité d'un confinement strict
+Ces modélisations furent un des principaux éléments déclencheurs du confinement national français (qui influencera d'autres pays européens à suivre la même voie). Dans son [rapport du 12 mars 2020](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf), le Conseil Scientifique a affirmé que les mesures classiques utilisées pour limiter la propagation des épidémies ne permettraient pas de limiter suffisamment la circulation du virus, impliquant la nécessité d'un confinement strict
 
 > *On ne s'attend pas à ce que la réduction de la taille du pic épidémique soit suffisante pour éviter une saturation du système de santé. (...) Cette intuition a été illustrée à travers la réalisation d'un modèle COVID19 particulier (Neil Ferguson, communication personnelle)*
 >
@@ -237,7 +237,13 @@ Ces modélisations furent un des principaux éléments déclencheurs du confinem
 
 La figure présentée ci-dessus montrant que ces modèles surestimaient largement ce qui se passait avec des mesures classiques de contrôle des épidémies, cette affirmation était vraisemblablement fausse.
 
-L'influence politique de ces modélisation se poursuit bien après mars 2020. Lorsqu'en juillet 2021 le Tribunal Constitutionnel espagnol a déclaré inconstitutionnel le premier confinement, [la ministre de la Justice a répliqué en assurant que ce dernier avait sauvé 450 000 vies en Espagne](https://www.courrierinternational.com/article/forme-espagne-un-confinement-juge-inconstitutionnel-des-milliers-damendes-remboursees). Si la source de ce chiffre n'est pas précisée, elle correspond bien au scénario pessimiste de [l'appendice](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx) du [rapport 12](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/) de l'Imperial College appliqué à l'Espagne. Le cas de la Suède interroge cette affirmation. En effet, si le gouvernement suédois avait confiné sa population, il aurait pu affirmer à l'image de la ministre espagnole que son action avait sauvé 90 000 personnes. Nous savons qu'il n'en est rien, le bilan réel sans confinement étant de 5000 morts, soit 18 fois moins.
+L'influence politique de ces modélisation se poursuit bien après mars 2020. Lorsqu'en juillet 2021 le Tribunal Constitutionnel espagnol a déclaré inconstitutionnel le premier confinement, [le président espagnol a répliqué en assurant que ce dernier avait sauvé 450 000 vies en Espagne](https://www.lamoncloa.gob.es/lang/en/presidente/news/Paginas/2020/20200610control-session.aspx). 
+
+> Ce n'est pas moi qui le dit, mais des études scientifiques indépendantes qui l'établissent : grâce à ce confinement, 450 000 vies ont été sauvées. Nous avons perdu la vie de plus de 27 000 de nos compatriotes, mais nous avons sauvé la vie de 450 000 personnes.
+>
+> Président du gouvernement espagnol, Pedro Sánchez
+
+Si la source de ce chiffre n'est pas précisée, elle correspond bien au scénario "pessimiste "ne rien faire" de [l'appendice](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx) du [rapport 12](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/) de l'Imperial College appliqué à l'Espagne. Le cas de la Suède interroge cette affirmation. En effet, si le gouvernement suédois avait confiné sa population, il aurait pu affirmer à l'image de la ministre espagnole que son action avait sauvé 90 000 personnes. Nous savons qu'il n'en est rien, le bilan réel sans confinement étant de 5 000 morts, soit 18 fois moins.
 
 </details>
 
@@ -270,7 +276,9 @@ Bien que ne correspondant pas à la réalité, nous avons fait le choix de repr�
 
 -   Dans le cas des pics de réanimations et hospitaliers, aucun scénario intermédiaire n'a été produit, seulement les scénarios "confinement" et "0 mesure". Présenter ces 2 scénarios permet donc d'imaginer où aurait dû se trouver la réalité, quelque part entre les 2.
 
--   Bien qu'irréalistes, les projections "aucune mesure" sont souvent mises en avant comme contrefactuel à l'absence de confinement, comme l'illustre le cas du pic hospitalier évoqué ci-dessus. C'est aussi le cas dans la presse (chiffre de [500 000 morts au Royaume-Uni](https://www.bfmtv.com/international/coronavirus-en-angleterre-les-projections-effrayantes-du-nombre-de-morts-en-cas-de-laisser-faire_AN-202003180090.html)) ou par le politique (chiffre de [450 000 personnes sauvées](https://www.courrierinternational.com/article/forme-espagne-un-confinement-juge-inconstitutionnel-des-milliers-damendes-remboursees) selon la ministre de la justice espagnole).
+-   Bien qu'irréalistes, les projections "aucune mesure" sont souvent mises en avant comme contrefactuel à l'absence de confinement, comme l'illustre le cas du pic hospitalier évoqué ci-dessus. C'est aussi le cas dans la presse (chiffre de [500 000 morts au Royaume-Uni](https://www.bfmtv.com/international/coronavirus-en-angleterre-les-projections-effrayantes-du-nombre-de-morts-en-cas-de-laisser-faire_AN-202003180090.html)) ou par le politique (chiffre de [450 000 personnes sauvées](https://www.courrierinternational.com/article/forme-espagne-un-confinement-juge-inconstitutionnel-des-milliers-damendes-remboursees) selon la ministre de la justice espagnole). Cet article [de BFM] (https://www.bfmtv.com/international/coronavirus-en-angleterre-les-projections-effrayantes-du-nombre-de-morts-en-cas-de-laisser-faire_AN-202003180090.html) affirme même qu'une stratégie d'atténuation est une stratégie de "laissez-faire" :
+
+> Par "laisser-faire", les chercheurs désignent des mesures dites d'atténuation, comme la quarantaine des cas identifiés de Covid-19 et de leurs proches, la fermeture des écoles.
 
 </details>
 
@@ -661,8 +669,19 @@ Nous n'avons cependant pas trouvé une telle projection dans [le rapport du 8 f�
 
 </summary>
 
-Les prévisions de l'INSERM ont été mises en avant dans un [rapport spécial du Conseil Scientifique](https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf) qui demandait la mise en place d'un confinement strict à partir du lundi 8 février 2021. Selon ces modélisations, le nombre d'hospitalisations hebdomadaires aurait dû être de plus de 30 000 à cette date (en réalité autour de 10 000), et continuer d'augmenter exponentiellement sans confinement strict (qui n'aura finalement lieu qu'un mois plus tard).
+La modélisation INSERM du 16 janvier préconise explicitement des mesures de distanciation sociale plus poussées dans son résumé :
 
+> "Ces résultats montrent la nécessité de renforcer les mesures de distanciation sociale"
+
+Il est frappant de constater qu'elle reconnaît ne pas avoir pris en compte le couvre-feu, une mesure dont l'objectif même était d'éviter un confinement.
+
+> Elle ne tient pas compte du couvre-feu anticipé à 18h et étendu au territoire national le 16 janvier 2021. L'évaluation de cette mesure de distanciation sociale sera réalisée sur les données épidémiques dans les prochaines semaines. Pour cette raison, nous avons fourni un scénario plus optimiste en supposant une activité épidémique stable"
+
+Vous trouverez plus de précisions à ce sujet dans la partie suivante *Discussion des hypothèses du scénario (technique)*.
+
+Ces résultats ont également été présentés dans un [rapport spécial du Conseil scientifique](https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf) étudiant la mise en œuvre d'un confinement strict début février. 
+
+Traduit avec www.DeepL.com/Translator (version gratuite)
 </details>
 
 <details>
@@ -677,7 +696,7 @@ A propos des scénarios de l'INSERM :
 
 -   [rapport du 16 janvier](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_dominance-20210116.pdf) : les scénarios correspondent à 3 taux de reproduction du variant historique (1, 1.1 et 1.2), couplés à un variant alpha 50% ou 70% plus transmissible. Les courbes sont issues de la figure 1.
 
--   [rapport du 2 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf) : les scénarios correspondent à 3 taux de reproduction du variant historique (0.9, 1.1 et 1.2) couplés à un variant alpha 50% plus transmissible. Les courbes sont les courbes grises de la figure 2 (redondance avec les courbes des figures 1 et 2).
+-   [rapport du 2 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf) : les scénarios correspondent à 3 taux de reproduction du variant historique (0.9, 1.1 et 1.2) couplés à un variant alpha 50% plus transmissible. Les courbes sont les courbes grises de la figure 2 (redondance avec les courbes des figures 1 et 3).
 
 -   [rapport du 14 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_socialdistancing-20210214.pdf) : variant alpha 50% plus transmissible. La transmissibilité du virus historique, n'est pas renseignée. En plus de la projection standard, 2 scénarios explorant une variation de la transmission du variant historique de +/- 10% illustrent un allègement ou un renforcement des mesures. La réalité n'a correspondu à aucun de ces 2 cas de figure, mais nous avons fait le choix de représenter ces 2 scénarios pour ne pas nous faire accuser d'exclusion arbitraire (la variation de 10% pouvant se produire naturellement de manière aléatoire).
 
@@ -721,9 +740,9 @@ Pour le rapport du 21 mai, nous n'avons pas eu besoin de mener nous-mêmes une a
 
 </summary>
 
-Pour le premier rapport, les scénarios se situent à la mi-juin au-dessus de la réalité, la surestimation allant d'un peu moins de 100% à 500%.
+Pour le premier rapport, les scénarios se situent à la mi-juin au-dessus de la réalité, la surestimation allant d'un facteur 2 à 6.
 
-En revanche la décrue observée suit fidèlement le scénario du second rapport, comme le montre la capture d'écran de Simon Cauchemez. Ce dernier ne fait pas mention du premier rapport.
+En revanche la décrue observée suit fidèlement le scénario du second rapport, comme le montre la capture d'écran de Simon Cauchemez. Ce dernier ne fait pas mention du décalage avec le premier rapport.
 
 </details>
 
@@ -767,6 +786,18 @@ knitr::include_graphics("images/Pasteur_2021_Avril/Cauchemez.png")
 </summary>
 
 Ces modélisations ont appuyé le [rapport du Conseil Scientifique du 6 mai 2021](https://www.vie-publique.fr/sites/default/files/rapport/pdf/279792.pdf). Bien que le Conseil Scientifique précise que "Ces projections [...] ne sont pas des prédictions", il s'appuie sur celles-ci pour estimer que "sous des hypothèses plausibles, un rebond important de l'épidémie est possible durant la période estivale si les mesures de contrôle sont relâchées trop rapidement, et cela même lorsqu'on considère un rythme important de vaccination.". C'est un des arguments qui à poussé le Conseil Scientifique à se positionner en faveur d'une réouverture des activités sociales "prudente et maîtrisée" suite au 3ème confinement.
+
+Plusieurs épidémiologistes ont fait des déclarations allant dans le sens du rapport de l'Institut Pasteur du 26 avril. [Ici](https://france3-regions.francetvinfo.fr/occitanie/herault/montpellier/deconfinement-mircea-sofonea-epidemiologiste-a-montpellier-on-va-rester-a-5-ou-6000-patients-covid-des-semaines-2064442.html) et [là](https://www.francetvinfo.fr/sante/maladie/coronavirus/confinement/covid-19-il-faut-attendre-au-moins-cinquante-jours-pour-voir-les-hospitalisations-baisser-estime-un-epidemiologiste_4601767.html) par exemple, le 27 avril : 
+
+> "On va rester à 5 ou 6000 patients Covid des semaines"
+>
+> "Il faut attendre au moins cinquante jours" pour voir les hospitalisations baisser"
+
+La diminution s'est produite la semaine suivante, et 50 jours plus tard (le 15 juin), il y avait moins de 1 000 patients en soins intensifs. Vous trouverez d'autres exemples sur les sites [19 avril](https://www.radiofrance.fr/franceinter/podcasts/l-invite-de-7h50/dominique-costagliola-je-ne-vois-pas-comment-on-peut-esperer-une-baisse-massive-des-cas-d-ici-fin-mai-7022253) et [5 mai](https://www.lemonde.fr/planete/article/2021/05/05/dominique-costagliola-la-probabilite-d-eviter-une-nouvelle-saturation-totale-de-l-hopital-est-faible_6079142_3244.html).
+
+> "Je ne vois pas comment on peut espérer une baisse massive des cas d’ici fin mai"
+>
+> "La probabilité d’éviter une nouvelle saturation totale de l’hôpital est faible"
 
 </details>
 
@@ -1160,6 +1191,10 @@ Nos courbes sont issues de la figure 7.
 
 -   3 variantes d'hypothèses sur l'efficacité vaccinale contre l'hospitalisation et l'infection respectivement de 95% et 60% (référence), 90% et 60%, et 95% et 80%.
 
+Comme nous l'avons déjà dit, le "relâchement des gestes barrières" est une hypothèse impossible à vérifier. Une mesure imparfaite de cette hypothèse serait la tendance à la mobilité de Google, qui ne montre pas d'augmentation au cours de la période :
+
+![](images/Pasteur_2021_October/mobility_2021_October.png){width="500"}
+
 </details>
 
 ## 9. Décembre 2021, seconde vague delta
@@ -1322,7 +1357,7 @@ Nous analysons également un [rapport publié le 15 février](https://modelisati
 
 Le rapport distinguait des scénarios "probables" (en trais pleins) de scénarios "moins probables" (en pointillés). Il distinguait également une hypothèses d'efficacité à 6 mois de la dose de rappel contre les infections de 85% ou 60%.
 
-La réalité est une efficacité initiale de 50% puis nulle au-delà de 3 mois (voir paragraphe "Auto-évaluation de l'Institut Pasteur"), excluant a minima le scénario 85%. Mais l'Institut Pasteur l'utilisant pour affirmer dans son rapport rétrospectif que "les dynamiques prédites et observées des admissions quotidiennes sont proches", nous avons fait le choix de le représenter.
+La réalité est une efficacité initiale de 50% puis 0% au-delà de 3 mois (voir paragraphe "Auto-évaluation de l'Institut Pasteur"), excluant a minima le scénario 85%. Mais l'Institut Pasteur l'utilisant pour affirmer dans son rapport rétrospectif que "les dynamiques prédites et observées des admissions quotidiennes sont proches", nous avons fait le choix de le représenter.
 
 </details>
 
@@ -1440,7 +1475,13 @@ scenario %>%
 
 </summary>
 
-Le rapport d'auto-évaluation de l'Institut Pasteur a été repris dans [certains articles de presse](https://www.huffingtonpost.fr/entry/institut-pasteur-avait-vu-juste-pour-la-5e-vague-voici-ses-predictions-sur-la-fin-de-lhiver_fr_620d0102e4b05706db70a281) déclarant que "l'institut Pasteur avait presque tout bon sur l'impact d'Omicron". Nous détaillons dans le paragraphe suivant les raisons qui nous font penser que cette affirmation est à prendre avec des pincettes.
+L'auto-évaluation de l'Institut Pasteur a été transmise aux sénateurs dans le cadre de leur enquête sur [l'adéquation du vaccin pass à l'évolution de l'épidémie de covid-19](https://www.senat.fr/rap/r21-537/r21-5371.pdf). Il est indiqué que "les projections de l'Institut Pasteur se sont avérées être dans les fourchettes prévues". Nous détaillons dans la section suivante les raisons pour lesquelles nous pensons que cette affirmation est sérieusement remise en cause. De plus, il n'y a aucune mention d'autres scénarios passés où l'Institut Pasteur s'est complètement trompé, par exemple en [août 2021 avec le laissez-passer sanitaire](https://evaluation-modelisation-covid.github.io/france_eng/index.html#august-2021-4th-wave-and-delta-variant).
+
+![](images/Pasteur_2022_Fevrier/senate_pasteur.png){width="500"}
+
+Le rapport d'auto-évaluation de l'Institut Pasteur a également été cité dans [certains articles de presse](https://www.huffingtonpost.fr/entry/institut-pasteur-avait-vu-juste-pour-la-5e-vague-voici-ses-predictions-sur-la-fin-de-lhiver_fr_620d0102e4b05706db70a281) comme disant que "l'institut Pasteur avait presque tout bon sur l'impact d'Omicron". 
+
+
 
 </details>
 
@@ -1464,13 +1505,15 @@ La plus évidente est l'absence totale d'allusion à l'efficacité vaccinale et 
 
 > *"Au-delà de trois mois, la dose de rappel ne semble plus protéger contre les infections au Covid-19"*
 
-Au moment de la publication du rapport, les [données de surveillance britanniques](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1052353/Vaccine_surveillance_report_-_week_5.pdf)indiquaient déjà une efficacité vaccinale de seulement 40% au bout de 10 semaines, bien loin des 80%. [Leurs données plus récentes](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1083443/Vaccine-surveillance-report-week-24.pdf) (ci-dessous) confirment une efficacité initiale de 45% puis presque nulle au-delà de 3 mois. L'équipe de Pasteur pouvait-elle ignorer ces éléments au moment de son auto-évaluation ?
+Au moment de la publication du rapport, les [données de surveillance britanniques](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1052353/Vaccine_surveillance_report_-_week_5.pdf)indiquaient déjà une efficacité vaccinale de seulement 40% au bout de 10 semaines, bien loin des 85%. [Leurs données plus récentes](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1083443/Vaccine-surveillance-report-week-24.pdf) (ci-dessous) confirment une efficacité initiale de 45% puis presque nulle au-delà de 3 mois.
 
 <center>
 
 ![](images/Pasteur_2022_Fevrier/UK_vaccine_consensus.png){width="500"}
 
 </center>
+
+Des journalistes ont correctement identifié dès le 13 janvier qu'une protection de 85% contre les infections est un ["chiffre largement incorrect"](https://www.liberation.fr/checknews/la-vaccination-avec-rappel-reduit-elle-les-infections-de-85-face-a-omicron-comme-laffirme-olivier-veran-20220113_VF5GJUFTRVCV5J3RANQGJOQMKY/). L'équipe de Pasteur pouvait-elle ignorer ces éléments au moment de son auto-évaluation ?
 
 Par ailleurs, contrairement à nous, l'auto-évaluation ne présente pas les scénarios "moins probables". Se pose alors la question des bonnes pratiques d'évaluation rétrospective, à définir en amont. L'équipe aurait-elle écarté ces scénario si la réalité les avait suivi ?
 
@@ -1479,5 +1522,7 @@ Nous notons que si l'équipe insiste régulièrement sur le fait que ["les scén
 Nous rappelons que la vérification de l'adéquation des hypothèses est importante, car comme le rappelle le début de chacun des rapport de l'Institut Pasteur :
 
 > *"Les trajectoires décrites dépendent des hypothèses faites; si les hypothèses ne se réalisent pas, la dynamique observée pourra être différente des projections."*
+
+Pourtant, l'Institut Pasteur n'a pas appliqué à lui-même sa propre déclaration concernant son hypothèse d'efficacité des vaccins. 
 
 </details>
