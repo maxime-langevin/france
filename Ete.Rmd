@@ -1,0 +1,658 @@
+---
+title: "ETE"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, message=F, warning=F, fig.align = "center",  dev='svg')
+library(plyr)
+library(lattice)
+library(lubridate)
+library(svglite)
+
+#loading relevant packages
+library(zoo) #for rollmean function
+library(tidyr)
+library(tidyverse) #mainly for reading files functions
+library(dplyr)
+library(ggplot2) #for ggplot graphs
+library(cowplot) #for plot_grid()
+library(stringr) #to manipulate strings
+
+theme_set(
+  theme_classic() +
+  theme(legend.position = "none", 
+        legend.title = element_blank(),
+        panel.grid.major.y = element_line(),
+        text = element_text(family = "Times New Roman"),
+        plot.title = element_text(face="bold"),
+        axis.title.x = element_blank(),
+        axis.title.y = element_blank())
+  )
+g_theme <- scale_color_manual(values=c('#ff0000','#D8D8D8'))
+myred <- '#ff0000'
+mygrey <- '#b4b4b4'
+#height and width of graphs
+w <- 4.5
+h <- 5.2
+```
+
+```{r loading_true _data}
+data_gouv_new_hosp_rea <- 
+  read.csv(url("https://www.data.gouv.fr/fr/datasets/r/6fadff46-9efd-4c53-942a-54aca783c30c"), sep=";") %>%
+  mutate(date = as.Date(jour))
+data_gouv_beds_hosp_rea <- 
+  read.csv(url("https://www.data.gouv.fr/fr/datasets/r/63352e38-d353-4b54-bfd1-f1b3ee1cabd7"), sep=";")  %>%
+  mutate(date = as.Date(jour))
+
+#Lits occupés en réanimation, hospitalisation et hospitalisation conventionnelle
+true_data_beds_hosp_rea <- data_gouv_beds_hosp_rea %>%
+  filter(sexe =="0", # 0 = hommes + femmes, 1=hommes, 2=femmes
+         #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         #dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978
+         ) %>%
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(hosp = sum(hosp, na.rm = T), 
+            rea = sum(rea, na.rm = T),
+            HospConv = sum(HospConv, na.rm = T))
+
+#pour les echos pasteur 29 avril ile de france
+true_data_beds_hosp_rea_IDF <- data_gouv_beds_hosp_rea %>%
+  filter(sexe =="0", # 0 = hommes + femmes, 1=hommes, 2=femmes
+         #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         #dep == 75 | dep == 92 | dep == 93 | dep == 94 | dep == 91 | dep == 95 | dep == 78 | dep == 77
+         ) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(hosp = sum(hosp, na.rm = T), 
+            rea = sum(rea, na.rm = T),
+            HospConv = sum(HospConv, na.rm = T))
+
+#Nouvelles admissions à l'hôpital et en réanimation (moyenné sur 7 jours)
+true_data_new_hosp_rea <- data_gouv_new_hosp_rea %>% 
+  filter( #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         #dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978
+         ) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(incid_hosp = sum(incid_hosp, na.rm = T), 
+            incid_rea = sum(incid_rea, na.rm = T)) %>%
+  mutate(new_rea_right = rollmean(incid_rea, 7, na.pad = T, align = "right"),#mean of 7 last days
+         new_hosp_right = rollmean(incid_hosp, 7, na.pad = T, align = "right"),
+         new_rea_center = rollmean(incid_rea, 7, na.pad = T, align = "center"),#centered mean
+         new_hosp_center = rollmean(incid_hosp, 7, na.pad = T, align = "center"))
+
+true_data_new_hosp_rea_no_mean <- data_gouv_new_hosp_rea %>% 
+  filter( #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+    #dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978
+    ) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(new_hosp = sum(incid_hosp, na.rm = T), 
+            new_rea = sum(incid_rea, na.rm = T))
+
+#Pour l'INSERM : admissions hebdomadaire à l'hôpital
+true_data_new_hosp_rea_weekly <- data_gouv_new_hosp_rea %>% 
+  group_by(date) %>% #je n'ai pas filtré les outre-mer ici car pas précisé, mais ne change pas grand-chose
+  dplyr::summarise(incid_hosp = sum(incid_hosp, na.rm = T)) %>%
+  mutate(new_hosp_week = rollsum(incid_hosp, 7, na.pad = T, align = "left")) #patients arrivés dans les 7 derniers jours)
+
+```
+
+# ETE
+
+leur rétrospective [ici](https://www.sciencedirect.com/science/article/pii/S2352556821001478?via%3Dihub)
+
+## 2020 pre confinement
+
+### 10 septembre
+voir les dates couvre feu pour dates légitimes?
+
+```{r }
+scenario <- read_csv("data/ete/ete_2020_09_10/ete_2020_09_10.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = min, ymax = max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median, color = "réalité"), size = 1, color=mygrey) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2020-09-10"), date("2020-10-15")) + g_theme + ylim(0, 7000) +
+  annotate('text', x = as.Date("2020-10-20"), y = 4000, label = "scénario", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-10-25"), y = 1800, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénario publié par l'équipe ETE le 10 septembre 2020\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+### 15 septembre
+
+```{r }
+scenario <- read_csv("data/ete/ete_2020_09_15/ete_2020_09_15.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = min_A, ymax = max_A), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median_A, color = "réalité"), size = 1, color=mygrey) +
+  geom_ribbon(aes(x = date, ymin = min_B, ymax = max_B), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median_B, color = "réalité"), size = 1, color=mygrey) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2020-09-15"), date("2020-12-01")) +  g_theme + 
+  annotate('text', x = as.Date("2020-10-20"), y = 15000, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-10-01"), y = 4000, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénarios publiés par l'équipe ETE le 15 septembre 2020\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+zoom sur scénario optimiste
+
+```{r }
+scenario <- read_csv("data/ete/ete_2020_09_15/ete_2020_09_15.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = min_A, ymax = max_A), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median_A, color = "réalité"), size = 1, color=mygrey) +
+  geom_ribbon(aes(x = date, ymin = min_B, ymax = max_B), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median_B, color = "réalité"), size = 1, color=mygrey) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2020-09-15"), date("2020-12-01")) +  g_theme + ylim(0, 20000) +
+  annotate('text', x = as.Date("2020-10-20"), y = 15000, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-10-01"), y = 4000, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénarios publiés par l'équipe ETE le 15 septembre 2020\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+comparaison faite par ETE
+
+```{r }
+scenario <- read_csv("data/ete/ete_2020_09_15/ete_2020_09_15.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = min_A, ymax = max_A), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median_A, color = "réalité"), size = 1, color=mygrey) +
+  geom_ribbon(aes(x = date, ymin = min_B, ymax = max_B), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median_B, color = "réalité"), size = 1, color=mygrey) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2020-09-15"), date("2021-02-01")) +  g_theme + ylim(0, 20000) +
+  annotate('text', x = as.Date("2020-10-20"), y = 15000, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-10-01"), y = 4000, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénarios publiés par l'équipe ETE le 15 septembre 2020\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+## 2020 confinement
+
+### 6 novembre
+
+tous les scénarios
+
+```{r }
+scenario <- read_csv("data/ete/ete_2020_11_06/ete_2020_11_06.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>% filter(date<date("2020-12-05")) %>%
+  #A
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = A_min, ymax = A_max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=A_median, color = "réalité"), size = 1, color=mygrey) +
+  #B
+  geom_ribbon(aes(x = date, ymin = B_min, ymax = B_max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=B_median, color = "réalité"), size = 1, color=mygrey) +
+  #C
+  geom_ribbon(aes(x = date, ymin = C_min, ymax = C_max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=C_median, color = "réalité"), size = 1, color=mygrey) +
+  #D
+  geom_ribbon(aes(x = date, ymin = D_min, ymax = D_max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=D_median, color = "réalité"), size = 1, color=mygrey) +
+  #real
+  geom_line(data= true_data_beds_hosp_rea %>% filter(date<date("2020-12-02")), 
+            #need to align the curves + +3 days
+            aes(x=date+3, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2020-11-06"), date("2020-12-15")) + g_theme +
+  annotate('text', x = as.Date("2020-12-01"), y = 9000, label = "scénarios", color = mygrey, fontface = "bold", 
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-12-04"), y = 14500, label = "'catastrophique'", color = mygrey, fontface = "italic", hjust=0,
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-12-04"), y = 5700, label = "'réaliste pessimiste'", color = mygrey, fontface = "italic", hjust=0,
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-12-04"), y = 4400, label = "'réaliste optimiste'", color = mygrey, fontface = "italic", hjust=0,
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-12-04"), y = 3300, label = "'trop optimiste'", color = mygrey, fontface = "italic", hjust=0,
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-11-15"), y = 3500, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénarios publiés par l'équipe ETE le 6 novembre 2020\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+zoom excluant scénario catastrophe :
+
+```{r }
+scenario <- read_csv("data/ete/ete_2020_11_06/ete_2020_11_06.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>% filter(date<date("2020-12-05")) %>%
+  #A trop optimiste
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = A_min, ymax = A_max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=A_median, color = "réalité"), size = 1, color=mygrey) +
+  #C réasliste optimiste
+  geom_ribbon(aes(x = date, ymin = C_min, ymax = C_max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=C_median, color = "réalité"), size = 1, color=mygrey) +
+  #D réaliste pessimiste
+  geom_ribbon(aes(x = date, ymin = D_min, ymax = D_max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=D_median, color = "réalité"), size = 1, color=mygrey) +
+  #real
+  geom_line(data= true_data_beds_hosp_rea %>% filter(date<date("2020-12-02")), 
+            #need to align the curves + +3 days
+            aes(x=date+3, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2020-11-06"), date("2020-12-15")) + g_theme +
+  annotate('text', x = as.Date("2020-12-07"), y = 7000, label = "scénarios", color = mygrey, fontface = "bold",  hjust=0,
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-12-04"), y = 5700, label = "'réaliste pessimiste'", color = mygrey, fontface = "italic", hjust=0,
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-12-04"), y = 4400, label = "'réaliste optimiste'", color = mygrey, fontface = "italic", hjust=0,
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-12-04"), y = 3300, label = "'trop optimiste'", color = mygrey, fontface = "italic", hjust=0,
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-11-15"), y = 3500, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénarios publiés par l'équipe ETE le 6 novembre 2020\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+le 20 novembre diront que la réalité aura correspondu au scénario "réaliste optimiste". C'est faux. La réalité aura été légèrement en-dessous du scénario qu'ils avaient caractérisé comme "trop optimiste".
+
+### 20 novembre
+
+#### projections
+```{r }
+scenario <- read_csv("data/ete/ete_2020_11_20/ete_2020_11_20.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = min, ymax = max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median), size = 1, color=mygrey) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2020-11-15"), date("2021-02-01")) + g_theme +
+  annotate('text', x = as.Date("2020-12-20"), y = 4500, label = "scénario", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-11-18"), y = 5200, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénario publié par l'équipe ETE le 20 novembre 2020",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+#### comparaison 20 novembre / 6 novembre
+
+```{r }
+scenario <- read_csv("data/ete/ete_2020_11_20/ete_2020_11_20_retrospective.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>% filter(date<date("2020-12-10")) %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_line(aes(x=date, y=`11_nov_too_opt_median`), size = 1, color=mygrey) +
+  geom_line(aes(x=date, y=`11_nov_real_opt_median`), size = 1, color=mygrey) +
+  geom_line(aes(x=date, y=`11_nov_real_pess_median`), size = 1, color=mygrey) +
+  #geom_line(aes(x=date, y=`11_nov_cata_median`), size = 1, color=mygrey) +
+  #geom_line(data= true_data_beds_hosp_rea,  aes(x=date+3, y=rea, color = "réalité"), size = 1) +
+  geom_line(aes(x=date, y=`20_nov_median`), size = 1, color="black") +
+  xlim(date("2020-11-06"), date("2020-12-20")) + g_theme +
+  annotate('text', x = as.Date("2020-11-12"), y = 6000, label = "scénarios\ndu 6 novembre", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-12-10"), y = 5200, label = "'réaliste pessimiste'", color = mygrey, fontface = "italic", hjust=0,
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-12-10"), y = 3600, label = "'réaliste optimiste'", color = mygrey, fontface = "bold.italic", hjust=0,
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-12-10"), y = 2600, label = "'trop optimiste'", color = mygrey, fontface = "italic", hjust=0,
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-11-18"), y = 4000, label = "scénario du 20 novembre\n`réaliste optimiste`", color = "black", fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "comparaison des scénarios ETE du 6 et 20 novembre",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+
+
+## 2020 déconfinement
+
+### 2 décembre
+
+```{r }
+scenario <- read_csv("data/ete/ete_2020_12_02/ete_2020_12_02.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = min, ymax = max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median, color = "réalité"), size = 1, color=mygrey) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2020-12-01"), date("2021-01-01")) + g_theme +
+  annotate('text', x = as.Date("2020-12-15"), y = 1800, label = "scénario", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-12-25"), y = 3000, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénario publié par l'équipe ETE le 2 décembre 2020\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+### 17 décembre
+
+```{r }
+scenario <- read_csv("data/ete/ete_2020_12_17/ete_2020_12_17.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = min, ymax = max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median, color = "réalité"), size = 1, color=mygrey) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2020-12-15"), date("2021-02-15")) + g_theme + ylim(0, 4000) +
+  annotate('text', x = as.Date("2021-02-10"), y = 1900, label = "scénario", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-12-25"), y = 3000, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénario publié par l'équipe ETE le 17 décembre 2020\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+### 24 décembre
+4 scénarios, dont 2 de reconfinement exclus. Les 2 autres diffèrent par leur hypothèse sur un "effet Noël" avec une hausse des contaminations pendant cet événement.
+
+```{r }
+scenario <- read_csv("data/ete/ete_2020_12_25/ete_2020_12_24.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  #normal
+  geom_ribbon(aes(x = date, ymin = min, ymax = max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median, color = "réalité"), size = 1, color=mygrey) +
+  #with christmas rebound
+  geom_ribbon(aes(x = date, ymin = min_rebound, ymax = max_rebound), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median_rebound, color = "réalité"), size = 1, color=mygrey) +
+  #reality
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2020-12-20"), date("2021-02-01")) + g_theme + ylim(0, 5000) +
+  annotate('text', x = as.Date("2021-01-20"), y = 4500, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2020-12-28"), y = 1800, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénario publié par l'équipe ETE le 24 décembre 2020\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+## 2021 Hiver
+
+### 22 janvier
+2 scénarios, dont 1 de reconfinement exclu
+
+```{r }
+scenario <- read_csv("data/ete/ete_2021_01_22/ete_2021_01_22.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = min, ymax = max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median, color = "réalité"), size = 1, color=mygrey) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2021-01-20"), date("2021-03-01")) + g_theme + 
+  annotate('text', x = as.Date("2021-02-20"), y = 5500, label = "scénario", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2021-02-20"), y = 2400, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénario publié par l'équipe ETE le 22 janvier 2021\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+
+### 26 février
+2 scénarios, dont 1 de reconfinement exclu
+
+```{r }
+scenario <- read_csv("data/ete/ete_2021_02_26/ete_2021_02_26.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = min, ymax = max), alpha=.4, fill = mygrey) +
+  geom_line(aes(x=date, y=median, color = "réalité"), size = 1, color=mygrey) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2021-02-20"), date("2021-04-15")) + g_theme + 
+  annotate('text', x = as.Date("2021-04-12"), y = 4500, label = "scénario", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2021-03-01"), y = 3000, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénario publié par l'équipe ETE le 22 février 2021\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+
+## 2021 3e déconfinement
+Au moment de la publication de ces scénarios, seuls les 2 plus pessimistes ont été mis en avant dans les interventions médiatiques de l'équipe ETE. Exemples de citations des interviews de fin avril :
+
+Pourtant, pour leur travail d'auto-évaluation rétrospective, les membres de l'équipe utiliseront uniquement le scénario optimiste proche de la réalité.
+
+### 26 avril
+
+```{r }
+scenario <- read_csv("data/ete/ete_2021_04_26/ete_2021_04_26.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = A_down, ymax = A_top), alpha=.4) +
+  geom_ribbon(aes(x = date, ymin = B_down, ymax = B_top), alpha=.4) +
+  geom_ribbon(aes(x = date, ymin = C_down, ymax = C_top), alpha=.4) +
+  scale_fill_manual(values = c(mygrey)) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2021-04-20"), date("2021-07-01")) + g_theme +
+  geom_vline(xintercept = as.Date("2021-04-26"), linetype = "dashed") +
+  annotate('text', x = as.Date("2021-04-28"), y = 7000, label = '"on va rester à 5000 ou 6000\npatients Covid des semaines"', 
+           color = "black", fontface = "italic", family = "Times New Roman", hjust=0) +
+  annotate('text', x = as.Date("2021-06-20"), y = 4700, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2021-05-30"), y = 2000, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénarios publiés par l'équipe ETE le 26 avril 2021\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+### 19 mai
+
+```{r }
+scenario <- read_csv("data/ete/ete_2021_05_19/ete_2021_05_19.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_line(aes(x=date, y=optimistic), size = 1, color=mygrey) +
+  geom_line(aes(x=date, y=pessimistic), size = 1, color=mygrey) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            aes(x=date, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2021-05-15"), date("2021-09-01")) + g_theme +
+  annotate('text', x = as.Date("2021-07-15"), y = 1800, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2021-08-15"), y = 1200, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénario publié par l'équipe ETE le 19 mai 2020\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+## Ete 2021
+
+### 20 juin
+
+```{r }
+scenario <- read_csv("data/ete/ete_2021_06_ete/ete_2021_06_20.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = A_down, ymax = A_top), alpha=.4) +
+  geom_ribbon(aes(x = date, ymin = B_down, ymax = B_top), alpha=.4) +
+  geom_ribbon(aes(x = date, ymin = C_down, ymax = C_top), alpha=.4) +
+  #plot before  15 june to see if "real" aligned to true data
+  geom_line(aes(x = date, y = real), alpha=.4) +
+  scale_fill_manual(values = c(mygrey)) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            #need to aligne curves : + 5 days
+            aes(x=date+5, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2021-06-17"), date("2021-08-01")) + g_theme + ylim(0, 2200) +
+  geom_vline(xintercept = as.Date("2021-04-26"), linetype = "dashed") +
+  annotate('text', x = as.Date("2021-07-27"), y = 300, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2021-07-27"), y = 960, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénarios publiés par l'équipe ETE le 20 juin 2021\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+### 7 juillet
+non inclus dans leur rétrospective ; comparable jusqu'à début août. Passe sanitaire annoncé le 12 juillet + 2 semaines avant de voir effet sur réanimation.
+
+```{r }
+scenario <- read_csv("data/ete/ete_2021_06_ete/ete_2021_07_07.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = A_down, ymax = A_top), alpha=.4) +
+  geom_ribbon(aes(x = date, ymin = B_down, ymax = B_top), alpha=.4) +
+  geom_ribbon(aes(x = date, ymin = C_down, ymax = C_top), alpha=.4) +
+  #geom_line(aes(x = date, y = real), alpha=.4) +
+  scale_fill_manual(values = c(mygrey)) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            #need to aligne curves : + 5 days
+            aes(x=date+4, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2021-07-05"), date("2021-08-01")) + g_theme + ylim(0, 1200) +
+  geom_vline(xintercept = as.Date("2021-04-26"), linetype = "dashed") +
+  annotate('text', x = as.Date("2021-07-28"), y = 300, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2021-07-25"), y = 850, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénarios publiés par l'équipe ETE le 7 juillet 2021\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+### 20 juillet
+
+```{r }
+scenario <- read_csv("data/ete/ete_2021_06_ete/ete_2021_07_20.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = A_down, ymax = A_top), alpha=.4) +
+  geom_ribbon(aes(x = date, ymin = B_down, ymax = B_top), alpha=.4) +
+  geom_ribbon(aes(x = date, ymin = C_down, ymax = C_top), alpha=.4) +
+  geom_ribbon(aes(x = date, ymin = D_down, ymax = D_top), alpha=.4) +
+  #geom_line(aes(x = date, y = real), alpha=.4) +
+  scale_fill_manual(values = c(mygrey)) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            #need to aligne curves : + 5 days
+            aes(x=date+4, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2021-07-01"), date("2021-11-01")) + g_theme +
+  geom_vline(xintercept = as.Date("2021-04-26"), linetype = "dashed") +
+  annotate('text', x = as.Date("2021-09-18"), y = 3000, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2021-07-25"), y = 1500, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénarios publiés par l'équipe ETE le 7 juillet 2021\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+
+## Vague Omicron
+
+### 23 décembre
+
+```{r }
+scenario <- read_csv("data/ete/ete_2021_12_23/ete_2021_12_23.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = A_down, ymax = A_top), alpha=.4) +
+  geom_ribbon(aes(x = date, ymin = B_down, ymax = B_top), alpha=.4) +
+  geom_line(aes(x=date, y=real), alpha=.4) +
+  scale_fill_manual(values = c(mygrey)) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            #need to aligne curves : + 2 days
+            aes(x=date+2, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2021-12-01"), date("2022-03-01")) + g_theme +
+  geom_vline(xintercept = as.Date("2021-04-26"), linetype = "dashed") +
+  annotate('text', x = as.Date("2021-09-18"), y = 3000, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2021-07-25"), y = 1500, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénarios publiés par l'équipe ETE le 7 juillet 2021\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+### 2022 et "7e vague"
+
+```{r }
+scenario <- read_csv("data/ete/ete_2022_04_04/ete_2022_04_04.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+scenario %>%
+  ggplot(aes(date, fill="scénarios")) + 
+  geom_ribbon(aes(x = date, ymin = A_down, ymax = A_top), alpha=.4) +
+  geom_ribbon(aes(x = date, ymin = B_down, ymax = B_top), alpha=.4) +
+  geom_line(aes(x=date, y=real), alpha=.4) +
+  scale_fill_manual(values = c(mygrey)) +
+  geom_line(data= true_data_beds_hosp_rea, 
+            #need to aligne curves : + 2 days
+            aes(x=date+5, y=rea, color = "réalité"), size = 1) +
+  xlim(date("2022-03-17"), date("2022-05-15")) + g_theme + ylim(0, 4000) +
+  geom_vline(xintercept = as.Date("2021-04-26"), linetype = "dashed") +
+  annotate('text', x = as.Date("2021-09-18"), y = 3000, label = "scénarios", color = mygrey, fontface = "bold",
+           family = "Times New Roman") +
+  annotate('text', x = as.Date("2021-07-25"), y = 1500, label = "réalité", color = myred, fontface = "bold",
+           family = "Times New Roman") +
+  labs(title = "Lits de réanimation",
+       subtitle = "scénarios publiés par l'équipe ETE le 4 avril (17 mars ?) 2022\n",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+

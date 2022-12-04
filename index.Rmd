@@ -97,7 +97,7 @@ true_data_new_hosp_rea_weekly <- data_gouv_new_hosp_rea %>%
 
 <summary>
 
-**Quel intérêt à étudier la fiabilité des scénarios de modélisations ?**
+**Quel intérêt à étudier la fiabilité des scénarios de modélisations ?** ***(cliquer pour dérouler)***
 
 </summary>
 
@@ -117,11 +117,11 @@ Une explication plus détaillée est disponible sur la page [Impact](https://eva
 
 <summary>
 
-**L'intérêt des modélisations n'est-il pas justement d'empêcher qu'elles se produisent ?**
+**L'intérêt des modélisations n'est-il pas justement d'empêcher qu'elles se produisent ?** ***(cliquer pour dérouler)***
 
 </summary>
 
-Un argument souvent entendu au sujet des scénarios de modélisation est le suivant : comme le scénario permet d'anticiper le pire, il mène à prendre des mesures qui vont justement empêcher que le scénario modélisé se produisent, ce qui expliquent le décalage entre le scénario de modélisation et la réalité (où des mesures de freinage ont été prises!). Effectivement, il n'est pas possible d'établir une comparaison dans ce cas de figure.
+Un argument souvent entendu au sujet des scénarios de modélisation est le suivant : comme le scénario permet d'anticiper le pire, il mène à prendre des mesures qui vont justement empêcher que le scénario modélisé se produise, ce qui explique le décalage entre le scénario de modélisation et la réalité (où des mesures de freinage ont été prises!). Effectivement, il n'est pas possible d'établir une comparaison dans ce cas de figure.
 
 <center>
 
@@ -139,6 +139,8 @@ Cependant, les scénarios de modélisation intègrent souvent plusieurs hypothè
 
 Ainsi, la comparaison entre scénarios de modélisation et réalité permettra bien d'évaluer si ceux-ci ont bien anticipé la réalité.
 
+A titre d'exemple, l'Institut Pasteur a produit des scénarios le 7 juillet 2021 dans le contexte de la 1ère vague delta. L'annonce de la mise en place du pass sanitaire le 12 juillet rend la comparaison de ces scénarios à la réalité illégitime. En revanche il est possible de comparer les scénarios ultérieurs du 26 juillet et du 5 août.
+
 </details>
 
 # Retour sur les principaux scénarios de modélisation
@@ -149,17 +151,17 @@ Ainsi, la comparaison entre scénarios de modélisation et réalité permettra b
 
 <summary>
 
-**Contexte**
+**Contexte** ***(cliquer pour dérouler)***
 
 </summary>
 
-En mars 2020, l'incertitude sur les conséquences qu'allaient avoir le covid-19 était grande. Lorsque l'Italie a commencé à être fortement touchée à la mi-mars, de nombreux pays européens ont réalisé que le covid-19 risquait d'avoir un impact significatif. Pour anticiper l'évolution de la pandémie, les décideurs se sont tournés vers le domaine de la modélisation épidémiologique.
+En **mars 2020**, l'incertitude sur les conséquences qu'allaient avoir le covid-19 était grande. Lorsque l'Italie a commencé à être fortement touchée à la mi-mars, de nombreux pays européens ont réalisé que le covid-19 allait avoir un impact significatif. Pour anticiper l'évolution de la pandémie, les décideurs se sont tournés vers le domaine de la modélisation épidémiologique.
 
-Une équipe de scientifiques de l'Imperial College (Londres), menée par le Professeur Neil Ferguson, a notamment publié le 16 mars le [rapport](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/) qui a conduit de nombreux gouvernements européens, dont le [gouvernement français](https://www.lemonde.fr/planete/article/2020/03/15/coronavirus-les-simulations-alarmantes-des-epidemiologistes-pour-la-france_6033149_3244.html), à confiner leur pays. Les scénarios présentés dans le rapport anticipaient, en l'absence de mesures strictes, de l'ordre de 500 000 morts en moins de 3 mois au Royaume-Uni, et des chiffres similaires pour la France. La mise en œuvre de mesures standard telles que celles prévues dans les plans de préparation à la pandémie (stratégie d'atténuation) entraînerait 250 000 décès. Selon le rapport, seule la mise en œuvre de mesures plus strictes pour supprimer le virus (comme le confinement) permettrait de contenir la vague et serait le seul moyen d'éviter la saturation du système hospitalier. Se fiant à ce rapport, les gouvernements ont pour beaucoup choisi de mettre en place des mesures strictes.
+**Une équipe de scientifiques de l'Imperial College (Londres)**, menée par le Professeur Neil Ferguson, a notamment publié le 16 mars le [rapport](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/) qui a conduit de nombreux gouvernements européens, dont le [gouvernement français](https://www.lemonde.fr/planete/article/2020/03/15/coronavirus-les-simulations-alarmantes-des-epidemiologistes-pour-la-france_6033149_3244.html), à confiner leur pays. Les scénarios présentés dans le rapport anticipaient, **en l'absence de mesures strictes, de l'ordre de 500 000 morts en moins de 3 mois au Royaume-Uni**, et des chiffres similaires pour la France. **La mise en œuvre de mesures standard** telles que celles prévues dans les plans de préparation à la pandémie (stratégie d'atténuation) **entraînerait 250 000 décès**. Selon le rapport, seule la mise en œuvre de mesures plus strictes pour supprimer le virus (comme le confinement) permettrait de contenir la vague et serait le seul moyen d'éviter la saturation du système hospitalier. **Selon les chercheurs, le confinement représentait "l'option politique privilégiée"**. Se fiant à ce rapport, les gouvernements ont pour beaucoup choisi de mettre en place des mesures de confinement.
 
-Bien évidemment, les projections décrivant ce qu'il devrait se passer en l'absence de mesures ne peuvent être comparées avec ce qui s'est réellement passé dans les pays confinés. C'est d'ailleurs l'un des contre-arguments les plus communs aux critiques des modèles épidémiologiques: c'est précisément grâce aux mesures que les scénarios de modélisation ne se sont pas réalisés.
+Bien évidemment, les projections décrivant ce qu'il devrait se passer en l'absence de mesures ne peuvent être comparées avec ce qui s'est réellement passé dans les pays confinés. C'est d'ailleurs l'un des contre-arguments les plus communs: c'est précisément grâce aux mesures que les scénarios de modélisation pessimistes ne se sont pas réalisés.
 
-Mais il y a un pays qui nous permet de tester la validité des scénarios de modélisation: la Suède. Lors de la première vague, la Suède a choisi de ne pas se confiner, préférant se reposer des mesures plus légères. Il est donc possible de comparer ce que prévoyaient les scénarios pour la Suède et la réalité.
+Cependant, un pays permet de tester la validité des scénarios de modélisation : la Suède. Lors de la première vague, **la Suède a choisi de ne pas se confiner**, préférant se reposer des mesures plus légères. Il est **donc possible de comparer ce qu'anticipaient les modélisations** pour la Suède et la réalité.
 
 </details>
 
@@ -167,15 +169,17 @@ Mais il y a un pays qui nous permet de tester la validité des scénarios de mod
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparaison des scénarios aux données réelles** ***(cliquer pour dérouler)***
 
 </summary>
 
 [L'appendice](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx) du [rapport 12](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/) de l'Imperial College, publié le 26 mars, contient des modélisations de l'épidémie en Suède.
 
-Les 2 premiers graphiques représentent les pics de lits occupés en réanimation et à l'hôpital. Les barres grises représentent les scénarios de l'Imperial College : confinement strict précoce, confinement strict tardif, et aucune mesure. Les barres rouges représentent la réalité. La Suède ayant mis en place des mesures de distanciation sociale sans pour autant imposer un confinement, les chiffres observés auraient dû se trouver quelque part entre les scénarios "confinement" et "aucune mesure". La réalité est tout autre. Alors même que la Suède n'a PAS confiné sa population, les scénarios AVEC confinement surestiment le pic de lits utilisés d'un facteur 2 à 10. Un scénario avec certaines restrictions devrait se situer entre les scénarios de confinement et sans restrictions, ce qui donne une surestimation d'un facteur 10 à 60.
+Les **2 premiers graphiques** représentent les **pics de lits occupés en réanimation et à l'hôpital**. Les barres grises représentent les scénarios de l'Imperial College : confinement strict précoce, confinement strict tardif, et aucune mesure. Les barres rouges représentent la réalité. La Suède ayant mis en place des mesures de distanciation sociale sans pour autant imposer un confinement, les chiffres observés auraient dû se trouver quelque part entre les scénarios *confinement* et *aucune mesure*.
 
-La dernière figure présente en gris les différents scénarios de l'Imperial College relatifs à la mortalité, et en rouge le nombre de morts réels. Là encore, les scénarios surestiment largement la mortalité. Le nombre de morts réels correspond au scénario de confinement précoce, ce qui n'a évidemment pas été l'approche suivie par la Suède. Les scénarios intermédiaires de distanciation sociale surestiment quant à eux la mortalité d'un facteur 3 à 7.
+Alors même que la Suède n'a PAS confiné sa population, les scénarios AVEC confinement surestiment le pic de lits utilisés d'un facteur 2 à 10. Un scénario avec des restrictions plus légères devrait se situer entre les scénarios *confinement* et le scénario *aucune restriction*, ce qui donne **une surestimation d'un facteur 10 à 60**.
+
+La **dernière figure** présente en gris les différents scénarios de l'Imperial College **relatifs à la mortalité**, et en rouge le nombre de morts réels. Là encore, les scénarios surestiment largement la mortalité. Le nombre de morts réels correspond au scénario de confinement précoce, ce qui n'a évidemment pas été l'approche suivie par la Suède. Les scénarios intermédiaires de distanciation sociale **surestiment quant à eux la mortalité d'un facteur 3 à 7**.
 
 </details>
 
@@ -225,25 +229,25 @@ knitr::include_graphics("images/Imperial_Sweden/Sweden_deaths.svg")
 
 <summary>
 
-**Impact politique et médiatique**
+**Impact politique et médiatique** ***(cliquer pour dérouler)***
 
 </summary>
 
-Ces modélisations furent un des principaux éléments déclencheurs du confinement national français (qui influencera d'autres pays européens à suivre la même voie). Dans son [rapport du 12 mars 2020](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf), le Conseil Scientifique a affirmé que les mesures classiques utilisées pour limiter la propagation des épidémies ne permettraient pas de limiter suffisamment la circulation du virus, impliquant la nécessité d'un confinement strict
+Ces modélisations furent un des principaux éléments déclencheurs du confinement national français, ainsi que dans d'autres pays. Dans son [rapport du 12 mars 2020](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf), **le Conseil Scientifique, s'appuyant sur les résultats de l'Imperial College**, avance ainsi que les mesures classiques utilisées pour limiter la propagation des épidémies ne permettraient pas de réduire suffisamment la circulation du virus, impliquant la nécessité d'un confinement strict
 
-> *On ne s'attend pas à ce que la réduction de la taille du pic épidémique soit suffisante pour éviter une saturation du système de santé. (...) Cette intuition a été illustrée à travers la réalisation d'un modèle COVID19 particulier (Neil Ferguson, communication personnelle)*
+> "On ne s'attend pas à ce que la réduction de la taille du pic épidémique soit suffisante pour éviter une saturation du système de santé. (...) ***Cette intuition a été illustrée à travers la réalisation d'un modèle COVID19 particulier (Neil Ferguson, communication personnelle)"***
 >
-> *Extrait du rapport du Conseil Scientifique du 12 mars 2020*
+> Extrait du ***rapport du Conseil Scientifique*** du 12 mars 2020
 
-La figure présentée ci-dessus montrant que ces modèles surestimaient largement ce qui se passait avec des mesures classiques de contrôle des épidémies, cette affirmation était vraisemblablement fausse.
+Les figures présentées ci-dessus montrant que ces modèles surestimaient largement ce qui se passait avec des mesures classiques de contrôle des épidémies, cette affirmation était potentiellement fausse.
 
 L'influence politique de ces modélisation se poursuit bien après mars 2020. Lorsqu'en juillet 2021 le Tribunal Constitutionnel espagnol a déclaré inconstitutionnel le premier confinement, [le président espagnol a répliqué en assurant que ce dernier avait sauvé 450 000 vies en Espagne](https://www.lamoncloa.gob.es/lang/en/presidente/news/Paginas/2020/20200610control-session.aspx). 
 
-> Ce n'est pas moi qui le dit, mais des études scientifiques indépendantes qui l'établissent : grâce à ce confinement, 450 000 vies ont été sauvées. Nous avons perdu la vie de plus de 27 000 de nos compatriotes, mais nous avons sauvé la vie de 450 000 personnes.
+> ***Ce n'est pas moi qui le dit, mais des études scientifiques indépendantes qui l'établissent : grâce à ce confinement, 450 000 vies ont été sauvées***. Nous avons perdu la vie de plus de 27 000 de nos compatriotes, mais nous avons sauvé la vie de 450 000 personnes.
 >
 > Président du gouvernement espagnol, Pedro Sánchez
 
-Si la source de ce chiffre n'est pas précisée, elle correspond bien au scénario "pessimiste "ne rien faire" de [l'appendice](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx) du [rapport 12](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/) de l'Imperial College appliqué à l'Espagne. Le cas de la Suède interroge cette affirmation. En effet, si le gouvernement suédois avait confiné sa population, il aurait pu affirmer à l'image de la ministre espagnole que son action avait sauvé 90 000 personnes. Nous savons qu'il n'en est rien, le bilan réel sans confinement étant de 5 000 morts, soit 18 fois moins.
+Si la source de ce chiffre n'est pas précisée, elle correspond bien au scénario pessimiste *ne rien faire* de [l'appendice](https://www.imperial.ac.uk/media/imperial-college/medicine/mrc-gida/Imperial-College-COVID19-Global-unmitigated-mitigated-suppression-scenarios.xlsx) du [rapport 12](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-12-global-impact-covid-19/) de l'Imperial College appliqué à l'Espagne. Le cas de la Suède interroge cette affirmation. En effet, **si le gouvernement suédois avait confiné sa population, il aurait pu affirmer à l'image du ministre espagnol que son action avait sauvé 90 000 personnes. Nous savons qu'il n'en est rien, le bilan réel sans confinement étant de 5 000 morts**, soit 18 fois moins.
 
 </details>
 
@@ -251,18 +255,18 @@ Si la source de ce chiffre n'est pas précisée, elle correspond bien au scénar
 
 <summary>
 
-**Discussion sur les hypothèses des scénarios (technique)**
+**Discussion sur les hypothèses des scénarios (technique)** ***(cliquer pour dérouler)***
 
 </summary>
 
 Pour les décès, l'Imperial College a développé 4 scénarios :
 
-1.  Aucune mesure
-2.  Atténuation : distanciation sociale de la population de manière uniforme (40% de réduction des contacts)
-3.  Atténuation : comme 2. mais en augmentant la distanciation sociale des plus de 70 ans (réduction des contacts de 60% pour cette catégorie)
-4.  Suppression des transmissions : distanciation sociale élargie et intense (réduction de 75% des contacts de l'ensemble de la population).
+1.  **Aucune mesure**
+2.  **Atténuation** : distanciation sociale de la population de manière uniforme (**40% de réduction des contacts**)
+3.  **Atténuation bis** : comme 2. mais en augmentant la distanciation sociale des plus de 70 ans (réduction des contacts de 60% pour cette catégorie)
+4.  **Suppression des transmissions** : distanciation sociale élargie et intense (**réduction de 75% des contacts** de l'ensemble de la population).
 
-Il est impossible de mesurer la réduction de contacts effective, mais les données de mobilité peuvent fournir une approximation. En Suède, la fréquentation des lieux de travail, gares, et des lieux de commerce et loisirs a été réduite au maximum de 30-45%, et celle des magasins alimentaires et pharmacies de 10-15%. Cela semble confirmer que la Suède ne penchait pas vers le scénario 4, mais plutôt vers une atténuation légère. Pour comparaison, en France, la fréquentation des lieux de travail, de commerce et de loisir a été réduite de 70-90% et celle des magasins alimentaires de 50%, ce qui est aligné avec le scénario 4 de confinement.
+Il est impossible de mesurer la réduction de contacts effective, mais les données de mobilité peuvent fournir une approximation. **En Suède, la fréquentation des lieux de travail, gares, et des lieux de commerce et loisirs a été réduite au maximum de 30-45%, et celle des magasins alimentaires et pharmacies de 10-15%**. Cela semble confirmer que la Suède ne penchait pas vers le scénario 4, mais plutôt vers **une atténuation légère**. Pour comparaison, **en France, la fréquentation des lieux de travail, de commerce et de loisir a été réduite de 70-90% et celle des magasins alimentaires de 50%**, ce qui est aligné avec le scénario 4 de **confinement**.
 
 <center>
 
@@ -272,11 +276,11 @@ Il est impossible de mesurer la réduction de contacts effective, mais les donn�
 
 </center>
 
-Bien que ne correspondant pas à la réalité, nous avons fait le choix de représenter les scénarios "aucune mesure" pour plusieurs raisons :
+Bien que n'étant pas réalistes, nous avons fait le choix de représenter les scénarios *aucune mesure* pour plusieurs raisons :
 
--   Dans le cas des pics de réanimations et hospitaliers, aucun scénario intermédiaire n'a été produit, seulement les scénarios "confinement" et "0 mesure". Présenter ces 2 scénarios permet donc d'imaginer où aurait dû se trouver la réalité, quelque part entre les 2.
+-   Dans le cas des pics de réanimations et hospitaliers, aucun scénario intermédiaire n'a été produit, seulement les scénarios *confinement* et *0 mesure*. Présenter ces 2 scénarios permet donc d'imaginer où aurait dû se trouver la réalité, quelque part entre les 2.
 
--   Bien qu'irréalistes, les projections "aucune mesure" sont souvent mises en avant comme contrefactuel à l'absence de confinement, comme l'illustre le cas du pic hospitalier évoqué ci-dessus. C'est aussi le cas dans la presse (chiffre de [500 000 morts au Royaume-Uni](https://www.bfmtv.com/international/coronavirus-en-angleterre-les-projections-effrayantes-du-nombre-de-morts-en-cas-de-laisser-faire_AN-202003180090.html)) ou par le politique (chiffre de [450 000 personnes sauvées](https://www.courrierinternational.com/article/forme-espagne-un-confinement-juge-inconstitutionnel-des-milliers-damendes-remboursees) selon la ministre de la justice espagnole). Cet article [de BFM] (https://www.bfmtv.com/international/coronavirus-en-angleterre-les-projections-effrayantes-du-nombre-de-morts-en-cas-de-laisser-faire_AN-202003180090.html) affirme même qu'une stratégie d'atténuation est une stratégie de "laissez-faire" :
+-   **Bien qu'irréalistes, les projections** ***aucune mesure*** **sont souvent mises en avant comme unique contrefactuel à l'absence de confinement**, comme l'illustre le cas du pic hospitalier évoqué ci-dessus. C'est aussi le cas dans la presse (chiffre de [500 000 morts au Royaume-Uni](https://www.bfmtv.com/international/coronavirus-en-angleterre-les-projections-effrayantes-du-nombre-de-morts-en-cas-de-laisser-faire_AN-202003180090.html)) ou par le politique (chiffre de [450 000 personnes sauvées](https://www.courrierinternational.com/article/forme-espagne-un-confinement-juge-inconstitutionnel-des-milliers-damendes-remboursees) selon la ministre de la justice espagnole). **Cet article [de BFM](https://www.bfmtv.com/international/coronavirus-en-angleterre-les-projections-effrayantes-du-nombre-de-morts-en-cas-de-laisser-faire_AN-202003180090.html) affirme même qu'une stratégie d'atténuation est une stratégie de "laissez-faire"** :
 
 > Par "laisser-faire", les chercheurs désignent des mesures dites d'atténuation, comme la quarantaine des cas identifiés de Covid-19 et de leurs proches, la fermeture des écoles.
 
@@ -288,11 +292,11 @@ Bien que ne correspondant pas à la réalité, nous avons fait le choix de repr�
 
 <summary>
 
-**Contexte**
+**Contexte** ***(cliquer pour dérouler)***
 
 </summary>
 
-Le 29 avril 2020, pendant le premier confinement, [un article du journal Les Echos](https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309) rapportait des modélisations de l'Institut Pasteur. Ces modélisations portaient sur l'évolution de l'épidémie post-confinement. Le ministère de la Santé indiquait alors que ces modèles sont non finalisés et en cours d'analyse, et par conséquent ne peuvent pas être rendus publics pour le moment. A notre connaissance ils n'ont pas été rendus publics par la suite.
+Le **29 avril 2020**, pendant le premier confinement, [un article du journal Les Echos](https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309) rapportait des **modélisations de l'Institut Pasteur**. Ces modélisations portaient sur l'évolution de l'épidémie post-confinement. Le ministère de la Santé indiquait alors que ces modèles étaient non finalisés et en cours d'analyse, et par conséquent ne peuvent pas être rendus publics pour le moment. A notre connaissance ils **n'ont jamais été rendus publics par la suite**.
 
 </details>
 
@@ -300,11 +304,11 @@ Le 29 avril 2020, pendant le premier confinement, [un article du journal Les Ech
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparaison des scénarios aux données réelles** ***(cliquer pour dérouler)***
 
 </summary>
 
-Fin juin, le scénario optimiste surestime les données réelles de 66%. Les scénarios médian et pessimiste se situent eux 3.5 et 9 fois au-dessus de la réalité.
+Fin juin, **le scénario optimiste surestime les données réelles de 66%**. **Les scénarios médian et pessimiste** se situent eux **3.5 et 9 fois au-dessus** de la réalité.
 
 </details>
 
@@ -331,15 +335,15 @@ scenario %>%
 
 <summary>
 
-**Impact politique et médiatique**
+**Impact politique et médiatique** ***(cliquer pour dérouler)***
 
 </summary>
 
-Bien que le rapport ayant conduit à ces modélisations n'a pas été à notre connaissance rendu public, celles-ci ont néanmoins été communiquées à la presse et à l'exécutif, comme le rapporte l'article des Echos :
+Bien que le rapport ayant conduit à ces modélisations n'a, à notre connaissance, pas été rendu public, celles-ci ont néanmoins été communiquées à la presse et à l'exécutif, comme le rapporte [l'article des Echos](https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309) :
 
-> Ce sont peut-être les modélisations réalisées par l'Institut Pasteur pour l'ARS Ile-de-France et l'AP-HP -par le Pr Simon Cauchemez - qui invitent à la prudence le gouvernement. Datées de mardi et à vocation interne, elles montrent que le nombre de patients en réanimation restera longtemps élevé, en tout cas jusqu'à l'été. Et cela quels que soient les scénarios.
+> Ce sont peut-être les modélisations réalisées par l'Institut Pasteur pour l'ARS Ile-de-France et l'AP-HP - par le Pr Simon Cauchemez - qui invitent à la prudence le gouvernement. **Datées de mardi et à vocation interne**, elles montrent que le nombre de patients en réanimation restera longtemps élevé, en tout cas jusqu'à l'été. Et cela quels que soient les scénarios.
 
-La confidentialité du rapport dont sont issues ces courbes pose la question de la transparence des modélisations. De manière similaire, le [rapport du Conseil Scientifique du 12 mars 2020](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf) faisait référence aux modélisations de l'Imperial College utilisées dans le rapport en ces termes "Neil Ferguson, communication personnelle", sans information additionnelle.
+La confidentialité du rapport dont sont issues ces courbes **pose la question de la transparence** des modélisations qui informent les décisionnaires publics. De manière similaire, le [rapport du Conseil Scientifique du 12 mars 2020](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf) faisait référence aux modélisations de l'Imperial College sur lesquelles il s'appuyait en ces termes : "Neil Ferguson, communication personnelle", sans information additionnelle.
 
 </details>
 
@@ -347,11 +351,11 @@ La confidentialité du rapport dont sont issues ces courbes pose la question de 
 
 <summary>
 
-**Discussion sur les hypothèses des scénarios (technique)**
+**Discussion sur les hypothèses des scénarios (technique)** ***(cliquer pour dérouler)***
 
 </summary>
 
-Les modélisations n'étant pas publiques, il ne nous a pas été possible d'étudier les hypothèses des scénarios. L'article des Echos fait simplement mention de différents taux de reproduction du virus, de 1.2, 1.5, ou plus.
+Les modélisations n'étant pas publiques, il ne nous a pas été possible d'étudier plus en détail les hypothèses des scénarios. L'article des Echos fait simplement mention de différents taux de reproduction du virus, de 1.2, 1.5, ou plus.
 
 </details>
 
@@ -361,11 +365,11 @@ Les modélisations n'étant pas publiques, il ne nous a pas été possible d'ét
 
 <summary>
 
-**Contexte**
+**Contexte** ***(cliquer pour dérouler)***
 
 </summary>
 
-Le 26 octobre, l'Institut Pasteur produit des scénarios d'évolution de l'épidémie en l'absence de confinement. Ce rapport n'a à notre connaissance pas été rendu public, et nous n'avons pas pu le consulter. Nous avons simplement trouvé une figure extraite du rapport, que l'on peut trouver sur cette [page](https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/).
+Le **26 octobre, l'Institut Pasteur produit des scénarios** d'évolution de l'épidémie en l'absence de confinement. Ce rapport n'a **à notre connaissance pas été rendu public**, et nous n'avons pas pu le consulter. Nous avons simplement trouvé une figure extraite du rapport, que l'on peut trouver sur cette [page](https://modelisation-covid19.pasteur.fr/realtime-analysis/hospital/).
 
 <center>
 
@@ -373,9 +377,9 @@ Le 26 octobre, l'Institut Pasteur produit des scénarios d'évolution de l'épid
 
 </center>
 
-Le 28 octobre, face à la perspective présentée par ces chiffres, Emmanuel Macron annonce un confinement généralisé, qui prendra effet le 30 octobre.
+Le 28 octobre, face à la perspective présentée par ces chiffres, Emmanuel Macron annonce un confinement généralisé, qui prendra effet le 30 octobre, rendant la comparaison de la réalité à la figure ci-dessus (qui ne modélise pas un confinement) illégitime.
 
-Le 30 octobre, l'Institut Pasteur produit une mise à jour de ses scénarios pour tenir compte de l'impact du confinement. Le rapport n'a pas été rendu public à notre connaissance. Certains médias y ont cependant eu accès, et ont reproduit les scénarios sous forme d'infographie. [L'article des Echos](https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656) constitue notre source pour nos graphiques.
+Le **30 octobre, l'Institut Pasteur produit une mise à jour** de ses scénarios pour tenir compte de l'impact du confinement. Le rapport n'a **pas été rendu public à notre connaissance**. Certains médias y ont cependant eu accès, et ont reproduit les scénarios sous forme d'infographie. [L'article des Echos](https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656) constitue notre source pour nos graphiques.
 
 </details>
 
@@ -383,11 +387,11 @@ Le 30 octobre, l'Institut Pasteur produit une mise à jour de ses scénarios pou
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparaison des scénarios aux données réelles** ***(cliquer pour dérouler)***
 
 </summary>
 
-Le scénario le plus optimiste est proche du pic réel de lits occupés en réanimation (+15%). Le scénario médian et le plus pessimiste se trouvent eux à +30% et +100%.
+Le **scénario le plus optimiste est proche du pic réel** de lits occupés en réanimation (**+15%**). Les **scénarios médian** et le plus **pessimiste** se trouvent eux à **+30% et +100%**.
 
 </details>
 
@@ -441,11 +445,11 @@ scenario %>%
 
 <summary>
 
-**Impact politique et médiatique**
+**Impact politique et médiatique** ***(cliquer pour dérouler)***
 
 </summary>
 
-Les modélisations du 26 octobre ont été un des élément déclencheur du 2ème confinement. Notamment, [lors de son allocution du 28 octobre](https://www.vie-publique.fr/discours/276951-emmanuel-macron-28102020-covid-19), Emmanuel Macron a annoncé que le nombre de patients en réanimation dépasserait les 9000 "quoi que nous fassions". Le pic réel sera deux fois moins élevé, à environ 4800 lits de soins critiques. On constate qu'en vue de justifier une décision politique, seule la modélisation la plus pessimiste a été mise en avant par l'exécutif. Elle a aussi été présentée comme une certitude, alors qu'il ne s'agissait que d'un scénario parmi d'autres.
+Les modélisations du 26 octobre ont été un des élément déclencheur du 2ème confinement. Notamment, [lors de son allocution du 28 octobre](https://www.vie-publique.fr/discours/276951-emmanuel-macron-28102020-covid-19), **Emmanuel Macron a annoncé que le nombre de patients en réanimation dépasserait les 9000 "quoi que nous fassions", ce qui ne disaient pas les modèles. Le pic réel sera deux fois moins élevé**, à environ 4800 lits de soins critiques. On constate qu'en vue de justifier une décision politique, seule la modélisation la plus pessimiste a été mise en avant par l'exécutif. Elle a aussi été présentée comme une certitude, alors qu'il ne s'agissait que d'un scénario parmi d'autres.
 
 Ces modélisations ont également été largement reprises dans la presse: ["Deuxième vague : les scénarios qui inquiètent"](https://www.tf1info.fr/sante/video-deuxieme-vague-les-scenarios-qui-inquietent-2168899.html) titrait ainsi LCI après l'annonce du 2ème confinement, présentant les scénarios dont les pics de réanimation étaient de 5500, 6200 et 9000 patients.
 
@@ -455,11 +459,11 @@ Ces modélisations ont également été largement reprises dans la presse: ["Deu
 
 <summary>
 
-**Discussion sur les hypothèses des scénarios (technique)**
+**Discussion sur les hypothèses des scénarios (technique)** ***(cliquer pour dérouler)***
 
 </summary>
 
-Le rapport n'ayant pas été rendu public, il ne nous a pas été possible d'explorer en détail les hypothèses des scénarios. Selon les éléments rapportés par Les Echos, les différents scénarios correspondent à différentes valeurs de taux de reproduction "R" de 0.7 à 1.2, reflétant une efficacité plus ou moins marquée du confinement.
+Le rapport n'ayant pas été rendu public, il ne nous a pas été possible d'explorer en détail les hypothèses des scénarios. Selon les éléments rapportés par Les Echos, les différents scénarios correspondent à différentes valeurs de taux de reproduction R de 0.7 à 1.2, reflétant une efficacité plus ou moins marquée du confinement.
 
 </details>
 
@@ -469,15 +473,17 @@ Le rapport n'ayant pas été rendu public, il ne nous a pas été possible d'exp
 
 <summary>
 
-**Contexte**
+**Contexte** ***(cliquer pour dérouler)***
 
 </summary>
 
-Au cours d'un hiver 2020-2021 marqué par un couvre-feu étendu, une dégradation de la situation sanitaire a mené Inserm et l'Institut Pasteur à publier des scénarios de modélisations de mi-janvier à mi-février. Ces scénarios ont servi de base pour envisager la mise en place d'un confinement strict début février, qui n'aura finalement pas eu lieu, offrant la possibilité de comparer les projections à ce qu'il s'est réellement passé.
+Dans un contexte d'émergence du variant britannique alpha, le [rapport du conseil scientifique du 12 janvier 2021](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_janvier_2021_actualise_13_janvier_2021.pdf) a produit de premières estimations préliminaires portant sur son impact très incertain, que ce soit sur la taille du pic hospitalier (de 7 000 à 40 000 lits de soins critiques) ou sur la date de l'augmentation (de février à avril), rendant la comparaison des courbes à la réalité impossible.
 
-De premiers confinements régionaux sont mis en place le 20 mars, suivis plus tard par d'autres jusqu'au confinement national le 3 avril. Le temps de latence entre la mise en place des mesures et leur effet sur les hospitalisations étant au minimum d'une semaine, voire 2 à 3 semaines comme l'indique le [rapport du conseil scientifique](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf) ("les premiers effets des mesures adoptées [...] ne peuvent apparaître qu'après deux à trois semaines"), nous arrêtons notre graphique au 27 mars. Au-delà, il n'est plus légitime de comparer la dynamique de la pandémie aux scénarios "sans confinement".
+Cependant ces projections seront affinées dans un **succession de rapports de l'INSERM et l'Institut Pasteur de mi-janvier à mi-février**. Ces scénarios ont servi de base pour envisager la mise en place d'un confinement strict début février, qui n'aura finalement pas eu lieu, offrant la possibilité de comparer les projections à ce qu'il s'est réellement passé.
 
-Avant ces dates, un certain nombre de mesures n'ont pas pu impacter la dynamique nationale de l'épidémie : le 25 février confinement le week-end à Dunkerque et une partie des Alpes-Maritimes, et le 4 mars confinement le week-end dans le Pas-de-Calais, ainsi que les centres commerciaux de plus de 10 000 m2 fermés.
+Dès le 15 décembre 2020, un couvre-feu à 20h était en place sur l'ensemble du territoire français. Il sera avancé à 18h pour 15 départements le 2 janvier 2021, puis pour l'ensemble du territoire le 16 janvier.
+
+De premiers confinements régionaux seront mis en place le 20 mars, suivis plus tard par d'autres jusqu'au confinement national le 3 avril. Le temps de latence entre la mise en place des mesures et leur effet sur les hospitalisations étant au minimum d'une semaine, voire 2 à 3 semaines comme l'indique le [rapport du conseil scientifique](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf) (*les premiers effets des mesures adoptées [...] ne peuvent apparaître qu'après deux à trois semaines*), nous arrêtons notre graphique au 27 mars. Au-delà, il n'est plus légitime de comparer la dynamique de la pandémie aux scénarios *sans confinement*.
 
 </details>
 
@@ -485,11 +491,13 @@ Avant ces dates, un certain nombre de mesures n'ont pas pu impacter la dynamique
 
 <summary>
 
-**Comparaison des scénarios aux données réelles : scénarios de l'Inserm**
+**Comparaison des scénarios aux données réelles : scénarios de l'Inserm** ***(cliquer pour dérouler)***
 
 </summary>
 
-Les scénarios réalisés pendant 1 mois pointent tous vers une augmentation exponentielle des admissions à l'hôpital. La réalité sera une légère diminution suivi d'une augmentation ramenant environ au niveau initial. Quasiment tous les scénarios dépassent les 30 000 admissions hebdomadaires avant la mi-mars sans signe de ralentissement de la dynamique, alors que la réalité se trouvait aux alentours de 10 000, soit 3 fois moins. Le scénario le plus optimiste surestime les hospitalisation d'un facteur 50-100%.
+*A noter : les scénarios sur 16 janvier et 2 février tiennent partiellement compte de l'impact du couvre-feu avancé à 18h. Celui du 14 février en tient pleinement compte. Nous discutons des choix d'inclusion des scénarios plus bas dans la partie Discussion sur les hypothèses des scénarios.*
+
+Les scénarios de l'INSERM ([ici](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_dominance-20210116.pdf), [ici](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf) et [ici](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_socialdistancing-20210214.pdf)) réalisés pendant 1 mois **pointent tous vers une augmentation exponentielle** des admissions à l'hôpital. La réalité sera une légère diminution suivi d'une augmentation ramenant environ au niveau initial. **Quasiment tous les scénarios dépassent les 30 000 admissions** hebdomadaires avant la mi-mars sans signe de ralentissement de la dynamique, alors que la **réalité se trouvait aux alentours de 10 000**, soit 3 fois moins. **Les scénarios le plus optimistes surestiment** les hospitalisation d'un **facteur 50-100%**.
 
 </details>
 
@@ -570,15 +578,17 @@ scenario %>%
 
 <summary>
 
-**Comparaison des scénarios aux données réelles : scénarios de l'Institut Pasteur**
+**Comparaison des scénarios aux données réelles : scénarios de l'Institut Pasteur** ***(cliquer pour dérouler)***
 
 </summary>
 
-Pour le rapport du 8 février, les 2 scénarios principaux se prolongeant en mars reflètent une hypothèse "sans vaccination" et une hypothèse "optimiste" de vaccination. Il est précisé qu' « en pratique, l'impact de la campagne actuelle est susceptible d'être intermédiaire entre les scénarios avec et sans vaccination », d'où notre choix de représenter ces 2 courbes. Plus loin dans le rapport sont présentés 2 autres variantes secondaires illustrant l'influence d'une faible variation du taux de reproduction : ce sont les courbes s'arrêtant en mars.
+*A noter : tous ces scénarios tiennent bien compte de l'impact du couvre-feu avancé à 18h.*
 
-Seul le scénario le plus optimiste colle à la réalité, bien que ce n'était pas le scénario principal présenté aux décideurs. Les autres surestiment les admissions réelles d'un facteur 50-100%.
+Pour le [rapport du 8 février](https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf), les 2 scénarios principaux se prolongeant en mars reflètent une hypothèse "sans vaccination" et une hypothèse "optimiste" de vaccination. Il est précisé qu' « *en pratique, l'impact de la campagne actuelle est susceptible d'être intermédiaire entre les scénarios avec et sans vaccination* », d'où notre choix de représenter ces 2 courbes. Plus loin dans le rapport sont présentés des variantes secondaires illustrant l'influence d'une faible variation du taux de reproduction : ce sont les courbes s'arrêtant début mars.
 
-Pour le rapport du 23 février, les scénarios présentés collent globalement bien à l'observation. Il n'est pas fait mention du décalage observé entre la réalité et les scénarios publiés 15 jours auparavant.
+**Le scénario le plus optimiste colle à la réalité jusqu'à la mi-mars**. Ce n'était pas le scénario principal présenté aux décideurs (cf les 2 scénarios se prolongeant en mars). **Les autres surestiment** les admissions réelles d'un **facteur 50-100%**.
+
+Pour le [rapport du 23 février](https://hal-pasteur.archives-ouvertes.fr/pasteur-03149525/document), **le scénario médian correspond globalement à la réalité**, qui se trouve aux alentours du scénario médian. Il n'est pas fait mention de la différence importante avec les scénarios du répport précédent du 8 février.
 
 </details>
 
@@ -641,17 +651,17 @@ scenario %>%
 
 <summary>
 
-**Auto-évaluation de l'Institut Pasteur**
+**Auto-évaluation de l'Institut Pasteur** ***(cliquer pour dérouler)***
 
 </summary>
 
-Une évaluation rétrospective portant sur le rapport du 8 février sera faite dans [un rapport ultérieur du 26 avril](https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf). Il y est indiqué que
+Une auto-évaluation rétrospective portant sur le rapport du 8 février sera faite par l'Institut Pasteur dans [un rapport ultérieur du 26 avril](https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf). Il y est indiqué que
 
-> *"dès le 8 février, ce modèle avait anticipé que le couvre-feu serait efficace pour contenir la circulation du virus historique mais n'empêcherait pas une augmentation importante des hospitalisations en l'absence de mesures supplémentaires"*
+> "dès **le 8 février, ce modèle avait anticipé que le couvre-feu serait efficace** pour contenir la circulation du virus historique mais n'empêcherait pas une augmentation importante des hospitalisations en l'absence de mesures supplémentaires"
 
-Cette affirmation est accompagnée de la figure ci-dessous. En 1 an de pandémie, cette figure constituera la première comparaison rétrospective officiellement publiée par l'Institut Pasteur.
+Cette affirmation est **accompagnée de la figure ci-dessous**. Un an après le début de la pandémie, cette figure constituera la première comparaison rétrospective officiellement publiée par l'Institut Pasteur.
 
-Nous n'avons cependant pas trouvé une telle projection dans [le rapport du 8 févrie](https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf)r. Toutes celles que nous avons trouvée sont représentées sur nos graphiques présentés ci-dessus. 
+**Nous n'avons cependant pas trouvé une telle projection dans** [le rapport du 8 février](https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf). Toutes celles que nous avons trouvées sont représentées sur nos graphiques présentés ci-dessus. 
 
 <center>
 
@@ -665,54 +675,68 @@ Nous n'avons cependant pas trouvé une telle projection dans [le rapport du 8 f�
 
 <summary>
 
-**Impact politique et médiatique**
+**Impact politique et médiatique** ***(cliquer pour dérouler)***
 
 </summary>
 
-La modélisation INSERM du 16 janvier préconise explicitement des mesures de distanciation sociale plus poussées dans son résumé :
+La [rapport](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_dominance-20210116.pdf) **INSERM du 16 janvier préconise explicitement des mesures de distanciation sociale plus poussées** dans son résumé :
 
 > "Ces résultats montrent la nécessité de renforcer les mesures de distanciation sociale"
 
-Il est frappant de constater qu'elle reconnaît ne pas avoir pris en compte le couvre-feu, une mesure dont l'objectif même était d'éviter un confinement.
+**Pourtant l'équipe INSERM dit ne pas prendre en compte le couvre-feu avancé pour la majorité de ses scénarios**, une mesure dont l'objectif même était d'éviter un confinement.
 
 > Elle ne tient pas compte du couvre-feu anticipé à 18h et étendu au territoire national le 16 janvier 2021. L'évaluation de cette mesure de distanciation sociale sera réalisée sur les données épidémiques dans les prochaines semaines. Pour cette raison, nous avons fourni un scénario plus optimiste en supposant une activité épidémique stable"
 
-Vous trouverez plus de précisions à ce sujet dans la partie suivante *Discussion des hypothèses du scénario (technique)*.
+A noter que si l'impact du couvre-feu n'est aussi que partiellement pris en compte dans le [rapport du 2 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf), il est en revanche pleinement intégré pour celui du [14 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_socialdistancing-20210214.pdf. Vous trouverez plus de précisions à ce sujet dans la partie suivante *Discussion des hypothèses du scénario (technique)*.
 
-Ces résultats ont également été présentés dans un [rapport spécial du Conseil scientifique](https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf) étudiant la mise en œuvre d'un confinement strict début février. 
+Ces résultats ont également été présentés dans un [rapport spécial du Conseil scientifique](https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf) le 29 janvier 2021, indiquant que *ces résultats montrent la nécessité de mesures rigoureuses de distanciation sociale pour faire face à la menace du variant* et étudiant la mise en œuvre d'un confinement strict début février. 
 
-Traduit avec www.DeepL.com/Translator (version gratuite)
 </details>
 
 <details>
 
 <summary>
 
-**Discussion sur les hypothèses des scénarios (technique)**
+**Discussion sur les hypothèses des scénarios (technique)** ***(cliquer pour dérouler)***
 
 </summary>
 
-A propos des scénarios de l'INSERM :
+Les scénarios de **l'Institut Pasteur prennent bien en compte l'effet du couvre-feu avancé** de 20h à 18h, **tout comme le rapport de l'INSERM du 14 février**. Les rapports **INSERM du 16 janvier et 2 février** ne prennent pas directement en compte cet effet, mais **tentent de le représenter à travers les scénarios optimistes**
+
+> Le modèle ne tient pas compte du couvre-feu anticipé à 18h et étendu au territoire national le 16 janvier 2021. L'évaluation de cette mesure de distanciation sociale sera réalisée sur les données épidémiques dans les prochaines semaines. Pour cette raison, nous avons fourni un scénario plus optimiste en supposant une activité épidémique stable. Cela pourrait être le résultat de mesures efficaces.
+> 
+> Rapport INSERM du 16 janvier 2021
+
+
+**A propos des scénarios de l'INSERM :**
 
 -   [rapport du 16 janvier](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_dominance-20210116.pdf) : les scénarios correspondent à 3 taux de reproduction du variant historique (1, 1.1 et 1.2), couplés à un variant alpha 50% ou 70% plus transmissible. Les courbes sont issues de la figure 1.
 
--   [rapport du 2 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf) : les scénarios correspondent à 3 taux de reproduction du variant historique (0.9, 1.1 et 1.2) couplés à un variant alpha 50% plus transmissible. Les courbes sont les courbes grises de la figure 2 (redondance avec les courbes des figures 1 et 3).
+-   [rapport du 2 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf) : les scénarios correspondent à 3 taux de reproduction du variant historique (0.9, 1 et 1.1) couplés à un variant alpha 50% plus transmissible. Les courbes sont les courbes grises de la figure 2 (redondance avec les courbes des figures 1 et 3).
 
--   [rapport du 14 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_socialdistancing-20210214.pdf) : variant alpha 50% plus transmissible. La transmissibilité du virus historique, n'est pas renseignée. En plus de la projection standard, 2 scénarios explorant une variation de la transmission du variant historique de +/- 10% illustrent un allègement ou un renforcement des mesures. La réalité n'a correspondu à aucun de ces 2 cas de figure, mais nous avons fait le choix de représenter ces 2 scénarios pour ne pas nous faire accuser d'exclusion arbitraire (la variation de 10% pouvant se produire naturellement de manière aléatoire).
+-   [rapport du 14 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_socialdistancing-20210214.pdf) : variant alpha 50% plus transmissible. La transmissibilité du virus historique, n'est pas renseignée. En plus de la projection standard, 2 scénarios explorant une variation de la transmission du variant historique de +/- 10% illustrent un allègement ou un renforcement des mesures. La réalité n'a correspondu à aucun de ces 2 cas de figure, mais nous avons fait le choix de représenter ces 2 scénarios pour ne pas nous faire accuser d'exclusion arbitraire (la variation de 10% pouvant se produire naturellement de manière aléatoire par le comportement des gens).
 
-A propos des scénarios de l'Institut Pasteur :
+**A propos des scénarios de l'Institut Pasteur :**
 
 -   [rapport du 8 février](https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf) : les scénarios correspondent à 3 taux de reproduction du variant historique (0.9, 0.95 et 1), couplés à un variant alpha 40%, 50% ou 70% plus transmissible. Les courbes sont issues des figures 2a, 6a, 7c
 
--   [rapport du 23 février](https://hal-pasteur.archives-ouvertes.fr/pasteur-03149525) : de nombreuses variantes sont proposées, car comme le souligne le rapport face à la grande incertitude "une unique prévision pour les prochains mois n'est pas possible". Dans le détail les différentes hypothèses portent sur la plus grande transmissibilité du variant alpha (+40%, 50% ou 70%) et un changement de trajectoire épidémique (diminution et augmentation de 8% ou 16%) qui intervient à différentes dates (22 février ou 8 mars). Les courbes sont extraites des figures 2c, 5a, 5c, 5e, en s'arrêtant au 27 mars comme expliqué dans le paragraphe "contexte".
+-   [rapport du 23 février](https://hal-pasteur.archives-ouvertes.fr/pasteur-03149525) : de nombreuses variantes sont proposées, car comme le souligne le rapport, face à la grande incertitude, *une unique prévision pour les prochains mois n'est pas possible*. Dans le détail les différentes hypothèses portent sur la plus grande transmissibilité du variant alpha (+50%, 60% ou 70%) et un changement de trajectoire épidémique (diminution ou augmentation de 8% ou 16%) qui intervient à différentes dates (22 février ou 8 mars). Les courbes sont extraites des figures 2c, 5a, 5c, 5e.
 
-Le rapport du 16 janvier de l'INSERM mérite précision, car il y est dit que l'effet du couvre-feu anticipé à 18 heures n'est pas pris en compte, mais que le scénario le plus optimiste pourrait refléter la mesure. Aurions-nous dû ne garder que celui-ci et exclure les autres scénarios ? Notre décision de tous les conserver s'appuie sur plusieurs points :
+**A propos de tous les scénarios**
 
--   Tout d'abord les auteurs ont fait le choix de les représenter, indiquant qu'ils validaient eux-mêmes la pertinence de ces scénarios. En effet ils n'hésitent pas à affirmer que "les nouvelles hospitalisations devraient atteindre environ 25 000 entre mi-février et début avril en l'absence d'intervention" »
+Le **variant alpha** est supposé être uniquement plus transmissible, et **n'augmente pas le risque d'hospitalisation**. Cela **sera modifié dans les rapports ultérieurs**, par exemple celui du [26 avril 2021](https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf), où la **probabilité d'hospitalisation est augmenté de 64%** avec l'infection alpha.
 
--   En s'appuyant sur ces résultats, ils n'hésitaient pas non plus à donner des recommandations politiques explicites « Ces résultats montrent la nécessité de renforcer les mesures de distanciation sociale » et ce alors même bien que le couvre-feu, dont le but même est d'éviter des mesures plus restrictives, n'était pas modélisé...
+Pour tous les rapports, nous arrêtons l'extraction des courbes au 27 mars comme expliqué dans le paragraphe *contexte*, les premiers confinements étant implémentés le 20 mars et l'effet des mesures sur les hospitalisations mettant au moins une semaine à se matérialiser (cf [rapport du conseil scientifique](https://solidarites-sante.gouv.fr/IMG/pdf/avis_conseil_scientifique_12_mars_2020.pdf), *les premiers effets des mesures adoptées […] ne peuvent apparaître qu’après deux à trois semaines*).
 
--   Enfin, on voit que les scénarios du 16 janvier sont très similaires à ceux du 2 février, alors même que ceux-ci "intègrent de façon effective toutes les mesures de distanciation sociale", indiquant que la prise en compte du couvre-feu ne change pas grand-chose
+**A propos des scénarios n'intégrant pas le couvre-feu anticipé**
+
+Les rapport INSERM du 16 janvier et 2 février méritent précision, car il y est dit que l'effet du couvre-feu anticipé à 18 heures n'est pas pris en compte, mais que le scénario le plus optimiste pourrait refléter la mesure. Aurions-nous dû ne garder que celui-ci et exclure les autres scénarios ? Notre décision de tous les conserver s'appuie sur plusieurs points :
+
+-   Tout d'abord les auteurs ont fait le choix de les représenter, indiquant qu'ils validaient eux-mêmes la pertinence de ces scénarios. En effet, c'est sur la base de ces scénarios qu'ils affirment que *les nouvelles hospitalisations devraient atteindre environ 25 000 entre mi-février et début avril en l'absence d'intervention*.
+
+-   En s'appuyant sur ces résultats, ils donnaient également des recommandations politiques explicites : *Ces résultats montrent la nécessité de renforcer les mesures de distanciation sociale*, et ce alors même bien que le couvre-feu, dont le but même est d'éviter des mesures plus restrictives, n'était pas modélisé.
+
+-   Enfin, on voit que les scénarios du 16 janvier et 2 février sont très similaires à ceux du 14 février, alors même que ce dernier intègre l'effet du couvre-feu anticipé, indiquant que la prise en compte du couvre-feu ne change que faiblement les résultats.
 
 </details>
 
