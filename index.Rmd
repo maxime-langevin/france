@@ -95,7 +95,7 @@ true_data_new_hosp_rea_weekly <- data_gouv_new_hosp_rea %>%
 
 ```
 
-# Avant d'explorer les scénarios de modélisation
+# Avant d'explorer les modélisations
 
 <details>
 
@@ -121,7 +121,7 @@ Une explication plus détaillée est disponible sur la page [Impact](https://eva
 
 <summary>
 
-**L'intérêt des modélisations n'est-il pas justement d'empêcher qu'elles se produisent ?** ***(cliquer pour dérouler)***
+**L'intérêt des modélisations n'est-il pas d'empêcher qu'elles se produisent ?** ***(cliquer pour dérouler)***
 
 </summary>
 
@@ -163,7 +163,7 @@ En **mars 2020**, l'incertitude sur les conséquences qu'allaient avoir le covid
 
 **Une équipe de scientifiques de l'Imperial College (Londres)**, menée par le Professeur Neil Ferguson, a notamment publié le 16 mars le [rapport](https://www.imperial.ac.uk/mrc-global-infectious-disease-analysis/covid-19/report-9-impact-of-npis-on-covid-19/) qui a conduit de nombreux gouvernements européens, dont le [gouvernement français](https://www.lemonde.fr/planete/article/2020/03/15/coronavirus-les-simulations-alarmantes-des-epidemiologistes-pour-la-france_6033149_3244.html), à confiner leur pays. Les scénarios présentés dans le rapport anticipaient, **en l'absence de mesures strictes, de l'ordre de 500 000 morts en moins de 3 mois au Royaume-Uni**, et des chiffres similaires pour la France. **La mise en œuvre de mesures standard** telles que celles prévues dans les plans de préparation à la pandémie (stratégie d'atténuation) **entraînerait 250 000 décès**. Selon le rapport, seule la mise en œuvre de mesures plus strictes pour supprimer le virus (comme le confinement) permettrait de contenir la vague et serait le seul moyen d'éviter la saturation du système hospitalier. **Selon les chercheurs, le confinement représentait "l'option politique privilégiée"**. Se fiant à ce rapport, les gouvernements ont pour beaucoup choisi de mettre en place des mesures de confinement.
 
-Bien évidemment, les projections décrivant ce qu'il devrait se passer en l'absence de mesures ne peuvent être comparées avec ce qui s'est réellement passé dans les pays confinés. C'est d'ailleurs l'un des contre-arguments les plus communs: c'est précisément grâce aux mesures que les scénarios de modélisation pessimistes ne se sont pas réalisés.
+Bien évidemment, les projections décrivant ce qu'il devrait se passer en l'absence de mesures ne peuvent être comparées avec ce qui s'est réellement passé dans les pays confinés. C'est d'ailleurs un contre-argument commun : c'est précisément grâce aux mesures que les scénarios de modélisation pessimistes ne se sont pas réalisés.
 
 Cependant, un pays permet de tester la validité des scénarios de modélisation : la Suède. Lors de la première vague, **la Suède a choisi de ne pas se confiner**, préférant se reposer des mesures plus légères. Il est **donc possible de comparer ce qu'anticipaient les modélisations** pour la Suède et la réalité.
 
@@ -173,7 +173,7 @@ Cependant, un pays permet de tester la validité des scénarios de modélisation
 
 <summary>
 
-**Comparaison des scénarios aux données réelles** ***(cliquer pour dérouler)***
+**Comparaison à la réalité** ***(cliquer pour dérouler)***
 
 </summary>
 
@@ -308,7 +308,7 @@ Le **29 avril 2020**, pendant le premier confinement, [un article du journal Les
 
 <summary>
 
-**Comparaison des scénarios aux données réelles** ***(cliquer pour dérouler)***
+**Comparaison à la réalité** ***(cliquer pour dérouler)***
 
 </summary>
 
@@ -322,13 +322,29 @@ scenario <- read.csv("data/2020_04_29_Pasteur/beds_rea.csv", sep=";") %>%
 
 scenario %>%
   gather(key=scenarios, value = value, -date) %>%
-  ggplot(aes(date, value, group=scenarios, color="scénarios")) + geom_smooth(se=F) + 
-  geom_line(data= true_data_beds_hosp_rea_IDF, 
-            aes(x=date, y=rea, color = "réalité", group="réalité"), size=1) +
-  annotate('text', x = as.Date("2020-03-27"), y = 500, label = "réalité", color = myred, fontface = "bold",
-           family = "Times New Roman") +
-  annotate('text', x = as.Date("2020-06-01"), y = 1500, label = "scénarios", color = mygrey, fontface = "bold",
-           family = "Times New Roman") +
+  ggplot(
+    aes(
+      date, value, 
+      group=scenarios, color="scénarios"
+      )
+    ) + 
+  geom_smooth(se=F) + 
+  geom_line(
+    data= true_data_beds_hosp_rea_IDF, 
+    aes(
+      x=date-1, y=rea, 
+      color = "réalité", group="réalité"
+      ),
+    size=1
+    ) +
+  annotate(
+    'text', x = as.Date("2020-03-27"), y = 500, label = "réalité", 
+    color = myred, fontface = "bold", family = "Times New Roman"
+    ) +
+  annotate(
+    'text', x = as.Date("2020-06-01"), y = 1500, label = "scénarios", 
+    color = mygrey, fontface = "bold", family = "Times New Roman"
+    ) +
   xlim(date("2020-03-19"), date("2020-06-28")) + g_theme +
   geom_vline(
     xintercept = as.Date("2020-04-29"), linetype="dashed"
@@ -337,9 +353,11 @@ scenario %>%
     'text', x = as.Date("2020-04-29")+1, y = 2500, label = "date de\npublication", 
     color = "black", fontface = "italic", family = "Times New Roman", hjust=0
   ) +
-  labs(title = "Lits de réanimation en Ile-de-France",
-       subtitle = "scénarios non publiés de l'Institut Pasteur, retranscrit dans les Echos \n",
-       caption = "\ntwitter : twitter : @Covid_Scenarios")
+  labs(
+    title = "Lits de réanimation en Ile-de-France",
+    subtitle = "scénarios non publiés de l'Institut Pasteur, retranscrit dans les Echos \n",
+    caption = "\ntwitter : twitter : @Covid_Scenarios"
+    )
 ```
 
 <details>
@@ -398,7 +416,7 @@ Le **30 octobre, l'Institut Pasteur produit une mise à jour** de ses scénarios
 
 <summary>
 
-**Comparaison des scénarios aux données réelles** ***(cliquer pour dérouler)***
+**Comparaison à la réalité** ***(cliquer pour dérouler)***
 
 </summary>
 
@@ -411,19 +429,33 @@ Le **scénario le plus optimiste est proche du pic réel** de lits occupés en r
 #### Lits de réanimation
 
 ```{r 2020_10_30_Pasteur_ICU_beds}
-#Lits de réanimation
 scenario <- read.csv("data/2020_10_30_Pasteur/beds_rea.csv", sep=";") %>%
   mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
 
 scenario %>%
   gather(key=pasteur, value = value, -date) %>%
-  ggplot(aes(date, value-200, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
-  geom_line(data= true_data_beds_hosp_rea, 
-            aes(x=date, y=rea, color = "réalité", group="true data"), size = 1) +
-  annotate('text', x = as.Date("2020-10-18"), y = 1400, label = "réalité", color = myred, fontface = "bold",
-           family = "Times New Roman") + 
-  annotate('text', x = as.Date("2020-11-10"), y = 7000, label = "scénarios", color = mygrey, fontface = "bold",
-           family = "Times New Roman") + 
+  ggplot(
+    aes(
+      date, value, group=pasteur, 
+      color="scénarios"
+      )
+    ) + 
+  geom_smooth(se=F) + 
+  geom_line(
+    data= true_data_beds_hosp_rea, 
+    aes(
+      x=date-1, y=rea, 
+      color = "réalité", group="true data"
+      ),
+    size = 1) +
+  annotate(
+    'text', x = as.Date("2020-10-18"), y = 1400, label = "réalité", 
+    color = myred, fontface = "bold", family = "Times New Roman"
+    ) + 
+  annotate(
+    'text', x = as.Date("2020-11-10"), y = 7000, label = "scénarios", color = mygrey, fontface = "bold",
+    family = "Times New Roman"
+    ) + 
   xlim(as.Date("2020-10-15"), as.Date("2020-12-10")) + g_theme  +
   geom_vline(
     xintercept = as.Date("2020-10-30"), linetype="dashed"
@@ -432,26 +464,52 @@ scenario %>%
     'text', x = as.Date("2020-10-30")-1, y = 6500, label = "date de\npublication", 
     color = "black", fontface = "italic", family = "Times New Roman", hjust=1
   ) +
-  labs(title = "Lits de réanimation occupés",
-       subtitle = "scénarios de l'Institut Pasteur du 30 octobre 2020\nnon publié mais retranscrit dans les Echos",
-       caption = "\ntwitter : twitter : @Covid_Scenarios")
+  labs(
+    title = "Lits de réanimation occupés",
+    subtitle = "scénarios de l'Institut Pasteur du 30 octobre 2020\nnon publié mais retranscrit dans les Echos",
+    caption = "\ntwitter : twitter : @Covid_Scenarios"
+    )
 ```
 
 #### Admissions en réanimation
 
 ```{r 2020_10_30_Pasteur_ICU_adm}
-#Admissions en réanimation
 scenario <- read.csv("data/2020_10_30_Pasteur/new_rea.csv", sep=";") %>%
   mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+
 scenario %>%
   gather(key=pasteur, value = value, -date) %>%
-  ggplot(aes(date, value-30, group=pasteur, color="scénarios")) + geom_smooth(se=F) +
-  geom_line(data= true_data_new_hosp_rea, 
-            aes(x=date, y=new_rea_center, color = "réalité", group="réalité"), size = 1) +
-  annotate('text', x = as.Date("2020-10-18"), y = 170, label = "réalité", color = myred, fontface = "bold",
-           family = "Times New Roman") + 
-  annotate('text', x = as.Date("2020-11-05"), y = 640, label = "scénarios", color = mygrey, fontface = "bold",
-           family = "Times New Roman") + 
+  ggplot(
+    aes(
+      date, value, 
+      group=pasteur, color="scénarios"
+      )
+    ) + 
+  geom_smooth(se=F) +
+  geom_line(
+    data= true_data_new_hosp_rea_no_mean, 
+    aes(
+      x=date-1, y=new_rea, 
+      color = "réalité", group="réalité"
+      ),
+    size = 1, alpha=.4
+    ) +
+  geom_line(
+    data= true_data_new_hosp_rea, 
+    aes(
+      x=date-1, y=new_rea_center, 
+      color = "réalité", group="réalité"
+      ),
+    size = 1
+    ) +
+  annotate(
+    'text', x = as.Date("2020-10-18"), y = 320,  label = "réalité", 
+    color = myred, fontface = "bold", family = "Times New Roman"
+    ) + 
+  annotate(
+    'text', x = as.Date("2020-11-05"), y = 640, label = "scénarios", 
+    color = mygrey, fontface = "bold", family = "Times New Roman"
+    ) + 
   xlim(as.Date("2020-10-15"), as.Date("2020-12-10")) + g_theme +
   geom_vline(
     xintercept = as.Date("2020-10-30"), linetype="dashed"
@@ -460,9 +518,11 @@ scenario %>%
     'text', x = as.Date("2020-10-30")-1, y = 100, label = "date de\npublication", 
     color = "black", fontface = "italic", family = "Times New Roman", hjust=1
   ) +
-  labs(title = "Admissions en réanimations",
-       subtitle = "scénarios de l'Institut Pasteur du 30 octobre 2020\nnon publié mais retranscrit dans les Echos",
-       caption = "\ntwitter : @Covid_Scenarios")
+  labs(
+    title = "Admissions en réanimations", 
+    subtitle = "scénarios de l'Institut Pasteur du 30 octobre 2020\nnon publié mais retranscrit dans les Echos",
+    caption = "\ntwitter : @Covid_Scenarios"
+    )
 ```
 
 ###
@@ -517,7 +577,7 @@ De premiers confinements régionaux seront mis en place le 20 mars, suivis plus 
 
 <summary>
 
-**Comparaison des scénarios aux données réelles : scénarios de l'Inserm** ***(cliquer pour dérouler)***
+**Comparaison à la réalité : INSERM** ***(cliquer pour dérouler)***
 
 </summary>
 
@@ -538,13 +598,29 @@ adjust <- 1700
 
 scenario %>%
   gather(key=scenario, value = value, -date) %>%
-  ggplot(aes(date, value+adjust, group=scenario, color="scénarios")) + geom_smooth(se=F) +
-  geom_line(data= true_data_new_hosp_rea_weekly, 
-            aes(x=date, y=new_hosp_week, color = "réalité", group="true data"), size = 1) +
-  annotate('text', x = as.Date("2021-01-05"), y = 7000, label = "réalité", color = myred, fontface = "bold",
-           family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-02-01"), y = 25000, label = "scénarios", color = mygrey, fontface = "bold",
-           family = "Times New Roman") + 
+  ggplot(
+    aes(
+      date, value+adjust, 
+      group=scenario, color="scénarios"
+      )
+    ) + 
+  geom_smooth(se=F) +
+  geom_line(
+    data= true_data_new_hosp_rea_weekly, 
+    aes(
+      x=date, y=new_hosp_week, 
+      color = "réalité", group="true data"
+      ),
+    size = 1
+    ) +
+  annotate(
+    'text', x = as.Date("2021-01-05"), y = 7000, label = "réalité", 
+    color = myred, fontface = "bold", family = "Times New Roman"
+    ) + 
+  annotate(
+    'text', x = as.Date("2021-02-01"), y = 25000, label = "scénarios", 
+    color = mygrey, fontface = "bold", family = "Times New Roman"
+    ) + 
   #confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
   #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
   xlim(date("2021-01-01"), date("2021-03-27")) + ylim(0,37000) + g_theme +
@@ -555,9 +631,11 @@ scenario %>%
     'text', x = as.Date("2021-01-16")-1, y = 25000, label = "date de\npublication", 
     color = "black", fontface = "italic", family = "Times New Roman", hjust=1
   ) +
-  labs(title = "Nombre hebdomadaire d'admission à l'hôpital",
-       subtitle = "scénarios publiés par l'INSERM le 16 janvier 2021\n",
-       caption = "\ntwitter : @Covid_Scenarios")
+  labs(
+    title = "Nombre hebdomadaire d'admission à l'hôpital",
+    subtitle = "scénarios publiés par l'INSERM le 16 janvier 2021\n",
+    caption = "\ntwitter : @Covid_Scenarios"
+    )
 
 #2 février
 scenario <- read.csv("data/2021_02_02_INSERM/new_hosp_INSERM.csv", sep=";") %>%
@@ -565,13 +643,28 @@ scenario <- read.csv("data/2021_02_02_INSERM/new_hosp_INSERM.csv", sep=";") %>%
 
 scenario %>%
   gather(key=scenario, value = value, -date) %>%
-  ggplot(aes(date, value+adjust, group=scenario, color="scenarios")) + geom_smooth(se=F) +
-  geom_line(data= true_data_new_hosp_rea_weekly, 
-            aes(x=date, y=new_hosp_week, color = "réalité", group="réalité"), size = 1) +
-  annotate('text', x = as.Date("2021-01-05"), y = 7000, label = "réalité", color = myred, fontface = "bold",
-           family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-02-15"), y = 25000, label = "scénarios", color = mygrey, fontface = "bold",
-           family = "Times New Roman") + 
+  ggplot(
+    aes(
+      date, value+adjust, 
+      group=scenario, color="scenarios"
+      )
+    ) + 
+  geom_smooth(se=F) +
+  geom_line(
+    data= true_data_new_hosp_rea_weekly, 
+    aes(
+      x=date, y=new_hosp_week, 
+      color = "réalité", group="réalité"
+      ),
+    size = 1) +
+  annotate(
+    'text', x = as.Date("2021-01-05"), y = 7000, label = "réalité", 
+    color = myred, fontface = "bold", family = "Times New Roman"
+    ) + 
+  annotate(
+    'text', x = as.Date("2021-02-15"), y = 25000, label = "scénarios", 
+    color = mygrey, fontface = "bold", family = "Times New Roman"
+    ) + 
   #confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
   #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
   xlim(date("2021-01-01"), date("2021-03-27")) + ylim(0,37000) + g_theme +
@@ -582,9 +675,11 @@ scenario %>%
     'text', x = as.Date("2021-02-02")-1, y = 25000, label = "date de\npublication", 
     color = "black", fontface = "italic", family = "Times New Roman", hjust=1
   ) +
-  labs(title = "Nombre hebdomadaire d'admission à l'hôpital",
-       subtitle = "scénarios publiés par l'INSERM le 2 février 2021\n",
-       caption = "\ntwitter : @Covid_Scenarios")
+  labs(
+    title = "Nombre hebdomadaire d'admission à l'hôpital",
+    subtitle = "scénarios publiés par l'INSERM le 2 février 2021\n",
+    caption = "\ntwitter : @Covid_Scenarios"
+    )
 
 #14 février
 scenario <- read.csv("data/2021_02_14_INSERM/weekly_hospital.csv", sep=";") %>%
@@ -592,13 +687,28 @@ scenario <- read.csv("data/2021_02_14_INSERM/weekly_hospital.csv", sep=";") %>%
 
 scenario %>%
   gather(key=scenario, value = value, -date) %>%
-  ggplot(aes(date, value+adjust, group=scenario, color="scénarios")) + geom_smooth(se=F) +
-  geom_line(data= true_data_new_hosp_rea_weekly, 
-            aes(x=date, y=new_hosp_week, color = "réalité", group="réalité"), size = 1) +
-  annotate('text', x = as.Date("2021-01-05"), y = 7000, label = "réalité", color = myred, fontface = "bold",
-           family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-02-27"), y = 25000, label = "scénarios", color = mygrey, fontface = "bold",
-           family = "Times New Roman") + 
+  ggplot(
+    aes(
+      date, value+adjust, 
+      group=scenario, color="scénarios"
+      )
+    ) + 
+  geom_smooth(se=F) +
+  geom_line(
+    data= true_data_new_hosp_rea_weekly, 
+    aes(
+      x=date, y=new_hosp_week, 
+      color = "réalité", group="réalité"
+      ),
+    size = 1
+    ) +
+  annotate(
+    'text', x = as.Date("2021-01-05"), y = 7000, label = "réalité", 
+    color = myred, fontface = "bold", family = "Times New Roman"
+    ) + 
+  annotate(
+    'text', x = as.Date("2021-02-27"), y = 25000, label = "scénarios", 
+    color = mygrey, fontface = "bold", family = "Times New Roman") + 
   #confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
   #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
   xlim(date("2021-01-01"), date("2021-03-27")) + ylim(0,37000) + g_theme +
@@ -609,16 +719,18 @@ scenario %>%
     'text', x = as.Date("2021-02-14")-1, y = 25000, label = "date de\npublication", 
     color = "black", fontface = "italic", family = "Times New Roman", hjust=1
   ) +
-  labs(title = "Nombre hebdomadaire d'admission à l'hôpital",
-       subtitle = "scénarios publiés par l'INSERM le 14 février 2021\n",
-       caption = "\ntwitter : @Covid_Scenarios")
+  labs(
+    title = "Nombre hebdomadaire d'admission à l'hôpital",
+    subtitle = "scénarios publiés par l'INSERM le 14 février 2021\n",
+    caption = "\ntwitter : @Covid_Scenarios"
+    )
 ```
 
 <details>
 
 <summary>
 
-**Comparaison des scénarios aux données réelles : scénarios de l'Institut Pasteur** ***(cliquer pour dérouler)***
+**Comparaison à la réalité : l'Institut Pasteur** ***(cliquer pour dérouler)***
 
 </summary>
 
@@ -628,7 +740,9 @@ Pour le [rapport du 8 février](https://modelisation-covid19.pasteur.fr/variant/
 
 **Le scénario le plus optimiste colle à la réalité jusqu'à la mi-mars**. Ce n'était pas le scénario principal présenté aux décideurs (cf les 2 scénarios se prolongeant en mars). **Les autres surestiment** les admissions réelles d'un **facteur 50-100%**.
 
-Pour le [rapport du 23 février](https://hal-pasteur.archives-ouvertes.fr/pasteur-03149525/document), **le scénario médian correspond globalement à la réalité**, qui se trouve aux alentours du scénario médian. Il n'est pas fait mention de la différence importante avec les scénarios du répport précédent du 8 février.
+Pour le [rapport du 23 février](https://hal-pasteur.archives-ouvertes.fr/pasteur-03149525/document), **le scénario médian correspond globalement à la réalité**, qui se trouve aux alentours du scénario médian. 
+
+Il n'est pas fait mention de la différence importante avec les scénarios du rapport précédent du 8 février.
 
 </details>
 
@@ -636,16 +750,40 @@ Pour le [rapport du 23 février](https://hal-pasteur.archives-ouvertes.fr/pasteu
 # February 8 2021
 scenario <- read.csv("data/2021_02_08_Pasteur/new_hosp.csv", sep=";") %>%
   mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
-#Admissions à l'hôpital
+
 scenario %>%
   gather(key=pasteur, value = value, -date) %>%
-  ggplot(aes(date, value-100, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
-  geom_line(data= true_data_new_hosp_rea, 
-            aes(x=date, y=new_hosp_right, color = "réalité", group="réalité"), size = 1) +
-  annotate('text', x = as.Date("2021-01-15"), y = 1100, label = "réalité", color = myred, fontface = "bold",
-           family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-03-01"), y = 2500, label = "scénarios", color = mygrey, fontface = "bold",
-           family = "Times New Roman") + 
+  ggplot(
+    aes(
+      date, value, 
+      group=pasteur, color="scénarios"
+      )
+    ) + 
+  geom_smooth(se=F) + 
+  geom_line(
+    data= true_data_new_hosp_rea_no_mean, 
+    aes(
+      x=date-1, y=new_hosp, 
+      color = "réalité", group="réalité"
+      ),
+    size = .5, alpha=.4
+    ) +
+  geom_line(
+    data= true_data_new_hosp_rea, 
+    aes(
+      x=date, y=new_hosp_center, 
+      color = "réalité", group="réalité"
+      ),
+    size = 1
+    ) +
+  annotate(
+    'text', x = as.Date("2021-01-15"), y = 2100, label = "réalité", 
+    color = myred, fontface = "bold", family = "Times New Roman"
+    ) + 
+  annotate(
+    'text', x = as.Date("2021-03-01"), y = 2500, label = "scénarios", 
+    color = mygrey, fontface = "bold", family = "Times New Roman"
+    ) + 
   #confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
   #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
   xlim(date("2021-01-10"), date("2021-03-27")) + ylim(0, 3500) + g_theme +
@@ -653,28 +791,54 @@ scenario %>%
     xintercept = as.Date("2021-02-08"), linetype="dashed"
   ) +
   annotate(
-    'text', x = as.Date("2021-02-08")-1, y = 2500, label = "date de\npublication", 
+    'text', x = as.Date("2021-02-08")-1, y = 2900, label = "date de\npublication", 
     color = "black", fontface = "italic", family = "Times New Roman", hjust=1
   ) +
-  labs(title = "Admission journalières à l'hôpital",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 8 février 2021\n",
-       caption = "\ntwitter : @Covid_Scenarios")
+  labs(
+    title = "Admission journalières à l'hôpital",
+    subtitle = "scénarios publiés par l'Institut Pasteur le 8 février 2021\n",
+    caption = "\ntwitter : @Covid_Scenarios"
+    )
+
 
 #February 23 2021
 #besoin de réaligner leurs données sur la réalité (ne compte surement pas exactement la meme chose)
 scenario <- read.csv("data/2021_02_23_Pasteur/new_hosp.csv", sep=";") %>%
   mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+adjust <- 300
 
-#Admissions à l'hôpital
 scenario %>%
   gather(key=pasteur, value = value, -date) %>%
-  ggplot(aes(date, value+350, group=pasteur, color="scénarios")) + geom_smooth(se=F) + 
-  geom_line(data= true_data_new_hosp_rea, 
-            aes(x=date, y=new_hosp_right, color = "réalité", group="réalité"), size = 1) +
-  annotate('text', x = as.Date("2021-01-15"), y = 1100, label = "réalité", color = myred, fontface = "bold",
-           family = "Times New Roman") + 
-  annotate('text', x = as.Date("2021-03-01"), y = 900, label = "scénario", color = mygrey, fontface = "bold",
-           family = "Times New Roman") + 
+  ggplot(
+    aes(
+      date, value+adjust, 
+      group=pasteur, color="scénarios"
+      )
+    ) + 
+  geom_smooth(se=F) + 
+  geom_line(
+    data= true_data_new_hosp_rea_no_mean, 
+    aes(
+      x=date-1, y=new_hosp, 
+      color = "réalité", group="réalité"
+      ),
+    size = .5, alpha=.4
+    ) +
+  geom_line(
+    data= true_data_new_hosp_rea, 
+    aes(
+      x=date, y=new_hosp_center, 
+      color = "réalité", group="réalité"
+      ),
+    size = 1
+    ) +
+  annotate(
+    'text', x = as.Date("2021-01-15"), y = 2100, label = "réalité", 
+    color = myred, fontface = "bold", family = "Times New Roman") + 
+  annotate(
+    'text', x = as.Date("2021-03-01"), y = 900, label = "scénario", 
+    color = mygrey, fontface = "bold", family = "Times New Roman"
+    ) + 
   #confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
   #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
   xlim(date("2021-01-10"), date("2021-03-27")) + ylim(0, 3500) + g_theme +
@@ -685,9 +849,11 @@ scenario %>%
     'text', x = as.Date("2021-02-23")-1, y = 2500, label = "date de\npublication", 
     color = "black", fontface = "italic", family = "Times New Roman", hjust=1
   ) +
-  labs(title = "Admission journalières à l'hôpital",
-       subtitle = "scénarios publiés par l'Institut Pasteur le 23 février 2021\n",
-       caption = "\ntwitter : @Covid_Scenarios")
+  labs(
+    title = "Admission journalières à l'hôpital",
+    subtitle = "scénarios publiés par l'Institut Pasteur le 23 février 2021\n",
+    caption = "\ntwitter : @Covid_Scenarios"
+    )
 ```
 
 <details>
@@ -730,7 +896,7 @@ La [rapport](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-v
 
 > Elle ne tient pas compte du couvre-feu anticipé à 18h et étendu au territoire national le 16 janvier 2021. L'évaluation de cette mesure de distanciation sociale sera réalisée sur les données épidémiques dans les prochaines semaines. Pour cette raison, nous avons fourni un scénario plus optimiste en supposant une activité épidémique stable"
 
-A noter que si l'impact du couvre-feu n'est aussi que partiellement pris en compte dans le [rapport du 2 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf), il est en revanche pleinement intégré pour celui du [14 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_socialdistancing-20210214.pdf. Vous trouverez plus de précisions à ce sujet dans la partie suivante *Discussion des hypothèses du scénario (technique)*.
+A noter que si l'impact du couvre-feu n'est aussi que partiellement pris en compte dans le [rapport du 2 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf), il est en revanche pleinement intégré pour celui du [14 février](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_socialdistancing-20210214.pdf). Vous trouverez plus de précisions à ce sujet dans la partie suivante *Discussion des hypothèses du scénario (technique)*.
 
 Ces résultats ont également été présentés dans un [rapport spécial du Conseil scientifique](https://solidarites-sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf) le 29 janvier 2021, indiquant que *ces résultats montrent la nécessité de mesures rigoureuses de distanciation sociale pour faire face à la menace du variant* et étudiant la mise en œuvre d'un confinement strict début février. 
 
@@ -775,11 +941,11 @@ Pour tous les rapports, nous arrêtons l'extraction des courbes au 27 mars comme
 
 Les rapport INSERM du 16 janvier et 2 février méritent précision, car il y est dit que l'effet du couvre-feu anticipé à 18 heures n'est pas pris en compte, mais que le scénario le plus optimiste pourrait refléter la mesure. Aurions-nous dû ne garder que celui-ci et exclure les autres scénarios ? Notre décision de tous les conserver s'appuie sur plusieurs points :
 
--   Tout d'abord les auteurs ont fait le choix de les représenter, indiquant qu'ils validaient eux-mêmes la pertinence de ces scénarios. En effet, c'est sur la base de ces scénarios qu'ils affirment que *les nouvelles hospitalisations devraient atteindre environ 25 000 entre mi-février et début avril en l'absence d'intervention*.
+-   **Tout d'abord les auteurs ont fait le choix de les représenter, indiquant qu'ils validaient eux-mêmes la pertinence** de ces scénarios. En effet, c'est sur la base de ces scénarios qu'ils affirment que "*les nouvelles hospitalisations devraient atteindre environ 25 000 entre mi-février et début avril en l'absence d'intervention*".
 
--   En s'appuyant sur ces résultats, ils donnaient également des recommandations politiques explicites : *Ces résultats montrent la nécessité de renforcer les mesures de distanciation sociale*, et ce alors même bien que le couvre-feu, dont le but même est d'éviter des mesures plus restrictives, n'était pas modélisé.
+-   **En s'appuyant sur ces résultats, ils donnaient également des recommandations politiques explicites** : "*Ces résultats montrent la nécessité de renforcer les mesures de distanciation sociale*", et ce bien que le couvre-feu, dont le but même est d'éviter des mesures plus restrictives, n'était pas modélisé.
 
--   Enfin, on voit que les scénarios du 16 janvier et 2 février sont très similaires à ceux du 14 février, alors même que ce dernier intègre l'effet du couvre-feu anticipé, indiquant que la prise en compte du couvre-feu ne change que faiblement les résultats.
+-   Enfin, on voit que **les scénarios du 16 janvier et 2 février sont très similaires à ceux du 14 février, alors même que ce dernier intègre l'effet du couvre-feu** anticipé, indiquant que la prise en compte du couvre-feu ne change que faiblement les résultats.
 
 </details>
 
@@ -803,7 +969,7 @@ Une auto-évaluation informelle du rapport du 21 mai a été publiée [sur le co
 
 <summary>
 
-**Comparaison des scénarios aux données réelles** ***(cliquer pour dérouler)***
+**Comparaison à la réalité** ***(cliquer pour dérouler)***
 
 </summary>
 
@@ -831,6 +997,14 @@ scenario %>%
       )
     ) + 
   geom_smooth(se=F) +
+  geom_line(
+    data= true_data_new_hosp_rea_no_mean, 
+    aes(
+      x=date-1, y=new_hosp, 
+      color = "réalité", group="réalité"
+      ),
+    size = .5, alpha=.4
+    ) +
   geom_line(
     data= true_data_new_hosp_rea, 
     aes(
@@ -872,6 +1046,14 @@ scenario %>%
       color="scénarios")
     ) + 
   geom_smooth(se=F) +
+  geom_line(
+    data= true_data_new_hosp_rea_no_mean, 
+    aes(
+      x=date-1, y=new_hosp, 
+      color = "réalité", group="réalité"
+      ),
+    size = .5, alpha=.4
+    ) +
   geom_line(
     data= true_data_new_hosp_rea, 
     aes(
@@ -1044,7 +1226,7 @@ Pour remédier à cela, l'Institut Pasteur a publié 2 nouveaux rapports, les [2
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparaison à la réalité**
 
 </summary>
 
@@ -1404,7 +1586,7 @@ Nous présentons une comparaison entre scénarios de modélisation et réalité 
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparaison à la réalité**
 
 </summary>
 
@@ -1454,7 +1636,7 @@ Dans un contexte notamment marqué par la généralisation du pass sanitaire, l'
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparaison à la réalité**
 
 </summary>
 
@@ -1543,7 +1725,7 @@ Nous comparons ici la projection du modèle 2 semaines avant le pic de la second
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparaison à la réalité**
 
 </summary>
 
@@ -1673,7 +1855,7 @@ Nous analysons également un [rapport publié le 15 février](https://modelisati
 
 <summary>
 
-**Comparaison des scénarios aux données réelles**
+**Comparaison à la réalité**
 
 </summary>
 
