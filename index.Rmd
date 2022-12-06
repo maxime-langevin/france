@@ -590,7 +590,7 @@ f_graph(
   "2021-02-02", 25000, #date de publication label
   "2021-01-01", "2021-03-27", 37000, #limites
   "Nombre hebdomadaire d'admission à l'hôpital", 
-  "scénarios publiés par l'INSERM le 16 janvier 2021\n"
+  "scénarios publiés par l'INSERM le 2 février 2021\n"
 ) 
 
 #14 février
@@ -605,7 +605,7 @@ f_graph(
   "2021-02-14", 25000, #date de publication label
   "2021-01-01", "2021-03-27", 37000, #limites
   "Nombre hebdomadaire d'admission à l'hôpital", 
-  "scénarios publiés par l'INSERM le 16 janvier 2021\n"
+  "scénarios publiés par l'INSERM le 14 février 2021\n"
 ) 
 ```
 
@@ -663,7 +663,7 @@ f_graph(
   true_data_new_hosp_rea, scenario, 
   "new_hosp_center", 0, 300,
   "2021-01-15", 2100, #realité label
-  "2021-03-01", 900, #scénarios label
+  "2021-03-11", 2500, #scénarios label
   "2021-02-23", 2900, #date de publication label
   "2021-01-10", "2021-03-27", 3500, #limites
   "Admission journalières à l'hôpital", 
@@ -840,7 +840,7 @@ f_graph(
   true_data_new_hosp_rea, scenario, 
   "new_hosp_center", 0, 150,
   "2021-04-20", 2300, #réalité label
-  "2021-06-07", 1600, #scénarios label
+  "2021-06-07", 700, #scénarios label
   "2021-05-21", 250, #date de publication label
   "2021-04-01", "2021-06-15", 2500, #limites
   "Admissions journalières à l'hôpital", 
