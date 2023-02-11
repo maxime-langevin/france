@@ -1,0 +1,1591 @@
+---
+title: "Check extraction"
+output:
+  html_document:
+    code_folding: hide
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=F, warning=F, fig.align = "center",  dev='svg')
+library(plyr)
+library(lattice)
+library(lubridate)
+library(svglite)
+
+#loading relevant packages
+library(zoo) #for rollmean function
+library(tidyr)
+library(tidyverse) #mainly for reading files functions
+library(dplyr)
+library(ggplot2) #for ggplot graphs
+library(cowplot) #for plot_grid()
+library(stringr) #to manipulate strings
+library(ISOweek) #to convert weeks to date and vice versa
+
+theme_set(
+  theme_classic() +
+  theme(legend.title = element_blank(),
+        panel.grid.major.y = element_line(),
+        text = element_text(family = "Times New Roman"),
+        plot.title = element_text(face="bold")
+        )
+  )
+g_theme <- scale_color_manual(values=c('#ff0000', "black",'#D8D8D8'))
+#height and width of graphs
+w <- 4.5
+h <- 5.2
+
+Source <- ""
+```
+
+# Prepare data
+
+We load the the reported hospitalization data on data.gouv, on [this page](https://www.data.gouv.fr/fr/datasets/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19/).
+
+Here are the metadata
+
+```{r}
+
+#metadonnees-covid-hospit-incid-reg.csv
+metadata <- read_csv2(
+  "data/0_metadata/metadonnees-covid-hospit-incid-reg.csv",
+  locale=locale(encoding="latin1")
+  )
+
+#metadonnees-donnees-hospitalieres-covid19-maj.csv
+metadata <- read_csv2(
+  "data/0_metadata/metadonnees-donnees-hospitalieres-covid19-maj20210810.csv",
+  locale=locale(encoding="latin1")
+  )
+
+#metadonnees-donnees-hospitalieres-covid19-nouveaux.csv
+metadata <- read_csv2(
+  "data/0_metadata/metadonnees-hospit-incid.csv",
+  locale=locale(encoding="latin1")
+  )
+
+#metadonnees-donnees-hospitalieres-covid19-classes-age-maj.csv
+metadata <- read_csv2(
+  "data/0_metadata/metadonnees-donnees-hospitalieres-covid19-classes-age-maj20210810.csv",
+  locale=locale(encoding="latin1")
+  )
+```
+
+metadonnees-covid-hospit-incid-reg.csv : rea admissions, region
+
+metadonnees-donnees-hospitalieres-covid19-maj.csv : dep, sex, hosp, rea, dc, hospconv
+
+metadonnees-donnees-hospitalieres-covid19-nouveaux.csv : departement new (incid) hosp, rea, dc
+
+metadonnees-donnees-hospitalieres-covid19-classes-age-maj.csv : region, age, hosp, rea, dec, hospconv
+
+metadonnees-services-hospitaliers-covid19.csv => not used
+
+metadonnees-sexe.csv pas important => not used (0 both, 1 men, 2 women)
+
+
+
+
+
+file 
+
+loaded
+
+admissions : covid-hospit-incid.csv (permalien https://www.data.gouv.fr/fr/datasets/r/6fadff46-9efd-4c53-942a-54aca783c30c)
+
+A charger !!!
+
+covid-hosp-ad-age
+https://www.data.gouv.fr/fr/datasets/r/dc7663c7-5da9-4765-a98b-ba4bc9de9079
+by region, by age, admissions to hospital
+
+
+not loaded :
+
+covid-hosp-txad-age-fra : reported to population, whole france, by age, deaths, hosp, SC
+
+covid-hosp-txad-reg: reported to population, by region, by age, deaths, hosp, SC
+
+covid-hosp-txad-fra : reported to population, whole france, deaths, hosp, SC
+
+covid-hospit-incid-reg : new rea by region
+
+covid-hospit-clage : region x age, for hosp, rea and hospConv
+
+covid-hospit-etab : not interesting
+
+```{r loading_true _data}
+data_gouv_new_hosp_rea <- 
+  read.csv(url("https://www.data.gouv.fr/fr/datasets/r/6fadff46-9efd-4c53-942a-54aca783c30c"), sep=";") %>%
+  mutate(date = as.Date(jour))
+data_gouv_beds_hosp_rea <- 
+  read.csv(url("https://www.data.gouv.fr/fr/datasets/r/63352e38-d353-4b54-bfd1-f1b3ee1cabd7"), sep=";")  %>%
+  mutate(date = as.Date(jour))
+
+#critical car beds, hospitlization beds and conventional hospitalization beds
+true_data_beds_hosp_rea <- data_gouv_beds_hosp_rea %>%
+  filter(sexe =="0", # 0 = men + women, 1 = men, 2 = women
+         #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978) %>%
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(hosp = sum(hosp, na.rm = T), 
+            rea = sum(rea, na.rm = T),
+            HospConv = sum(HospConv, na.rm = T))
+
+#pour les echos pasteur 29 avril ile de france
+true_data_beds_hosp_rea_IDF <- data_gouv_beds_hosp_rea %>%
+  filter(sexe =="0", # 0 = hommes + femmes, 1=hommes, 2=femmes
+         #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         dep == 75 | dep == 92 | dep == 93 | dep == 94 | dep == 91 | dep == 95 | dep == 78 | dep == 77) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(hosp = sum(hosp, na.rm = T), 
+            rea = sum(rea, na.rm = T),
+            HospConv = sum(HospConv, na.rm = T))
+
+#Nouvelles admissions à l'hôpital et en réanimation (moyenné sur 7 jours)
+true_data_new_hosp_rea <- data_gouv_new_hosp_rea %>% 
+  filter( #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+         dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(incid_hosp = sum(incid_hosp, na.rm = T), 
+            incid_rea = sum(incid_rea, na.rm = T)) %>%
+  mutate(new_rea_right = rollmean(incid_rea, 7, na.pad = T, align = "right"),#mean of 7 last days
+         new_hosp_right = rollmean(incid_hosp, 7, na.pad = T, align = "right"),
+         new_rea_center = rollmean(incid_rea, 7, na.pad = T, align = "center"),#centered mean
+         new_hosp_center = rollmean(incid_hosp, 7, na.pad = T, align = "center"))
+
+true_data_new_hosp_rea_no_mean <- data_gouv_new_hosp_rea %>% 
+  filter( #enlève l'Outre-Mer car les scénarios de Pasteur uniquement pour la France Métropolitaine
+    dep != 971 & dep != 972 & dep != 973 & dep != 974 & dep != 976 & dep != 978) %>% 
+  group_by(date) %>% #grouper tous les départements ensembles
+  dplyr::summarise(new_hosp = sum(incid_hosp, na.rm = T), 
+            new_rea = sum(incid_rea, na.rm = T))
+
+#Pour l'INSERM : admissions hebdomadaire à l'hôpital
+true_data_new_hosp_rea_weekly <- data_gouv_new_hosp_rea %>% 
+  group_by(date) %>% #je n'ai pas filtré les outre-mer ici car pas précisé, mais ne change pas grand-chose
+  dplyr::summarise(incid_hosp = sum(incid_hosp, na.rm = T)) %>%
+  mutate(new_hosp_week = rollsum(incid_hosp, 7, na.pad = T, align = "left")) #patients arrivés dans les 7 derniers jours)
+
+```
+
+Paireau et al paper
+
+```{r}
+true_data_Paireau_et_al <- readRDS("Data/full_data.rds") %>%
+  filter(region == "metropolitan") %>%
+  select(date, iHosp, iHosp_smooth, iICU, iICU_smooth, inHosp, inHosp_smooth, inICU, inICU_smooth) %>%
+  distinct()
+
+#"smooth" data reported multiple time for each date, so we synthesize it
+true_data_Paireau_et_al <- true_data_Paireau_et_al %>%
+  group_by(date) %>%
+  summarise_all(mean, na.rm=T) %>%
+  mutate_all(round, 0)
+```
+
+
+
+for INSERM data (hospital admissions by week)
+
+remove the overseas regions, see this map https://en.wikipedia.org/wiki/INSEE_code#/media/File:Carte-des-codes-des-regions-selon-l-INSEE.jpg
+
+
+```{r}
+temp <- 
+  read_csv2(url("https://www.data.gouv.fr/fr/datasets/r/dc7663c7-5da9-4765-a98b-ba4bc9de9079")) %>%
+  filter(!reg %in% c("01", "02", "03", "04", "06"))
+
+INSERM_true <- temp %>% filter(cl_age90 == "0") %>%
+  rename(date = Semaine) %>%
+  group_by(date) %>%
+  summarise(
+    NewAdmHospit = sum(NewAdmHospit, na.rm=T)
+  ) 
+
+INSERM_true <- temp %>% filter(cl_age90 != "0") %>%
+  rename(date = Semaine) %>%
+  group_by(date) %>%
+  summarise(
+    NewAdmHospit = sum(NewAdmHospit, na.rm=T)
+  )
+
+
+INSERM_true$date <- gsub("S", "W", INSERM_true$date)
+INSERM_true$date <- paste0(INSERM_true$date, "-4")
+INSERM_true$date <- ISOweek2date(INSERM_true$date)
+
+
+
+
+```
+
+
+
+```{r function_to_generate_min_med_max_error}
+#remplacer par ce qu'il y a en dessous pour calculer min, 
+#puis inner join avec fichier real pour garder que les dates qui matchent (important pour INSERM)
+f_compute_error <- function(date_begin, date_end, dataset){
+  #dates delimitating the comparison period
+  date_min <- as.Date(date_begin)
+  date_max <- as.Date(date_end)
+  #preparing file : gets date and true data value on the period
+  reality_file <- dataset %>%
+    select(date, reality) %>%
+    filter(date>date_min & date<date_max)
+  #computin min, med and max of scenarios
+  temp <- dataset %>% 
+    select(-reality, -reality_report) %>%
+    rowwise() %>%
+    mutate(
+      min = min(c_across(-date), na.rm=T),
+      med = median(c_across(-date), na.rm=T),
+      max = max(c_across(-date), na.rm=T),
+    )
+  #joins 2 files
+  reality_file <- inner_join(reality_file, temp, by="date")
+  reality_file <- reality_file %>%
+    mutate(
+      error_min = round((min/reality)*100),
+      error_med = round((med/reality)*100),
+      error_max = round((max/reality)*100)
+    )
+  return (reality_file)
+}
+
+```
+
+```{r f_graph}
+f_graph <- 
+  function(
+    true_data, scenarios, variable, 
+    x_label_publication, y_label_publication,
+    x_min, x_max, y_max,
+    str_y, str_reality
+  ){
+    modellers_true_data <- scenarios %>%
+      select(date, reality)
+    
+    scenarios <- scenarios %>%
+      select(-reality) %>%
+      gather(key=scenario, value = value, -date)
+
+    
+    p <- ggplot(data = scenarios) + 
+      #scenarios lines
+      geom_line(
+        aes(
+          x=date, y=value, 
+          group=scenario, color="scenarios"
+        ),
+        size = 1
+      ) + 
+      #reality line
+      geom_line(
+        data= true_data, 
+        aes(
+          x=date, y=!!as.symbol(variable), 
+          color = str_reality
+          ),
+        size = 1
+        ) +
+      #modellers reality line
+      geom_point(
+        data = modellers_true_data,
+        aes(
+          date, reality, color = "reality in report"
+          ) 
+      ) +
+      #publication date line and label
+      geom_vline(
+        xintercept = as.Date(x_label_publication), linetype="dashed"
+      ) +
+      annotate(
+        'text', x = as.Date(x_label_publication)-1, y = y_label_publication, label = "publication\ndate", 
+        color = "black", fontface = "italic", family = "Times New Roman", hjust=1
+      ) +
+      # x and y limits
+      xlim(as.Date(x_min), as.Date(x_max)) + ylim(0, y_max) + 
+      g_theme +
+      labs(
+        title = "",
+        subtitle = "",
+        caption = Source,
+        x="", y= str_y
+        )
+    
+    return(p)
+  }
+```
+
+function to correct curves
+
+```{r}
+f_offset <- function(dataset_scenarios, dataset_reality, variable_select){
+  #reality 
+  temp_reality <- dataset_reality %>% select(date, reality = !!as.symbol(variable_select))
+  temp_reality$date <- temp_reality$date + x_reality_offset #on date (x)
+  temp_reality$reality <- temp_reality$reality + y_reality_offset #on values (y)
+  
+  #reality in report
+  temp_reality_report <- dataset_scenarios %>% select(date, reality_report = reality)
+  
+  
+  #scenarios offset
+  temp_scenarios <- dataset_scenarios %>% select(-reality)
+  temp_scenarios$date <- temp_scenarios$date + x_scenarios_offset #on dates (x)
+  temp_scenarios[,-1] <- lapply(temp_scenarios[,-1], function(x) x+y_scenarios_offset) #on values (y)
+  
+  temp <- full_join(temp_scenarios, temp_reality_report, by="date")
+  temp <- left_join(temp, temp_reality)
+  
+  return(temp)
+}
+```
+
+graph of corrected data
+
+```{r}
+f_graph_corrected <- 
+  function(
+    scenarios, 
+    x_label_publication, y_label_publication,
+    x_min, x_max, y_max,
+    str_y, str_reality
+  ){
+    modellers_true_data <- scenarios %>%
+      select(date, reality_report)
+    
+    true_data <- scenarios %>%
+      select(date, reality)
+    
+    scenarios <- scenarios %>%
+      select(-reality, -reality_report) %>%
+      gather(key=scenario, value = value, -date)
+
+    
+    p <- ggplot(data = scenarios) + 
+      #scenarios lines
+      geom_line(
+        aes(
+          x=date, y=value, 
+          group=scenario, color="scenarios"
+        ),
+        size = 1
+      ) + 
+      #reality line
+      geom_line(
+        data= true_data, 
+        aes(
+          x=date, y=reality, 
+          color = str_reality
+          ),
+        size = 1
+        ) +
+      #modellers reality line
+      geom_point(
+        data = modellers_true_data,
+        aes(
+          date, reality_report, color = "reality in report"
+          ) 
+      ) +
+      #publication date line and label
+      geom_vline(
+        xintercept = as.Date(x_label_publication), linetype="dashed"
+      ) +
+      annotate(
+        'text', x = as.Date(x_label_publication)-1, y = y_label_publication, label = "publication\ndate", 
+        color = "black", fontface = "italic", family = "Times New Roman", hjust=1
+      ) +
+      # x and y limits
+      xlim(as.Date(x_min), as.Date(x_max)) + ylim(0, y_max) + 
+      g_theme +
+      labs(
+        title = "",
+        subtitle = "",
+        caption = Source,
+        x="", y= str_y
+        )
+    
+    return(p)
+  }
+```
+
+graph of errors
+
+```{r}
+f_graph_error <- function(
+    dataset, x_label, y_label
+    ){
+  ggplot(dataset, aes(date)) + 
+  geom_line(aes(y=error_med)) +
+  geom_ribbon(aes(ymin = error_min, ymax = error_max), alpha = 0.1) + 
+  geom_hline(yintercept = 100) +
+  geom_vline(xintercept=as.Date(x_label), linetype="dashed") +
+  annotate(
+    'text', x = as.Date(x_label)-1, y = y_label, label = "publication\ndate", 
+    color = "black", fontface = "italic", family = "Times New Roman", hjust=1
+  ) +
+  ylim(0, NA) +
+  labs(
+    x="", y="% of reality value",
+    title = "Median, min and max relative errors of scenarios vs reality",
+    subtitle = "line: median scenario ; area: min and max scenarios"
+  )
+}
+```
+
+
+# April 28, 2020 {.tabset .tabset-fade .tabset-pills}
+
+Source: [Les Echos newspaper](https://www.lesechos.fr/idees-debats/editos-analyses/pourquoi-philippe-a-douche-les-francais-1199309), April 29, 2020. Specified "dated Tuesday", so we deduce that the publication date from Tuesday April 28. Identified by Google search.
+
+## Original 
+
+```{r 2020_04_28_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2020_04_29/2020_04_29.png")
+```
+
+## Reproduced {.tabset .tabset-fade}
+
+There is a slight horizontal offset between the curves, already present in the original figure. To match the report reality, we offset the Paireau et al. reality curve by -1 day, and the scenarios reality curves by +1 day.
+
+```{r}
+#offset values
+x_reality_offset <- -1
+y_reality_offset <- 0
+x_scenarios_offset <- 1
+y_scenarios_offset <- 0
+```
+
+### Before correction
+
+```{r 2020_04_28_Pasteur}
+scenarios <- read_csv("data/2020_04_29/beds_rea.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+f_graph(
+  true_data_beds_hosp_rea_IDF, scenarios, 
+  "rea", 
+  "2020-04-28", 1000, #publication date label
+  "2020-03-19", "2020-06-28", #date limits
+  NA, # y limits
+  "ICU beds in Ile-de-France", #y axis label
+  "reality in data.gouv" #reality label
+)
+```
+
+### After correction
+
+```{r}
+temp <- f_offset(scenarios, true_data_beds_hosp_rea_IDF, "rea")
+
+f_graph_corrected(
+  temp, 
+  "2020-04-28", 1000, #publication date label
+  "2020-03-19", "2020-06-28", #date limits
+  NA, # y limits
+  "Intensive care beds in Ile-de-France", 
+  "reality in data.gouv"
+)
+
+write_csv(temp, "data/2020_04_29/corrected_scenarios.csv")
+```
+
+## Error
+
+```{r}
+error <- f_compute_error("2020-03-29", "2020-06-28", temp)
+
+f_graph_error(
+  error,
+  "2020-04-28", 300 #publication date label
+  )
+```
+
+
+# October 30, 2020 {.tabset .tabset-fade .tabset-pills}
+
+Source: [Les Echos newspaper](https://www.lesechos.fr/economie-france/social/covid-la-decrue-dans-les-services-de-reanimation-esperee-en-france-dans-une-dizaine-de-jours-1261656), November 3, 2020. We know the publication date from the statement "The scientists from Pasteur Institute and Santé Publique France updated their epidemic scenarios on October 30". Identified by Google search.
+
+checker la sortie du confinement
+
+## Orginal
+
+```{r 2020_10_30_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2020_10_30/2020_10_30.png")
+```
+
+## Reproduced {.tabset .tabset-fade}
+
+There is no need to correct the data.
+
+```{r}
+#offset values
+x_reality_offset <- 0
+y_reality_offset <- 0
+x_scenarios_offset <- 0
+y_scenarios_offset <- 0
+```
+
+### Before correction
+
+```{r 2020_10_30}
+scenarios <- read_csv("data/2020_10_30/beds_rea.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+f_graph(
+  true_data_Paireau_et_al, scenarios, 
+  "inICU", 
+  "2020-10-30", 5000, #publication date label
+  "2020-10-01", "2020-12-15", #date limits
+  NA, # y limits
+  "ICU beds",
+  "reality in Paireau et al."
+)
+```
+
+### After correction
+
+```{r}
+temp <- f_offset(
+  scenarios, 
+  true_data_Paireau_et_al %>% select(date, inICU), 
+  "inICU"
+  )
+
+f_graph_corrected(
+  temp, 
+  "2020-10-30", 5000, #publication date label
+  "2020-10-01", "2020-12-15", #date limits
+  NA, # y limits
+  "ICU beds", 
+  "reality in data.gouv"
+)
+
+write_csv(temp, "data/2020_10_30/corrected_scenarios.csv")
+```
+
+
+## Error
+
+```{r}
+error <- f_compute_error("2020-10-01", "2020-12-15", temp)
+
+f_graph_error(
+  error,
+  "2020-10-30", 200 #publication date label
+  )
+```
+
+
+# January 16, 2021 {.tabset .tabset-fade .tabset-pills}
+
+Source: [INSERM/Pasteur report](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm_covid-19-voc_dominance-20210116.pdf), January 16, 2021. Cited in the [January 29, 2021 report](https://sante.gouv.fr/IMG/pdf/note_eclairage_variants_modelisation_29_janvier_2021.pdf), which was identified on Pasteur Institute's website, on [this page](https://modelisation-covid19.pasteur.fr/realtime-analysis/impact-variant/).
+
+## Original {.tabset .tabset-fade}
+
+### Fig 1
+
+```{r 2021_01_16_original, echo=FALSE, out.width="100%"}
+knitr::include_graphics("data/2021_01_16/2021_01_16.png")
+```
+
+## Reproduced {.tabset .tabset-fade}
+
+We do not correct the data
+
+```{r}
+#offset values
+x_reality_offset <- 0
+y_reality_offset <- 0
+x_scenarios_offset <- 0
+y_scenarios_offset <- 0
+```
+
+### Before correction
+
+```{r 2021_01_16}
+scenarios <- read_csv("data/2021_01_16/weekly_hospital.csv")
+scenarios$date <- paste0(scenarios$date, "-4")
+scenarios$date <- ISOweek2date(scenarios$date)
+
+temp2 <- true_data_Paireau_et_al %>%
+  select(date,iHosp) %>%
+  mutate(
+    date = ISOweek(date),
+    date = ISOweek2date(paste0(date, "-4"))
+    ) %>%
+  group_by(date) %>%
+  summarise(iHosp = sum(iHosp, na.rm=T)) 
+
+f_graph(
+  temp2, scenarios, 
+  "iHosp", 
+  "2021-01-16", 1000, #publication date label
+  "2020-10-01", "2021-05-01", #date limits
+  NA, # y limits
+  "weekly hospital admissions",
+  "reality in Paireau et al."
+)
+
+  #confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
+  #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
+```
+
+### After correction
+
+```{r}
+temp <- f_offset(
+  scenarios, 
+  temp2, 
+  "iHosp"
+  )
+
+f_graph_corrected(
+  temp, 
+  "2021-01-16", 1000, #publication date label
+  "2020-10-01", "2021-05-01", #date limits
+  NA, # y limits
+  "weekly hospital admissions",
+  "reality in Paireau et al."
+)
+
+write_csv(temp, "data/2021_01_16/corrected_scenarios.csv")
+```
+
+### error
+
+```{r}
+error <- f_compute_error("2020-10-01", "2021-05-01", temp)
+
+f_graph_error(
+  error,
+  "2021-01-16", 250 #publication date label
+  )
+```
+
+# February 2, 2021 {.tabset .tabset-fade .tabset-pills}
+
+Source: [INSERM/Pasteur report](https://www.epicx-lab.com/uploads/9/6/9/4/9694133/inserm-covid-19-voc-lockdown-20210202.pdf), February 2, 2021. Identified on Pasteur Institute's website, on [this page]().
+
+## Original {.tabset .tabset-fade}
+
+### Fig 2
+
+```{r 2021_02_02_original, echo=FALSE, out.width="100%"}
+knitr::include_graphics("data/2021_02_02/2021_02_02.png")
+```
+
+## Reproduced {.tabset .tabset-fade}
+
+We do not correct the data
+
+```{r}
+#offset values
+x_reality_offset <- 0
+y_reality_offset <- 0
+x_scenarios_offset <- 0
+y_scenarios_offset <- 0
+```
+
+### Before correction
+
+```{r 2021_02_02_Inserm}
+scenarios <- read_csv("data/2021_02_02/new_hosp_INSERM.csv")
+scenarios$date <- paste0(scenarios$date, "-4")
+scenarios$date <- ISOweek2date(scenarios$date)
+
+
+temp2 <- true_data_Paireau_et_al %>%
+  select(date,iHosp) %>%
+  mutate(
+    date = ISOweek(date),
+    date = ISOweek2date(paste0(date, "-4"))
+    ) %>%
+  group_by(date) %>%
+  summarise(iHosp = sum(iHosp, na.rm=T)) 
+
+f_graph(
+  temp2, scenarios, 
+  "iHosp", 
+  "2021-02-02", 1000, #publication date label
+  "2020-10-01", "2021-05-01", #date limits
+  NA, # y limits
+  "weekly hospital admissions",
+  "reality in Paireau et al."
+)
+
+
+  
+#confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
+  #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
+```
+
+### After correction
+
+```{r}
+temp <- f_offset(
+  scenarios, 
+  temp2, 
+  "iHosp"
+  )
+
+f_graph_corrected(
+  temp, 
+  "2021-02-03", 1000, #publication date label
+  "2020-10-01", "2021-05-01", #date limits
+  NA, # y limits
+  "weekly hospital admissions",
+  "reality in Paireau et al."
+)
+
+write_csv(temp, "data/2021_02_02/corrected_scenarios.csv")
+```
+
+
+## Error
+
+```{r}
+error <- f_compute_error("2020-10-01", "2021-05-01", temp)
+
+f_graph_error(
+  error,
+  "2021-02-02", 250 #publication date label
+  )
+```
+
+
+# February 8, 2021 {.tabset .tabset-fade .tabset-pills}
+
+Source: [Pasteur report](https://modelisation-covid19.pasteur.fr/variant/RapportInstitutPasteur_variants_8fevrier2021.pdf), February 8, 2021. Identified on Pasteur Institute's website, on [this page](https://modelisation-covid19.pasteur.fr/realtime-analysis/impact-variant/).
+
+## Original {.tabset .tabset-fade}
+
+probably something to adjust
+
+### Fig 2A
+
+```{r 2021_02_08_fig_2_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2021_02_08/2021_02_08_fig2.png")
+```
+
+### Fig 6A
+
+```{r 2021_02_08_fig_6_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2021_02_08/2021_02_08_fig6.png")
+```
+
+### Fig 7C
+
+```{r 2021_02_08_fig_7_original, echo=FALSE, out.width="100%"}
+knitr::include_graphics("data/2021_02_08/2021_02_08_fig7.png")
+```
+
+
+## Reproduced {.tabset .tabset-fade}
+
+We do not correct the data, except for a small offset by 100 for reality
+
+```{r}
+#offset values
+x_reality_offset <- 0
+y_reality_offset <- 100
+x_scenarios_offset <- 0
+y_scenarios_offset <- 0
+```
+
+
+### Before correction
+
+```{r 2021_02_08_Pasteur}
+scenarios <- read_csv("data/2021_02_08/new_hosp.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+f_graph(
+  true_data_Paireau_et_al, scenarios, 
+  "iHosp_smooth", 
+  "2021-02-08", 5000, #publication date label
+  "2021-01-01", "2021-06-01", #date limits
+  NA, # y limits
+  "daily hospital admissions",
+  "reality in Paireau et al."
+) +
+  geom_line(
+    data=true_data_Paireau_et_al, aes(date, iHosp), alpha=.4, color="red"
+  )
+```
+
+### After correction
+
+```{r }
+temp <- f_offset(
+  scenarios, 
+  true_data_Paireau_et_al %>% select(date, iHosp_smooth),
+  "iHosp_smooth"
+  )
+
+f_graph_corrected(
+  temp, 
+  "2021-02-08", 5000, #publication date label
+  "2021-01-01", "2021-06-01", #date limits
+  NA, # y limits
+  "weekly hospital admissions",
+  "reality in Paireau et al."
+)  +
+  geom_line(
+    data=true_data_Paireau_et_al, aes(date, iHosp+y_reality_offset), alpha=.4, color="red"
+  )
+
+write_csv(temp, "data/2021_02_08/corrected_scenarios.csv")
+```
+
+
+## Error
+
+```{r}
+error <- f_compute_error("2021-01-01", "2021-03-27", temp)
+
+f_graph_error(
+  error,
+  "2021-02-08", 250 #publication date label
+  )
+```
+
+
+# February 23, 2021 {.tabset .tabset-fade .tabset-pills}
+
+Source: [Pasteur report](https://hal-pasteur.archives-ouvertes.fr/pasteur-03149525/document), February 23, 2021. Identified on Pasteur Institute's website, on [this page](https://modelisation-covid19.pasteur.fr/realtime-analysis/impact-variant/).
+
+## Original {.tabset .tabset-fade}
+
+apparemment mieux de prendre med = (max+min)/2 que le vrai med, pose problème quand bcp de scénarios multipliés
+
+### Fig 2C
+
+```{r 2021_02_23__fig2_original, echo=FALSE, out.width="80%"}
+knitr::include_graphics("data/2021_02_23/2021_02_23_fig2.png")
+```
+
+### Fig 5A, 5C and 5E
+
+```{r 2021_02_23_fig_5_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2021_02_23/2021_02_23_fig5.png")
+```
+
+## Reproduced {.tabset .tabset-fade}
+
+We do not correct the data
+
+```{r}
+#offset values
+x_reality_offset <- 0
+y_reality_offset <- 0
+x_scenarios_offset <- 0
+y_scenarios_offset <- 0
+```
+
+
+### Before correction
+
+```{r 2021_02_23_Pasteur}
+#February 23 2021
+#besoin de réaligner leurs données sur la réalité (ne compte surement pas exactement la meme chose)
+scenarios <- read_csv("data/2021_02_23/new_hosp.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+f_graph(
+  true_data_Paireau_et_al, scenarios, 
+  "iHosp_smooth", 
+  "2021-02-23", 3000, #publication date label
+  "2021-01-15", "2021-07-01", #date limits
+  NA, # y limits
+  "daily hospital admissions",
+  "reality in Paireau et al."
+) 
+
+  #confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
+  #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
+```
+
+### After correction
+
+```{r}
+temp <- f_offset(
+  scenarios, 
+  true_data_Paireau_et_al %>% select(date, iHosp_smooth), 
+  "iHosp_smooth"
+  )
+
+f_graph_corrected(
+  temp, 
+  "2021-02-23", 3000, #publication date label
+  "2021-01-15", "2021-07-01", #date limits
+  NA, # y limits
+  "weekly hospital admissions",
+  "reality in Paireau et al."
+)
+
+write_csv(temp, "data/2021_02_23/corrected_scenarios.csv")
+```
+
+
+## Error
+
+```{r}
+error <- f_compute_error("2021-01-16", "2021-03-27", temp)
+
+f_graph_error(
+  error,
+  "2021-02-23", 250 #publication date label
+  )
+```
+
+
+#  April 26, 2021 {.tabset .tabset-fade .tabset-pills}
+
+Source: [Pasteur report](https://modelisation-covid19.pasteur.fr/loosening/Scenarios_de_levee_des_mesures_de_freinage_20210426.pdf), April 26, 2021. Identified on Pasteur Institute's website, on [this page](https://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/).
+
+## Original {.tabset .tabset-fade}
+
+### Fig 3B and 3D
+
+```{r 2021_04_26_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2021_04_26/2021_04_26.png")
+```
+
+## Reproduced {.tabset .tabset-fade}
+
+Just a slight vertical correction on reality curve
+
+```{r}
+#offset values
+x_reality_offset <- 0
+y_reality_offset <- 30
+x_scenarios_offset <- 0
+y_scenarios_offset <- 0
+```
+
+
+### Before correction
+
+```{r 2021_04_26_Pasteur}
+scenarios <- read_csv("data/2021_04_26/new_hosp.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+
+
+f_graph(
+  true_data_Paireau_et_al, scenarios, 
+  "iHosp_smooth",
+  "2021-04-26", 1000, #publication date label
+  "2021-01-15", "2021-07-01", #date limits
+  NA, # y limits
+  "daily hospital admissions", 
+  "reality in Paireau et al."
+) +
+  geom_line(
+    data=true_data_Paireau_et_al, aes(date, iHosp), alpha=.4, color="red"
+  )  +
+  ylim(0, 2000)
+```
+
+### After correction
+
+```{r}
+temp <- f_offset(
+  scenarios, 
+  true_data_Paireau_et_al %>% select(date, iHosp_smooth), 
+  "iHosp_smooth"
+  )
+
+f_graph_corrected(
+  temp, 
+  "2021-04-26", 1000, #publication date label
+  "2021-01-15", "2021-07-01", #date limits
+  NA, # y limits
+  "daily hospital admissions",
+  "reality in Paireau et al."
+) +
+  geom_line(
+    data=true_data_Paireau_et_al, aes(date, iHosp), alpha=.4, color="red"
+  ) +
+  ylim(0, 2000)
+
+write_csv(temp, "data/2021_04_26/corrected_scenarios.csv")
+```
+
+
+## Error
+
+```{r}
+error <- f_compute_error("2021-03-15", "2021-06-15", temp)
+
+f_graph_error(
+  error,
+  "2021-04-26", 250 #publication date label
+  )
+```
+
+
+# May 21 Scenarios TBD {.tabset .tabset-fade .tabset-pills}
+
+Source: [Pasteur report](https://modelisation-covid19.pasteur.fr/loosening/Mise_a_jour_scenarios_de_levee_des_mesures_de_freinage_20210521.pdf), May 21, 2021. Identified on Pasteur Institute's website, on [this page](https://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/).
+
+## Original {.tabset .tabset-fade}
+
+### fig 3A
+
+```{r 2021_05_21_fig_3A_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2021_05_21/2021_05_21_fig3A.png")
+```
+
+### fig 3C
+
+```{r 2021_05_21_fig_3C_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2021_05_21/2021_05_21_fig3C.png")
+```
+
+### fig 3E
+
+```{r 2021_05_21_fig_3E_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2021_05_21/2021_05_21_fig3E.png")
+```
+
+### fig 3G
+
+```{r 2021_05_21_fig_3G_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2021_05_21/2021_05_21_fig3G.png")
+```
+
+## Reproduced {.tabset .tabset-fade}
+
+Just a small x offset by 1 day
+
+```{r}
+#offset values
+x_reality_offset <- 1
+y_reality_offset <- 0
+x_scenarios_offset <- 0
+y_scenarios_offset <- 0
+```
+
+
+### Before correction
+
+```{r 2021_05_21_Pasteur}
+scenarios <- read_csv("data/2021_05_21/SC_beds.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+f_graph(
+  true_data_Paireau_et_al, scenarios, 
+  "inICU",
+  "2021-05-21", 1000, #publication date label
+  "2021-01-15", "2021-07-01", #date limits
+  NA, # y limits
+  "ICU beds", 
+  "reality in Paireau et al."
+) 
+```
+
+### After correction
+
+```{r}
+temp <- f_offset(
+  scenarios, 
+  true_data_Paireau_et_al %>% select(date, inICU), 
+  "inICU"
+  )
+
+f_graph_corrected(
+  temp, 
+  "2021-05-21", 1000, #publication date label
+  "2021-01-15", "2021-07-01", #date limits
+  NA, # y limits
+  "ICU beds", 
+  "reality in Paireau et al."
+) 
+
+write_csv(temp, "data/2021_05_21/corrected_scenarios.csv")
+```
+
+
+## Error
+
+```{r}
+error <- f_compute_error("2021-03-15", "2021-06-15", temp)
+
+f_graph_error(
+  error,
+  "2021-05-21", 250 #publication date label
+  )
+```
+
+
+# July 26, 2021 REEXTRAIRE ? {.tabset .tabset-fade .tabset-pills}
+
+Source: [Pasteur report](https://modelisation-covid19.pasteur.fr/variant/Institut_Pasteur_Acceleration_vaccination_et_Delta_20210726.pdf), July 26, 2021. Identified on Pasteur Institute's website, on [this page](https://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/).
+
+## Original {.tabset .tabset-fade}
+
+### Fig 6 {.tabset .tabset-fade}
+
+#### zoomed
+
+```{r}
+knitr::include_graphics("data/2021_07_26/fig6_zoom.png")
+```
+
+#### all
+
+```{r 2021_07_26_fig6_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2021_07_26/2021_07_26_fig6.png")
+```
+
+### Fig 5 {.tabset .tabset-fade}
+
+#### zoomed
+
+```{r}
+knitr::include_graphics("data/2021_07_26/fig5_zoom.png")
+```
+
+#### all
+
+```{r 2021_07_26_fig5_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2021_07_26/2021_07_26_fig5.png")
+```
+
+## Reproduced {.tabset .tabset-fade .tabset-pills}
+
+Small vertical offset of -30
+
+```{r}
+#offset values
+x_reality_offset <- 0
+y_reality_offset <- -30
+x_scenarios_offset <- 0
+y_scenarios_offset <- 0
+```
+
+### Before correction
+
+```{r 2021_07_26_Pasteur_ICU_beds}
+scenarios <- read_csv("data/2021_07_26/beds_SC.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+f_graph(
+  true_data_beds_hosp_rea, scenarios, 
+  "rea",
+  "2021-07-26", 5000, #publication date label
+  "2021-06-15", "2021-10-01", #date limits
+  NA, # y limits
+  "ICU beds", 
+  "reality in data.gouv"
+) 
+```
+
+### After correction 
+
+```{r }
+temp <- f_offset(
+  scenarios, 
+  true_data_beds_hosp_rea, 
+  "rea"
+  )
+
+f_graph_corrected(
+  temp, 
+  "2021-07-26", 5000, #publication date label
+  "2021-06-15", "2021-10-01", #date limits
+  NA, # y limits
+  "ICU beds", 
+  "reality in data.gouv"
+) 
+
+write_csv(temp, "data/2021_07_26/corrected_scenarios.csv")
+```
+
+## Error
+
+```{r}
+error <- f_compute_error("2021-07-15", "2021-10-10", temp)
+
+f_graph_error(
+  error,
+  "2021-07-26", 250 #publication date label
+  )
+```
+
+
+# August 5, 2021 {.tabset .tabset-fade .tabset-pills}
+
+Source: [Pasteur report](https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_Dynamiques_regionales_des_hospitalisations_20210805.pdf), August 5, 2021. Identified on Pasteur Institute's website, on [this page](https://modelisation-covid19.pasteur.fr/realtime-analysis/delta-variant-dynamic/).
+
+## Original {.tabset .tabset-fade}
+
+### Fig F
+
+```{r 20201_08_05_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2021_08_05/2021_08_05.png")
+```
+
+## Reproduced {.tabset .tabset-fade}
+
+We do not correct the data
+
+```{r}
+#offset values
+x_reality_offset <- -2
+y_reality_offset <- -80
+x_scenarios_offset <- 0
+y_scenarios_offset <- 0
+```
+
+
+### Before correction
+
+```{r 2021_08_05_Pasteur_ICU_beds}
+scenarios <- read_csv("data/2021_08_05/beds_SC.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+f_graph(
+  true_data_beds_hosp_rea, scenarios, 
+  "rea",
+  "2021-08-05", 5000, #publication date label
+  "2021-06-15", "2021-10-01", #date limits
+  NA, # y limits
+  "ICU beds", 
+  "reality in data.gouv"
+) 
+```
+
+### After correction
+
+```{r}
+temp <- f_offset(
+  scenarios, 
+  true_data_beds_hosp_rea, 
+  "rea"
+  )
+
+f_graph_corrected(
+  temp, 
+  "2021-08-05", 5000, #publication date label
+  "2021-06-15", "2021-10-01", #date limits
+  NA, # y limits
+  "ICU beds", 
+  "reality in data.gouv"
+) 
+
+write_csv(temp, "data/2021_08_05/corrected_scenarios.csv")
+```
+
+
+## Error
+
+```{r}
+error <- f_compute_error("2021-07-15", "2021-10-10", temp)
+
+f_graph_error(
+  error,
+  "2021-08-05", 250 #publication date label
+  )
+```
+
+
+# October 4, 2021 {.tabset .tabset-fade .tabset-pills}
+
+Source: [Pasteur report](https://modelisation-covid19.pasteur.fr/scenarios/InstitutPasteur_scenariosCOVID19AutomneHiver_2021.pdf), October 4, 2021. Identified on Pasteur Institute's website, on [this page](https://modelisation-covid19.pasteur.fr/realtime-analysis/fall-winter-scenarios/).
+
+## Original {.tabset .tabset-fade}
+
+### Fig 9
+
+```{r 2021_10_04_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2021_10_04/2021_10_04.png")
+```
+
+## Reproduced {.tabset .tabset-fade}
+
+Horizontal offset by -1 day, vertical offset by -40 
+
+```{r}
+#offset values
+x_reality_offset <- -1
+y_reality_offset <- -40
+x_scenarios_offset <- 0
+y_scenarios_offset <- 0
+```
+
+
+### Before correction
+
+```{r 2021-10-10 Pasteur}
+scenarios <- read_csv("data/2021_10_04/new_hosp.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+f_graph(
+  true_data_new_hosp_rea, scenarios, 
+  "new_hosp_center",
+  "2021-10-04", 1000, #publication date label
+  "2021-07-01", "2022-01-01", #date limits
+  NA, # y limits
+  "daily hospital admissions beds", 
+  "reality in data.gouv"
+)
+```
+
+### After correction
+
+```{r}
+temp <- f_offset(
+  scenarios, 
+  true_data_new_hosp_rea, 
+  "new_hosp_center"
+  )
+
+f_graph_corrected(
+  temp, 
+  "2021-10-04", 1000, #publication date label
+  "2021-07-01", "2022-01-01", #date limits
+  NA, # y limits
+  "daily hospital admissions beds", 
+  "reality in data.gouv"
+) 
+
+write_csv(temp, "data/2021_10_04/corrected_scenarios.csv")
+```
+
+
+## Error
+
+```{r}
+error <- f_compute_error("2021-09-15", "2021-12-20", temp)
+
+f_graph_error(
+  error,
+  "2021-10-04", 250 #publication date label
+  )
+```
+
+
+# January 7, 2021 {.tabset .tabset-fade .tabset-pills}
+
+Source: [Pasteur report](https://modelisation-covid19.pasteur.fr/variant/InstitutPasteur_Complement_Analyse_Impact_Omicron_20220107_corrige.pdf), January 7, 2022. Identified on Pasteur Institute's website, on [this page](https://modelisation-covid19.pasteur.fr/realtime-analysis/omicron-variant-epidemic/).
+
+## Original {.tabset .tabset-fade}
+
+### Figure 4
+
+```{r 2022_01_07_original, echo=FALSE, out.width="500px"}
+knitr::include_graphics("data/2022_01_07/2022_01_07.png")
+```
+
+
+## Reproduced {.tabset .tabset-fade}
+
+-2 day for reality, -# days for scenarios
+
+```{r}
+#offset values
+x_reality_offset <- -2
+y_reality_offset <- 0
+x_scenarios_offset <- -1
+y_scenarios_offset <- 0
+```
+
+
+### Before correction
+
+```{r 2022-01-07_probable_high_VE_Pasteur}
+scenarios <- read_csv("data/2022_01_07/beds_SC_low_VE.csv") %>%
+  mutate(date = as.Date(date, format = "%Y/%m/%d", optional = T))
+
+
+f_graph(
+  true_data_beds_hosp_rea, scenarios, 
+  "rea",
+  "2022-01-07", 1000, #publication date label
+  "2021-12-01", "2022-04-01", #date limits
+  NA, # y limits
+  "ICU beds", 
+  "reality in data.gouv"
+)
+```
+
+### After correction
+
+```{r}
+temp <- f_offset(
+  scenarios, 
+  true_data_beds_hosp_rea, 
+  "rea"
+  )
+
+f_graph_corrected(
+  temp, 
+  "2022-01-07", 1000, #publication date label
+  "2021-12-01", "2022-04-01", #date limits
+  NA, # y limits
+  "ICU beds", 
+  "reality in data.gouv"
+) 
+
+write_csv(temp, "data/2022_01_07/corrected_scenarios.csv")
+```
+
+## Error
+
+```{r}
+error <- f_compute_error("2021-12-01", "2022-04-01", temp)
+
+f_graph_error(
+  error,
+  "2022-01-07", 250 #publication date label
+  )
+```
+
+
+
+```{r 2022-01-07_not_probable_high_VE_Pasteur}
+#high VE all
+# scenario <- read.csv("data/2022_01_07/beds_SC_peu_probable_low_VE.csv", sep=";") %>%
+#   mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T)) %>%
+#   gather(key=scenarios, value = value, -date)
+# scenario %>%
+#   ggplot(aes(date, value, group=scenarios)) +
+#   geom_line(data= scenario, 
+#             aes(x=date, value, group=scenarios), color = "grey", size=1) +
+#   geom_line(data= true_data_beds_hosp_rea, 
+#             aes(x=date, y=rea, color = "red", group="réalité"), size=1) +
+#   annotate('text', x = as.Date("2022-01-20"), y = 2800, label = "reality", color = "red", fontface = "bold",
+#            family = "Times New Roman") +
+#   annotate('text', x = as.Date("2021-12-25"), y = 5800, label = "scenarios", color = "grey", fontface = "bold",
+#            family = "Times New Roman") +
+#   xlim(date("2021-12-01"), date("2022-04-01")) + ylim(0,11000) +
+#   labs(title = "Intensive Care Unit Beds",
+#        subtitle = "scenarios published by the Pasteur Institute on January 7, 2022\n",
+#        caption = "\ntwitter : @Covid_Scenarios")
+# 
+# scenario <- read.csv("data/2022_01_07/beds_SC_peu_probable_low_VE.csv", sep=";") %>%
+#   mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+# test <- f_compute_error("2021-12-01", "2022-04-01", "rea", true_data_beds_hosp_rea)
+# ggplot(test, aes(date)) + 
+#   geom_line(aes(y=error_med)) +
+#   geom_ribbon(aes(ymin = error_min, ymax = error_max), alpha = 0.1) + 
+#   geom_hline(yintercept = 100)
+
+```
+
+
+
+
+# Winter 2021 curfew discussion {.tabset .tabset-fade .tabset-pills}
+
+## January 28 lockdown scenario
+
+j'ai pris que confinement "light" 8 février. OK de ne pas prendre confinement "dur" mais je pense qu'il serait plus legit de regarder confinement qui commence le 1er février => extraire 3B
+
+lockdown ("soft", i.e. as in November 2020)starting on February 8th
+
+```{r 2021_01_28_Pasteur_ICU_adm}
+#Admissions en réanimation
+scenario <- read_csv("data/appendix/2021_01_28/2021_01_28.csv") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T)) %>%
+  select(-real)
+scenario %>%
+  ggplot(aes(date)) +
+  geom_line(data= true_data_new_hosp_rea, 
+            aes(x=date, y=new_rea_center), size = 1, color="red") +
+  geom_line(aes(y=lockdown_light_Feb_8), color="grey") +
+  geom_ribbon(aes(ymin = min_lockdown_light_Feb_8, ymax = max_lockdown_light_Feb_8), alpha = 0.4, fill="grey") +
+  annotate(
+    'text', x = as.Date("2021-01-28"), y = 170, 
+    label = "reality\nno lockdown but 6 p.m. curfew", 
+    color = "red", fontface = "bold",
+    family = "Times New Roman") + 
+  annotate(
+    'text', x = as.Date("2021-02-15"), 
+    y = 570, label = "lockdown scenario", 
+    color = "grey", fontface = "bold",
+    family = "Times New Roman") + 
+  xlim(as.Date("2021-01-01"), as.Date("2021-03-15")) + g_theme +
+  labs(title = "Intensive Care Unit Admissions",
+       subtitle = "Pasteur Institute scenarios published on January 28, 2021",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+lockdown ("soft", i.e. as in November 2020)starting on February 1st
+
+```{r 2021_01_28_Pasteur_ICU_adm_soft}
+#Admissions en réanimation
+scenario <- read_csv("data/appendix/2021_01_28/2021_01_28_lock_soft_Feb_1.csv") %>%
+  mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T)) %>%
+  select(-real)
+scenario %>%
+  ggplot(aes(date)) +
+  geom_line(data= true_data_new_hosp_rea, 
+            aes(x=date, y=new_rea_center), size = 1, color="red") +
+  geom_line(aes(y=lock_soft_Feb_1), color="grey") +
+  geom_ribbon(aes(ymin = min_lock_soft_Feb_1, ymax = max_lock_soft_Feb_1), alpha = 0.4, fill="grey") +
+  annotate(
+    'text', x = as.Date("2021-02-15"), y = 170, 
+    label = "reality\nno lockdown but 6 p.m. curfew", 
+    color = "red", fontface = "bold",
+    family = "Times New Roman") + 
+  annotate(
+    'text', x = as.Date("2021-02-15"), 
+    y = 500, label = "lockdown scenario", 
+    color = "grey", fontface = "bold",
+    family = "Times New Roman") + 
+  xlim(as.Date("2021-01-28"), as.Date("2021-03-08")) + g_theme +
+  labs(title = "Intensive Care Unit Admissions",
+       subtitle = "Pasteur Institute scenarios published on January 28, 2021",
+       caption = "\ntwitter : @Covid_Scenarios")
+```
+
+## February 14 scenarios
+
+```{r 2021_02_14_Inserm}
+# #14 février
+# scenario <- read.csv("data/2021_02_14/weekly_hospital.csv", sep=";") %>%
+#   mutate(date = as.Date(date, format = "%d/%m/%Y", optional = T))
+# scenario %>%
+#   gather(key=scenario, value = value, -date) %>%
+#   ggplot(aes(date, value+1700, group=scenario, color="scénarios")) + geom_smooth(se=F) +
+#   geom_line(data= true_data_new_hosp_rea_weekly, 
+#             aes(x=date, y=new_hosp_week, color = "réalité", group="réalité"), size = 1) +
+#   annotate('text', x = as.Date("2021-01-05"), y = 7000, label = "reality", color = "red", fontface = "bold",
+#            family = "Times New Roman") + 
+#   annotate('text', x = as.Date("2021-02-27"), y = 25000, label = "scenarios", color = "grey", fontface = "bold",
+#            family = "Times New Roman") + 
+#   #confinement de 16 départements le 20 mars cf https://fr.wikipedia.org/wiki/Chronologie_de_la_pand%C3%A9mie_de_Covid-19_en_France
+#   #2 semaines pour voir les effets sur hospitalisations. correspond aussi au confinement général du 3 avril
+#   xlim(date("2021-01-01"), date("2021-03-27")) + ylim(0,37000) + g_theme +
+#   labs(title = "Weekly number of hospital admissions",
+#        subtitle = "scenarios published by INSERM on February 14, 2021\n",
+#        caption = "\ntwitter : @Covid_Scenarios")
+# 
+# scenario <- scenario %>% select(-calibration)
+# 
+# test <- f_compute_error("2021-01-01", "2021-03-27", "new_hosp_week", true_data_new_hosp_rea_weekly)
+# ggplot(test, aes(date)) + 
+#   geom_line(aes(y=error_med)) +
+#   geom_ribbon(aes(ymin = error_min, ymax = error_max), alpha = 0.1) + 
+#   geom_hline(yintercept = 100)
+```
+
+# Pasteur's self-assessment {.tabset .tabset-fade .tabset-pills}
+
+## April 26, 2021 (assesses February 8, 2021 report)
+
+## June 16, 2021 (assesses May 21, 2021 report)
+
+## February 15, 2022 (assesses January 7, 2021 report)
+
+## Other non included (does not assesses hospitalizations)
+
+
